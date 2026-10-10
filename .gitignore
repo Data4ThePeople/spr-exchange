@@ -1,0 +1,20 @@
+# Secrets — never commit
+.env
+
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# PyCharm per-user state
+.idea/workspace.xml
+
+# Scratch
+scratch/
+logs/
+
+# Working brief: holds unverified claims, not for the public repo
+D4TP_SPR_exchange_project_prompt.md
