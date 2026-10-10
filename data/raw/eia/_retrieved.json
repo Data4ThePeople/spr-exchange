@@ -1,0 +1,21 @@
+{
+ "retrieved": "2026-10-10",
+ "series": {
+  "PET.WCSSTUS1.W": "Weekly U.S. ending stocks of crude oil in the SPR, thousand barrels",
+  "PET.WCESTUS1.W": "Weekly U.S. ending stocks of crude oil excluding SPR, thousand barrels",
+  "PET.WCREXUS2.W": "Weekly U.S. exports of crude oil, thousand barrels per day",
+  "PET.WCRIMUS2.W": "Weekly U.S. imports of crude oil, thousand barrels per day",
+  "PET.WCRFPUS2.W": "Weekly U.S. field production of crude oil, thousand barrels per day",
+  "PET.WCRRIUS2.W": "Weekly U.S. refiner net input of crude oil, thousand barrels per day",
+  "PET.WPULEUS3.W": "Weekly U.S. percent utilization of refinery operable capacity",
+  "PET.WDISTUS1.W": "Weekly U.S. ending stocks of distillate fuel oil, thousand barrels",
+  "PET.MCREXUS2.M": "Monthly U.S. exports of crude oil, thousand barrels per day",
+  "PET.MCSSTUS1.M": "Monthly U.S. ending stocks of crude oil in the SPR, thousand barrels",
+  "PET.RWTC.D": "Cushing, OK WTI spot price FOB, dollars per barrel, daily",
+  "PET.RBRTE.D": "Europe Brent spot price FOB, dollars per barrel, daily",
+  "PET.RCLC1.D": "Cushing, OK crude oil future contract 1, dollars per barrel, daily",
+  "PET.RCLC2.D": "Cushing, OK crude oil future contract 2, dollars per barrel, daily",
+  "PET.RCLC3.D": "Cushing, OK crude oil future contract 3, dollars per barrel, daily",
+  "PET.RCLC4.D": "Cushing, OK crude oil future contract 4, dollars per barrel, daily"
+ }
+}

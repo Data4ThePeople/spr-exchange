@@ -1,0 +1,32 @@
+round,rfp_no,award_date,offered_bbl,company_as_listed,company,type,barrels
+1,DE-RP96-26PO00001,2026-03-20,86000000,BP Products North America,BP Products North America,Refiner/major,5000000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Energy Transfer Crude Marketing LLC,Energy Transfer Crude Marketing,Midstream,375000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Gunvor USA LLC,Gunvor USA,Trader,3085000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Marathon Petroleum Company LP,Marathon Petroleum,Refiner,7700000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Mercuria Energy America LLC,Mercuria Energy America,Trader,2000000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Shell Trading (US) Company,Shell Trading (US),Major trading arm,16200000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Trafigura Trading LLC,Trafigura,Trader,8860000
+1,DE-RP96-26PO00001,2026-03-20,86000000,Vitol Inc.,Vitol,Trader,2000000
+1.a,DE-RP96-26PO00002,2026-04-10,10000000,Gunvor USA LLC,Gunvor USA,Trader,1100000
+1.a,DE-RP96-26PO00002,2026-04-10,10000000,Macquarie Commodities Trading US,Macquarie,Trader,2000000
+1.a,DE-RP96-26PO00002,2026-04-10,10000000,Phillips 66 Company,Phillips 66,Refiner,2900000
+1.a,DE-RP96-26PO00002,2026-04-10,10000000,Trafigura Trading LLC,Trafigura,Trader,2480000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Alon USA,Alon USA,Refiner,1000000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,BP Products North America,BP Products North America,Refiner/major,1000000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Energy Transfer Crude Marketing,Energy Transfer Crude Marketing,Midstream,1100000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,ExxonMobil Oil Corporation,ExxonMobil,Refiner,3000000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Macquarie Commodities Trading US,Macquarie,Trader,2500000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Marathon Petroleum Company,Marathon Petroleum,Refiner,2000000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Shell Trading (US) Company,Shell Trading (US),Major trading arm,1900000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Trafigura Trading LLC,Trafigura,Trader,10030000
+1.b,DE-RP96-26PO00003,2026-04-17,30000000,Vitol,Vitol,Trader,3500000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Atlantic Trading & Marketing,Atlantic Trading & Marketing (TotalEnergies),Trader,1700000
+2,DE-RP96-26PO00004,2026-05-11,92500000,BP Products North America,BP Products North America,Refiner/major,2100000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Energy Transfer Crude Marketing,Energy Transfer Crude Marketing,Midstream,1050000
+2,DE-RP96-26PO00004,2026-05-11,92500000,ExxonMobil Oil Corporation,ExxonMobil,Refiner,11400000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Macquarie Commodities Trading US,Macquarie,Trader,6550000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Marathon Petroleum Company,Marathon Petroleum,Refiner,12400000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Mercuria Energy America,Mercuria Energy America,Trader,2500000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Phillips 66,Phillips 66,Refiner,2650000
+2,DE-RP96-26PO00004,2026-05-11,92500000,Trafigura Trading LLC,Trafigura,Trader,12980000
+3,DE-RP96-26PO00005,2026-06-22,40000000,Vitol Inc.,Vitol,Trader,500000
