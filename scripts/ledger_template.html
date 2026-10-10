@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Took the Barrels: 2026 SPR Exchange Ledger</title>
+<meta name="description" content="Every contract awarded in the 2026 Strategic Petroleum Reserve emergency exchange: which companies borrowed the oil, how much, and in which round. Searchable, with a free CSV download and links to the Department of Energy source documents.">
+<style>
+/* Light scheme painted explicitly so the page holds inside the Prismic frame
+   whatever the viewer's OS theme. Categorical colors are the first four slots
+   of the validated reference palette, in fixed order, one per firm type. */
+:root {
+  --bg: #FBFAF7; --panel: #ffffff; --ink: #14181d; --muted: #5b6470;
+  --grid: #d9d6cf; --hair: #ebe8e1; --ghost: #ece9e2; --teal: #085041;
+  --t-house: #2a78d6; --t-arm: #eb6834; --t-refiner: #1baf7a; --t-mid: #eda100;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.45; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 24px 24px 32px; container-type: inline-size; position: relative; }
+.logo { height: 24px; width: auto; display: block; margin-bottom: 12px; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.standfirst { font-size: 15px; color: var(--muted); margin: 0; max-width: 76ch; }
+header.masthead { border-bottom: 1px solid var(--grid); padding-bottom: 12px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; margin: 14px 0 6px; font-size: 13px; }
+.filters label { display: flex; flex-direction: column; gap: 3px; color: var(--muted); }
+.filters select, .filters input[type=search] { font: inherit; font-size: 14px; color: var(--ink); background: var(--panel); border: 1px solid var(--grid); border-radius: 4px; padding: 5px 8px; min-width: 0; }
+.filters input[type=search] { width: 170px; }
+.filters button { font: inherit; font-size: 13.5px; color: var(--ink); background: var(--panel); border: 1px solid var(--grid); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+.filters button:hover { border-color: var(--muted); }
+.check { flex-direction: row !important; align-items: center; gap: 7px !important; color: var(--ink) !important; font-size: 13.5px; cursor: pointer; margin: 2px 0 10px; }
+.check input { width: 15px; height: 15px; margin: 0; accent-color: var(--teal); }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 4px 0 14px; }
+.card { background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; padding: 10px 12px; }
+.card .k { font-size: 12.5px; color: var(--muted); }
+.card .v { font-size: 26px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; margin: 2px 0; }
+.card .s { font-size: 12px; color: var(--muted); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; padding: 12px 12px 8px; min-width: 0; }
+figure h2 { font-size: 15px; margin: 0 0 2px; font-weight: 700; }
+figure .sub { font-size: 12.5px; color: var(--muted); margin: 0 0 6px; }
+figure.wide { margin-top: 12px; }
+svg { display: block; width: 100%; }
+svg text { font-family: var(--sans); fill: var(--muted); font-size: 12px; }
+svg .val { fill: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+svg .name { fill: var(--ink); }
+svg .axis { stroke: var(--grid); }
+svg .gridline { stroke: var(--hair); }
+.legend { display: flex; flex-wrap: wrap; gap: 2px 16px; margin: 0 0 4px; padding: 0; list-style: none; font-size: 12.5px; }
+.legend li { display: flex; align-items: center; gap: 6px; color: var(--ink); }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 2px; flex: 0 0 11px; }
+.empty { color: var(--muted); font-size: 14px; padding: 24px 0; text-align: center; }
+
+.tip { position: absolute; pointer-events: none; z-index: 5; max-width: 300px; padding: 9px 11px; background: var(--ink); color: #fff; border-radius: 6px; font-size: 13px; line-height: 1.4; box-shadow: 0 6px 20px rgba(20,24,29,.25); opacity: 0; transition: opacity .1s; }
+.tip.on { opacity: 1; }
+.tip b { font-variant-numeric: tabular-nums; }
+.tip .dim { color: #b8c0c9; font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+
+.tablehead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin: 16px 0 6px; }
+.tablehead h2 { font-size: 15px; margin: 0; }
+.tablehead .count { font-size: 13px; color: var(--muted); font-weight: 400; }
+.dl { font: inherit; font-size: 13.5px; font-weight: 600; color: #fff; background: var(--teal); border: 0; border-radius: 4px; padding: 6px 12px; cursor: pointer; text-decoration: none; }
+.tblwrap { overflow: auto; border: 1px solid var(--grid); border-radius: 6px; background: var(--panel); max-height: 520px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--panel); font-weight: 700; cursor: pointer; user-select: none; border-bottom: 1px solid var(--grid); }
+th.num, td.num { text-align: right; }
+td .sw { margin-right: 6px; transform: translateY(1px); }
+td a { color: var(--teal); }
+td.nowrap { white-space: nowrap; }
+tfoot td { font-weight: 700; border-top: 1px solid var(--grid); border-bottom: 0; position: sticky; bottom: 0; background: var(--panel); }
+
+.source { font-size: 12.5px; color: var(--muted); margin: 12px 0 0; max-width: 100ch; }
+.source a { color: var(--ink); }
+
+html.embed .wrap { padding: 12px 14px 12px; }
+html.embed .logo { height: 18px; margin-bottom: 6px; }
+html.embed h1 { font-size: 21px; }
+html.embed .standfirst { font-size: 13.5px; }
+html.embed .tblwrap { max-height: 330px; }
+html.embed .card { padding: 8px 10px; }
+html.embed .cards { margin-bottom: 10px; }
+html.embed .filters { margin-top: 10px; }
+
+@container (max-width: 830px) {
+  h1 { font-size: 21px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .card .v { font-size: 22px; }
+  .grid2 { grid-template-columns: 1fr; }
+  .filters label { flex: 1 1 44%; }
+  .filters input[type=search] { width: 100%; }
+  .hide-narrow { display: none; }
+}
+@media (max-width: 640px) { .wrap { padding-left: 16px; padding-right: 16px; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <header class="masthead">
+    <a href="https://www.data4thepeople.com" aria-label="Data 4 The People"><img class="logo" alt="Data 4 The People" src="__LOGO__"></a>
+    <h1>Who took the barrels</h1>
+    <p class="standfirst">Every contract in the 2026 Strategic Petroleum Reserve emergency exchange. The government loaned crude oil to these companies, which owe it back later with extra barrels. Filter by round, company, or type of company.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Filters">
+    <label>Round <select id="f-round"></select></label>
+    <label>Type of company <select id="f-type"></select></label>
+    <label>Company <select id="f-firm"></select></label>
+    <label>Contract size <select id="f-size">
+      <option value="0">Any size</option><option value="1000000">1 million barrels or more</option>
+      <option value="5000000">5 million or more</option><option value="10000000">10 million or more</option></select></label>
+    <label>Search <input type="search" id="f-q" placeholder="Company name"></label>
+    <button type="button" id="f-reset">Reset</button>
+  </div>
+  <label class="check"><input type="checkbox" id="f-merge"> Count oil majors' trading arms together with trading houses</label>
+
+  <section class="cards" aria-live="polite">
+    <div class="card"><div class="k">Barrels awarded</div><div class="v" id="c-total"></div><div class="s" id="c-total-s"></div></div>
+    <div class="card"><div class="k" id="c-trade-k"></div><div class="v" id="c-trade"></div><div class="s" id="c-trade-s"></div></div>
+    <div class="card"><div class="k">Largest borrower</div><div class="v" id="c-top"></div><div class="s" id="c-top-s"></div></div>
+    <div class="card"><div class="k">Share of offered barrels taken</div><div class="v" id="c-take"></div><div class="s" id="c-take-s"></div></div>
+  </section>
+
+  <ul class="legend" id="legend" aria-label="Type of company"></ul>
+  <div class="grid2">
+    <figure>
+      <h2>Barrels awarded in each round, by type of company</h2>
+      <p class="sub">Million barrels. The gray bar is what the government offered.</p>
+      <div id="ch-rounds"></div>
+    </figure>
+    <figure>
+      <h2>Barrels awarded to each company</h2>
+      <p class="sub">Million barrels, and share of the barrels shown.</p>
+      <div id="ch-firms"></div>
+    </figure>
+  </div>
+
+  <figure class="wide">
+    <h2>Crude oil held in the Strategic Petroleum Reserve, by week</h2>
+    <p class="sub">Million barrels. Dashed lines mark the date of each round of awards.</p>
+    <div id="ch-spr"></div>
+  </figure>
+
+  <div class="tablehead">
+    <h2>The ledger <span class="count" id="t-count"></span></h2>
+    <a class="dl" id="dl" download="spr_2026_exchange_awards.csv" href="#">Download the full ledger (CSV)</a>
+  </div>
+  <div class="tblwrap">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="award_date">Award date</th><th data-k="round">Round</th>
+        <th data-k="company_as_listed">Company, as listed by the government</th>
+        <th data-k="type">Type</th><th data-k="barrels" class="num">Barrels</th>
+        <th data-k="minprem" class="hide-narrow" title="The lowest premium the government would accept in this round">Minimum extra owed</th>
+        <th class="hide-narrow">Source</th>
+      </tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><td colspan="4">Total shown</td><td class="num" id="t-total"></td><td class="hide-narrow"></td><td class="hide-narrow"></td></tr></tfoot>
+    </table>
+  </div>
+
+  <p class="source" id="source"></p>
+  <div class="tip" id="tip" role="status"></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var D = /*__DATA__*/null;
+  var framed = (function () { try { return window.self !== window.top; } catch (e) { return true; } })();
+  if (framed) document.documentElement.classList.add("embed");
+
+  var TYPES = ["Trading house", "Major trading arm", "Refiner", "Midstream"];
+  var COLOR = { "Trading house": "var(--t-house)", "Major trading arm": "var(--t-arm)", "Refiner": "var(--t-refiner)", "Midstream": "var(--t-mid)" };
+  var TYPE_NOTE = {
+    "Trading house": "Trading house: buys and sells commodities; its corporate group owns no U.S. refinery",
+    "Major trading arm": "Major trading arm: the trading company of an oil major that also owns a U.S. refinery",
+    "Refiner": "Refiner: a company that turns crude oil into fuel",
+    "Midstream": "Midstream: a pipeline company's marketing arm"
+  };
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var roundBy = {}; D.rounds.forEach(function (r) { roundBy[r.round] = r; });
+  var awardedRounds = D.rounds.filter(function (r) { return D.ledger.some(function (x) { return x.round === r.round; }); });
+  var state = { round: "all", type: "all", firm: "all", size: 0, q: "", merge: false, sortK: "award_date", sortDir: 1 };
+  var $ = function (id) { return document.getElementById(id); };
+  var tip = $("tip"), wrap = $("wrap");
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function sum(a, f) { return a.reduce(function (t, x) { return t + f(x); }, 0); }
+  function mil(n) { var v = n / 1e6; return (Math.abs(v) >= 100 ? v.toFixed(2) : v.toFixed(3)).replace(/\.?0+$/, ""); }
+  function pct(x) { return (x * 100).toFixed(1) + "%"; }
+  function commas(n) { return Math.round(n).toLocaleString("en-US"); }
+  function longDate(iso) { var p = iso.split("-"); return MONTHS[+p[1] - 1] + " " + (+p[2]) + ", " + p[0]; }
+  function shortDate(iso) { var p = iso.split("-"); return MONTHS[+p[1] - 1] + " " + (+p[2]); }
+  function premText(r) { return r.min_premium_low_pct === r.min_premium_high_pct ? r.min_premium_low_pct + "%" : r.min_premium_low_pct + "% to " + r.min_premium_high_pct + "%"; }
+  function isTrade(t) { return t === "Trading house" || (state.merge && t === "Major trading arm"); }
+
+  function filtered() {
+    var q = state.q.trim().toLowerCase();
+    return D.ledger.filter(function (x) {
+      return (state.round === "all" || x.round === state.round) &&
+        (state.type === "all" || x.type === state.type) &&
+        (state.firm === "all" || x.company === state.firm) &&
+        x.barrels >= state.size &&
+        (!q || x.company_as_listed.toLowerCase().indexOf(q) >= 0 || x.company.toLowerCase().indexOf(q) >= 0);
+    });
+  }
+
+  /* ---------- tooltip ---------- */
+  function showTip(html, evt) {
+    tip.innerHTML = html; tip.classList.add("on");
+    var wr = wrap.getBoundingClientRect(), x = evt.clientX - wr.left + 14, y = evt.clientY - wr.top + 14;
+    if (x + tip.offsetWidth > wr.width - 8) x = evt.clientX - wr.left - tip.offsetWidth - 14;
+    if (x < 4) x = 4;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  function hideTip() { tip.classList.remove("on"); }
+  function bindTips(root) {
+    root.querySelectorAll("[data-tip]").forEach(function (el) {
+      var h = function (e) { showTip(el.getAttribute("data-tip"), e.touches ? e.touches[0] : e); };
+      el.addEventListener("mousemove", h); el.addEventListener("mouseleave", hideTip);
+      el.addEventListener("touchstart", h, { passive: true });
+    });
+  }
+
+  /* ---------- cards ---------- */
+  function cards(rows) {
+    var total = sum(rows, function (x) { return x.barrels; });
+    $("c-total").textContent = mil(total) + " million";
+    var firms = {}; rows.forEach(function (x) { firms[x.company] = (firms[x.company] || 0) + x.barrels; });
+    var nFirms = Object.keys(firms).length;
+    $("c-total-s").textContent = rows.length + (rows.length === 1 ? " contract, " : " contracts, ") + nFirms + (nFirms === 1 ? " company" : " companies");
+    var trade = sum(rows, function (x) { return isTrade(x.type) ? x.barrels : 0; });
+    $("c-trade-k").textContent = state.merge ? "Went to trading houses and majors' trading arms" : "Went to trading houses";
+    $("c-trade").textContent = total ? pct(trade / total) : "n/a";
+    $("c-trade-s").textContent = total ? mil(trade) + " million barrels" : "";
+    var top = Object.keys(firms).sort(function (a, b) { return firms[b] - firms[a]; })[0];
+    $("c-top").textContent = top ? pct(firms[top] / total) : "n/a";
+    $("c-top-s").textContent = top ? top + ", " + mil(firms[top]) + " million barrels" : "";
+    var rs = awardedRounds.filter(function (r) { return state.round === "all" || r.round === state.round; });
+    var per = rs.map(function (r) { return { r: r, aw: sum(D.ledger, function (x) { return x.round === r.round ? x.barrels : 0; }) }; });
+    var aw = sum(per, function (p) { return p.aw; }), off = sum(rs, function (r) { return r.offered_bbl; });
+    $("c-take").textContent = off ? pct(aw / off) : "n/a";
+    $("c-take-s").textContent = rs.length > 1
+      ? "By round: " + per.map(function (p) { return p.r.round + ": " + pct(p.aw / p.r.offered_bbl); }).join(", ") + ". All companies."
+      : mil(aw) + " of " + mil(off) + " million offered. All companies.";
+  }
+
+  /* ---------- stacked bars by round ---------- */
+  function chartRounds(rows) {
+    var box = $("ch-rounds"), W = Math.max(280, box.clientWidth), H = framed ? 268 : 300;
+    var m = { l: 34, r: 8, t: 22, b: 40 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var rs = awardedRounds, maxV = Math.max.apply(null, rs.map(function (r) { return r.offered_bbl; })) / 1e6;
+    var step = maxV > 60 ? 25 : 10, top = Math.ceil(maxV / step) * step;
+    var y = function (v) { return m.t + ih - (v / top) * ih; };
+    var band = iw / rs.length, bw = Math.min(56, band * 0.6), s = "";
+    for (var t = 0; t <= top; t += step) {
+      s += '<line class="gridline" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(t) + '" y2="' + y(t) + '"/>' +
+           '<text x="' + (m.l - 6) + '" y="' + (y(t) + 4) + '" text-anchor="end">' + t + '</text>';
+    }
+    rs.forEach(function (r, i) {
+      var cx = m.l + band * i + band / 2, x0 = cx - bw / 2;
+      var all = sum(D.ledger, function (x) { return x.round === r.round ? x.barrels : 0; });
+      var off = r.offered_bbl / 1e6;
+      s += '<rect x="' + x0 + '" y="' + y(off) + '" width="' + bw + '" height="' + (y(0) - y(off)) + '" rx="4" fill="var(--ghost)" data-tip="' +
+        esc("<b>Round " + r.round + "</b><br>Offered: <b>" + mil(r.offered_bbl) + " million</b> barrels<br>Awarded: <b>" + mil(all) + " million</b> (" + pct(all / r.offered_bbl) + ")<br><span class='dim'>Minimum extra barrels owed: " + premText(r) + "</span>") + '"/>';
+      var base = 0, segs = TYPES.map(function (ty) { return { ty: ty, v: sum(rows, function (x) { return x.round === r.round && x.type === ty ? x.barrels : 0; }) / 1e6 }; }).filter(function (g) { return g.v > 0; });
+      var shown = sum(segs, function (g) { return g.v; });
+      segs.forEach(function (g) {
+        var y1 = y(base + g.v), h = Math.max(1, y(base) - y1 - (base > 0 ? 2 : 0));
+        s += '<rect x="' + x0 + '" y="' + y1 + '" width="' + bw + '" height="' + h + '" rx="2" fill="' + COLOR[g.ty] + '" data-tip="' +
+          esc("<b>Round " + r.round + "</b>, awarded " + longDate(r.award_date) + "<br>" + g.ty + ": <b>" + mil(g.v * 1e6) + " million</b> barrels<br><span class='dim'>" + pct(g.v * 1e6 / all) + " of this round's awards</span>") + '"/>';
+        base += g.v;
+      });
+      if (shown > 0) s += '<text class="val" x="' + cx + '" y="' + (y(Math.max(shown, off)) - 6) + '" text-anchor="middle">' + mil(shown * 1e6) + '</text>';
+      s += '<text class="name" x="' + cx + '" y="' + (H - m.b + 16) + '" text-anchor="middle">Round ' + r.round + '</text>' +
+           '<text x="' + cx + '" y="' + (H - m.b + 31) + '" text-anchor="middle">' + shortDate(r.award_date) + '</text>';
+    });
+    s += '<line class="axis" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(0) + '" y2="' + y(0) + '"/>';
+    box.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" role="img" aria-label="Stacked bars of barrels awarded in each round by type of company. The table below holds the same data.">' + s + '</svg>';
+    bindTips(box);
+  }
+
+  /* ---------- firm leaderboard ---------- */
+  function chartFirms(rows) {
+    var box = $("ch-firms"), W = Math.max(280, box.clientWidth);
+    var agg = {}; rows.forEach(function (x) { (agg[x.company] = agg[x.company] || { name: x.company, type: x.type, v: 0, n: 0, rounds: [] }); agg[x.company].v += x.barrels; agg[x.company].n++; agg[x.company].rounds.push(x.round); });
+    var list = Object.keys(agg).map(function (k) { return agg[k]; }).sort(function (a, b) { return b.v - a.v || (a.name < b.name ? -1 : 1); });
+    if (!list.length) { box.innerHTML = '<p class="empty">No contracts match these filters.</p>'; return; }
+    var total = sum(list, function (f) { return f.v; }), rowH = 22, H = list.length * rowH + 6;
+    var labW = Math.min(200, W * 0.5), valW = 96, x0 = labW + 6, iw = W - x0 - valW, maxV = list[0].v, s = "";
+    list.forEach(function (f, i) {
+      var yy = 3 + i * rowH, w = Math.max(2, (f.v / maxV) * iw), nm = f.name.replace(" (TotalEnergies)", "");
+      var maxCh = Math.floor(labW / 6.4); if (nm.length > maxCh) nm = nm.slice(0, maxCh - 1).trim() + "\u2026";
+      var tipH = esc("<b>" + f.name + "</b><br>" + f.type + "<br><b>" + mil(f.v) + " million</b> barrels, " + pct(f.v / total) + " of barrels shown<br><span class='dim'>" + f.n + (f.n === 1 ? " contract" : " contracts") + ", round" + (f.n === 1 ? " " : "s ") + f.rounds.join(", ") + "</span>");
+      s += '<g data-tip="' + tipH + '"><rect x="0" y="' + yy + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<text class="name" x="' + labW + '" y="' + (yy + 15) + '" text-anchor="end">' + esc(nm) + '</text>' +
+        '<rect x="' + x0 + '" y="' + (yy + 4) + '" width="' + w + '" height="' + (rowH - 8) + '" rx="3" fill="' + COLOR[f.type] + '"/>' +
+        '<text class="val" x="' + (x0 + w + 6) + '" y="' + (yy + 15) + '">' + mil(f.v) + ' <tspan style="font-weight:400;fill:var(--muted)">' + pct(f.v / total) + '</tspan></text></g>';
+    });
+    box.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" role="img" aria-label="Bars of barrels awarded to each company. The table below holds the same data.">' + s + '</svg>';
+    bindTips(box);
+  }
+
+  /* ---------- SPR level ---------- */
+  function chartSpr() {
+    var box = $("ch-spr"), W = Math.max(280, box.clientWidth), H = framed ? 200 : 230;
+    var m = { l: 38, r: 58, t: 34, b: 24 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var pts = D.spr.map(function (p) { return { d: p[0], t: Date.parse(p[0]), v: p[1] / 1000 }; });
+    var t0 = pts[0].t, t1 = pts[pts.length - 1].t;
+    var lo = Math.floor(Math.min.apply(null, pts.map(function (p) { return p.v; })) / 50) * 50;
+    var hi = Math.ceil(Math.max.apply(null, pts.map(function (p) { return p.v; })) / 50) * 50;
+    var x = function (t) { return m.l + (t - t0) / (t1 - t0) * iw; }, y = function (v) { return m.t + ih - (v - lo) / (hi - lo) * ih; };
+    var s = "";
+    for (var v = lo; v <= hi; v += 50) s += '<line class="gridline" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text x="' + (m.l - 6) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + v + '</text>';
+    var d = new Date(t0); d.setUTCDate(1); d.setUTCMonth(d.getUTCMonth() + 1);
+    var every = iw < 520 ? 3 : 2;
+    for (; d.getTime() <= t1; d.setUTCMonth(d.getUTCMonth() + 1)) {
+      if (d.getUTCMonth() % every) continue;
+      var lab = MONTHS[d.getUTCMonth()] + (d.getUTCMonth() < every ? " " + d.getUTCFullYear() : "");
+      s += '<text x="' + x(d.getTime()) + '" y="' + (H - 6) + '" text-anchor="middle">' + lab + '</text>';
+    }
+    awardedRounds.forEach(function (r, i) {
+      var xx = x(Date.parse(r.award_date)), ly = i % 2 ? 12 : 26;
+      s += '<line x1="' + xx + '" x2="' + xx + '" y1="' + (ly + 4) + '" y2="' + y(lo) + '" stroke="var(--muted)" stroke-dasharray="3 3" stroke-width="1"/>' +
+           '<text class="name" x="' + xx + '" y="' + ly + '" text-anchor="middle" style="font-size:11.5px">' + r.round + '</text>';
+    });
+    s += '<text x="' + m.l + '" y="12" style="font-size:11.5px">Round</text>';
+    s += '<path d="' + pts.map(function (p, i) { return (i ? "L" : "M") + x(p.t).toFixed(1) + " " + y(p.v).toFixed(1); }).join("") + '" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round"/>';
+    var last = pts[pts.length - 1];
+    s += '<circle cx="' + x(last.t) + '" cy="' + y(last.v) + '" r="4" fill="var(--teal)" stroke="var(--panel)" stroke-width="2"/>' +
+         '<text class="val" x="' + (x(last.t) + 8) + '" y="' + (y(last.v) + 4) + '">' + last.v.toFixed(1) + '</text>' +
+         '<text x="' + (x(last.t) + 8) + '" y="' + (y(last.v) + 18) + '" style="font-size:11px">' + shortDate(last.d) + '</text>';
+    s += '<line id="spr-x" y1="' + m.t + '" y2="' + y(lo) + '" stroke="var(--ink)" stroke-width="1" opacity="0"/><circle id="spr-dot" r="4" fill="var(--teal)" stroke="var(--panel)" stroke-width="2" opacity="0"/>' +
+         '<rect id="spr-hit" x="' + m.l + '" y="' + m.t + '" width="' + iw + '" height="' + ih + '" fill="transparent"/>';
+    box.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" role="img" aria-label="Line chart of weekly Strategic Petroleum Reserve crude oil stocks in million barrels, with the award date of each round marked.">' + s + '</svg>';
+    var svg = box.querySelector("svg"), hit = box.querySelector("#spr-hit"), xl = box.querySelector("#spr-x"), dot = box.querySelector("#spr-dot");
+    function move(e) {
+      var ev = e.touches ? e.touches[0] : e, r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) * (W / r.width);
+      var tt = t0 + (px - m.l) / iw * (t1 - t0), best = pts[0];
+      pts.forEach(function (p) { if (Math.abs(p.t - tt) < Math.abs(best.t - tt)) best = p; });
+      xl.setAttribute("x1", x(best.t)); xl.setAttribute("x2", x(best.t)); xl.setAttribute("opacity", ".35");
+      dot.setAttribute("cx", x(best.t)); dot.setAttribute("cy", y(best.v)); dot.setAttribute("opacity", "1");
+      var aw = awardedRounds.filter(function (a) { var dt = Date.parse(a.award_date); return dt <= best.t && dt > best.t - 7 * 864e5; });
+      showTip("<b>Week ending " + longDate(best.d) + "</b><br><b>" + best.v.toFixed(1) + " million</b> barrels" + (aw.length ? "<br><span class='dim'>Round " + aw.map(function (a) { return a.round; }).join(", ") + " awarded this week</span>" : ""), ev);
+    }
+    function out() { xl.setAttribute("opacity", "0"); dot.setAttribute("opacity", "0"); hideTip(); }
+    hit.addEventListener("mousemove", move); hit.addEventListener("mouseleave", out);
+    hit.addEventListener("touchstart", move, { passive: true }); hit.addEventListener("touchmove", move, { passive: true });
+  }
+
+  /* ---------- table ---------- */
+  function table(rows) {
+    var k = state.sortK, dir = state.sortDir;
+    var val = function (x) { return k === "minprem" ? roundBy[x.round].min_premium_low_pct : x[k]; };
+    var sorted = rows.slice().sort(function (a, b) {
+      var A = val(a), B = val(b);
+      return (A < B ? -1 : A > B ? 1 : (b.barrels - a.barrels)) * dir;
+    });
+    $("tbl").querySelector("tbody").innerHTML = sorted.map(function (x) {
+      return '<tr><td class="nowrap">' + longDate(x.award_date) + '</td><td>' + x.round + '</td><td>' + esc(x.company_as_listed) + '</td>' +
+        '<td class="nowrap"><span class="sw" style="background:' + COLOR[x.type] + '"></span>' + x.type + '</td>' +
+        '<td class="num">' + commas(x.barrels) + '</td><td class="hide-narrow">' + premText(roundBy[x.round]) + '</td>' +
+        '<td class="hide-narrow nowrap"><a href="' + esc(x.source_url) + '" target="_blank" rel="noopener">Award sheet</a></td></tr>';
+    }).join("") || '<tr><td colspan="7" class="empty">No contracts match these filters.</td></tr>';
+    $("t-total").textContent = commas(sum(rows, function (x) { return x.barrels; }));
+    $("t-count").textContent = rows.length === D.ledger.length ? "all " + rows.length + " contracts" : rows.length + " of " + D.ledger.length + " contracts";
+    document.querySelectorAll("#tbl th[data-k]").forEach(function (th) {
+      th.setAttribute("aria-sort", th.getAttribute("data-k") === k ? (dir > 0 ? "ascending" : "descending") : "none");
+    });
+  }
+
+  function csvHref() {
+    var cols = ["round", "rfp_no", "award_date", "offered_bbl", "company_as_listed", "company", "type", "barrels", "source_url"];
+    var q = function (v) { v = String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+    var txt = cols.join(",") + "\n" + D.ledger.map(function (x) { return cols.map(function (c) { return q(x[c]); }).join(","); }).join("\n") + "\n";
+    return "data:text/csv;charset=utf-8," + encodeURIComponent(txt);
+  }
+
+  function render() { var rows = filtered(); cards(rows); chartRounds(rows); chartFirms(rows); table(rows); }
+
+  /* ---------- setup ---------- */
+  function opts(el, first, list) { el.innerHTML = '<option value="all">' + first + '</option>' + list.map(function (o) { return '<option value="' + esc(o[0]) + '">' + esc(o[1]) + '</option>'; }).join(""); }
+  opts($("f-round"), "All rounds", awardedRounds.map(function (r) { return [r.round, "Round " + r.round + " (" + shortDate(r.award_date) + ")"]; }));
+  opts($("f-type"), "All types", TYPES.map(function (t) { return [t, t]; }));
+  var firmNames = {}; D.ledger.forEach(function (x) { firmNames[x.company] = 1; });
+  opts($("f-firm"), "All companies", Object.keys(firmNames).sort().map(function (n) { return [n, n]; }));
+  $("legend").innerHTML = TYPES.map(function (t) { return '<li title="' + esc(TYPE_NOTE[t]) + '"><span class="sw" style="background:' + COLOR[t] + '"></span>' + t + '</li>'; }).join("");
+  $("dl").href = csvHref();
+
+  [["f-round", "round"], ["f-type", "type"], ["f-firm", "firm"]].forEach(function (p) { $(p[0]).addEventListener("change", function (e) { state[p[1]] = e.target.value; render(); }); });
+  $("f-size").addEventListener("change", function (e) { state.size = +e.target.value; render(); });
+  $("f-q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+  $("f-merge").addEventListener("change", function (e) { state.merge = e.target.checked; render(); });
+  $("f-reset").addEventListener("click", function () {
+    state.round = state.type = state.firm = "all"; state.size = 0; state.q = ""; state.merge = false;
+    ["f-round", "f-type", "f-firm"].forEach(function (id) { $(id).value = "all"; }); $("f-size").value = "0"; $("f-q").value = ""; $("f-merge").checked = false; render();
+  });
+  document.querySelectorAll("#tbl th[data-k]").forEach(function (th) {
+    th.addEventListener("click", function () { var k = th.getAttribute("data-k"); state.sortDir = state.sortK === k ? -state.sortDir : 1; state.sortK = k; table(filtered()); });
+  });
+
+  var lastSpr = D.spr[D.spr.length - 1], pending = D.rounds.filter(function (r) { return awardedRounds.indexOf(r) < 0; });
+  $("source").innerHTML = 'Sources: U.S. Department of Energy award sheets and requests for proposals for each round (<a href="https://www.spr.doe.gov/" target="_blank" rel="noopener">spr.doe.gov</a>); U.S. Energy Information Administration, weekly SPR crude oil stocks, through the week ending ' + longDate(lastSpr[0]) + '. ' +
+    'The award sheets list only a company name and a number of barrels. The type of company is our classification. "Minimum extra owed" is the lowest premium, in extra barrels as a percent of barrels borrowed, the government would accept in that round, from the request for proposals; the premium each company bid is not public. Barrels awarded are not the same as barrels delivered. ' +
+    (pending.length ? 'Round ' + pending.map(function (r) { return r.round; }).join(", ") + ' (up to ' + mil(sum(pending, function (r) { return r.offered_bbl; })) + ' million barrels offered) had no awards posted when this was built. ' : '') +
+    'Data as of ' + longDate(D.built) + '. Free to use with credit. Built by <a href="https://www.data4thepeople.com" target="_blank" rel="noopener">Data 4 The People</a>.';
+
+  render(); chartSpr();
+  var lastW = wrap.clientWidth;
+  if (window.ResizeObserver) new ResizeObserver(function () { if (wrap.clientWidth !== lastW) { lastW = wrap.clientWidth; render(); chartSpr(); } }).observe(wrap);
+})();
+</script>
+</body>
+</html>
