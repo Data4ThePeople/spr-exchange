@@ -22,6 +22,7 @@ Output
   data/processed/trade_example_round_<round>.csv
 """
 import csv, datetime, json, re, sys
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -34,6 +35,11 @@ def front_month():
     tz = datetime.timezone(datetime.timedelta(seconds=res["meta"]["gmtoffset"]))
     return {datetime.datetime.fromtimestamp(t, tz).date().isoformat(): c
             for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c is not None}
+
+
+def cents(v):
+    """Round to the cent, halves up, so a mean like 72.205 does not depend on float noise."""
+    return float(Decimal(str(round(v, 6))).quantize(Decimal("0.01"), ROUND_HALF_UP))
 
 
 def ym(mon, year, shift=0):
@@ -103,12 +109,12 @@ def main():
                 owed = 1 + prem / 100
                 rows.append(dict(
                     round=ROUND, priced_on=label, date=day, site=t["site"], delivery=t["delivery_period"],
-                    offered_bbl=t["offered_bbl"], return_window=window, premium_pct=prem, return_price=round(ret, 2),
-                    cost_to_return=round(owed * ret, 2), sale_front_month=round(front[day], 2),
-                    margin_front_month=round(front[day] - owed * ret, 2),
+                    offered_bbl=t["offered_bbl"], return_window=window, premium_pct=prem, return_price=cents(ret),
+                    cost_to_return=cents(owed * ret), sale_front_month=cents(front[day]),
+                    margin_front_month=cents(front[day] - owed * ret),
                     breakeven_premium_front_pct=round((front[day] / ret - 1) * 100, 1),
                     sale_delivery_contract=later if later else "",
-                    margin_delivery_contract=round(later - owed * ret, 2) if later else "",
+                    margin_delivery_contract=cents(later - owed * ret) if later else "",
                     breakeven_premium_delivery_pct=round((later / ret - 1) * 100, 1) if later else ""))
     out = ROOT / f"data/processed/trade_example_round_{ROUND}.csv"
     with out.open("w", newline="") as f:

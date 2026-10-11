@@ -3,7 +3,7 @@
 One section per dataset, written before any analysis, updated whenever we learn
 something new. The point is to know the traps before they show up in a chart.
 
-Retrieval date for everything below: October 10, 2026, unless noted.
+Retrieval date for everything below: October 10, 2026, unless noted. Futures were pulled again on October 11, 2026 (`data/raw/futures/_retrieved.json`).
 
 ## SPR exchange award sheets (U.S. Department of Energy)
 
@@ -80,7 +80,8 @@ per-round terms live: sites, crude streams, delivery months, minimum premiums,
 return windows, and the title clause.
 
 **Where it comes from.** Same DOE folders as the award sheets. 24 PDFs in
-`data/raw/doe_rfps/` with URLs and SHA-256 hashes in `manifest.json`. Spreadsheet
+`data/raw/doe_rfps/`. `manifest.json` there lists 29 files with URLs and SHA-256
+hashes: these 24 plus the five award sheets held in `data/raw/doe_awards/`. Spreadsheet
 exhibits (offer form, contract template) were not downloaded.
 
 **Version and vintage.** RFPs DE-RP96-26PO00001 through 00006. Round 1 has three
@@ -88,9 +89,19 @@ amendments; round 2 has one, which moved 3 million barrels from Bryan Mound
 sweet (August) to Bryan Mound sour (July). `data/reference/rfp_terms.csv` uses
 the amended round 2 table.
 
-**Coverage.** All six rounds. The premium tables are images of spreadsheets in
-the PDFs; we keyed them by hand into `data/reference/rfp_terms.csv` with the
-page each came from. They need a second read against the PDFs in the tie-out.
+**Coverage.** All six rounds. The premium tables sit in the PDFs as pasted spreadsheets
+(they do have a text layer); we keyed them by hand into
+`data/reference/rfp_terms.csv` with the page each came from. The independent
+tie-out of October 11, 2026 re-read all 25 rows and all 6 rows of `rounds.csv`
+against the PDFs and found no difference.
+
+**Inconsistencies inside DOE's documents.** Round 3 (RFP 00005): the B.5 table
+on page B-6 lists Big Hill at 14,000,000 (August) and 15,000,000 (September);
+the B.1 table and two later copies say 11,000,000 and 14,000,000, which add to
+the stated 40,000,000 and agree with Q&A question 3. We use 11 and 14 million.
+Round 1 (RFP 00001): the Bryan Mound receipt rate carries a footnote of 2
+million barrels a month for "Nov-Feb 2027" on pages B-1 and C-1 and "Jan-Feb
+2027" on B-5 and B-6.
 
 **Changes over time.** The premium design changed. Round 1 set a minimum
 premium per site and one return window. From round 1.a on, DOE added a schedule
@@ -146,7 +157,7 @@ figure is the one to quote for a finished month.
 
 **Suppressed, censored or masked values.** None known in these series.
 
-**Missing data.** Null values are dropped by the fetch script; none fall in 2026.
+**Missing data.** The fetch script drops null values; the raw files contain none.
 
 **Revisions.** Weekly values are not revised week to week, but the monthly
 series replaces them as the record and is itself revised. We refresh the whole
@@ -179,8 +190,10 @@ symbol (for example CLZ26.NYM). Raw JSON in `data/raw/futures/`; tidy table in
 
 **Coverage.** Every value is an exchange close as relayed by Yahoo. Nothing is
 interpolated by us. Yahoo no longer serves contracts that have expired, so the
-April through October 2026 WTI contracts are missing. For those months the
-front of the curve has to come from EIA's WTI spot price instead. Several
+April through October 2026 WTI contracts are missing. For the near end of the
+curve the trade math uses Yahoo's front-month continuous contract (`CL=F`), not
+EIA's spot price. The two differ: on April 13, 2026 EIA spot was $100.72 and
+`CL=F` closed at $99.08; on June 15, $84.65 and $80.75. Several
 far-dated Brent months are also not served. Missing symbols are listed in
 `data/raw/futures/_retrieved.json`.
 
@@ -257,8 +270,8 @@ original article located and read before it is used.
 
 ## Worked trade example (`scripts/trade_math.py`)
 
-- **What it is:** a per-barrel estimate of the borrow, sell and hedge trade for one round. Run as `scripts/trade_math.py <round>` for rounds 1.a, 1.b, 2, 3 or 4. Output: `data/processed/trade_example_round_<round>.csv`, one row per pricing date, lot and return window.
-- **Method:** barrels owed are 1 plus the RFP minimum premium plus the return window's add-on (`data/reference/rfp_terms.csv`). Return price is the mean WTI futures close for the contract months in the window. Gross margin per barrel borrowed = sale price - barrels owed x return price. The break-even premium is sale price / return price - 1. Computed on the bid due date and on the award date.
+- **What it is:** a per-barrel estimate of the borrow, sell and hedge trade for one round. Run as `scripts/trade_math.py <round>`. Outputs are built and checked for rounds 1.b, 3 and 4 only. Output: `data/processed/trade_example_round_<round>.csv`, one row per pricing date, lot and return window.
+- **Method:** barrels owed are 1 plus the RFP minimum premium plus the return window's add-on (`data/reference/rfp_terms.csv`). Return price is the mean WTI futures close for the contract months in the window. Gross margin per barrel borrowed = sale price - barrels owed x return price. The break-even premium is sale price / return price - 1. Computed on the bid due date and on the award date; a round with no award yet (round 4) is priced on the bid due date and on the latest close held, labeled "latest". Each contract month in a window is the contract whose delivery month is that month. Prices are rounded to the cent with halves rounded up.
 - **Two sale prices:** (1) the front-month WTI futures close (`data/raw/futures/CL=F.json`, Yahoo continuous contract), which is the highest price on the curve when near prices sit above later ones; (2) the contract for the month after the lot's delivery month, which is closer to what oil lifted that month sells for. Yahoo does not serve the April to October 2026 contracts, so (2) is blank for rounds 1 to 3.
 - **Limits:** the premium each firm bid is not public, so the minimum is used and the result is a ceiling. Not included: the grade's gap to WTI (most lots are sour crude), pipeline and shipping, the letter of credit, interest on the sale proceeds. When or whether any firm hedged is not known. Where a far contract month is missing (September and October 2029), the window uses the months that are served.
 

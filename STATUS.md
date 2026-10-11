@@ -43,3 +43,4 @@ None.
 - 2026-10-11: return schedule bounds built (dist/returns.html): 8.48M certain back by end of 2027, 87.06M by end of 2028, last due July 31, 2029. Waiting on Eric's review.
 - 2026-10-11: own tie-out script written (scripts/tie_out.py), 32 of 32 checks pass. Independent tie-out by a fresh agent launched. Eric says the post publishes 2026-10-12; no records request.
 - 2026-10-11: GitHub Pages enabled (main, root), pages live under https://data4thepeople.github.io/spr-exchange/dist/. Eric: move to 2a after the independent tie-out finishes and its edits are worked through.
+- 2026-10-11: independent tie-out back. No difference in any published number; ledger 31/31, rfp_terms 25/25, rounds 6/6, EIA and futures row for row. Fixed: cent rounding ties in two trade CSVs, DATASETS.md statements, 'three of the six rounds', 'agreed to lend', receipt-rate sources. Open for Eric: 'Maximum profit' and 'ideal time' wording.
