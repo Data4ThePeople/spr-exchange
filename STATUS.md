@@ -69,3 +69,4 @@ None.
 - 2026-10-11: 2f dry run clean (44 slices, 2 images to upload, new blog_post uid spr-exchange). The real push was blocked by the permission classifier; waiting on Eric to run it.
 - 2026-10-11: Eric ran the push. Draft aswH9xEAACkAt-Zz created in the Migration Release, 44 slices, 2 images uploaded, tags and author empty. Read-back check not run: no Prismic read token is set up.
 - 2026-10-11: publication moved to October 11, 2026 at 6:30 p.m. EDT at Eric's instruction. Prismic draft needs a re-push to carry it.
+- 2026-10-11: Prismic draft aswH9xEAACkAt-Zz updated with the new date and time (Migration Release, still a draft).
