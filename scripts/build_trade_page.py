@@ -5,6 +5,7 @@ Inputs
   data/processed/trade_example_round_<round>.csv   from scripts/trade_math.py
   data/processed/spr_2026_exchange_awards.csv      from scripts/build_ledger.py
   data/reference/rounds.csv
+  data/reference/transport_costs.csv              published pipeline rates, for the notes
   scripts/trade_template.html, logo/d4tp-text-dark.svg
 
 Output
@@ -59,7 +60,10 @@ def main():
             trader_taken=sum(int(a["barrels"]) for a in awards
                              if a["round"] == rnd and a["type"] == "Trading house") if posted else None,
             example=ex))
-    data = dict(built=datetime.date.today().isoformat(), rounds=out_rounds)
+    pipes = [float(r["cents_per_bbl"]) for r in csv.DictReader((ROOT / "data/reference/transport_costs.csv").open())
+             if r["item"] == "Pipeline"]
+    data = dict(built=datetime.date.today().isoformat(), rounds=out_rounds,
+                pipeline_cents=dict(low=min(pipes), high=max(pipes)))
     logo = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "logo/d4tp-text-dark.svg").read_bytes()).decode()
     html = (ROOT / "scripts/trade_template.html").read_text()
     if "/*__DATA__*/null" not in html or "__LOGO__" not in html:

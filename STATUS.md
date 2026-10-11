@@ -36,3 +36,4 @@ None.
 - 2026-10-11: round 4 priced on bid date and latest close; RFP B-1 terms re-read against the PDF and match rfp_terms.csv. DOE has posted no award as of today.
 - 2026-10-11: trade explainer built (dist/trade.html) with rounds 1.b, 3 and a pending card for round 4. Waiting on Eric's review and edits. Hero idea from Eric saved to memory.
 - 2026-10-11: modeled profit for trading houses added to dist/trade.html (per-barrel best case x trader barrels, before costs). All six RFPs put transport costs on the borrower (B.6(b)); not priced.
+- 2026-10-11: trade explainer relabeled 'Maximum profit before transportation costs' with Eric's fine print; Nederland pipeline tariffs saved. Terminal fees not public.

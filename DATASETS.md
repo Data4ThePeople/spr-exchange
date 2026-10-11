@@ -266,3 +266,9 @@ original article located and read before it is used.
 
 - One example per round (1.b, 3, 4): the lot and return window with the largest gross margin on the bid due date in `trade_example_round_<round>.csv`, at the minimum premium. Sale price is the contract for the month after pickup where held (round 4), else the front-month close (rounds 1.b and 3).
 - "Barrels taken" comes from the award ledger; a round with no award sheet shows as pending. Set `SHOW_PENDING_MATH = False` in the build script to leave that card empty.
+
+## Transportation costs (`data/reference/transport_costs.csv`, `data/raw/tariffs/`)
+
+- **What we hold:** ETP Crude LLC's published pipeline rates from the Energy Transfer Nederland terminal (custody transfer point for West Hackberry and Big Hill oil) to the Motiva and Total refineries and the Zydeco Pipeline: 20.57 to 31.77 cents a barrel, effective July 1, 2026 (TX No. 14.5.0 and F.E.R.C. No. 12.8.0, PDFs saved). The rate in force in April 2026 was the prior issue; the F.E.R.C. Zydeco rate was 31.32 cents then, as reported in a search summary and not yet read from the PDF.
+- **What we do not hold:** terminal, dock and storage fees at Nederland, Freeport or Texas City (private contracts; not found in any public filing), and pipeline rates out of Bryan Mound and Bayou Choctaw. The Texas coastal protection fee is 1.333 cents a barrel when in force; the Comptroller's site says it was suspended as of May 1, 2026 (from a search summary, not yet checked on the page).
+- **Use:** quoted in the notes of `dist/trade.html` only. No transportation cost is subtracted from any figure.

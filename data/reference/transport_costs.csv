@@ -1,0 +1,4 @@
+item,from,to,cents_per_bbl,effective,source,source_file
+Pipeline,ETNT Nederland Terminal,Motiva refinery (Port Arthur),20.57,2026-07-01,ETP Crude LLC tariff TX No. 14.5.0,data/raw/tariffs/ETPC_TX_RRC_1450.pdf
+Pipeline,ETNT Nederland Terminal,Total Petrochemicals refinery (Port Arthur),31.77,2026-07-01,ETP Crude LLC tariff TX No. 14.5.0,data/raw/tariffs/ETPC_TX_RRC_1450.pdf
+Pipeline,ETNT Nederland Terminal,Zydeco Pipeline (Port Neches),31.77,2026-07-01,ETP Crude LLC tariff F.E.R.C. No. 12.8.0,data/raw/tariffs/ETPC_FERC_12.8.0.pdf

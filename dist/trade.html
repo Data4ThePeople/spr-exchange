@@ -52,6 +52,7 @@ svg .hit { fill: transparent; cursor: default; }
 .model { margin: 0 0 10px; }
 .model .k { font-size: 12.5px; color: var(--muted); }
 .model .v2 { font-size: 22px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.model .fine { font-size: 11.5px; color: var(--muted); font-style: italic; margin-top: 3px; }
 .why { font-size: 13.5px; margin: 0 0 8px; padding: 0; list-style: none; }
 .why li { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid var(--hair); }
 .why b { font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -122,7 +123,7 @@ html.embed .steps { margin: 10px 0; }
 </div>
 
 <script>
-const DATA = {"built":"2026-10-11","rounds":[{"round":"1.b","bids_due":"2026-04-13","award_date":"2026-04-17","offered":30000000,"taken":26030000,"trader_taken":16030000,"example":{"site":"West Hackberry","pickup":"May 2026","window":"Oct-Dec 2028","date":"2026-04-13","premium_pct":20.0,"later_price":68.37,"cost":82.05,"sale":99.08,"sale_basis":"front","left":17.03,"gap_pct":44.9}},{"round":"3","bids_due":"2026-06-15","award_date":"2026-06-22","offered":40000000,"taken":500000,"trader_taken":500000,"example":{"site":"Big Hill","pickup":"Sep 2026","window":"Oct-Dec 2027","date":"2026-06-15","premium_pct":10.0,"later_price":70.58,"cost":77.63,"sale":80.75,"sale_basis":"front","left":3.12,"gap_pct":14.4}},{"round":"4","bids_due":"2026-10-06","award_date":null,"offered":40000000,"taken":null,"trader_taken":null,"example":{"site":"Bryan Mound","pickup":"Nov 2026","window":"Nov-Dec 2029","date":"2026-10-06","premium_pct":17.5,"later_price":66.86,"cost":78.56,"sale":88.43,"sale_basis":"delivery","left":9.87,"gap_pct":32.3}}]};
+const DATA = {"built":"2026-10-11","rounds":[{"round":"1.b","bids_due":"2026-04-13","award_date":"2026-04-17","offered":30000000,"taken":26030000,"trader_taken":16030000,"example":{"site":"West Hackberry","pickup":"May 2026","window":"Oct-Dec 2028","date":"2026-04-13","premium_pct":20.0,"later_price":68.37,"cost":82.05,"sale":99.08,"sale_basis":"front","left":17.03,"gap_pct":44.9}},{"round":"3","bids_due":"2026-06-15","award_date":"2026-06-22","offered":40000000,"taken":500000,"trader_taken":500000,"example":{"site":"Big Hill","pickup":"Sep 2026","window":"Oct-Dec 2027","date":"2026-06-15","premium_pct":10.0,"later_price":70.58,"cost":77.63,"sale":80.75,"sale_basis":"front","left":3.12,"gap_pct":14.4}},{"round":"4","bids_due":"2026-10-06","award_date":null,"offered":40000000,"taken":null,"trader_taken":null,"example":{"site":"Bryan Mound","pickup":"Nov 2026","window":"Nov-Dec 2029","date":"2026-10-06","premium_pct":17.5,"later_price":66.86,"cost":78.56,"sale":88.43,"sale_basis":"delivery","left":9.87,"gap_pct":32.3}}],"pipeline_cents":{"low":20.57,"high":31.77}};
 const framed = window.self !== window.top;
 if (framed) document.documentElement.classList.add("embed");
 
@@ -188,9 +189,9 @@ function card(r) {
       <li><span>How much higher today's price was than the price for ${esc(spell(e.window))}</span><b>${pct(e.gap_pct)}</b></li>
       <li><span>Extra oil the government asked for</span><b>${pct(e.premium_pct)}</b></li>
     </ul>
-    <div class="model"><div class="k">Modeled profit for trading companies</div>` +
-    (pending ? `<div class="v2">Not known yet</div><div class="k">It depends on how many barrels they take.</div>`
-             : `<div class="v2">${bigUsd(e.left * r.trader_taken)}</div><div class="k">${mil(r.trader_taken)} million barrels they borrowed, times ${usd(e.left)}. Before shipping and other costs.</div>`) + `</div>`;
+    <div class="model"><div class="k">Maximum profit before transportation costs</div>` +
+    (pending ? `<div class="v2">Not known yet</div><div class="k">It depends on how many barrels trading companies take.</div>`
+             : `<div class="v2">${bigUsd(e.left * r.trader_taken)}</div><div class="k">Trading companies borrowed ${mil(r.trader_taken)} million barrels, times ${usd(e.left)}.</div><div class="fine">This assumes they locked in both prices at the ideal time. The real figure is likely much lower.</div>`) + `</div>`;
   return `<section class="round${pending ? " pending" : ""}">
     <h3>${esc(name)}${pending ? `<span class="tag">Results pending</span>` : ""}</h3>
     <p class="when">Bids due ${longDate(r.bids_due)}</p>${body}
@@ -204,7 +205,7 @@ document.querySelectorAll(".hit").forEach(el => {
 });
 
 document.getElementById("tbl").innerHTML =
-  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th><th class="num">Taken by trading companies</th><th class="num">Modeled profit, trading companies</th></tr></thead><tbody>` +
+  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th><th class="num">Taken by trading companies</th><th class="num">Maximum profit before transportation costs, trading companies</th></tr></thead><tbody>` +
   DATA.rounds.map(r => { const e = r.example; return `<tr><td>${monthOf(r.bids_due)} (bids due ${longDate(r.bids_due)})</td>` +
     (e ? `<td>${esc(e.site)}, ${esc(spell(e.pickup))}</td><td>${esc(spell(e.window))}</td><td class="num">${usd(e.sale)}</td><td class="num">${usd(e.later_price)}</td><td class="num">${pct(e.premium_pct)}</td><td class="num">${usd(e.cost)}</td><td class="num">${usd(e.left)}</td>`
        : `<td colspan="7">Not shown</td>`) +
@@ -214,8 +215,8 @@ const frontRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis ==
 const laterRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis === "delivery").map(r => monthOf(r.bids_due));
 document.getElementById("notes").innerHTML = `
   <p><b>What this is.</b> An estimate of what the government's terms allowed, not what any company earned. Each card shows the pickup month and return date that left the most per barrel, at the smallest amount of extra oil the government would accept. Companies could offer more extra oil to win, and their offers are not public.</p>
-  <p><b>Modeled profit.</b> The amount left over per barrel, times the barrels awarded to trading companies in that round. These are firms that buy and sell oil but do not run refineries. It is a best case before costs, for the group as a whole, and assumes every barrel was sold and bought back at the prices shown.</p>
-  <p><b>What is left out.</b> Borrowers pay to move the oil out of the reserve and back in. The government's terms put pipeline fees, shipping, port charges and taxes on the borrower. Also left out: the bank guarantee each borrower must post, and the lower price of "sour" (high-sulfur) oil in some rounds. All of these shrink what is left over.</p>
+  <p><b>Maximum profit.</b> The amount left over per barrel, times the barrels awarded to trading companies in that round. These are firms that buy and sell oil but do not run refineries. It is a best case before costs, for the group as a whole, and assumes every barrel was sold and bought back at the prices shown. Prices moved quickly, so a company that locked in on a different day could have kept much less.</p>
+  <p><b>What is left out.</b> Borrowers pay to move the oil out of the reserve and back in. The government's terms put pipeline fees, shipping, port charges and taxes on the borrower. Also left out: the bank guarantee each borrower must post, and the lower price of "sour" (high-sulfur) oil in some rounds. All of these shrink what is left over. Most of these fees are set in private contracts. One that is published: moving oil by pipeline from the terminal that serves two of the reserve sites to nearby refineries costs about ${Math.round(DATA.pipeline_cents.low)} to ${Math.round(DATA.pipeline_cents.high)} cents a barrel.</p>
   <p><b>Prices.</b> West Texas Intermediate futures closes as relayed by Yahoo Finance, not official exchange settlements.` +
   (frontRounds.length ? ` For the ${frontRounds.join(" and ")} round${frontRounds.length > 1 ? "s" : ""} the "sell now" price is the nearest futures contract, which was the highest price that day.` : "") +
   (laterRounds.length ? ` For the ${laterRounds.join(" and ")} round${laterRounds.length > 1 ? "s" : ""} it is the contract for the month after pickup.` : "") + `</p>
