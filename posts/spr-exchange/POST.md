@@ -47,7 +47,7 @@ There is one big difference from 2022. That oil was sold. This oil is being lent
 
 ## How the loan works
 
-The Energy Department calls it an "exchange." A company borrows crude oil from the reserve now and promises to return the same amount later, plus extra barrels. The extra is called a premium. It works like interest, paid in oil.
+The Energy Department calls it an "exchange." A company borrows crude oil from the reserve now and promises to return the same amount of oil later, plus extra barrels. The extra is called a premium. It works like interest, paid in oil.
 
 Here is where the auction comes in. For each batch of oil, the department sets a minimum premium. Companies bid by offering to return more than the minimum, and the highest offers win. In the first rounds this spring, the minimum ran from 17% to 24%. The department has said the winning bids averaged about 25%.
 
@@ -59,7 +59,7 @@ After each round, the department posts a one-page sheet listing the winners. We 
 
 Thirteen companies won 31 contracts for 133.56 million barrels. Trading houses, which buy and sell oil but do not refine it, took 45.0%. Refiners took 38.3%. The trading arms of two oil majors took 14.8%, and a pipeline company took the rest. The largest borrower was Trafigura, a trading house, with 34.35 million barrels, or 25.7% of the total.
 
-The contracts do not say where the oil has to go. Ownership passes to the borrower when the oil leaves the reserve, and nothing in the terms limits resale or export. The department told bidders as much in writing: "The goal of the Emergency Exchange Release is to get barrels onto the market."
+The contracts do not say where the oil has to go. Ownership passes to the borrower when the oil leaves the reserve, and nothing in the terms limits resale or export. The department told bidders as much in writing: "The goal of the Emergency Exchange Release is to get barrels onto the market." Which market? The department's own announcements say the goal is to stabilize GLOBAL oil supply, and nothing in the contracts keeps the oil here.
 
 ## Why pay 20% interest in oil?
 
@@ -69,13 +69,15 @@ Returning 120 barrels for every 100 borrowed sounds like a bad deal. The chart b
 
 Take the April round. On April 13, the day bids were due, a barrel for quick delivery sold for $99.08. On the same day, a company could sign a contract to buy oil for late 2028 at $68.37. Oil for later delivery was cheaper, which is common when supply is short today. A borrower that owed 20% extra needed 1.2 barrels in 2028, at a cost of $82.05. That left $17.03 for each barrel borrowed, before shipping and other costs.
 
-What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil for late 2028, and the government asked for 20%. When the gap is bigger than the premium, borrowing pays. Companies took 86.8% of the oil offered in that round.
+What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil for late 2028, and the government asked for 20%. When the gap is bigger than the premium, borrowing pays. Companies snapped up 86.8% of the oil offered in that round.
 
-By June the gap had shrunk to 14.4%. The department cut its minimum premium to between 8% and 9%, and companies still took only 500,000 of the 40 million barrels offered.
+By June the gap had shrunk to 14.4%. As the math changed, the department cut its minimum premium to between 8% and 9%, and companies still took only 500,000 of the 40 million barrels offered. 
+
+Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to it tomorrow.
 
 Trading houses borrowed 16.03 million barrels in the April round. If each locked in both prices on the day bids were due, the group's profit before transportation costs comes to about $273 million. That is our estimate of what the terms allowed, not what any company earned. Bids are not public, and a company that locked in prices on a different day could have made much less or much more.
 
-The department has not posted results for the latest round, which had bids due October 6. The same math shows $9.87 a barrel there for the longest return dates.
+The cool thing here is that now that we understand the general math, we can get a sense of what the future holds. The latest round with bids due on October 6 has not been posted. But we can run the math on this round and find that the same math shows $9.87 a barrel there for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
 
 ## When does the oil come back?
 
@@ -91,7 +93,7 @@ The Energy Department has a case for all of this. Releasing oil in a supply emer
 
 In our view, the design still leaves the country carrying two risks that the borrowers do not.
 
-**The first is 2027.** Most of this oil is not due back next year. If supply gets worse before it gets better, the reserve has less to give. Markets have moved in that direction since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
+**The first is 2027.** Most of this oil is not due back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
 
 A borrower can protect itself against a move like that. It can lock in its buying price on the day it borrows. The government has no matching tool for the thing it gave up, which is having the oil on hand.
 
@@ -101,9 +103,9 @@ That has happened before. Return dates were pushed back more than once on oil le
 
 ## My view
 
-I am very upset by all of this. Look at Trafigura. We have basically outsourced the decision of when our oil comes back and where it goes to companies like this. There is nothing wrong with them per se. But their job is not to care about American energy security in 2027. Their job is to turn a profit on a trade. More than a quarter of the oil we lent this year has gone to this one company. What this tells me is that our government, if it cares about American energy security in 2027, is betting that these companies' financial incentives today align with lower risk for America in 2027. I just don't see how that is the case. To me it seems shortsighted.
+I am very upset by all of this. Look at Trafigura. We have basically outsourced the decision of when our oil comes back and where it goes to companies like this. There is nothing wrong with them per se. But their job is not to care about American energy security in 2027. Their job is to turn a profit on a trade. More than a quarter of the oil we lent this year has gone to this one company. What this tells me is that our government, if it cares about American energy security in 2027, is betting that these companies' financial incentives today align with lower risk for America in 2027. I just don't see how that is the case. To me it seems shortsighted, if we assume our government cares about our energy security. And if it doesn't, this is one more case of handing our energy strategy to corporate interests.
 
-I believe the U.S. should care what is done with its emergency oil. Under these contracts it does not. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. A trading house can sell it anywhere. Less than 1% of this oil went to a small refiner, and nearly half went to trading houses. Once it is sold, we have no idea where it goes. It is like pissing in the ocean.
+I believe the U.S. should care what is done with its emergency oil. Under these contracts it does not. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. A trading house can sell it anywhere. Less than 1% of this oil went to a small refiner, and nearly half went to trading houses. Once it is sold, we have no idea where it goes. The bet was that our oil would make a difference on the global market. That could have worked if the conflict had ended quickly. It didn't, and now our laissez-faire approach of lending emergency oil to the highest bidder may be backfiring.
 
 [In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. The reserve is where that shows up in a ledger.
 
