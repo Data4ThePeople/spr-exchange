@@ -3,6 +3,9 @@
   "page_subtitle": "The S in SPR is supposed to stand for strategic. In 2026, our emergency oil goes to the highest bidder, and the government is the one making the bet.",
   "published_date": "2026-10-12",
   "updated_date": "2026-10-12",
+  "meta_title": "How the 2026 SPR Oil Exchange Works and Who Borrowed",
+  "meta_description": "Who borrowed 133.56 million barrels from the Strategic Petroleum Reserve in 2026, why a 20% premium can still pay, and when the oil is due back.",
+  "meta_keywords": "Strategic Petroleum Reserve, SPR exchange 2026, SPR emergency exchange, who borrowed SPR oil, SPR oil loan premium, how much oil is in the SPR, when will the SPR be refilled, Trafigura SPR",
   "make_this_main_post": false,
   "slices": [
     {
@@ -845,5 +848,5 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Meet the Speculative Petroleum Reserve\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n  \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-exchange\"\n  }\n}"
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Meet the Speculative Petroleum Reserve\",\n  \"description\": \"Who borrowed 133.56 million barrels from the Strategic Petroleum Reserve in 2026, why a 20% premium can still pay, and when the oil is due back.\",\n  \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n  \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"keywords\": [\n    \"Strategic Petroleum Reserve\",\n    \"SPR exchange 2026\",\n    \"SPR emergency exchange\",\n    \"who borrowed SPR oil\",\n    \"SPR oil loan premium\",\n    \"how much oil is in the SPR\",\n    \"when will the SPR be refilled\",\n    \"Trafigura SPR\"\n  ],\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-exchange\"\n  }\n}"
 }
