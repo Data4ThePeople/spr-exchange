@@ -20,22 +20,22 @@ dividers: false
 
 If you’ve been following our work, you know that I am fascinated by oil markets, especially when they are disrupted in such spectacular fashion. This is why I have [written so extensively about them](https://www.data4thepeople.com/p/rip-us-energy-strategy/). Oil markets are, in my view, the ultimate complex system. Plus, not only do we complacently consume the products of this system, but we have them to thank for our entire standard of living, at least in the developed world (I designed and taught an entire class on this called “The Carbon Economy.”) Getting us all to a base understanding is critical.
 
-But I still have blind spots. One of them was the Strategic Petroleum Reserve (SPR). Over the past few months, I have watched the U.S. drain its SPR, right alongside you, using our free EIA inventory data visualization tool.
+But there is always something new to learn. One thing I never fully understood was the mechanics of the Strategic Petroleum Reserve (SPR). Over the past few months, I have watched the U.S. drain its SPR, right alongside you, using our free EIA inventory data visualization tool.
 
 ![Line chart titled U.S. Petroleum Inventories, Weekly Seasonality, set to the Strategic Reserve. One line per year since 1982 shows the reserve by week of the year, in million barrels. Most years sit between 500 and 700 million. The bold red 2026 line starts near 415 million, falls from about week 13, and ends near 283 million at week 40, below every other year on the chart at that point.](images/01-spr-inventory.png)
 *The Strategic Petroleum Reserve by week of the year, 1982 to 2026. The red line is 2026. Source: EIA weekly stocks, from our petroleum inventory tool.*
 
-But I honestly didn’t know how this all worked. I hadn’t done the analysis to – as Cuba Gooding Jr. iconically says in Jerry Maguire – “Show me the money!”
+It's easy to see that our emergency oil has been depleted. The harder part is why and how. I didn't know, because I hadn’t done the analysis to – as Cuba Gooding Jr. iconically says in Jerry Maguire – “Show me the money!”
 
 Well, over the weekend I did that analysis, and was shocked at what I found.
 
-The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not quite how it works – at least not the way we are drawing it down in 2026. Rather it’s more like an auction, with an auction room where a bidder can lock in a profit the day it bids. Where this oil goes? The government doesn’t say.
+The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not quite how it works – at least not the way we are drawing it down in 2026. Rather it’s more like a used car auction, where the buyer of the car can immediately lock in a profit on the car the day it bids. Where this oil goes? The government doesn’t say.
 
-So I am giving it a new name: the Speculative Petroleum Reserve. The companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a bet is the U.S. government.
+Based on my understanding of how the SPR works in 2026, I am giving it a new name: the Speculative Petroleum Reserve. But the companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a speculative bet is the U.S. government. As you will see, it is betting that 2026 is the worst of the oil crisis, and that 2027 will be far better. 
 
-All we know is the demand for our emergency oil is being driven by math.
+That bet may backfire.
 
-We’ll show you this today. We will… show you the money.
+All this said, it's time to show you how this all works - to, "show you the money."
 
 ## A brief history of the SPR
 
@@ -45,9 +45,9 @@ The law lets the President order oil released during a "severe energy supply int
 
 Then came this year. On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, the largest such release on record. The U.S. committed 172 million barrels, and the Energy Department began lending oil that month. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.
 
-There is one big difference from 2022. That oil was sold. This oil is being lent.
-
 ## How the loan works
+
+There is one big difference from the SPR drawdown in 2022 and that in 2026. In 2022, the oil was sold. The SPR oil is now being lent.
 
 The Energy Department calls it an "exchange." A company borrows crude oil from the reserve now and promises to return the same amount of oil later, plus extra barrels. The extra is called a premium. It works like interest, paid in oil.
 
@@ -99,7 +99,7 @@ In my view, the design still leaves the country carrying two risks that the borr
 
 A borrower can protect itself against a move like that. It can lock in its buying price on the day it borrows. The government has no matching tool for the thing it gave up, which is having the oil on hand.
 
-**The second is getting the oil back on time.** The government is owed barrels, not dollars. Its protection is a bank guarantee equal to the oil's value on the day of the award. If prices are higher when the oil comes due, that money buys fewer barrels than were lent. The contracts also excuse late delivery in cases such as war. And return dates can be changed after the fact.
+**The second is getting the oil back on time.** The government is owed barrels, not dollars. But if a borrower fails to return them, the government's protection is a bank guarantee in dollars, equal to the oil's value on the day of the award. If prices are higher by then, that money buys fewer barrels than were lent. The contracts also excuse late delivery in cases such as war. And return dates can be changed after the fact.
 
 That has happened before. Return dates were pushed back more than once on oil lent in 2021 and 2022, according to reporting by Argus.
 
