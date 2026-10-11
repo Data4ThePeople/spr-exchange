@@ -77,7 +77,7 @@ Remember this cut. In the 2021 and 2022 loans the premium was fixed and never ch
 
 Trading houses borrowed 16.03 million barrels in the April round. If each locked in both prices on the day bids were due, the group's profit before transportation costs comes to about $273 million. That is our estimate of what the terms allowed, not what any company earned. Bids are not public, and a company that locked in prices on a different day could have made much less or much more.
 
-The cool thing here is that now that we understand the general math, we can get a sense of what the future holds. The latest round with bids due on October 6 has not been posted. But we can run the math on this round and find that the same math shows $9.87 a barrel there for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
+The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the math on this round and find that the same math shows $9.87 a barrel there for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
 
 ## When does the oil come back?
 
@@ -93,7 +93,7 @@ The Energy Department has a case for all of this. Releasing oil in a supply emer
 
 In our view, the design still leaves the country carrying two risks that the borrowers do not.
 
-**The first is 2027.** Most of this oil is not due back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
+**The first is 2027.** Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
 
 A borrower can protect itself against a move like that. It can lock in its buying price on the day it borrows. The government has no matching tool for the thing it gave up, which is having the oil on hand.
 
