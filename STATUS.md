@@ -6,14 +6,14 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: none yet
-Step: 1
-Since: 2026-10-10
+Step: 2a
+Since: 2026-10-11
 
 ## Steps
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
-| 1  | Exploration and analysis | | |
+| 1  | Exploration and analysis | 2026-10-11 | Own tie-out 32/32; independent tie-out found no difference in any published number; three wording edits accepted by Eric |
 | 2a | Draft with brackets resolved | | |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
@@ -45,3 +45,4 @@ None.
 - 2026-10-11: GitHub Pages enabled (main, root), pages live under https://data4thepeople.github.io/spr-exchange/dist/. Eric: move to 2a after the independent tie-out finishes and its edits are worked through.
 - 2026-10-11: independent tie-out back. No difference in any published number; ledger 31/31, rfp_terms 25/25, rounds 6/6, EIA and futures row for row. Fixed: cent rounding ties in two trade CSVs, DATASETS.md statements, 'three of the six rounds', 'agreed to lend', receipt-rate sources. Open for Eric: 'Maximum profit' and 'ideal time' wording.
 - 2026-10-11: EIA coverage check done from WPSR Appendix A (footnote on what SPR stocks include; weekly vs monthly gap 0.9M for June 2026).
+- 2026-10-11: Eric accepted tie-out edits 1 to 3 (estimated profit wording, lower-or-higher fine print, closer-to-pickup line on the June card) and confirmed step 1. Step 2a open; waiting on the slug and Eric's draft.

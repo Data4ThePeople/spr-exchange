@@ -278,6 +278,8 @@ original article located and read before it is used.
 ## Trade explainer page (`scripts/build_trade_page.py` -> `dist/trade.html`)
 
 - One example per round (1.b, 3, 4): the lot and return window with the largest gross margin on the bid due date in `trade_example_round_<round>.csv`, at the minimum premium. Sale price is the contract for the month after pickup where held (round 4), else the front-month close (rounds 1.b and 3).
+- For a front-month example, the card adds a second figure priced with the first dated contract after the pickup month, when we hold one within two months of pickup (round 3 only: November 2026 for a September pickup).
+- The profit line is the per-barrel amount times trading-house barrels in the round, priced on the bid due date. It is not a maximum: the same math on other dates gives higher and lower values (the independent tie-out found $25.64 a barrel for round 1.b on April 29, 2026).
 - "Barrels taken" comes from the award ledger; a round with no award sheet shows as pending. Set `SHOW_PENDING_MATH = False` in the build script to leave that card empty.
 
 ## Transportation costs (`data/reference/transport_costs.csv`, `data/raw/tariffs/`)

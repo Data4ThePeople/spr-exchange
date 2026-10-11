@@ -104,7 +104,7 @@ html.embed .steps { margin: 10px 0; }
   </ol>
 
   <h2 id="charttitle">One barrel in three of the six rounds: what was left after giving the oil back</h2>
-  <p class="sub">Dollars per barrel borrowed, using prices from the day bids were due. Best case for the borrower, before costs. When the price gap is bigger than the extra oil owed, there is money left over.</p>
+  <p class="sub">Dollars per barrel borrowed, using prices from the day bids were due. Each card uses the best pickup and return dates on offer, before costs. When the price gap is bigger than the extra oil owed, there is money left over.</p>
   <ul class="legend">
     <li><span class="sw" style="background:var(--c-sell)"></span>Sell one barrel now</li>
     <li><span class="sw" style="background:var(--c-back)"></span>Buy one barrel back later</li>
@@ -184,14 +184,14 @@ function card(r) {
     : `<b>What happened</b>Companies took ${mil(r.taken)} million of the ${mil(r.offered)} million barrels offered (${pct(r.taken / r.offered * 100)}).`;
   let body = `<p class="empty">The math for this round will go here.</p>`;
   if (e) body = bars(e) + `
-    <div class="left"><div class="k">${e.left >= 0 ? "Left over per barrel" : "Short per barrel"}</div><div class="v">${usd(e.left)}</div></div>
+    <div class="left"><div class="k">${e.left >= 0 ? "Left over per barrel" : "Short per barrel"}</div><div class="v">${usd(e.left)}</div>${e.left_closer_to_pickup === null ? "" : `<div class="k">Priced closer to the pickup month, this trade ${e.left_closer_to_pickup < 0 ? "loses" : "leaves"} about $${Math.round(Math.abs(e.left_closer_to_pickup))} a barrel.</div>`}</div>
     <ul class="why">
       <li><span>How much higher today's price was than the price for ${esc(spell(e.window))}</span><b>${pct(e.gap_pct)}</b></li>
       <li><span>Extra oil the government asked for</span><b>${pct(e.premium_pct)}</b></li>
     </ul>
-    <div class="model"><div class="k">Maximum profit before transportation costs</div>` +
+    <div class="model"><div class="k">Estimated profit before transportation costs, if prices were locked in the day bids were due</div>` +
     (pending ? `<div class="v2">Not known yet</div><div class="k">It depends on how many barrels trading companies take.</div>`
-             : `<div class="v2">${bigUsd(e.left * r.trader_taken)}</div><div class="k">Trading companies borrowed ${mil(r.trader_taken)} million barrels, times ${usd(e.left)}.</div><div class="fine">This assumes they locked in both prices at the ideal time. The real figure is likely much lower.</div>`) + `</div>`;
+             : `<div class="v2">${bigUsd(e.left * r.trader_taken)}</div><div class="k">Trading companies borrowed ${mil(r.trader_taken)} million barrels, times ${usd(e.left)}.</div><div class="fine">This assumes they locked in both prices the day bids were due. The real figure could be much lower or higher.</div>`) + `</div>`;
   return `<section class="round${pending ? " pending" : ""}">
     <h3>${esc(name)}${pending ? `<span class="tag">Results pending</span>` : ""}</h3>
     <p class="when">Round ${esc(r.round)}. Bids due ${longDate(r.bids_due)}</p>${body}
@@ -205,7 +205,7 @@ document.querySelectorAll(".hit").forEach(el => {
 });
 
 document.getElementById("tbl").innerHTML =
-  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th><th class="num">Taken by trading companies</th><th class="num">Maximum profit before transportation costs, trading companies</th></tr></thead><tbody>` +
+  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th><th class="num">Taken by trading companies</th><th class="num">Estimated profit before transportation costs, trading companies</th></tr></thead><tbody>` +
   DATA.rounds.map(r => { const e = r.example; return `<tr><td>${monthOf(r.bids_due)} (bids due ${longDate(r.bids_due)})</td>` +
     (e ? `<td>${esc(e.site)}, ${esc(spell(e.pickup))}</td><td>${esc(spell(e.window))}</td><td class="num">${usd(e.sale)}</td><td class="num">${usd(e.later_price)}</td><td class="num">${pct(e.premium_pct)}</td><td class="num">${usd(e.cost)}</td><td class="num">${usd(e.left)}</td>`
        : `<td colspan="7">Not shown</td>`) +
@@ -215,7 +215,7 @@ const frontRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis ==
 const laterRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis === "delivery").map(r => monthOf(r.bids_due));
 document.getElementById("notes").innerHTML = `
   <p><b>What this is.</b> An estimate of what the government's terms allowed, not what any company earned. Each card shows the pickup month and return date that left the most per barrel, at the smallest amount of extra oil the government would accept. Companies could offer more extra oil to win, and their offers are not public.</p>
-  <p><b>Maximum profit.</b> The amount left over per barrel, times the barrels awarded to trading companies in that round. These are firms that buy and sell oil but do not run refineries. It is a best case before costs, for the group as a whole, and assumes every barrel was sold and bought back at the prices shown. Prices moved quickly, so a company that locked in on a different day could have kept much less.</p>
+  <p><b>Estimated profit.</b> The amount left over per barrel, times the barrels awarded to trading companies in that round. These are firms that buy and sell oil but do not run refineries. It is before costs, for the group as a whole, and assumes every barrel was sold and bought back at the prices shown. Prices moved quickly, so a company that locked in on a different day could have kept much less or much more.</p>
   <p><b>What is left out.</b> Borrowers pay to move the oil out of the reserve and back in. The government's terms put pipeline fees, shipping, port charges and taxes on the borrower. Also left out: the bank guarantee each borrower must post, and the lower price of "sour" (high-sulfur) oil in some rounds. All of these shrink what is left over. Most of these fees are set in private contracts. One that is published: moving oil by pipeline from the terminal that serves two of the reserve sites to nearby refineries costs about ${Math.round(DATA.pipeline_cents.low)} to ${Math.round(DATA.pipeline_cents.high)} cents a barrel.</p>
   <p><b>Prices.</b> West Texas Intermediate futures closes as relayed by Yahoo Finance, not official exchange settlements.` +
   (frontRounds.length ? ` For the ${frontRounds.join(" and ")} round${frontRounds.length > 1 ? "s" : ""} the "sell now" price is the nearest futures contract.` : "") +

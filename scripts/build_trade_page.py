@@ -22,6 +22,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ROUNDS = ["1.b", "3", "4"]      # the rounds shown, left to right
+MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+MAX_GAP = 2                     # months after pickup a contract may be and still count as "closer to pickup"
 SHOW_PENDING_MATH = True        # show the math for a round DOE has not reported yet
 
 
@@ -43,6 +45,25 @@ def best_example(rnd):
     return max((pick(r) for r in rows), key=lambda x: x["left"])
 
 
+def closer_to_pickup(rnd, ex):
+    """Left-over amount if a front-month example is priced with the first dated
+    contract after the pickup month instead. Only when we hold one within
+    MAX_GAP months of pickup; otherwise None."""
+    if ex["sale_basis"] != "front":
+        return None
+    mon, year = ex["pickup"].split()
+    pickup = int(year) * 12 + MONTHS.index(mon)
+    held = {}
+    for r in csv.DictReader((ROOT / "data/processed/futures_closes.csv").open()):
+        if r["product"] == "WTI" and r["date"] == ex["date"]:
+            y, m = map(int, r["delivery"].split("-"))
+            held[y * 12 + m - 1] = float(r["close"])
+    after = [n for n in held if pickup < n <= pickup + MAX_GAP]
+    if not after:
+        return None
+    return round(held[min(after)] - ex["cost"], 2)
+
+
 def main():
     rounds = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
     awards = list(csv.DictReader((ROOT / "data/processed/spr_2026_exchange_awards.csv").open()))
@@ -51,6 +72,7 @@ def main():
         meta = rounds[rnd]
         posted = meta["award_sheet_posted"] == "yes"
         ex = best_example(rnd)
+        ex["left_closer_to_pickup"] = closer_to_pickup(rnd, ex)
         if not posted and not SHOW_PENDING_MATH:
             ex = None
         out_rounds.append(dict(
