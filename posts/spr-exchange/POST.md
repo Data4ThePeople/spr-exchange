@@ -41,9 +41,9 @@ We’ll show you this today. We will… show you the money.
 
 Congress created the Strategic Petroleum Reserve in 1975, after the 1973-74 oil embargo. The government stores crude oil in underground salt caverns along the Gulf Coast, at four sites in Texas and Louisiana. The first oil went in during 1977. By the end of 2009 the reserve held 726.6 million barrels, the most it has ever held.
 
-The law lets the President order oil released during a "severe energy supply interruption." The largest release before this year came in 2022, when the government sold 180 million barrels after Russia invaded Ukraine. By June 2023 the reserve was down to 347.2 million barrels, less than half its peak. It was then refilled slowly, to 415.4 million barrels by February 2026.
+The law lets the President order oil released during a "severe energy supply interruption." The largest release so far came in 2022, when the government sold 180 million barrels after Russia invaded Ukraine. By June 2023 the reserve was down to 347.2 million barrels, less than half its peak. It was then refilled slowly, to 415.4 million barrels by February 2026.
 
-Then came this year. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. In March, the Energy Department began releasing oil again, as part of a coordinated release with other countries. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.
+Then came this year. On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, the largest such release on record. The U.S. committed 172 million barrels, and the Energy Department began lending oil that month. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.
 
 There is one big difference from 2022. That oil was sold. This oil is being lent.
 
@@ -73,13 +73,13 @@ Take the April round. On April 13, the day bids were due, a barrel for quick del
 
 What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil for late 2028, and the government asked for 20%. When the gap is bigger than the premium, borrowing pays. Companies snapped up 86.8% of the oil offered in that round.
 
-By June the gap had shrunk to 14.4%. As the math changed, the department cut its minimum premium to between 8% and 9%, and companies still took only 500,000 of the 40 million barrels offered. 
+By June the gap had shrunk to 14.4%. As the math changed, the department cut its minimum premium to between 8% and 9%, or 10% for the return date shown in the chart, and only 500,000 of the 40 million barrels offered were taken.
 
 Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to it tomorrow.
 
 Trading houses borrowed 16.03 million barrels in the April round. If each locked in both prices on the day bids were due, the group's profit before transportation costs comes to about $273 million. That is our estimate of what the terms allowed, not what any company earned. Bids are not public, and a company that locked in prices on a different day could have made much less or much more.
 
-The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the math on this round and find that the same math shows $9.87 a barrel there for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
+The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the same math on this round, and it shows $9.87 a barrel for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
 
 ## When does the oil come back?
 
@@ -93,9 +93,9 @@ The department has not published which dates each company chose, so the real pat
 
 The Energy Department has a case for all of this. Releasing oil in a supply emergency is what the reserve is for. A loan also brings oil back, which the 2022 sale did not, and the department says the premiums will leave the reserve with more barrels than it lent.
 
-In our view, the design still leaves the country carrying two risks that the borrowers do not.
+In my view, the design still leaves the country carrying two risks that the borrowers do not.
 
-**The first is 2027.** Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
+**The first is 2027.** Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Nearly seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
 
 A borrower can protect itself against a move like that. It can lock in its buying price on the day it borrows. The government has no matching tool for the thing it gave up, which is having the oil on hand.
 

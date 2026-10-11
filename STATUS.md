@@ -52,3 +52,4 @@ None.
 - 2026-10-11: Eric's own edits to POST.md reviewed; nine rewordings proposed and all accepted, applied.
 - 2026-10-11: title set to 'Meet the Speculative Petroleum Reserve'; renaming callouts added to the intro and the closing at Eric's instruction.
 - 2026-10-11: Eric confirmed step 2a. Step 2b open.
+- 2026-10-11: 2b look-over done; items 2-7 applied and a sourced sentence on the conflict and the IEA release added to the history section.

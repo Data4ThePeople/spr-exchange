@@ -317,3 +317,8 @@ original article located and read before it is used.
 - **Weekly against monthly:** the same table compares weekly-derived and monthly survey figures. For June 2026 the SPR was 321.3 million barrels from weekly data and 322.2 million in the monthly survey, a gap of 0.9 million.
 - **Revisions:** a re-pull of the weekly series on October 11, 2026 matched the October 10 pull for all 2,297 weeks.
 - **Not read:** the report's explanatory notes on reporting day and survey form. The weekly period label is taken as the week-ending Friday, as EIA's series labels state.
+
+## Background facts in the post from outside sources (not saved as files)
+
+- **Start of the 2026 disruption and the coordinated release:** International Energy Agency news release, "IEA Member countries to carry out largest ever oil stock release amid market disruptions from Middle East conflict" (iea.org). As summarized by search on October 11, 2026: the conflict began February 28, 2026 and impeded flows through the Strait of Hormuz; on March 11 the 32 member countries agreed to make 400 million barrels available. Read as a search summary, not the page itself.
+- **U.S. share of 172 million barrels:** DOE press release titles ("...172 Million Barrel Strategic Petroleum Reserve Exchange"), energy.gov.
