@@ -73,6 +73,12 @@ def main():
                 seen.add(d)
                 rows.append((d, product, symbol, f"{y}-{m:02d}", round(close, 2)))
             time.sleep(0.4)
+    # Front-month continuous contract, used as the sale price in scripts/trade_math.py.
+    r = fetch("CL=F")
+    front = (r.json().get("chart", {}).get("result") or [None])[0] if r.status_code == 200 else None
+    if not front or not front.get("timestamp"):
+        sys.exit("CL=F not served")
+    (RAW / "CL=F.json").write_text(json.dumps(front))
     rows.sort()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", newline="") as f:
