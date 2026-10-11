@@ -59,3 +59,4 @@ None.
 - 2026-10-11: 2c markup checked with the importer, convert-only: 30 slices, 3 full-width embeds, 1 image, 1 divider. No fences added; no embed is followed directly by a heading.
 - 2026-10-11: Eric confirmed step 2c. Step 2d open.
 - 2026-10-11: hero-prompt.md written, three variants from Eric's auction-barrel idea. Waiting on the generated image.
+- 2026-10-11: hero concept changed by Eric to a used car auction; hero-prompt.md rewritten.
