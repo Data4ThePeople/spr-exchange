@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2d
+Step: 2e
 Since: 2026-10-11
 
 ## Steps
@@ -17,7 +17,7 @@ Since: 2026-10-11
 | 2a | Draft with brackets resolved | 2026-10-11 | Title: Meet the Speculative Petroleum Reserve |
 | 2b | Eric's edit, Claude's look-over | 2026-10-11 | Three look-overs; 23 edits accepted; open source checks listed in the log |
 | 2c | Slice markup | 2026-10-11 | Defaults only; 30 slices |
-| 2d | Hero 1680x1080 + alt text | | |
+| 2d | Hero 1680x1080 + alt text | 2026-10-11 | Used car auction with an SPR barrel, AI image, center crop |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
@@ -61,3 +61,4 @@ None.
 - 2026-10-11: hero-prompt.md written, three variants from Eric's auction-barrel idea. Waiting on the generated image.
 - 2026-10-11: hero concept changed by Eric to a used car auction; hero-prompt.md rewritten.
 - 2026-10-11: hero image from Eric (Gemini, Prompt 1) cropped center to 1680x1080; alt text written (444 characters).
+- 2026-10-11: Eric confirmed step 2d. Step 2e open.
