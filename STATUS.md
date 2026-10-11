@@ -38,3 +38,4 @@ None.
 - 2026-10-11: modeled profit for trading houses added to dist/trade.html (per-barrel best case x trader barrels, before costs). All six RFPs put transport costs on the borrower (B.6(b)); not priced.
 - 2026-10-11: trade explainer relabeled 'Maximum profit before transportation costs' with Eric's fine print; Nederland pipeline tariffs saved. Terminal fees not public.
 - 2026-10-11: pulled the FY22 Winter Exchange RFP set for comparison; 2021-22 premiums were fixed by DOE (2.3% to 9.1%), not bid, and unchanged by amendments. Angles from Eric saved to memory.
+- 2026-10-11: read two Argus reports on delayed returns of 2021-22 exchange oil; contract modifications exist only as FOIA releases, not held. Eric is considering two posts: (1) how the exchange works, (2) 2021-22 vs 2026 handling.
