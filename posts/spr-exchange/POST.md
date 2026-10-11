@@ -18,18 +18,18 @@ dividers: false
 
 # Title TBD
 
-If you’ve been following our work, you know that I am fascinated by oil markets, especially when they are disrupted in such spectacular fashion. This is why I have written so extensively about them. Oil markets are, in my view, the ultimate complex system. Plus, not only do we complacently consume the products of this system, but we have them to thank for our entire standard of living, at least in the developed world (I designed and taught an entire class on this called “The Carbon Economy.”) Getting us all to a base understanding is critical.
+If you’ve been following our work, you know that I am fascinated by oil markets, especially when they are disrupted in such spectacular fashion. This is why I have [written so extensively about them](https://www.data4thepeople.com/p/rip-us-energy-strategy/). Oil markets are, in my view, the ultimate complex system. Plus, not only do we complacently consume the products of this system, but we have them to thank for our entire standard of living, at least in the developed world (I designed and taught an entire class on this called “The Carbon Economy.”) Getting us all to a base understanding is critical.
 
 But I still have blind spots. One of them was the Strategic Petroleum Reserve (SPR). Over the past few months, I have watched the U.S. drain its SPR, right alongside you, using our free EIA inventory data visualization tool.
 
 ![Line chart titled U.S. Petroleum Inventories, Weekly Seasonality, set to the Strategic Reserve. One line per year since 1982 shows the reserve by week of the year, in million barrels. Most years sit between 500 and 700 million. The bold red 2026 line starts near 415 million, falls from about week 13, and ends near 283 million at week 40, below every other year on the chart at that point.](images/01-spr-inventory.png)
 *The Strategic Petroleum Reserve by week of the year, 1982 to 2026. The red line is 2026. Source: EIA weekly stocks, from our petroleum inventory tool.*
 
-But I honestly didn’t know how this all worked. I hadn’t done the analysis to - as Cuba Gooding Jr. iconically says in Jerry Maguire – “Show me the money!”
+But I honestly didn’t know how this all worked. I hadn’t done the analysis to – as Cuba Gooding Jr. iconically says in Jerry Maguire – “Show me the money!”
 
 Well, over the weekend I did that analysis, and was shocked at what I found.
 
-The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not at all true – at least not the way we are drawing it down in 2026. Rather it’s more like an auction, with an auction room filled with traders looking to lock in a quick buck. Where this oil goes? We don’t know.
+The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not quite how it works – at least not the way we are drawing it down in 2026. Rather it’s more like an auction, with an auction room where a bidder can lock in a profit the day it bids. Where this oil goes? The government doesn’t say.
 
 All we know is the demand for our emergency oil is being driven by math.
 
@@ -41,7 +41,7 @@ Congress created the Strategic Petroleum Reserve in 1975, after the 1973-74 oil 
 
 The law lets the President order oil released during a "severe energy supply interruption." The largest release before this year came in 2022, when the government sold 180 million barrels after Russia invaded Ukraine. By June 2023 the reserve was down to 347.2 million barrels, less than half its peak. It was then refilled slowly, to 415.4 million barrels by February 2026.
 
-Then came this year. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. In March, the Energy Department began releasing oil again, as part of a coordinated release with other countries. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982.
+Then came this year. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. In March, the Energy Department began releasing oil again, as part of a coordinated release with other countries. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.
 
 There is one big difference from 2022. That oil was sold. This oil is being lent.
 
@@ -97,7 +97,17 @@ A borrower can protect itself against a move like that. It can lock in its buyin
 
 **The second is getting the oil back on time.** The government is owed barrels, not dollars. Its protection is a bank guarantee equal to the oil's value on the day of the award. If prices are higher when the oil comes due, that money buys fewer barrels than were lent. The contracts also excuse late delivery in cases such as war. And return dates can be changed after the fact.
 
-That has happened before. Return dates were pushed back more than once on oil lent in 2021 and 2022, according to reporting by Argus. Tomorrow we will look at how those loans worked, and how they compare with this year's.
+That has happened before. Return dates were pushed back more than once on oil lent in 2021 and 2022, according to reporting by Argus.
+
+## My view
+
+I am very upset by all of this. Look at Trafigura. We have basically outsourced the decision of when our oil comes back and where it goes to companies like this. There is nothing wrong with them per se. But their job is not to care about American energy security in 2027. Their job is to turn a profit on a trade. More than a quarter of the oil we lent this year has gone to this one company. What this tells me is that our government, if it cares about American energy security in 2027, is betting that these companies' financial incentives today align with lower risk for America in 2027. I just don't see how that is the case. To me it seems shortsighted.
+
+I believe the U.S. should care what is done with its emergency oil. Under these contracts it does not. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. A trading house can sell it anywhere. Less than 1% of this oil went to a small refiner, and nearly half went to trading houses. Once it is sold, we have no idea where it goes. It is like pissing in the ocean.
+
+[In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. The reserve is where that shows up in a ledger.
+
+Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compare with this year's.
 
 ::: divider
 
