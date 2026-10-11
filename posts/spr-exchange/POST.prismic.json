@@ -1,0 +1,849 @@
+{
+  "page_title": "Meet the Speculative Petroleum Reserve",
+  "page_subtitle": "The S in SPR is supposed to stand for strategic. In 2026, our emergency oil goes to the highest bidder, and the government is the one making the bet.",
+  "published_date": "2026-10-12",
+  "updated_date": "2026-10-12",
+  "make_this_main_post": false,
+  "slices": [
+    {
+      "slice_type": "drop_cap",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "drop_cap_text": [
+          {
+            "type": "paragraph",
+            "text": "If you\u2019ve been following our work, you know that I am fascinated by oil markets, especially when they are disrupted in such spectacular fashion. This is why I have written so extensively about them. Oil markets are, in my view, the ultimate complex system. Plus, not only do we complacently consume the products of this system, but we have them to thank for our entire standard of living, at least in the developed world (I designed and taught an entire class on this called \u201cThe Carbon Economy.\u201d) Getting us all to a base understanding is critical.",
+            "spans": [
+              {
+                "start": 164,
+                "end": 197,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/rip-us-energy-strategy/",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "But there is always something new to learn. One thing I never fully understood was the mechanics of the Strategic Petroleum Reserve (SPR). Over the past few months, I have watched the U.S. drain its SPR, right alongside you, using our free EIA inventory data visualization tool.",
+            "spans": [
+              {
+                "start": 235,
+                "end": 277,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/methodology-the-petroleum-inventory-seasonality-ch",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "blog_body_content_image",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "image": {
+          "alt": "Line chart titled U.S. Petroleum Inventories, Weekly Seasonality, set to the Strategic Reserve. One line per year since 1982 shows the reserve by week of the year, in million barrels. Most years sit between 500 and 700 million. The bold red 2026 line starts near 415 million, falls from about week 13, and ends near 283 million at week 40, below every other year on the chart at that point.",
+          "copyright": null
+        },
+        "source_text": [
+          {
+            "type": "paragraph",
+            "text": "The Strategic Petroleum Reserve by week of the year, 1982 to 2026. The red line is 2026. Source: EIA weekly stocks, from our petroleum inventory tool.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 150,
+                "type": "em"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "It's easy to see that our emergency oil has been depleted. The harder part is why and how. I didn't know, because I hadn\u2019t done the analysis to \u2013 as Cuba Gooding Jr. iconically says in Jerry Maguire \u2013 \u201cShow me the money!\u201d",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Well, over the weekend I did that analysis, and was shocked at what I found.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The U.S. SPR is not what we thought it was. Maybe it\u2019s just me, but I thought this was oil of last resort to protect Americans from crises. That\u2019s not quite how it works \u2013 at least not the way we are drawing it down in 2026. Rather it\u2019s more like a used car auction, where the buyer of the car can immediately lock in a profit on the car the day it bids. Where this oil goes? The government doesn\u2019t say.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Based on my understanding of how the SPR works in 2026, I am giving it a new name: the Speculative Petroleum Reserve. But the companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a speculative bet is the U.S. government. In effect, it is betting that 2026 is the worst of the oil crisis, and that 2027 will be far better.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "That bet may backfire.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "All this said, it's time to show you how this all works - to \"show you the money.\"",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "A brief history of the SPR",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Congress created the Strategic Petroleum Reserve in 1975, after the 1973-74 oil embargo. The government stores crude oil in underground salt caverns along the Gulf Coast, at four sites in Texas and Louisiana. The first oil went in during 1977. By the end of 2009 the reserve held 726.6 million barrels, the most it has ever held.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The law lets the President order oil released during a \"severe energy supply interruption.\" The largest release so far came in 2022, when the government sold 180 million barrels after Russia invaded Ukraine. By June 2023 the reserve was down to 347.2 million barrels, less than half its peak. It was then refilled slowly, to 415.4 million barrels by February 2026.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Then came this year. On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, the largest such release on record. The U.S. committed 172 million barrels, and the Energy Department began lending oil that month. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "How the loan works",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "There is one big difference between the SPR drawdown in 2022 and the one in 2026. In 2022, the oil was sold. The SPR oil is now being lent.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Energy Department calls it an \"exchange.\" A company borrows crude oil from the reserve now and promises to return the same amount of oil later, plus extra barrels. The extra is called a premium. It works like interest, paid in oil.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Here is where the auction comes in. For each batch of oil, the department sets a minimum premium. Companies bid by offering to return more than the minimum, and the highest offers win. In the first rounds this spring, the minimum ran from 17% to 24%. The department has said the winning bids averaged about 25%.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Who took the barrels",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "After each round, the department posts a one-page sheet listing the winners. We combined every sheet into one ledger, shown below, that you can search and download.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "html_embed",
+      "slice_label": null,
+      "variation": "fullWidth",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "html_content": [
+          {
+            "type": "preformatted",
+            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/spr-exchange/dist/ledger.html\" width=\"100%\" height=\"1400\" loading=\"lazy\" style=\"border:0\" title=\"Who took the barrels: every contract in the 2026 Strategic Petroleum Reserve exchange\"></iframe>",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "embed_height": "1400px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "Thirteen companies won 31 contracts for 133.56 million barrels. Trading houses, which buy and sell oil but do not refine it, took 45.0%. Refiners took 38.3%. The trading arms of two oil majors took 14.8%, and a pipeline company took the rest. The largest borrower was Trafigura, a trading house, with 34.35 million barrels, or 25.7% of the total.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The contracts do not say where the oil has to go. Ownership passes to the borrower when the oil leaves the reserve, and nothing in the terms limits resale or export. The department told bidders as much in writing: \"The goal of the Emergency Exchange Release is to get barrels onto the market.\" Which market? The department's own announcements say the goal is to stabilize GLOBAL oil supply, and nothing in the contracts keeps the oil here.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Why pay 20% interest in oil?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Returning 120 barrels for every 100 borrowed may sound like a bad deal, until you do the math. The chart below walks through one barrel in three of the six rounds to illustrate how the economics work from the borrower's perspective.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "html_embed",
+      "slice_label": null,
+      "variation": "fullWidth",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "html_content": [
+          {
+            "type": "preformatted",
+            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/spr-exchange/dist/trade.html\" width=\"100%\" height=\"1300\" loading=\"lazy\" style=\"border:0\" title=\"How borrowing oil from the reserve can make money\"></iframe>",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "embed_height": "1300px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "Take the April round. On April 13, the day bids were due, a barrel for quick delivery sold for $99.08. On the same day, a company could sign a futures market contract to buy oil for late 2028 delivery at $68.37. Oil for later delivery was cheaper, which is common when supply is short today. A borrower that owed 20% extra needed 1.2 barrels in 2028, at a cost of $82.05. That left $17.03 for each barrel borrowed, before shipping and other costs.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil delivered in late 2028. Meanwhile, the government asked for just 20% \"interest.\" When the pricing gap between oil now and oil later is much bigger than the interest cost, borrowing pays off. But don't take our word for it. Look what happened. In this early round, companies snapped up 86.8% of the oil offered, gladly paying the 20% premium.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Fast forward to June and the oil now vs. oil later gap had shrunk to 14.4%. For that round, the department cut its minimum premium to between 8% and 9%, or 10% for the return date shown in the chart. But that wasn't enough to get much interest - only 500,000 of the 40 million barrels offered were taken.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to this tomorrow.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the same math on this round, and it shows $9.87 a barrel for the longest return dates. So on paper this round pays far better than June's, but well short of April's.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In our view, this means that we should expect more interest to borrow oil in the round that just completed.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Translation: SPR drawdowns are not over, and may pick up again.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "When does the oil come back?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Each contract lets the borrower pick from a set of return dates, and later dates carry a slightly higher premium. The chart below shows the earliest and the latest that the contracts allow the oil to be returned.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "html_embed",
+      "slice_label": null,
+      "variation": "fullWidth",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "html_content": [
+          {
+            "type": "preformatted",
+            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/spr-exchange/dist/returns.html\" width=\"100%\" height=\"1000\" loading=\"lazy\" style=\"border:0\" title=\"When is the borrowed oil due back?\"></iframe>",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "embed_height": "1000px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "The department has not published which dates each company chose, so the real path is somewhere between the two lines. On the latest dates allowed, 8.48 million barrels, or 6% of the oil awarded, are due back by the end of 2027. About 65% is due by the end of 2028. The last barrels are due July 31, 2029.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Two risks we have taken on",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Energy Department has a case for all of this. Releasing oil in a supply emergency is what the reserve is for. A loan also brings oil back, which the 2022 sale did not, and the department says the premiums will leave the reserve with more barrels than it lent.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Just like how the USDA designed the Thrifty Food Plan for SNAP, this makes sense on paper, but runs into problems in real life.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In my view, the design leaves the country carrying two risks that the borrowers do not.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The first is 2027. Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 18,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The expectation for a quick resolution to the war has not aged well. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher. And that's a problem for our strategy. We borrowed oil from 2027 expecting that we wouldn't need it then. Now it's growing more likely that we will. With the SPR at 283 million barrels and borrowers not required to return much next year, we are left far less protected.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In other words, hopefully you enjoyed the relative calm of 2026 in energy markets. In 2027, we may have to see what happens when we are not able to flood the global markets with our emergency crude oil.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "To be clear, the oil trader borrowing crude from the SPR isn't taking on this risk. A borrower can protect itself against a continued supply crunch by locking in its buying price on the day it borrows, thanks to the magic of financial markets. The government can't mitigate this risk. If its bet on 2027 energy markets is wrong, we all just have to deal with the consequences.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The second is getting the oil back on time. The government is owed barrels, not dollars. But if a borrower fails to return them, the government's protection is a bank guarantee in dollars, equal to the oil's value on the day of the award. If prices are higher by then, that money buys fewer barrels than were lent. The contracts also excuse late delivery in cases such as war. And return dates can be changed after the fact.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 43,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "That has happened before. Return dates were pushed back more than once on oil lent in 2021 and 2022, according to reporting by Argus.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "My view",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "I am very upset by all of this.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Understand this. The largest borrower of our SPR oil was Trafigura. Who the heck is that? Have you recently filled up at a Trafigura-branded gas station?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "No, you have not.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "That's because Trafigura is a global oil trading firm. This upsets me. Not because there is anything wrong with Trafigura. We need global oil traders. This is not their fault. Rather, it's a branding problem. I feel misled. I thought this was emergency oil to help Americans when global markets are disrupted. That is not how it is being used. At least not anymore.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "So, we have basically outsourced the logistics of our SPR oil to oil traders, whose job is to turn the best profit on a trade, wherever the oil ends up.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "I believe the U.S. should care what is done with its emergency oil. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. But less than 1% of this oil went to a small refiner, and nearly half went to trading houses.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "We put all our chips on our oil making a difference on the global market. For a while, it looked like it was working. By early July, crude oil had dropped from its highs to $68.55 a barrel, nearly back to where it was before the war. But what we got wrong was the expectation that the war would end during this period. Oil closed at $91.85 on October 9. The supply crunch has deepened, and spread to other parts of the energy market, notably to the supertankers that carry oil from the Middle East to Asia, where the going rate has risen from a normal $30,000 a day to an eye-popping $1.4 million, according to the Baltic Exchange. This is starting to look like a chain reaction, and we now go into that with the lowest SPR reserves since 1982.",
+            "spans": [
+              {
+                "start": 572,
+                "end": 596,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/supertanker-rates/",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "This reminds me of something else happening right now. The Treasury Department is working to hold down rising interest rates on U.S. debt (if you aren't up to speed on that, it is worth catching up). So far, rates have kept climbing. In both cases, the government is using the tools it has to steady a market much bigger than it is. At some point those tools may not be enough. To me, our debt and our oil are facing the same risk at the same time - the risk of losing control of powerful complex markets.",
+            "spans": [
+              {
+                "start": 103,
+                "end": 137,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.bloomberg.com/news/articles/2026-08-19/long-dated-treasuries-rally-as-treasury-boosts-bond-buybacks",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In July I wrote that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. Consider this post the next chapter in that saga.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 15,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/rip-us-energy-strategy/",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "So, as I conclude this post, the least I can do is offer to help correct the branding issue the SPR currently has. The S in SPR is supposed to stand for strategic, but I do not see a strategy here - at least not one that benefits Americans. I see a bet that this conflict ends before we need the oil back, and it looks like a losing one. Thus, I hereby rename the SPR, the Speculative Petroleum Reserve.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compare with this year's.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "divider_dots",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {}
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "What this does not tell you",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "What any company earned. The profit figures are our estimates of what the government's terms allowed. They use the minimum premium, one pricing day, and the best pickup and return dates on offer. Actual bids are not public.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 24,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "The borrowers' costs. Shipping, pipeline and terminal fees, the bank guarantee, and the lower price of high-sulfur oil are left out. All of them reduce what is left over.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 21,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Official settlement prices. Our futures prices are daily closes as relayed by Yahoo Finance.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 27,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "The real return schedule. The return chart shows the earliest and latest dates the contracts allow. The earliest line is faster than the reserve sites can physically take oil back.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 25,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Where the oil went. Crude oil is interchangeable once it enters the market, and the award sheets do not track it.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 19,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "How each company should be labeled. The firm types in the ledger are our classification, based on the company name the department listed.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 35,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The data, code and method notes are public at github.com/Data4ThePeople/spr-exchange.",
+            "spans": [
+              {
+                "start": 46,
+                "end": 84,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/spr-exchange",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    }
+  ],
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Meet the Speculative Petroleum Reserve\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n  \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-exchange\"\n  }\n}"
+}
