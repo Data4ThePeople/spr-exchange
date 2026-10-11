@@ -254,3 +254,9 @@ export. Any full-period figure in the post is ours and labeled as ours.
 
 **License and attribution.** Cite the outlet and Kpler. Each figure needs its
 original article located and read before it is used.
+
+## Worked trade example (`scripts/trade_math.py`)
+
+- **What it is:** a per-barrel estimate of the borrow, sell and hedge trade for one round (default 1.b). Output: `data/processed/trade_example.csv`.
+- **Method:** sale price is the front-month WTI futures close (`data/raw/futures/CL=F.json`, Yahoo continuous contract). Return price is the mean WTI futures close for the contract months in each RFP return window. Barrels owed are 1 plus the RFP minimum premium plus the window's add-on. Gross margin per barrel borrowed = sale price - barrels owed x return price. Computed on the bid due date and on the award date.
+- **Limits:** the premium each firm bid is not public, so the minimum is used and the result is a ceiling. The front-month contract on April 13 was for May delivery; the oil was delivered in May and June and would have priced off later, cheaper months. Not included: the grade's gap to WTI, pipeline and shipping, the letter of credit, interest on the sale proceeds. When or whether any firm hedged is not known.
