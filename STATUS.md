@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2a
+Step: 2b
 Since: 2026-10-11
 
 ## Steps
@@ -14,7 +14,7 @@ Since: 2026-10-11
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-11 | Own tie-out 32/32; independent tie-out found no difference in any published number; three wording edits accepted by Eric |
-| 2a | Draft with brackets resolved | | |
+| 2a | Draft with brackets resolved | 2026-10-11 | Title: Meet the Speculative Petroleum Reserve |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
@@ -51,3 +51,4 @@ None.
 - 2026-10-11: Eric accepted opening edits 1-4, the closing with changes 1 and 2, tie-back items 3-5 and the refiner paragraph; all applied to POST.md.
 - 2026-10-11: Eric's own edits to POST.md reviewed; nine rewordings proposed and all accepted, applied.
 - 2026-10-11: title set to 'Meet the Speculative Petroleum Reserve'; renaming callouts added to the intro and the closing at Eric's instruction.
+- 2026-10-11: Eric confirmed step 2a. Step 2b open.
