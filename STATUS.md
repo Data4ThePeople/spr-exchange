@@ -50,3 +50,4 @@ None.
 - 2026-10-11: Eric's draft placed in POST.md verbatim; brackets resolved (SPR chart image from the inventory tool, history, three-viz walk-through, two risks, teaser, limits). Proposed edits to his prose sent as a numbered list; none applied.
 - 2026-10-11: Eric accepted opening edits 1-4, the closing with changes 1 and 2, tie-back items 3-5 and the refiner paragraph; all applied to POST.md.
 - 2026-10-11: Eric's own edits to POST.md reviewed; nine rewordings proposed and all accepted, applied.
+- 2026-10-11: title set to 'Meet the Speculative Petroleum Reserve'; renaming callouts added to the intro and the closing at Eric's instruction.

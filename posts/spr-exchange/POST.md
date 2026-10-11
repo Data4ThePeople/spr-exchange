@@ -1,6 +1,6 @@
 ---
-title:
-subtitle:
+title: Meet the Speculative Petroleum Reserve
+subtitle: The S in SPR is supposed to stand for strategic. In 2026, our emergency oil goes to the highest bidder, and the government is the one making the bet.
 slug: spr-exchange
 date: 2026-10-12
 section: Data 4 Thought
@@ -16,7 +16,7 @@ caption_spacer: 20px
 dividers: false
 ---
 
-# Title TBD
+# Meet the Speculative Petroleum Reserve
 
 If you’ve been following our work, you know that I am fascinated by oil markets, especially when they are disrupted in such spectacular fashion. This is why I have [written so extensively about them](https://www.data4thepeople.com/p/rip-us-energy-strategy/). Oil markets are, in my view, the ultimate complex system. Plus, not only do we complacently consume the products of this system, but we have them to thank for our entire standard of living, at least in the developed world (I designed and taught an entire class on this called “The Carbon Economy.”) Getting us all to a base understanding is critical.
 
@@ -30,6 +30,8 @@ But I honestly didn’t know how this all worked. I hadn’t done the analysis t
 Well, over the weekend I did that analysis, and was shocked at what I found.
 
 The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not quite how it works – at least not the way we are drawing it down in 2026. Rather it’s more like an auction, with an auction room where a bidder can lock in a profit the day it bids. Where this oil goes? The government doesn’t say.
+
+So I am giving it a new name: the Speculative Petroleum Reserve. The companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a bet is the U.S. government.
 
 All we know is the demand for our emergency oil is being driven by math.
 
@@ -110,6 +112,8 @@ I believe the U.S. should care what is done with its emergency oil. Under these 
 This reminds me of something else happening right now. The Treasury Department is working to hold down [rising interest rates on U.S. debt](https://www.bloomberg.com/news/articles/2026-08-19/long-dated-treasuries-rally-as-treasury-boosts-bond-buybacks) (if you aren't up to speed on that, it is worth catching up). So far, rates have kept climbing. In both cases, the government is using the tools it has to steady a market much bigger than it is. At some point those tools may not be enough. To me, that looks like a risk for our debt and our oil at the same time.
 
 [In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. The reserve is where that shows up in a ledger.
+
+That is why I am renaming it. The S in SPR is supposed to stand for strategic, but I do not see a strategy here. I see a bet that this conflict ends before we need the oil back. Until that changes, I am calling it the Speculative Petroleum Reserve.
 
 Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compare with this year's.
 
