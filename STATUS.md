@@ -66,3 +66,4 @@ None.
 - 2026-10-11: 2e retargeted at Eric's direction to 'how the SPR works' and 'why it is drawing down'; front matter rewritten.
 - 2026-10-11: Eric accepted 2e edits 1-3: section heading renamed, Common questions section (six questions) added, ledger sentence expanded.
 - 2026-10-11: Eric confirmed step 2e. Step 2f open.
+- 2026-10-11: 2f dry run clean (44 slices, 2 images to upload, new blog_post uid spr-exchange). The real push was blocked by the permission classifier; waiting on Eric to run it.
