@@ -60,3 +60,4 @@ None.
 - 2026-10-11: Eric confirmed step 2c. Step 2d open.
 - 2026-10-11: hero-prompt.md written, three variants from Eric's auction-barrel idea. Waiting on the generated image.
 - 2026-10-11: hero concept changed by Eric to a used car auction; hero-prompt.md rewritten.
+- 2026-10-11: hero image from Eric (Gemini, Prompt 1) cropped center to 1680x1080; alt text written (437 characters or fewer than 500).

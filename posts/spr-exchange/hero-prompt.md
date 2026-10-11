@@ -84,5 +84,5 @@ camera. 35mm, natural light, high detail, no other text, no watermark.
 
 ## Chosen
 
-File:
-Alt (under 500 characters):
+File: images/spr-exchange-hero-source.jpg (Gemini, from Prompt 1; cropped center to images/spr-exchange-hero-1680x1080.png)
+Alt (under 500 characters): An AI-generated illustration of a used car auction inside a metal warehouse. A dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE stands alone in the auction lane where a car would be, with a lot sticker on its side. Under a hanging LANE 1 sign, an auctioneer at a wooden stand bearing a gold eagle emblem points into a crowd of bidders in work jackets and ball caps, some raising cards. Rows of used cars wait in the background.
