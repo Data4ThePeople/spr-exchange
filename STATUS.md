@@ -53,3 +53,4 @@ None.
 - 2026-10-11: title set to 'Meet the Speculative Petroleum Reserve'; renaming callouts added to the intro and the closing at Eric's instruction.
 - 2026-10-11: Eric confirmed step 2a. Step 2b open.
 - 2026-10-11: 2b look-over done; items 2-7 applied and a sourced sentence on the conflict and the IEA release added to the history section.
+- 2026-10-11: Eric's second round of edits reviewed; 16 proposed edits all accepted and applied, plus the bank guarantee sentence. Tanker figure confirmed against the VLCC project (Baltic TD3C, Oct 9).

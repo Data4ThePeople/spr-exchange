@@ -31,11 +31,11 @@ Well, over the weekend I did that analysis, and was shocked at what I found.
 
 The U.S. SPR is not what we thought it was. Maybe it’s just me, but I thought this was oil of last resort to protect Americans from crises. That’s not quite how it works – at least not the way we are drawing it down in 2026. Rather it’s more like a used car auction, where the buyer of the car can immediately lock in a profit on the car the day it bids. Where this oil goes? The government doesn’t say.
 
-Based on my understanding of how the SPR works in 2026, I am giving it a new name: the Speculative Petroleum Reserve. But the companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a speculative bet is the U.S. government. As you will see, it is betting that 2026 is the worst of the oil crisis, and that 2027 will be far better. 
+Based on my understanding of how the SPR works in 2026, I am giving it a new name: the Speculative Petroleum Reserve. But the companies borrowing the oil are not the ones speculating. As you will see, they can lock in their prices the day they bid. The one making a speculative bet is the U.S. government. In effect, it is betting that 2026 is the worst of the oil crisis, and that 2027 will be far better. 
 
 That bet may backfire.
 
-All this said, it's time to show you how this all works - to, "show you the money."
+All this said, it's time to show you how this all works - to "show you the money."
 
 ## A brief history of the SPR
 
@@ -47,7 +47,7 @@ Then came this year. On February 28, a conflict began in the Middle East that di
 
 ## How the loan works
 
-There is one big difference from the SPR drawdown in 2022 and that in 2026. In 2022, the oil was sold. The SPR oil is now being lent.
+There is one big difference between the SPR drawdown in 2022 and the one in 2026. In 2022, the oil was sold. The SPR oil is now being lent.
 
 The Energy Department calls it an "exchange." A company borrows crude oil from the reserve now and promises to return the same amount of oil later, plus extra barrels. The extra is called a premium. It works like interest, paid in oil.
 
@@ -65,21 +65,23 @@ The contracts do not say where the oil has to go. Ownership passes to the borrow
 
 ## Why pay 20% interest in oil?
 
-Returning 120 barrels for every 100 borrowed sounds like a bad deal. The chart below walks through one barrel in three of the six rounds to show when it is a good one.
+Returning 120 barrels for every 100 borrowed may sound like a bad deal, until you do the math. The chart below walks through one barrel in three of the six rounds to illustrate how the economics work from the borrower's perspective.
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/trade.html" width="100%" height="1300" loading="lazy" style="border:0" title="How borrowing oil from the reserve can make money"></iframe>
 
-Take the April round. On April 13, the day bids were due, a barrel for quick delivery sold for $99.08. On the same day, a company could sign a contract to buy oil for late 2028 at $68.37. Oil for later delivery was cheaper, which is common when supply is short today. A borrower that owed 20% extra needed 1.2 barrels in 2028, at a cost of $82.05. That left $17.03 for each barrel borrowed, before shipping and other costs.
+Take the April round. On April 13, the day bids were due, a barrel for quick delivery sold for $99.08. On the same day, a company could sign a futures market contract to buy oil for late 2028 delivery at $68.37. Oil for later delivery was cheaper, which is common when supply is short today. A borrower that owed 20% extra needed 1.2 barrels in 2028, at a cost of $82.05. That left $17.03 for each barrel borrowed, before shipping and other costs.
 
-What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil for late 2028, and the government asked for 20%. When the gap is bigger than the premium, borrowing pays. Companies snapped up 86.8% of the oil offered in that round.
+What matters is the gap between the two prices. In April, oil sold now cost 44.9% more than oil delivered in late 2028. Meanwhile, the government asked for just 20% "interest." When the pricing gap between oil now and oil later is much bigger than the interest cost, borrowing pays off. But don't take our word for it. Look what happened. In this early round, companies snapped up 86.8% of the oil offered, gladly paying the 20% premium.
 
-By June the gap had shrunk to 14.4%. As the math changed, the department cut its minimum premium to between 8% and 9%, or 10% for the return date shown in the chart, and only 500,000 of the 40 million barrels offered were taken.
+Fast forward to June and the oil now vs. oil later gap had shrunk to 14.4%. For that round, the department cut its minimum premium to between 8% and 9%, or 10% for the return date shown in the chart. But that wasn't enough to get much interest - only 500,000 of the 40 million barrels offered were taken.
 
-Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to it tomorrow.
-
-Trading houses borrowed 16.03 million barrels in the April round. If each locked in both prices on the day bids were due, the group's profit before transportation costs comes to about $273 million. That is our estimate of what the terms allowed, not what any company earned. Bids are not public, and a company that locked in prices on a different day could have made much less or much more.
+Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to this tomorrow.
 
 The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the same math on this round, and it shows $9.87 a barrel for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
+
+In our view, this means that we should expect more interest to borrow oil in the round that just completed. 
+
+Translation: SPR drawdowns are not over, and may pick up again.
 
 ## When does the oil come back?
 
@@ -93,11 +95,17 @@ The department has not published which dates each company chose, so the real pat
 
 The Energy Department has a case for all of this. Releasing oil in a supply emergency is what the reserve is for. A loan also brings oil back, which the 2022 sale did not, and the department says the premiums will leave the reserve with more barrels than it lent.
 
-In my view, the design still leaves the country carrying two risks that the borrowers do not.
+Just like how the USDA designed the Thrifty Food Plan for SNAP, this makes sense on paper, but runs into problems in real life.
 
-**The first is 2027.** Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. That expectation has not aged well. Nearly seven months later, oil still costs about what it did the day the first loans were awarded. So, what if this disruption lasts through 2027? Then the reserve faces it with 283 million barrels and no promise that most of the lent oil is back. We are left holding the bag. If supply gets worse before it gets better, the reserve has less to give. Markets have started to price in a protracted supply crunch since the first loans were awarded. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher.
+In my view, the design leaves the country carrying two risks that the borrowers do not.
 
-A borrower can protect itself against a move like that. It can lock in its buying price on the day it borrows. The government has no matching tool for the thing it gave up, which is having the oil on hand.
+**The first is 2027.** Most of this oil does not have to come back next year. When we started lending this oil, the market was priced for a short disruption. Oil for 2027 cost about a quarter less than oil that day. 
+
+The expectation for a quick resolution to the war has not aged well. On March 20, oil for delivery in 2027 averaged $74.69 a barrel. On October 9 it averaged $83.46, about 12% higher. And that's a problem for our strategy. We borrowed oil from 2027 expecting that we wouldn't need it then. Now it's growing more likely that we will. With the SPR at 283 million barrels and borrowers not required to return much next year, we are left far less protected. 
+
+In other words, hopefully you enjoyed the relative calm of 2026 in energy markets. In 2027, we may have to see what happens when we are not able to flood the global markets with our emergency crude oil.  
+
+To be clear, the oil trader borrowing crude from the SPR isn't taking on this risk. A borrower can protect itself against a continued supply crunch by locking in its buying price on the day it borrows, thanks to the magic of financial markets. The government can't mitigate this risk. If its bet on 2027 energy markets is wrong, we all just have to deal with the consequences.
 
 **The second is getting the oil back on time.** The government is owed barrels, not dollars. But if a borrower fails to return them, the government's protection is a bank guarantee in dollars, equal to the oil's value on the day of the award. If prices are higher by then, that money buys fewer barrels than were lent. The contracts also excuse late delivery in cases such as war. And return dates can be changed after the fact.
 
@@ -105,15 +113,25 @@ That has happened before. Return dates were pushed back more than once on oil le
 
 ## My view
 
-I am very upset by all of this. Look at Trafigura. We have basically outsourced the decision of when our oil comes back and where it goes to companies like this. There is nothing wrong with them per se. But their job is not to care about American energy security in 2027. Their job is to turn a profit on a trade. More than a quarter of the oil we lent this year has gone to this one company. What this tells me is that our government, if it cares about American energy security in 2027, is betting that these companies' financial incentives today align with lower risk for America in 2027. I just don't see how that is the case. To me it seems shortsighted, if we assume our government cares about our energy security. And if it doesn't, this is one more case of handing our energy strategy to corporate interests.
+I am very upset by all of this. 
 
-I believe the U.S. should care what is done with its emergency oil. Under these contracts it does not. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. A trading house can sell it anywhere. Less than 1% of this oil went to a small refiner, and nearly half went to trading houses. Once it is sold, we have no idea where it goes. The bet was that our oil would make a difference on the global market. That could have worked if the conflict had ended quickly. It didn't, and now our laissez-faire approach of lending emergency oil to the highest bidder may be backfiring.
+Understand this. The largest borrower of our SPR oil was Trafigura. Who the heck is that? Have you recently filled up at a Trafigura-branded gas station? 
 
-This reminds me of something else happening right now. The Treasury Department is working to hold down [rising interest rates on U.S. debt](https://www.bloomberg.com/news/articles/2026-08-19/long-dated-treasuries-rally-as-treasury-boosts-bond-buybacks) (if you aren't up to speed on that, it is worth catching up). So far, rates have kept climbing. In both cases, the government is using the tools it has to steady a market much bigger than it is. At some point those tools may not be enough. To me, that looks like a risk for our debt and our oil at the same time.
+No, you have not. 
 
-[In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. The reserve is where that shows up in a ledger.
+That's because Trafigura is a global oil trading firm. This upsets me. Not because there is anything wrong with Trafigura. We need global oil traders. This is not their fault. Rather, it's a branding problem. I feel misled. I thought this was emergency oil to help Americans when global markets are disrupted. That is not how it is being used. At least not anymore. 
 
-That is why I am renaming it. The S in SPR is supposed to stand for strategic, but I do not see a strategy here. I see a bet that this conflict ends before we need the oil back. Until that changes, I am calling it the Speculative Petroleum Reserve.
+So, we have basically outsourced the logistics of our SPR oil to oil traders, whose job is to turn the best profit on a trade, wherever the oil ends up. 
+
+I believe the U.S. should care what is done with its emergency oil. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. But less than 1% of this oil went to a small refiner, and nearly half went to trading houses. 
+
+We put all our chips on our oil making a difference on the global market. For a while, it looked like it was working. By early July, crude oil had dropped from its highs to $68.55 a barrel, nearly back to where it was before the war. But what we got wrong was the expectation that the war would end during this period. Oil closed at $91.85 on October 9. The supply crunch has deepened, and spread to other parts of the energy market, notably to the supertankers that carry oil from the Middle East to Asia, where the going rate has risen from a normal $30,000 a day to an eye-popping $1.4 million, according to the Baltic Exchange. This is starting to look like a chain reaction, and we now go into that with the lowest SPR reserves since 1982.
+
+This reminds me of something else happening right now. The Treasury Department is working to hold down [rising interest rates on U.S. debt](https://www.bloomberg.com/news/articles/2026-08-19/long-dated-treasuries-rally-as-treasury-boosts-bond-buybacks) (if you aren't up to speed on that, it is worth catching up). So far, rates have kept climbing. In both cases, the government is using the tools it has to steady a market much bigger than it is. At some point those tools may not be enough. To me, our debt and our oil are facing the same risk at the same time - the risk of losing control of powerful complex markets.
+
+[In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. Consider this post the next chapter in that saga.
+
+So, as I conclude this post, the least I can do is offer to help correct the branding issue the SPR currently has. The S in SPR is supposed to stand for strategic, but I do not see a strategy here - at least not one that benefits Americans. I see a bet that this conflict ends before we need the oil back, and it looks like a losing one. Thus, I hereby rename the SPR, the Speculative Petroleum Reserve.
 
 Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compare with this year's.
 
