@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2b
+Step: 2c
 Since: 2026-10-11
 
 ## Steps
@@ -15,7 +15,7 @@ Since: 2026-10-11
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-11 | Own tie-out 32/32; independent tie-out found no difference in any published number; three wording edits accepted by Eric |
 | 2a | Draft with brackets resolved | 2026-10-11 | Title: Meet the Speculative Petroleum Reserve |
-| 2b | Eric's edit, Claude's look-over | | |
+| 2b | Eric's edit, Claude's look-over | 2026-10-11 | Three look-overs; 23 edits accepted; open source checks listed in the log |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
@@ -54,3 +54,5 @@ None.
 - 2026-10-11: Eric confirmed step 2a. Step 2b open.
 - 2026-10-11: 2b look-over done; items 2-7 applied and a sourced sentence on the conflict and the IEA release added to the history section.
 - 2026-10-11: Eric's second round of edits reviewed; 16 proposed edits all accepted and applied, plus the bank guarantee sentence. Tanker figure confirmed against the VLCC project (Baltic TD3C, Oct 9).
+- 2026-10-11: links added to the inventory tool and the supertanker post (both checked, both load).
+- 2026-10-11: Eric confirmed step 2b. Step 2c open. Carried forward for Eric to check before publishing: IEA release and Bloomberg link not opened by Claude; 1975 founding and four sites, the 180-million-barrel 2022 sale, DOE's 'about 25%' average and the 'stabilize GLOBAL oil supply' wording come from sources not saved; Alon USA as a small refiner is Claude's labeling.
