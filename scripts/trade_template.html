@@ -49,6 +49,9 @@ svg .hit { fill: transparent; cursor: default; }
 .left { margin: 6px 0 8px; padding-top: 8px; border-top: 1px solid var(--hair); }
 .left .k { font-size: 12.5px; color: var(--muted); }
 .left .v { font-size: 30px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.model { margin: 0 0 10px; }
+.model .k { font-size: 12.5px; color: var(--muted); }
+.model .v2 { font-size: 22px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .why { font-size: 13.5px; margin: 0 0 8px; padding: 0; list-style: none; }
 .why li { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid var(--hair); }
 .why b { font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -130,6 +133,7 @@ const mil = v => { const m = v / 1e6; return (m % 1 ? m.toFixed(1) : m.toFixed(0
 const longDate = iso => { const [y, m, d] = iso.split("-").map(Number); return Object.values(MON)[m - 1] + " " + d + ", " + y; };
 const monthOf = iso => Object.values(MON)[Number(iso.split("-")[1]) - 1];
 const spell = s => s.replace(/[A-Z][a-z]{2}/g, m => MON[m] || m).replace(/-/g, " to ");
+const bigUsd = v => { const m = Math.abs(v) / 1e6; return (v < 0 ? "-$" : "$") + (m >= 10 ? Math.round(m).toLocaleString("en-US") : m.toFixed(1)) + " million"; };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 const tip = document.getElementById("tip"), wrap = document.getElementById("wrap");
@@ -183,7 +187,10 @@ function card(r) {
     <ul class="why">
       <li><span>How much higher today's price was than the price for ${esc(spell(e.window))}</span><b>${pct(e.gap_pct)}</b></li>
       <li><span>Extra oil the government asked for</span><b>${pct(e.premium_pct)}</b></li>
-    </ul>`;
+    </ul>
+    <div class="model"><div class="k">Modeled profit for trading companies</div>` +
+    (pending ? `<div class="v2">Not known yet</div><div class="k">It depends on how many barrels they take.</div>`
+             : `<div class="v2">${bigUsd(e.left * r.trader_taken)}</div><div class="k">${mil(r.trader_taken)} million barrels they borrowed, times ${usd(e.left)}. Before shipping and other costs.</div>`) + `</div>`;
   return `<section class="round${pending ? " pending" : ""}">
     <h3>${esc(name)}${pending ? `<span class="tag">Results pending</span>` : ""}</h3>
     <p class="when">Bids due ${longDate(r.bids_due)}</p>${body}
@@ -197,17 +204,18 @@ document.querySelectorAll(".hit").forEach(el => {
 });
 
 document.getElementById("tbl").innerHTML =
-  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th></tr></thead><tbody>` +
+  `<thead><tr><th>Round</th><th>Oil picked up</th><th>Oil given back</th><th class="num">Sell now</th><th class="num">Later price</th><th class="num">Extra owed</th><th class="num">Cost to give back</th><th class="num">Left over</th><th class="num">Barrels offered</th><th class="num">Barrels taken</th><th class="num">Taken by trading companies</th><th class="num">Modeled profit, trading companies</th></tr></thead><tbody>` +
   DATA.rounds.map(r => { const e = r.example; return `<tr><td>${monthOf(r.bids_due)} (bids due ${longDate(r.bids_due)})</td>` +
     (e ? `<td>${esc(e.site)}, ${esc(spell(e.pickup))}</td><td>${esc(spell(e.window))}</td><td class="num">${usd(e.sale)}</td><td class="num">${usd(e.later_price)}</td><td class="num">${pct(e.premium_pct)}</td><td class="num">${usd(e.cost)}</td><td class="num">${usd(e.left)}</td>`
        : `<td colspan="7">Not shown</td>`) +
-    `<td class="num">${r.offered.toLocaleString("en-US")}</td><td class="num">${r.taken === null ? "Not posted" : r.taken.toLocaleString("en-US")}</td></tr>`; }).join("") + "</tbody>";
+    `<td class="num">${r.offered.toLocaleString("en-US")}</td><td class="num">${r.taken === null ? "Not posted" : r.taken.toLocaleString("en-US")}</td><td class="num">${r.taken === null ? "Not posted" : r.trader_taken.toLocaleString("en-US")}</td><td class="num">${r.taken === null || !e ? "" : bigUsd(e.left * r.trader_taken)}</td></tr>`; }).join("") + "</tbody>";
 
 const frontRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis === "front").map(r => monthOf(r.bids_due));
 const laterRounds = DATA.rounds.filter(r => r.example && r.example.sale_basis === "delivery").map(r => monthOf(r.bids_due));
 document.getElementById("notes").innerHTML = `
   <p><b>What this is.</b> An estimate of what the government's terms allowed, not what any company earned. Each card shows the pickup month and return date that left the most per barrel, at the smallest amount of extra oil the government would accept. Companies could offer more extra oil to win, and their offers are not public.</p>
-  <p><b>What is left out.</b> Shipping and pipeline fees, the bank guarantee each borrower must post, and the lower price of the heavier "sour" oil in some rounds. All of these shrink what is left over.</p>
+  <p><b>Modeled profit.</b> The amount left over per barrel, times the barrels awarded to trading companies in that round. These are firms that buy and sell oil but do not run refineries. It is a best case before costs, for the group as a whole, and assumes every barrel was sold and bought back at the prices shown.</p>
+  <p><b>What is left out.</b> Borrowers pay to move the oil out of the reserve and back in. The government's terms put pipeline fees, shipping, port charges and taxes on the borrower. Also left out: the bank guarantee each borrower must post, and the lower price of "sour" (high-sulfur) oil in some rounds. All of these shrink what is left over.</p>
   <p><b>Prices.</b> West Texas Intermediate futures closes as relayed by Yahoo Finance, not official exchange settlements.` +
   (frontRounds.length ? ` For the ${frontRounds.join(" and ")} round${frontRounds.length > 1 ? "s" : ""} the "sell now" price is the nearest futures contract, which was the highest price that day.` : "") +
   (laterRounds.length ? ` For the ${laterRounds.join(" and ")} round${laterRounds.length > 1 ? "s" : ""} it is the contract for the month after pickup.` : "") + `</p>

@@ -56,6 +56,8 @@ def main():
             round=rnd, bids_due=meta["bids_due"], award_date=meta["award_date"] or None,
             offered=int(meta["offered_bbl"]),
             taken=sum(int(a["barrels"]) for a in awards if a["round"] == rnd) if posted else None,
+            trader_taken=sum(int(a["barrels"]) for a in awards
+                             if a["round"] == rnd and a["type"] == "Trading house") if posted else None,
             example=ex))
     data = dict(built=datetime.date.today().isoformat(), rounds=out_rounds)
     logo = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "logo/d4tp-text-dark.svg").read_bytes()).decode()
