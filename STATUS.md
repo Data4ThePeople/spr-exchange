@@ -58,3 +58,4 @@ None.
 - 2026-10-11: Eric confirmed step 2b. Step 2c open. Carried forward for Eric to check before publishing: IEA release and Bloomberg link not opened by Claude; 1975 founding and four sites, the 180-million-barrel 2022 sale, DOE's 'about 25%' average and the 'stabilize GLOBAL oil supply' wording come from sources not saved; Alon USA as a small refiner is Claude's labeling.
 - 2026-10-11: 2c markup checked with the importer, convert-only: 30 slices, 3 full-width embeds, 1 image, 1 divider. No fences added; no embed is followed directly by a heading.
 - 2026-10-11: Eric confirmed step 2c. Step 2d open.
+- 2026-10-11: hero-prompt.md written, three variants from Eric's auction-barrel idea. Waiting on the generated image.
