@@ -6,9 +6,9 @@ date: 2026-10-12
 section: Data 4 Thought
 hero: images/spr-exchange-hero-1680x1080.png
 hero_alt: An AI-generated illustration of a used car auction inside a metal warehouse. A dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE stands alone in the auction lane where a car would be, with a lot sticker on its side. Under a hanging LANE 1 sign, an auctioneer at a wooden stand bearing a gold eagle emblem points into a crowd of bidders in work jackets and ball caps, some raising cards. Rows of used cars wait in the background.
-meta_title: How the 2026 SPR Oil Exchange Works and Who Borrowed
-description: Who borrowed 133.56 million barrels from the Strategic Petroleum Reserve in 2026, why a 20% premium can still pay, and when the oil is due back.
-keywords: Strategic Petroleum Reserve, SPR exchange 2026, SPR emergency exchange, who borrowed SPR oil, SPR oil loan premium, how much oil is in the SPR, when will the SPR be refilled, Trafigura SPR
+meta_title: How the Strategic Petroleum Reserve (SPR) Works in 2026
+description: How the Strategic Petroleum Reserve works, why it is being drawn down in 2026, who is borrowing the oil, and when it is due back. In plain language.
+keywords: how does the Strategic Petroleum Reserve work, why is the SPR being drawn down, SPR drawdown 2026, how much oil is in the SPR, Strategic Petroleum Reserve explained, SPR exchange, who borrowed SPR oil, when will the SPR be refilled
 schema_type: article
 drop_cap: true
 heading_spacer: 20px
