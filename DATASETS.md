@@ -307,3 +307,11 @@ original article located and read before it is used.
 - **Method:** within each round, awarded barrels are placed lot by lot up to each lot's offered volume (`rfp_terms.csv`). "Earliest" fills the lots whose first window opens soonest and returns the oil the day that window opens. "Latest" fills the lots whose last window closes latest and returns the oil the day that window closes. Round 1 windows use the exact days in the RFP; other rounds use the first and last day of the window months.
 - **Limits:** the earliest line ignores DOE's monthly receipt rate at each site, so it is faster than the sites could take oil back. It also starts September 1, 2026, and EIA weekly stocks show no net increase through October 2, 2026. Neither line reflects any later change to return dates.
 - **Receipt rates:** `data/reference/site_receipt_rates.csv` holds the nominal monthly rate at which each site can take oil back, from the Section B.1 tables of the RFPs (Bryan Mound 3.0M, West Hackberry 3.3M, Big Hill 3.0M, Bayou Choctaw 1.2M; 10.5M combined). The page uses the sum to say the earliest line is not physically possible. The RFPs add that capacity "may be lower than the table due to previous SPR tenders."
+
+## EIA weekly SPR stocks: coverage check (October 11, 2026)
+
+- **Read:** EIA Weekly Petroleum Status Report, Appendix A, Table A1 (saved as `data/raw/eia_docs/wpsr_appendix_a_2026-10-11.pdf`).
+- **What the figure includes:** footnote 3 says "Crude oil stocks in the SPR include non-U.S. stocks held under foreign or commercial storage agreements." So the weekly level counts oil physically stored at the sites, including any held there for others. The appendix does not say that oil owed to the reserve under an exchange is counted, and a loaned barrel leaves the level when it is delivered.
+- **Weekly against monthly:** the same table compares weekly-derived and monthly survey figures. For June 2026 the SPR was 321.3 million barrels from weekly data and 322.2 million in the monthly survey, a gap of 0.9 million.
+- **Revisions:** a re-pull of the weekly series on October 11, 2026 matched the October 10 pull for all 2,297 weeks.
+- **Not read:** the report's explanatory notes on reporting day and survey form. The weekly period label is taken as the week-ending Friday, as EIA's series labels state.
