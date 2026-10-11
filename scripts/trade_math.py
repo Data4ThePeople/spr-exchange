@@ -81,7 +81,9 @@ def main():
     front = front_month()
 
     rows, seen = [], set()
-    days = [("bids due", rnd["bids_due"])] + ([("award", rnd["award_date"])] if rnd["award_date"] else [])
+    # No award yet: price the round on the bid date and on the latest close we hold.
+    last = min(max(d for d, _ in curve), max(front))
+    days = [("bids due", rnd["bids_due"])] + ([("award", rnd["award_date"])] if rnd["award_date"] else [("latest", last)])
     for label, day in days:
         for t in terms:
             mon, year = t["delivery_period"].split()

@@ -33,3 +33,4 @@ None.
 - 2026-10-10 Ledger tool built: dist/ledger.html from scripts/build_ledger_page.py and scripts/ledger_template.html. Filters, four headline cards, stacked bars by round, company leaderboard, weekly SPR level with award dates, sortable table with DOE source links, CSV download. Checked at 879px and 390px inside an iframe; all filters tested by script. Full height at 879px is about 1,400px. Waiting on Eric's review before the simulator. GitHub Pages not yet enabled.
 - 2026-10-11: worked trade example for round 1.b (scripts/trade_math.py). Eric dropped the live-curve simulator in favor of a math explainer. Waiting on his read of the estimate.
 - 2026-10-11: trade math extended to rounds 3 and 4 (per-lot output in data/processed/trade_example_round_*.csv). Waiting on Eric's read.
+- 2026-10-11: round 4 priced on bid date and latest close; RFP B-1 terms re-read against the PDF and match rfp_terms.csv. DOE has posted no award as of today.
