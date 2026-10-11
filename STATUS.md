@@ -47,3 +47,4 @@ None.
 - 2026-10-11: EIA coverage check done from WPSR Appendix A (footnote on what SPR stocks include; weekly vs monthly gap 0.9M for June 2026).
 - 2026-10-11: Eric accepted tie-out edits 1 to 3 (estimated profit wording, lower-or-higher fine print, closer-to-pickup line on the June card) and confirmed step 1. Step 2a open; waiting on the slug and Eric's draft.
 - 2026-10-11: slug set to spr-exchange; posts/spr-exchange/POST.md created from the template. Waiting on Eric's draft.
+- 2026-10-11: Eric's draft placed in POST.md verbatim; brackets resolved (SPR chart image from the inventory tool, history, three-viz walk-through, two risks, teaser, limits). Proposed edits to his prose sent as a numbered list; none applied.
