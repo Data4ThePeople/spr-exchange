@@ -107,6 +107,8 @@ I am very upset by all of this. Look at Trafigura. We have basically outsourced 
 
 I believe the U.S. should care what is done with its emergency oil. Under these contracts it does not. A regional refiner that borrows a barrel is far more likely to run it through a refinery here. A trading house can sell it anywhere. Less than 1% of this oil went to a small refiner, and nearly half went to trading houses. Once it is sold, we have no idea where it goes. The bet was that our oil would make a difference on the global market. That could have worked if the conflict had ended quickly. It didn't, and now our laissez-faire approach of lending emergency oil to the highest bidder may be backfiring.
 
+This reminds me of something else happening right now. The Treasury Department is working to hold down [rising interest rates on U.S. debt](https://www.bloomberg.com/news/articles/2026-08-19/long-dated-treasuries-rally-as-treasury-boosts-bond-buybacks) (if you aren't up to speed on that, it is worth catching up). In both cases, the government is using the tools it has to steady a market much bigger than it is. At some point those tools may not be enough. To me, that looks like a risk for our debt and our oil at the same time.
+
 [In July I wrote](https://www.data4thepeople.com/p/rip-us-energy-strategy/) that America no longer has an energy strategy, and that we were handing our oil decisions to people who care more about the next earnings report than about our energy security. The reserve is where that shows up in a ledger.
 
 Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compare with this year's.
