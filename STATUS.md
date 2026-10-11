@@ -5,7 +5,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: none yet
+Post: spr-exchange
 Step: 2a
 Since: 2026-10-11
 
@@ -46,3 +46,4 @@ None.
 - 2026-10-11: independent tie-out back. No difference in any published number; ledger 31/31, rfp_terms 25/25, rounds 6/6, EIA and futures row for row. Fixed: cent rounding ties in two trade CSVs, DATASETS.md statements, 'three of the six rounds', 'agreed to lend', receipt-rate sources. Open for Eric: 'Maximum profit' and 'ideal time' wording.
 - 2026-10-11: EIA coverage check done from WPSR Appendix A (footnote on what SPR stocks include; weekly vs monthly gap 0.9M for June 2026).
 - 2026-10-11: Eric accepted tie-out edits 1 to 3 (estimated profit wording, lower-or-higher fine print, closer-to-pickup line on the June card) and confirmed step 1. Step 2a open; waiting on the slug and Eric's draft.
+- 2026-10-11: slug set to spr-exchange; posts/spr-exchange/POST.md created from the template. Waiting on Eric's draft.
