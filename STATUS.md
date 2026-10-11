@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2c
+Step: 2d
 Since: 2026-10-11
 
 ## Steps
@@ -16,7 +16,7 @@ Since: 2026-10-11
 | 1  | Exploration and analysis | 2026-10-11 | Own tie-out 32/32; independent tie-out found no difference in any published number; three wording edits accepted by Eric |
 | 2a | Draft with brackets resolved | 2026-10-11 | Title: Meet the Speculative Petroleum Reserve |
 | 2b | Eric's edit, Claude's look-over | 2026-10-11 | Three look-overs; 23 edits accepted; open source checks listed in the log |
-| 2c | Slice markup | | |
+| 2c | Slice markup | 2026-10-11 | Defaults only; 30 slices |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
@@ -57,3 +57,4 @@ None.
 - 2026-10-11: links added to the inventory tool and the supertanker post (both checked, both load).
 - 2026-10-11: Eric confirmed step 2b. Step 2c open. Carried forward for Eric to check before publishing: IEA release and Bloomberg link not opened by Claude; 1975 founding and four sites, the 180-million-barrel 2022 sale, DOE's 'about 25%' average and the 'stabilize GLOBAL oil supply' wording come from sources not saved; Alon USA as a small refiner is Claude's labeling.
 - 2026-10-11: 2c markup checked with the importer, convert-only: 30 slices, 3 full-width embeds, 1 image, 1 divider. No fences added; no embed is followed directly by a heading.
+- 2026-10-11: Eric confirmed step 2c. Step 2d open.
