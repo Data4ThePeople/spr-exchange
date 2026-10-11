@@ -41,3 +41,4 @@ None.
 - 2026-10-11: read two Argus reports on delayed returns of 2021-22 exchange oil; contract modifications exist only as FOIA releases, not held. Eric is considering two posts: (1) how the exchange works, (2) 2021-22 vs 2026 handling.
 - 2026-10-11: Eric reframed post 1 around two government risks (return risk; the gap years through 2027). Checked return windows, letter of credit and force majeure terms, and the 2027 futures move against the data.
 - 2026-10-11: return schedule bounds built (dist/returns.html): 8.48M certain back by end of 2027, 87.06M by end of 2028, last due July 31, 2029. Waiting on Eric's review.
+- 2026-10-11: own tie-out script written (scripts/tie_out.py), 32 of 32 checks pass. Independent tie-out by a fresh agent launched. Eric says the post publishes 2026-10-12; no records request.
