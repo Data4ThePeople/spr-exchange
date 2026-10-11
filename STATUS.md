@@ -19,7 +19,7 @@ Since: 2026-10-11
 | 2c | Slice markup | 2026-10-11 | Defaults only; 30 slices |
 | 2d | Hero 1680x1080 + alt text | 2026-10-11 | Used car auction with an SPR barrel, AI image, center crop |
 | 2e | SEO | 2026-10-11 | Targets: how the SPR works, why it is drawing down; six-question FAQ |
-| 2f | Pushed to Prismic (draft) | | |
+| 2f | Pushed to Prismic (draft) | | doc aswH9xEAACkAt-Zz, Migration Release; awaiting Eric's confirmation |
 | 2g | Mailchimp teaser | | |
 
 ## Stale
@@ -67,3 +67,4 @@ None.
 - 2026-10-11: Eric accepted 2e edits 1-3: section heading renamed, Common questions section (six questions) added, ledger sentence expanded.
 - 2026-10-11: Eric confirmed step 2e. Step 2f open.
 - 2026-10-11: 2f dry run clean (44 slices, 2 images to upload, new blog_post uid spr-exchange). The real push was blocked by the permission classifier; waiting on Eric to run it.
+- 2026-10-11: Eric ran the push. Draft aswH9xEAACkAt-Zz created in the Migration Release, 44 slices, 2 images uploaded, tags and author empty. Read-back check not run: no Prismic read token is set up.

@@ -1,0 +1,16 @@
+{
+  "images/01-spr-inventory.png": {
+    "id": "t_o7i6txvr7exb0J",
+    "width": 1200,
+    "height": 900,
+    "url": "https://images.prismic.io/data4thepeople/t_o7i6txvr7exb0J_01-spr-inventory.png?auto=format,compress",
+    "stamp": "120234:1791718832"
+  },
+  "images/spr-exchange-hero-1680x1080.png": {
+    "id": "EqUevwblHW9OnMqG",
+    "width": 1680,
+    "height": 1080,
+    "url": "https://images.prismic.io/data4thepeople/EqUevwblHW9OnMqG_spr-exchange-hero-1680x1080.png?auto=format,compress",
+    "stamp": "3389830:1791756055"
+  }
+}
