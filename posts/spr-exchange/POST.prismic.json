@@ -3,9 +3,9 @@
   "page_subtitle": "The S in SPR is supposed to stand for strategic. In 2026, our emergency oil goes to the highest bidder, and the government is the one making the bet.",
   "published_date": "2026-10-12",
   "updated_date": "2026-10-12",
-  "meta_title": "How the 2026 SPR Oil Exchange Works and Who Borrowed",
-  "meta_description": "Who borrowed 133.56 million barrels from the Strategic Petroleum Reserve in 2026, why a 20% premium can still pay, and when the oil is due back.",
-  "meta_keywords": "Strategic Petroleum Reserve, SPR exchange 2026, SPR emergency exchange, who borrowed SPR oil, SPR oil loan premium, how much oil is in the SPR, when will the SPR be refilled, Trafigura SPR",
+  "meta_title": "How the Strategic Petroleum Reserve (SPR) Works in 2026",
+  "meta_description": "How the Strategic Petroleum Reserve works, why it is being drawn down in 2026, who is borrowing the oil, and when it is due back. In plain language.",
+  "meta_keywords": "how does the Strategic Petroleum Reserve work, why is the SPR being drawn down, SPR drawdown 2026, how much oil is in the SPR, Strategic Petroleum Reserve explained, SPR exchange, who borrowed SPR oil, when will the SPR be refilled",
   "make_this_main_post": false,
   "slices": [
     {
@@ -213,7 +213,7 @@
         "paragraph_text": [
           {
             "type": "heading2",
-            "text": "How the loan works",
+            "text": "How the SPR works in 2026",
             "spans": [],
             "direction": "ltr"
           },
@@ -264,7 +264,7 @@
           },
           {
             "type": "paragraph",
-            "text": "After each round, the department posts a one-page sheet listing the winners. We combined every sheet into one ledger, shown below, that you can search and download.",
+            "text": "After each round, the department posts a one-page sheet listing the winners. We combined every sheet into one ledger, shown below, that you can search and download for free. It lists every contract in the 2026 Strategic Petroleum Reserve exchange: the company, the site, the type of oil and the number of barrels.",
             "spans": [],
             "direction": "ltr"
           }
@@ -826,6 +826,231 @@
               }
             ],
             "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Common questions",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How does the Strategic Petroleum Reserve work?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The U.S. government stores crude oil in underground salt caverns at four sites in Texas and Louisiana. The law lets the President order oil released during a severe energy supply interruption. The oil can be sold, as it was in 2022, or lent, as it is in 2026. In a loan, a company takes oil now and returns the same amount later, plus extra barrels called a premium.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Why is the SPR being drawn down in 2026?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, and the U.S. committed 172 million. The Energy Department has been lending that oil to companies in a series of auctions since March.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How much oil is in the Strategic Petroleum Reserve?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The reserve held 283.0 million barrels on October 2, 2026, the lowest weekly level since October 1982. Its peak was 726.6 million barrels at the end of 2009.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Who is getting the SPR oil?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Thirteen companies won 31 contracts for 133.56 million barrels in the rounds reported so far. Trading houses took 45.0%, refiners 38.3%, the trading arms of two oil majors 14.8%, and a pipeline company the rest. The largest borrower was Trafigura, with 25.7% of the total.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Why would a company agree to return 20% more oil than it borrowed?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Because oil for later delivery was much cheaper than oil sold right away. On April 13, 2026, oil sold now cost 44.9% more than oil for late 2028. A company could sell the borrowed barrel, lock in the price of the barrels it owed, and keep the difference.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "When will the SPR be refilled?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The department has not published the return dates each company chose. On the latest dates the contracts allow, 6% of the lent oil is due back by the end of 2027, about 65% by the end of 2028, and the last barrels by July 31, 2029.",
+            "spans": [],
+            "direction": "ltr"
           },
           {
             "type": "paragraph",
@@ -848,5 +1073,5 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Meet the Speculative Petroleum Reserve\",\n  \"description\": \"Who borrowed 133.56 million barrels from the Strategic Petroleum Reserve in 2026, why a 20% premium can still pay, and when the oil is due back.\",\n  \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n  \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"keywords\": [\n    \"Strategic Petroleum Reserve\",\n    \"SPR exchange 2026\",\n    \"SPR emergency exchange\",\n    \"who borrowed SPR oil\",\n    \"SPR oil loan premium\",\n    \"how much oil is in the SPR\",\n    \"when will the SPR be refilled\",\n    \"Trafigura SPR\"\n  ],\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-exchange\"\n  }\n}"
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"Meet the Speculative Petroleum Reserve\",\n      \"description\": \"How the Strategic Petroleum Reserve works, why it is being drawn down in 2026, who is borrowing the oil, and when it is due back. In plain language.\",\n      \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n      \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n      \"articleSection\": \"Data 4 Thought\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"inLanguage\": \"en-US\",\n      \"isAccessibleForFree\": true,\n      \"keywords\": [\n        \"how does the Strategic Petroleum Reserve work\",\n        \"why is the SPR being drawn down\",\n        \"SPR drawdown 2026\",\n        \"how much oil is in the SPR\",\n        \"Strategic Petroleum Reserve explained\",\n        \"SPR exchange\",\n        \"who borrowed SPR oil\",\n        \"when will the SPR be refilled\"\n      ],\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"https://www.data4thepeople.com/p/spr-exchange\"\n      },\n      \"@id\": \"https://www.data4thepeople.com/p/spr-exchange#article\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/spr-exchange#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How does the Strategic Petroleum Reserve work?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The U.S. government stores crude oil in underground salt caverns at four sites in Texas and Louisiana. The law lets the President order oil released during a severe energy supply interruption. The oil can be sold, as it was in 2022, or lent, as it is in 2026. In a loan, a company takes oil now and returns the same amount later, plus extra barrels called a premium.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why is the SPR being drawn down in 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, and the U.S. committed 172 million. The Energy Department has been lending that oil to companies in a series of auctions since March.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much oil is in the Strategic Petroleum Reserve?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The reserve held 283.0 million barrels on October 2, 2026, the lowest weekly level since October 1982. Its peak was 726.6 million barrels at the end of 2009.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who is getting the SPR oil?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Thirteen companies won 31 contracts for 133.56 million barrels in the rounds reported so far. Trading houses took 45.0%, refiners 38.3%, the trading arms of two oil majors 14.8%, and a pipeline company the rest. The largest borrower was Trafigura, with 25.7% of the total.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why would a company agree to return 20% more oil than it borrowed?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Because oil for later delivery was much cheaper than oil sold right away. On April 13, 2026, oil sold now cost 44.9% more than oil for late 2028. A company could sell the borrowed barrel, lock in the price of the barrels it owed, and keep the difference.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When will the SPR be refilled?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The department has not published the return dates each company chose. On the latest dates the contracts allow, 6% of the lent oil is due back by the end of 2027, about 65% by the end of 2028, and the last barrels by July 31, 2029.\"\n          }\n        }\n      ]\n    }\n  ]\n}"
 }

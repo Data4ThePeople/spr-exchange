@@ -64,3 +64,4 @@ None.
 - 2026-10-11: Eric confirmed step 2d. Step 2e open.
 - 2026-10-11: 2e front matter written (meta title, description, eight keywords) from search targets Claude proposed; Common questions section proposed, not applied.
 - 2026-10-11: 2e retargeted at Eric's direction to 'how the SPR works' and 'why it is drawing down'; front matter rewritten.
+- 2026-10-11: Eric accepted 2e edits 1-3: section heading renamed, Common questions section (six questions) added, ledger sentence expanded.

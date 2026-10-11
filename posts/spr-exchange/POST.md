@@ -45,7 +45,7 @@ The law lets the President order oil released during a "severe energy supply int
 
 Then came this year. On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. U.S. crude oil averaged $64.51 a barrel in February and reached $114.58 on April 7. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, the largest such release on record. The U.S. committed 172 million barrels, and the Energy Department began lending oil that month. By October 2 the reserve held 283.0 million barrels, the lowest weekly level since October 1982. Seven of the ten largest weekly withdrawals in the reserve's history came in May and June of this year.
 
-## How the loan works
+## How the SPR works in 2026
 
 There is one big difference between the SPR drawdown in 2022 and the one in 2026. In 2022, the oil was sold. The SPR oil is now being lent.
 
@@ -55,7 +55,7 @@ Here is where the auction comes in. For each batch of oil, the department sets a
 
 ## Who took the barrels
 
-After each round, the department posts a one-page sheet listing the winners. We combined every sheet into one ledger, shown below, that you can search and download.
+After each round, the department posts a one-page sheet listing the winners. We combined every sheet into one ledger, shown below, that you can search and download for free. It lists every contract in the 2026 Strategic Petroleum Reserve exchange: the company, the site, the type of oil and the number of barrels.
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/ledger.html" width="100%" height="1400" loading="lazy" style="border:0" title="Who took the barrels: every contract in the 2026 Strategic Petroleum Reserve exchange"></iframe>
 
@@ -145,5 +145,31 @@ Tomorrow we will look at how the 2021 and 2022 loans worked, and how they compar
 - **The real return schedule.** The return chart shows the earliest and latest dates the contracts allow. The earliest line is faster than the reserve sites can physically take oil back.
 - **Where the oil went.** Crude oil is interchangeable once it enters the market, and the award sheets do not track it.
 - **How each company should be labeled.** The firm types in the ledger are our classification, based on the company name the department listed.
+
+## Common questions
+
+### How does the Strategic Petroleum Reserve work?
+
+The U.S. government stores crude oil in underground salt caverns at four sites in Texas and Louisiana. The law lets the President order oil released during a severe energy supply interruption. The oil can be sold, as it was in 2022, or lent, as it is in 2026. In a loan, a company takes oil now and returns the same amount later, plus extra barrels called a premium.
+
+### Why is the SPR being drawn down in 2026?
+
+On February 28, a conflict began in the Middle East that disrupted oil shipments through the Strait of Hormuz. On March 11, the 32 member countries of the International Energy Agency agreed to release 400 million barrels of emergency oil, and the U.S. committed 172 million. The Energy Department has been lending that oil to companies in a series of auctions since March.
+
+### How much oil is in the Strategic Petroleum Reserve?
+
+The reserve held 283.0 million barrels on October 2, 2026, the lowest weekly level since October 1982. Its peak was 726.6 million barrels at the end of 2009.
+
+### Who is getting the SPR oil?
+
+Thirteen companies won 31 contracts for 133.56 million barrels in the rounds reported so far. Trading houses took 45.0%, refiners 38.3%, the trading arms of two oil majors 14.8%, and a pipeline company the rest. The largest borrower was Trafigura, with 25.7% of the total.
+
+### Why would a company agree to return 20% more oil than it borrowed?
+
+Because oil for later delivery was much cheaper than oil sold right away. On April 13, 2026, oil sold now cost 44.9% more than oil for late 2028. A company could sell the borrowed barrel, lock in the price of the barrels it owed, and keep the difference.
+
+### When will the SPR be refilled?
+
+The department has not published the return dates each company chose. On the latest dates the contracts allow, 6% of the lent oil is due back by the end of 2027, about 65% by the end of 2028, and the last barrels by July 31, 2029.
 
 The data, code and method notes are public at [github.com/Data4ThePeople/spr-exchange](https://github.com/Data4ThePeople/spr-exchange).
