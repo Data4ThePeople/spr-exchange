@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2e
+Step: 2f
 Since: 2026-10-11
 
 ## Steps
@@ -18,7 +18,7 @@ Since: 2026-10-11
 | 2b | Eric's edit, Claude's look-over | 2026-10-11 | Three look-overs; 23 edits accepted; open source checks listed in the log |
 | 2c | Slice markup | 2026-10-11 | Defaults only; 30 slices |
 | 2d | Hero 1680x1080 + alt text | 2026-10-11 | Used car auction with an SPR barrel, AI image, center crop |
-| 2e | SEO | | |
+| 2e | SEO | 2026-10-11 | Targets: how the SPR works, why it is drawing down; six-question FAQ |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
 
@@ -65,3 +65,4 @@ None.
 - 2026-10-11: 2e front matter written (meta title, description, eight keywords) from search targets Claude proposed; Common questions section proposed, not applied.
 - 2026-10-11: 2e retargeted at Eric's direction to 'how the SPR works' and 'why it is drawing down'; front matter rewritten.
 - 2026-10-11: Eric accepted 2e edits 1-3: section heading renamed, Common questions section (six questions) added, ledger sentence expanded.
+- 2026-10-11: Eric confirmed step 2e. Step 2f open.
