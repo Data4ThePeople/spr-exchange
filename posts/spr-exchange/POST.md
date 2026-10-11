@@ -2,7 +2,8 @@
 title: Meet the Speculative Petroleum Reserve
 subtitle: The S in SPR is supposed to stand for strategic. In 2026, our emergency oil goes to the highest bidder, and the government is the one making the bet.
 slug: spr-exchange
-date: 2026-10-12
+date: 2026-10-11
+time: 18:30:00-04:00
 section: Data 4 Thought
 hero: images/spr-exchange-hero-1680x1080.png
 hero_alt: An AI-generated illustration of a used car auction inside a metal warehouse. A dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE stands alone in the auction lane where a car would be, with a lot sticker on its side. Under a hanging LANE 1 sign, an auctioneer at a wooden stand bearing a gold eagle emblem points into a crowd of bidders in work jackets and ball caps, some raising cards. Rows of used cars wait in the background.
