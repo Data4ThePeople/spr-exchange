@@ -79,9 +79,9 @@ html.embed .cards { margin: 10px 0; }
 
   <figure>
     <h2 id="charttitle">Borrowed oil back in the reserve, earliest and latest the contracts allow</h2>
-    <p class="sub">Million barrels returned, not counting the extra oil owed. The real path is somewhere in the shaded area.</p>
+    <p class="sub" id="chartsub"></p>
     <ul class="legend">
-      <li><span class="sw" style="background:var(--c-early)"></span>Earliest the contracts allow</li>
+      <li><span class="sw" style="background:var(--c-early)"></span>Earliest the contracts allow (not physically possible)</li>
       <li><span class="sw" style="background:var(--c-late)"></span>Latest the contracts allow</li>
       <li><span class="sw box" style="background:var(--band)"></span>What the public cannot see</li>
     </ul>
@@ -116,11 +116,15 @@ const years = []; for (let y = firstYear; y <= lastYear; y++) years.push(y);
 document.getElementById("standfirst").textContent =
   `Companies borrowed ${mil(TOTAL)} million barrels from the emergency reserve in 2026. The government set the dates they can give it back. It has not said which dates each company picked, so the public can only see the earliest and latest the rules allow.`;
 
+const monthsNeeded = Math.ceil(TOTAL / DATA.receipt_per_month);
+document.getElementById("chartsub").textContent =
+  `Million barrels returned, not counting the extra oil owed. The real path is somewhere in the shaded area. The orange line is not physically possible: the reserve sites can take back about ${mil(DATA.receipt_per_month)} million barrels a month combined, so returning all of it would take at least ${monthsNeeded} months.`;
+
 // Cards: what the rules guarantee at each year-end, then the last due date.
 const cardYears = years.filter(y => backBy(DATA.latest, y + "-12-31") < TOTAL).slice(-2);
 document.getElementById("cards").innerHTML = cardYears.map(y => {
   const due = backBy(DATA.latest, y + "-12-31"), could = backBy(DATA.earliest, y + "-12-31");
-  return `<div class="card"><div class="k">Due back by contract by the end of ${y}</div><div class="v">${mil(due)} million</div><div class="s">${pct(due, TOTAL)} of the oil lent, if no dates are pushed back. As much as ${mil(could)} million could be back.</div></div>`;
+  return `<div class="card"><div class="k">Due back by contract by the end of ${y}</div><div class="v">${mil(due)} million</div><div class="s">${pct(due, TOTAL)} of the oil lent, if no dates are pushed back. The contract dates would permit up to ${mil(could)} million.</div></div>`;
 }).join("") + `<div class="card"><div class="k">Last barrels due</div><div class="v">${longDate(lastDue)}</div><div class="s">${mil(TOTAL - backBy(DATA.latest, (lastYear - 1) + "-12-31"))} million barrels can stay out into ${lastYear}.</div></div>`;
 
 function draw() {
@@ -151,7 +155,7 @@ function draw() {
     const box = host.querySelector("svg").getBoundingClientRect(), px = (ev.clientX - box.left) * W / box.width;
     const d = iso(t0 + (t1 - t0) * (px - M.l) / (W - M.l - M.r)), lo = backBy(DATA.latest, d), hi = backBy(DATA.earliest, d);
     cross.setAttribute("x1", px); cross.setAttribute("x2", px); cross.setAttribute("visibility", "visible");
-    tip.innerHTML = `${longDate(d)}<br>Due back by contract: <b>${mil(lo)} million</b><br>Could be back: <b>${mil(hi)} million</b>`;
+    tip.innerHTML = `${longDate(d)}<br>Due back by contract: <b>${mil(lo)} million</b><br>Earliest dates would permit: <b>${mil(hi)} million</b>`;
     tip.classList.add("on");
     const f = fig.getBoundingClientRect(), left = ev.clientX - f.left + 14;
     tip.style.left = Math.min(left, f.width - tip.offsetWidth - 8) + "px"; tip.style.top = (ev.clientY - f.top + 14) + "px";
@@ -162,11 +166,11 @@ draw();
 new ResizeObserver(draw).observe(document.getElementById("chart"));
 
 const dates = [...new Set(DATA.earliest.concat(DATA.latest).map(r => r[0]))].sort();
-document.getElementById("tbl").innerHTML = `<thead><tr><th>By this date</th><th class="num">Due back by contract (latest the rules allow)</th><th class="num">Could be back (earliest the rules allow)</th></tr></thead><tbody>` +
+document.getElementById("tbl").innerHTML = `<thead><tr><th>By this date</th><th class="num">Due back by contract (latest the rules allow)</th><th class="num">Earliest the contract dates permit (not physically possible)</th></tr></thead><tbody>` +
   dates.map(d => `<tr><td>${longDate(d)}</td><td class="num">${backBy(DATA.latest, d).toLocaleString("en-US")}</td><td class="num">${backBy(DATA.earliest, d).toLocaleString("en-US")}</td></tr>`).join("") + "</tbody>";
 
 document.getElementById("notes").innerHTML = `
-  <p><b>How to read it.</b> The orange line assumes every company returns its oil on the first day the rules allow. The blue line assumes every company waits until the last day its contract allows. Neither is a forecast, and neither is a guarantee: the government can agree to later dates, and a contract can excuse a late return in cases such as war.</p>
+  <p><b>How to read it.</b> The orange line assumes every company returns its oil on the first day the rules allow. That cannot happen in practice. The government lists how much oil each site can take back in a month, and the four sites add up to about ${mil(DATA.receipt_per_month)} million barrels. The orange line shows only what the contract dates permit. The blue line assumes every company waits until the last day its contract allows. Neither is a forecast, and neither is a guarantee: the government can agree to later dates, and a contract can excuse a late return in cases such as war.</p>
   <p><b>Why there are two lines.</b> The government publishes how many barrels each company won in each round. It does not publish which pickup month or return date each company chose. Within each round, the lines place the awarded barrels in the offers with the earliest or the latest return dates, without putting more oil in any offer than the government made available.</p>
   <p><b>What is not shown.</b> The extra oil owed on top of each barrel, the round with results still pending, and any change to return dates the government may agree to later.</p>
   <p><b>Sources.</b> U.S. Department of Energy requests for proposals and award sheets, <a href="https://www.spr.doe.gov/posting/" target="_blank" rel="noopener">spr.doe.gov</a>. Method and code: <a href="https://github.com/Data4ThePeople/spr-exchange" target="_blank" rel="noopener">github.com/Data4ThePeople/spr-exchange</a>. Built ${longDate(DATA.built)}.</p>

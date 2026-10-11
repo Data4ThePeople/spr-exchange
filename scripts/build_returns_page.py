@@ -3,6 +3,7 @@
 
 Inputs
   data/processed/return_schedule.csv   from scripts/return_schedule.py (re-run here)
+  data/reference/site_receipt_rates.csv   monthly rate each site can take oil back, from the RFPs
   scripts/returns_template.html, logo/d4tp-text-dark.svg
 Output
   dist/returns.html   self-contained page, data inlined, no CDN
@@ -27,6 +28,8 @@ def main():
         data[scenario] = sorted(by_date.items())
     if sum(n for _, n in data["earliest"]) != sum(n for _, n in data["latest"]):
         sys.exit("the two scenarios do not hold the same barrels")
+    data["receipt_per_month"] = sum(int(r["nominal_receipt_bbl_per_month"]) for r in
+                                    csv.DictReader((ROOT / "data/reference/site_receipt_rates.csv").open()))
     logo = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "logo/d4tp-text-dark.svg").read_bytes()).decode()
     html = (ROOT / "scripts/returns_template.html").read_text()
     if "/*__DATA__*/null" not in html or "__LOGO__" not in html:
