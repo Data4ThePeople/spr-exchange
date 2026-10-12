@@ -448,3 +448,13 @@ and have not been checked against a primary source.
 - **Shares** are barrels awarded to the group divided by all barrels awarded in that program.
 - **Limits:** a sale and a loan are different deals; the page compares who received oil, not what they paid. The years differ in price, in the cause of the shortage and in refinery demand, so the page does not say the program design caused the change.
 - **Bank guarantee:** not a difference between the December 2021 loan and the 2026 loans. Both require a letter of credit equal to 100% of the oil's value at award (2021 RFP p. 157; 2026 Release No. 4 RFP p. 149).
+
+## 2022 offers, winners and losers (`scripts/build_bids_2022.py` -> `data/processed/spr_2022_sale_offers.csv`)
+
+- **What it is:** every offer filed in the seven 2022 emergency sales, from DOE's "Offeror Abstract Report" for each sale (in `data/raw/doe_sales_2022/`). One page per offer; one row here per offer and master line item (MLI): 583 offers, 777 lines, 20 bidders.
+- **Barrels bid** is the report's "MAXQ" for that MLI, or the largest quantity asked for when MAXQ is blank. A company often files several offers for the same oil at different prices, so barrels bid (433,695,000) overstate what bidders wanted. Use it to see who showed up and how often they won.
+- **Awarded** is matched from the award ledger on sale, offer number and MLI. The build stops unless every awarded barrel matches an offer; all 180,660,000 do. One line was awarded more than its MAXQ.
+- **Price comparison:** for each sale and MLI, the lowest winning unit price is taken from the award ledger, and each offer line's best price is compared with it, weighted by barrels bid. MLIs are different crude streams and delivery months, so prices are only compared within the same sale and MLI.
+- **Four bidders that won nothing** were added to `company_map.csv`: Monroe Energy (refiner), PetroChina International (America) (foreign oil company trading arm), and Upstream Petroleum and Biomass Energy Services ("Not classified"; business not identified).
+- **No 2026 equivalent.** DOE has posted no report of offers for the 2026 exchange, only the one-page award sheets. Who bid and lost in 2026, and at what premium, is not public.
+- **Context from EIA weekly data already held (`eia_series.csv`):** refinery utilization averaged 92.1% in March to November 2022 and 94.4% from March 20 to October 2, 2026; refiner crude inputs 16.03 and 16.83 million barrels a day; crude exports 3.65 and 4.28 million barrels a day. Not yet tied out by a second path.
