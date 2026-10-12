@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2f
+Step: 2g
 Since: 2026-10-11
 
 ## Steps
@@ -19,7 +19,7 @@ Since: 2026-10-11
 | 2c | Slice markup | 2026-10-11 | Defaults only; 30 slices |
 | 2d | Hero 1680x1080 + alt text | 2026-10-11 | Used car auction with an SPR barrel, AI image, center crop |
 | 2e | SEO | 2026-10-11 | Targets: how the SPR works, why it is drawing down; six-question FAQ |
-| 2f | Pushed to Prismic (draft) | | doc aswH9xEAACkAt-Zz, Migration Release; awaiting Eric's confirmation |
+| 2f | Pushed to Prismic (draft) | 2026-10-11 | doc aswH9xEAACkAt-Zz, Migration Release |
 | 2g | Mailchimp teaser | | |
 
 ## Stale
@@ -70,3 +70,4 @@ None.
 - 2026-10-11: Eric ran the push. Draft aswH9xEAACkAt-Zz created in the Migration Release, 44 slices, 2 images uploaded, tags and author empty. Read-back check not run: no Prismic read token is set up.
 - 2026-10-11: publication moved to October 11, 2026 at 6:30 p.m. EDT at Eric's instruction. Prismic draft needs a re-push to carry it.
 - 2026-10-11: Prismic draft aswH9xEAACkAt-Zz updated with the new date and time (Migration Release, still a draft).
+- 2026-10-11: Eric confirmed step 2f. Step 2g open.
