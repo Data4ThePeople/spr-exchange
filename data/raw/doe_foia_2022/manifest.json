@@ -1,0 +1,281 @@
+[
+ {
+  "file": "FY2022_WinterExchangeAll.pdf",
+  "label": "FY2022 Winter Exchange All",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/FY2022_WinterExchangeAll.pdf",
+  "bytes": 24285378,
+  "sha256": "a4ceec2a174596a549cfc023575a3a6d40a14ba0c7c63df0bb28c7547d79110a",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0005_Mod_0001_(ATMI)_FullyExecuted.pdf",
+  "label": "22PO0005 Mod 0001 (ATMI) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0005_Mod_0001_%28ATMI%29_FullyExecuted.pdf",
+  "bytes": 184733,
+  "sha256": "13fcc806b1526ef2fd8aae04b6d809edcb4aba3eccc4306159f061f012ee3ece",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0012_Mod_0001_(P66)_FullyExecuted.pdf",
+  "label": "22PO0012 Mod 0001 (P66) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0012_Mod_0001_%28P66%29_FullyExecuted.pdf",
+  "bytes": 617764,
+  "sha256": "006651736e01e2e35f63e6ca03ddbcb64e71e48aa112bc530d420ce7f614b73f",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0006_Mod_0001_(Shell)_FullyExecuted.pdf",
+  "label": "22PO0006 Mod 0001 (Shell) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0006_Mod_0001_%28Shell%29_FullyExecuted.pdf",
+  "bytes": 247217,
+  "sha256": "db197354430be77a7a0177d82fa4cec2c6823025fce77767f678d0b170481f4b",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0008_Mod_0001_(Chevron)_FullyExecuted.pdf",
+  "label": "22PO0008 - Mod 0001 (Chevron) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0008_Mod_0001_%28Chevron%29_FullyExecuted.pdf",
+  "bytes": 565321,
+  "sha256": "f135e6d9230e8dfa3b9fa4c72679629c46cec318b2d8849ecd743b30b66f1d89",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0013_Mod_0001_(Exxon)_FullyExecuted.pdf",
+  "label": "22PO0013 Mod 0001 (Exxon) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0013_Mod_0001_%28Exxon%29_FullyExecuted.pdf",
+  "bytes": 135923,
+  "sha256": "c9483639353feae23d9d02990f4b0a4dc72cd31c5ca96c99cc4ebf68aeb1d778",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0004_Mod_0001_(Shell)_FullyExecuted.pdf",
+  "label": "22PO0004 Mod 0001 (Shell) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0004_Mod_0001_%28Shell%29_FullyExecuted.pdf",
+  "bytes": 230102,
+  "sha256": "8496dbf57bd6692d0564d87281d6009bd77928cfb1c59ec992f4afca42b4e3d4",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0006_Mod_0002_(Shell)_FullyExecuted.pdf",
+  "label": "22PO0006 Mod 0002 (Shell) Fully Executed",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0006_Mod_0002_%28Shell%29_FullyExecuted.pdf",
+  "bytes": 228950,
+  "sha256": "0effa416b92de54e5aedc65e0437ac5464afb08e97db398d479f3fd806b7ed8b",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0012_Mod_0002_(P66)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0012 Mod 0002 (P66) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0012_Mod_0002_%28P66%29_FullyExecuted_Redacted.pdf",
+  "bytes": 935347,
+  "sha256": "d6b00fb870e0f83e4cf4c9a742aca8927af5ea1d0812d3282c6c46e48bd43b75",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0012_Mod_0003_(P66)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0012 Mod 0003 (P66) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0012_Mod_0003_%28P66%29_FullyExecuted_Redacted.pdf",
+  "bytes": 1135863,
+  "sha256": "c55565a57171cc68fa1e2a134d85de5507a22a4497f1d8039d4f01b8ead410f3",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0012_Mod_0004_(P66)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0012 Mod 0004 (P66) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0012_Mod_0004_%28P66%29_FullyExecuted_Redacted.pdf",
+  "bytes": 730626,
+  "sha256": "373c79eccae9c058db446b2ce92afd91efa8f2f15b82b920503b879bd232803e",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0009_Mod_0001_(BP)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0009 Mod 0001 (BP) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0009_Mod_0001_%28BP%29_FullyExecuted_Redacted.pdf",
+  "bytes": 353265,
+  "sha256": "99df77a8e73a1926c5faf9f3b687570f1fc95240f7b60f40309429dac7bdefe2",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0011_Mod_0001_(Macquarie)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0011 Mod 0001 (Macquarie) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0011_Mod_0001_%28Macquarie%29_FullyExecuted_Redacted.pdf",
+  "bytes": 173964,
+  "sha256": "0102dc369bbe64e7c110e48d7e97e7f55cd2620cef2b717d6e4392465a4c9e60",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0006_Mod_0003_(Shell)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0006 Mod 0003 (Shell) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0006_Mod_0003_%28Shell%29_FullyExecuted_Redacted.pdf",
+  "bytes": 1935412,
+  "sha256": "43dc0c6214c45be42aa6b3afafdef5edd828abf66fa1cd13c1e229c4cc064fdb",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0012_Mod_0005_(P66)_Redacted.pdf",
+  "label": "22PO0012 Mod 0005 (P66) Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0012_Mod_0005_%28P66%29_Redacted.pdf",
+  "bytes": 516673,
+  "sha256": "ff81905d6b4cc3bd5ea1b214953a120e97ec54314eef70cb114f8e99c6e53c5c",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0009_Mod_0001_(BP)_Redacted.pdf",
+  "label": "22PO0009 Mod 0001 (BP) Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0009_Mod_0001_%28BP%29_Redacted.pdf",
+  "bytes": 319172,
+  "sha256": "7d36bca281c2e0b990e7c08e44c0f78c6f15a8a42306c78c4732f33c5362e04e",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0005_Mod_0002_(ATMI)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0005 Mod 0002 (ATMI) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0005_Mod_0002_%28ATMI%29_FullyExecuted_Redacted.pdf",
+  "bytes": 1486423,
+  "sha256": "9db684922ad30d1ef2fdd982a0a5b4e9af70149b00b7e454dd50a2af28ddbb19",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0011_Mod_0002_(Macquarie)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0011 Mod 0002 (Macquarie) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0011_Mod_0002_%28Macquarie%29_FullyExecuted_Redacted.pdf",
+  "bytes": 210446,
+  "sha256": "ad1ac1fa17b207e78432816b0028e9ba2c1573e219b587c83e6ff61fd384f054",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0006_Mod_0004_(Shell)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0006 Mod 0004 (Shell) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0006_Mod_0004_%28Shell%29_FullyExecuted_Redacted.pdf",
+  "bytes": 2282770,
+  "sha256": "aae9db2b5f2b0dfff6b6cb3db047e49c6fe6756bac82a3bc4e441dfe43354189",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0004_Mod_0002_(Shell)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0004 Mod 0002 (Shell) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0004_Mod_0002_%28Shell%29_FullyExecuted_Redacted.pdf",
+  "bytes": 2003748,
+  "sha256": "3e5e22de650907898b1130de8413e966b120d01a105a18655fa682d98f6584e9",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0007_Mod_0001_(ExxonMobil)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0007 Mod 0001 (ExxonMobil) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0007_Mod_0001_%28ExxonMobil%29_FullyExecuted_Redacted.pdf",
+  "bytes": 2023943,
+  "sha256": "a1ab86b3ef06109a799ba232038637fbf1b692d1bcb035270181ffd913e3a5ea",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0013_Mod_0002_(ExxonMobil)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0013 Mod 0002 (ExxonMobil) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0013_Mod_0002_%28ExxonMobil%29_FullyExecuted_Redacted.pdf",
+  "bytes": 1591470,
+  "sha256": "198f42e47f3c1da88bdbcec69a8a3db845e568775a1455c9d90e3d2e0f75e067",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0010_Mod_0001_(Trafigura)_Redacted.pdf",
+  "label": "22PO0010 Mod 0001 (Trafigura)_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0010_Mod_0001_%28Trafigura%29_Redacted.pdf",
+  "bytes": 197511,
+  "sha256": "c7707ddd7a4dc99ad314fd2a55d87c45c3b6843010f8464685bd8d285fd79f3c",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0002_Mod_0001_(Marathon)_Redacted.pdf",
+  "label": "22PO0002 Mod 0001 (Marathon)_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0002_Mod_0001_%28Marathon%29_Redacted.pdf",
+  "bytes": 1037900,
+  "sha256": "018b648f676e234060e792caacec55aaf5b4ecdf2e05031dc28f73d99743280d",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0003_Mod0002_(ExxonMobil)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0003 Mod0002 (ExxonMobil) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0003_Mod0002_%28ExxonMobil%29_FullyExecuted_Redacted.pdf",
+  "bytes": 730061,
+  "sha256": "ec9fbbf35682364df6c8c32938d2f056855c9de5fc9d0ea310c124d5f29ac96a",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0003_Mod0003_(ExxonMobil)_FullyExecuted_Redacted.pdf",
+  "label": "22PO0003 Mod0003 (ExxonMobil) Fully Executed_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0003_Mod0003_%28ExxonMobil%29_FullyExecuted_Redacted.pdf",
+  "bytes": 722062,
+  "sha256": "e0a662a556dfff917bcaf9a94903e7fe236eddd5e371bf194284d4b0374275ef",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0007_Mod_0002_(ExxonMobil)_FY22WE_Redacted.pdf",
+  "label": "22PO0007 Mod 0002 (ExxonMobil) FY22WE Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0007_Mod_0002_%28ExxonMobil%29_FY22WE_Redacted.pdf",
+  "bytes": 1436903,
+  "sha256": "df768b8a6dac13f76f665fcbe1b2c1b8d8d358ee03616ffd2c7565da5934144c",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0013_Mod_0003_(ExxonMobil)_FY22WE.pdf",
+  "label": "22PO0013 Mod 0003 (ExxonMobil) FY22WE",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0013_Mod_0003_%28ExxonMobil%29_FY22WE.pdf",
+  "bytes": 398811,
+  "sha256": "ccdbd3b05e38c3cfe457138bc94cc14b2f75d3d4db34ebf25a07a33c62fd2252",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0008_Mod_0003_(Chevron)_FY22WE_Redacted.pdf",
+  "label": "22PO0008 Mod 0003 (Chevron) FY22WE Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0008_Mod_0003_%28Chevron%29_FY22WE_Redacted.pdf",
+  "bytes": 715855,
+  "sha256": "052c3cb782b250b97733a77aa89154128a3a79156bc031cce21384aaa6fc0f78",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "DE-AC96-22PO00003_Mod_0004_(ExxonMobil)_FY22WEComp_Redacted.pdf",
+  "label": "DE-AC96-22PO00003 Mod 0004 (ExxonMobil) FY22WEComp_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/DE-AC96-22PO00003_Mod_0004_%28ExxonMobil%29_FY22WEComp_Redacted.pdf",
+  "bytes": 1335798,
+  "sha256": "2e19eae420a738a2fb68ca2d61c1e3aaae7ad0bf0775821586c24f61d7006b1f",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "22PO0003_Mod_0003_(ExxonMobil)_FY22WE_Redacted.pdf",
+  "label": "22PO0003 Mod 0003 (ExxonMobil) FY22WE_Redacted",
+  "url": "https://www.spr.doe.gov/FOIA/FY22WtrExchange/22PO0003_Mod_0003_%28ExxonMobil%29_FY22WE_Redacted.pdf",
+  "bytes": 1297799,
+  "sha256": "e8d60df25ff5aabf639dd7ac3d8485f42421516d6c258ac7279bbf0912ff4a8a",
+  "is_pdf": true,
+  "retrieved": "2026-10-12"
+ }
+]

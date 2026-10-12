@@ -1,0 +1,84 @@
+=== page 1 ===
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+1. CONTRACT ID CODE
+PAGE OF
+PAGES
+2. AMENDMENT/MODIFICATION NUMBER
+1
+1
+3. EFFECTIVE DATE
+0002
+4. REQUISITION/PURCHASE REQUISITION NUMBER 5. PROJECT NUMBER (If applicable)
+See Block 16C
+6. ISSUED BY
+CODE
+01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X)
+9A. AMENDMENT OF SOLICITATION NUMBER
+Shell Trading (US) Company
+1000 Main St.
+11t Floor
+Houston, TX 77010
+98, DATED (SEE ITEM 11)
+10A. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0006
+10B. DATED (SEE ITEM 13)
+CODE
+FACILITY CODE
+01/21/2022
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in item 14. The hour and date specified for receipt of Offers
+• is extended
+not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing Items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR OFFER.
+If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each letter or electronic
+communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified.
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+CHECK ONE
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+A. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+B. THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Paragraph 10, "Changes" & Mutual Agreement of the Parties
+D. OTHER (Specify type of modification and authority)
+E. IMPORTANT: Contractor
+is not
+X is required to sign this document and retum
+copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+The return period of exchange agreement 22PO0006 is amended as follows: Contractor shall return 2,430,000
+exchange oil plus premium barrels to the Big Hill SPR site from July 15, 2025 through August 31, 2025. Contractor's oil
+return schedules must be approved by the Government prior to delivery. There is no adjustment to the premium as a
+result of this extension. However, the Irrevocable Standby Letter of Credit must remain in effect through October 31,
+2025.
+All other provisions of the agreement remain the same.
+Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect.
+15A, NAME AND TITLE OF SIGNER (Type or print)
+Sean Spansel, NA Offshore Crude Oil Trading Mgr
+16A. NAME AND TITLE OF CONTRACTING OFFICER (Type or print)
+and Attorney in Fact STUSCO
+Mary C. Roark
+15B. CONTRACTOR/OFFEROR
+15C. DATE SIGNED 16B UNITED STATES OF AMERICA
+3 March 2023
+(Signature of person authorized to sign
+MaRy CRoank
+(Signature of Contracting Officer)
+16G. DATE SIGNED
+3|8 / 2023
+Previous edition unusable
+STANDARD FORM 30 (REV. 11/2016)
+Prescribed by GSA FAR (48 CFR) 53.243

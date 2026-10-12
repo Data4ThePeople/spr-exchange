@@ -1,0 +1,267 @@
+=== page 1 ===
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+1. CONTRACT ID CODE
+PAGE OF PAGES
+2. AMENDMENT/MODIFICATION NUMBER
+[3. EFFECTIVE DATE
+14, REQUISITIONPURCHASE REQUISITION NUMBER S. PROJECT NUMBER (i applicable)
+0005
+See Block 16C
+6. ISSUED BY
+CODE
+[01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X)
+T9A. AMENDMENT OF SOLICITATION NUMBER
+Phillips 66 Company
+2331 CityWest Blvd
+Houston, Texas 77042
+9B. DATED (SEE ITEM 11)
+1OA. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0012
+TOB. DATED (SEE ITEM 13)
+CODE
+FACILITY CODE
+01/24/2022
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+•The above numbered solicitation is amended as set forth in Item 14. The hour and date specified for receipt of Offers L is extended
+• not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR OFFER.
+If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each letter or electronic
+communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified,
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+CHECK ONE
+A. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+B. THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Section 21, "Reconciliation"
+D. OTHER (Specify type of modification and authority)
+E. IMPORTANT: Contractor
+is not
+X is required to sign this document and return 1
+_copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+Exchange Agreement No. 22PO0012 is modified as shown on the attached pages.
+xcept as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effe
+15A. NAME AND TITLE OF SIGNER (Type or print)
+A. NAME AND TITLE OF CONTRACTING OFFICER (Type or pril
+Mary C. Roark
+Phillips 66 Company
+By:
+n C
+Name:
+: Jason Gallagher
+Title:
+Crude Trader
+15C. DATE SIGNED 16B UNITED STATES OF ADigRifty signed by
+3/8/2024
+ARICROaRK MARY ROARK
+Date: 2024.03.08
+716C. DATE SIGNED
+03/08/2024
+Previous edition unusable
+STANDARD FORM 30 (REV. 11/2016)
+Prescribed by GSA FAR (48 CFR) 53.243
+=== page 2 ===
+22PO0012
+Mod No 0005
+Page 2 of 3
+SF 30 BLOCK 14 CONTINUATION PAGE
+P66 and the DOE entered into contract 22PO0012 on January 24, 2022 in which DOE agreed to deliver
+approximately 2,300,000 barrels sour crude to the P66 Beaumont Terminal for the FY2022 Winter Exchange
+durina the months of April through June 2022. DOE delivered 2,274,273 basis barrels to P66 with a premium rate
+of (b) (4) which results in premium barrels of (b) (4) upon DOE receipt of all basis barrels. On April 18, 2023 the
+DOE and P66 modified (Mod 0002) the contract to allow accommodate an in-situ cavern return of (b) (4) basis
+barrels with a premium rate of (b) (4) which resulted in premium barrels of (b) (4) barrels due upon DOE receipt of
+remaining basis barrel balance. On June 12, 2023 the DOE and P66 modified (Mod 0003) the contract to
+accommodate an in-situ cavern return of (b) (4) basis barrels with a premium rate of (b) (4) which resulted in
+premium barrels of ID 4) due upon DOE receipt of remaining basis barrel balance. Premiums on in-situ returns
+per contract, were to be deferred premiums. The remaining basis balance as of 7/1/2023 was (b) (4) barrels at
+a premium rate of (b) (4) with an applicable premium of (b) (4) barrels.
+In November and December 2023, the DOE accepted early Winter Exchange returns from P66. P66 delivered
+1,040,869 basis barrels at a premium rate of (0) (4) resulting in [b) (4) premium barrels. Deferred premiums of
+[b (4) and (b) (4) related to the April and June in-situ transactions were received in December 2023. Total
+barrels returned as of December 31, 2023 can be seen in the table below. All premium and basis volume barrel
+obligations have been fulfilled.
+FY22 Winter Exchange
+Philips 66 Company
+22PO0012
+January 2024
+SPR oil delivered by DOE
+Premium exchange oil due SPR
+Total Exch Volumes Due DOE
+Basis Barrels Delivered to DOE
+Premium Barrels Delivered to DOE
+Net Return Volume
+Variance (+ DOE owes / - Contractor owes)
+bbls
+bbls
+bbls
+bbls
+bbls
+bbls
+bbls
+SOUR
+2,274,273
+-(b) (4)
+2,274,273
+-(b) (4)
+-
+bbls
+bbls
+bbls
+bbls
+bbls
+bbls
+bbls
+TOTAL
+2,274,273
+bbls
+(0) (4) s
+bbls
+2,274,273
+bbls
+-(b) (4)
+bbls
+bbls
+bbls
+Per the contract, all transportation costs associated with cargoes are to be borne by P66. All cargoes delivered to
+SPR from the P66 Beaumont location are subject to a $O.13 per barrel rebill assessed by the terminal. SPR
+rebilled for November and December 2023 as seen below. These payments were received by DOE without
+exception.
+P66 Beaumont Rebill items ($0,13 per barrel)
+Period
+Volume
+Nov-23
+636,952.81
+Fee
+$0.13
+Dec-23
+485,579.03
+$0.13
+Cost
+$82,803.87
+$63,125.27
+$145,929.14
+Confirmed by DOE
+Yes
+Yes
+=== page 3 ===
+22PO0012
+Mod No 0005
+Page 3 of 3
+In accordance with Section 17 of the contract, P66 is responsible for variations in return oil quality exceeding the
+weighted average of net oil deliveries to P66. The weighted average API and sulfur on deliveries was 31.0° and
+1.45% respectively. Quality differential was not assessed on the in-situ cargoes in April and June 2023. Cargoes
+WER12BH001 - WER12BH004 have a net quality differential of $215,548.91. The detail can be seen in the table
+below.
+Company
+Cargo No.
+Date
+Delivered
+Subtotal wi wgt. Avg. of quality
+Customer Retum
+IN SITU TRANSFERS
+PHILLIPS 66 COMPANY
+PHILLIPS 66 COMPANY
+PHILLIPS 66 COMPANY
+PHILLIPS 66 COMPANY
+PHILLIPS 66 COMPANY
+PHILLIPS 66 COMPANY
+Total
+WE012RT001 4/15/2023
+WE012RT002
+5/31/2023
+WER12BH001
+11/18/2023
+WER12BH002
+WER12BH003
+11/28/2023
+12/13/2023
+WER12BH004
+12/24/2023
+Quantity
+API Gravity Sulfur API Gravity Sulfur API Gravity Sulfur API Gravity
+Delivered Delivered
+Variance
+Verance Apestment Apestment Adjustment Adjustment
+per BBL
+2,274,273
+31.0
+(b) (4)
+35.6
+36.8
+32.3
+32.9
+32.0
+31.7
+(b 4
+1.45
+0.41
+0,34
+1.86
+1.58
+1.74
+1.83
+4.600
+5,800
+1.300
+1.900
+1.000
+0,700
+0.130
+00200
+$0.000
+$0,000
+$0.000
+$0.000
+$0.000
+50.000
+$0.000
+$0,000
+$0.310
+$0.030
+$0.190
+$0.280
+S0.00
+$0,00
+$0.00
+$0.00
+$0.00
+S0.00
+$0.00
+$0,00
+96,855.
+69, 735.5
+$57,008.17
+$51,950.08
+$0.00
+$215,548.91
+$0.00
+$0,00
+$96,855.16
+$9,735.50
+$57,008.17
+$51,950.00
+$215,548.91
+The parties also agree on final settlement under the contract as follows:
+Phillips 66 Company has returned all basis and premium barrels per terms of the contract and modifications to the
+contract. P66 has paid DOE all applicable rebillable items as it relates to transportation. In accordance with
+sections 17 (Oil Quality) and 21 (Reconciliation) of the contract, Phillips 66 Company owes the DOE
+$215,548.91 net quality differential for barrels received under contract 22PO0012. Once payment has been
+received by DOE, this close out modification will constitute a full and final settlement under the contract. This
+includes all known quantity, quality, delivery and/or pricing issues resulting from, caused by, or incident to this
+contract.

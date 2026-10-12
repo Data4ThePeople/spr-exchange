@@ -1,0 +1,398 @@
+=== page 1 ===
+1. CONTRACT ID CODE
+PAGE OF PAGES
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+2. AMENDMENT/MODIFICATION NUMBER
+| 3. EFFECTIVE DATE
+4. REQUISITIOMPURCHASE REQUISITION NUMBER 75. PROJECT NUMBER (if applicable)
+0003
+See Block 16C
+6. ISSUED BY
+CODE
+01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X) 9A. AMENDMENT OF SOLICITATION NUMBER
+Chevron USA, Inc.
+1500 Louisiana Street
+Houston, Texas 77002
+9B. DATED (SEE ITEM 11)
+1OA. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0008
+TOB. DATED (SEE ITEM 13)
+01/21/2022
+CODE
+FACILITY CODE
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in Item 14. The hour and date specified for receipt of Offers _ is extended
+• not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+ог (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR OFFER.
+If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each letter or electronic
+communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+CHECK ONE TA. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+•
+B. THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Section 21, "Reconciliation"
+D. OTHER (Specify type of modification and authority)
+•
+E. IMPORTANT: Contractor C is not a X is required to sign this document and retum 1_copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+Exchange Agreement No. 22PO0008 is modified as shown on the attached pages.
+15A. NAME AND TITLE OF SIGNER (Type or print)
+Barbara Harrison, VP Crude
+15B, GONTRACTORIOFFEROR
+Dale
+(Signature of person authorized to sign)
+Mary C. Roark
+15C. DATE SIGNED
+16B UNITED STATES OF AMBiffâlly signed by
+3/3/2026
+MARICROaRK MARY ROARK
+Date: 2026.03.04
+(Signature of contradEny 758er 06'00'
+116C. DATE SIGNED
+03/04/2026
+Previous edition unusable
+STANDARD FORM 30 (REV. 11/2016)
+Prescribed by GSA FAR (48 CFR) 53.243
+=== page 2 ===
+22PO0008
+Mod No 0003
+Page 2 of 4
+SF 30 BLOCK 14 CONTINUATION PAGE
+Chevron and the DOE entered into contract 22PO0008 on January 21, 2022, in which DOE agreed to deliver
+approximately 885,000 barrels sour crude for the FY2022 Winter Exchange by March 31, 2022. DOE delivered
+884,616 basis barrels to Chevron with a premium rate of 6.10% which results in premium sour barrels of 53,962
+upon DOE receipt of all basis barrels. On August 29, 2022, the DOE and Chevron modified (Mod 0001) the
+contract to have all sour exchange return barrels, plus applicable sour premium barrels, to be returned to DOE
+SPR Bayou Choctaw between November 1, 2024, and December 31, 2024.
+FY22 Winter Exchange
+Chevron USA Inc
+22PO0008
+January 2022
+SPR oil delivered to contractor
+Basis Barrels owed to DOE
+Premium exchange oil due SPR
+Total Exch Volumes Due DOE
+Basis Barrels Delivered to DOE
+Premium Barrels Delivered to DOE
+Net Return Volume
+Variance ( + DOE owes I - Contractor owes'
+SOUR
+884,616 bbls
+884,616 bbls
+53,962 bbls
+938,578 bbls
+:
+bbls
+bbls
+bbls
+(938,578) bbls
+TOTAL
+884,616 bbs
+884,616 bbls
+53,962 bbls
+938,578 bbls
+bbls
+bbls
+bbls
+(938,578) bbls
+On April 3, 2025, the DOE and Chevron modified (Mod 0002) the contract to convert all remaining basis and
+premium barrels from US Produced Sour to US Produced Sweet. All sweet exchange return barrels, plus
+applicable sweet premium barrels, are to be returned to DOE SPR Bayou Choctaw site between January 1, 2026,
+and January 31, 2026. Modifications can be seen in the table below.
+SPR Delivery
+2/19/2022
+2/24/2022
+3/4/2022
+3/14/2022
+3/24/2022
+Cargo
+SPR Crude
+WE008BC061 BC SOUR
+WE008BC062 BC SOUR
+WE008BC063
+BC SOUR
+WE008BC064
+BC SOUR
+WE008BC096
+BC SOUR
+Basis SPR
+Exchange
+Proposed Proposed
+Proposed
+Proposed
+Revised
+Sour Barrels
+Premium Premium Sour SPR Total Sour Conversion Modified
+Modified Total Sweet
+Schedule due
+Delivered
+Barrels Owed
+Receivable
+Ratio
+Basis
+Basis
+Barrels to Site Pause
+269.876
+154,929
+164,920
+154.942
+884.616
+610%
+6.10%
+6.10%
+6.10%
+16,462
+9.451
+9.451
+9,451
+53.962
+159,096
+286,338
+164,380
+164,371|
+164.393
+938,578
+(b) (4)
+Jan-26
+From January to February 2026, the DOE accepted Winter Exchange returns from Chevron in the total amount of
+872,398 sweet barrels, which consisted of 822,694 basis barrels and 49,704 premium barrels. Total sweet barrels
+returned as of February 8, 2026, can be seen in the table below.
+=== page 3 ===
+22PO0008
+Mod No 0003
+Page 3 of 4
+FY22 Winter Exchange
+Chevron USA Inc
+22PO0008
+January 2022
+SPR oil delivered to contractor
+Basis Barrels owed to DOE
+Premium exchange oil due SPR
+Total Exch Volumes Due DOE
+Basis Barrels Delivered to DOE
+Premium Barrels Delivered to DOE
+Net Return Volume
+Variance (+ DOE owes / - Contractor owes)
+SWEET
+bbls
+822,694 bbls
+50,184 bbls
+872,878 bbls
+822,694 bbls
+49,704 bbls
+872,398
+bbls
+(480) bbls
+TOTAL
+bbls
+822,694 bbls
+150180 Bi
+822,694 bbls
+49,704 bbls
+872,398 bbls
+(480) bbls
+In accordance with Section 21 of the Agreement, Chevron is responsible for the undelivered amount (480 barrels)
+ased on the cost value of the exchange oil on the date of the last delivery as annotated on the DD250 plus an
+pplicable transportation costs (2/9/26 - $66.2387/bbl). The calculation can be seen below
+Pricing Detail
+2/9/2026 Argus Media: Weighted Average WTI Houston
+St. James Terminaling
+Redstick Tariff
+Redstick PLA
+$
+$
+Total S
+65.34
+0.3500 Market Estimate Terminalling Rate per OTC
+0.4165
+Redstick Tariff to DOE
+0.1322 Rate @0.2%
+66.2387
+Redstick Tariff to DOE
+Per Mod 0002, quality differential was re-baselined due to the sweet conversion. The exchange returns in
+February 2026 delivered to the Bayou Choctaw site were subject to quality differential totaling (b) (4). Total
+quality differential for all exchange return cargoes can be seen in the second table below:
+Company
+Cargo No.
+Contract
+Crude API Grav. Sulfur
+Quantity API Gravity Sulfur
+tract Sutract Delivered Delanied Deliverei Delivered
+DOE Delivery
+Chevron USA Inc
+- WE008BC061
+Chevron USA Inc
+WE008BC062
+Chevron USA Inc
+WE008BC063
+Chevron USA Inc
+WE008BC064
+Chevron USA Inc
+WE008BC096
+Subtotal w/ wgt. Avg. of quality
+22PO0008
+22PO0008
+22PO0008
+22PO0008
+22PO0008
+BC SOUR
+BC SOUR
+BC SOUR
+BC SOUR
+BC SOUR
+31.9
+31.9
+31.9
+31.9
+31.9
+146
+1.46
+1.46
+1.46
+1.46
+02/19/22
+02/24/22
+03/04/22
+03/14/22
+03/24/22
+149,949
+269,876
+154,929
+154,920
+154,942
+884,616
+31.4
+31.2
+31.3
+31.6
+32.6
+31.6
+1.47
+1.41
+1.43
+1.38
+1.30
+1.40
+Company
+Cargo No.
+Contract
+Crude API Grav.
+Sulfur
+Contract Contract
+Quantity API Gravity
+API Gravity
+Delivered Dointed Delivered Delivered Appraint Adjuturnt
+Total Value
+Adjustment
+to Dely Crude
+Customer Return
+Chevron USA Inc
+Chevron USA Inc
+Chevron USA Inc
+Chevron USA Inc
+Chevron USA Inc
+Total
+WER08BC041
+WER08BC042
+VER08BCO.
+ER08BC044BA:
+WER08BC044PREMIUM
+22P00008
+22PO0008
+22PO0008
+22PO0008
+22PO0008
+BC SWEET
+BC SWEET
+BC SWEET
+BC SWEET
+BC SWEET
+31.9
+1.46
+1.46
+1.46
+1.46
+1.46
+1/5/2026
+1/20/2026
+1/29/2026
+218/2026
+2/8/2026
+214,196
+214,302
+214,361
+179,835
+49,704
+872,398
+39.5
+39.5
+39.7
+39.6
+38.8
+38.8
+0.45
+sweet quality per Mod002
+0.44
+(b) (4)
+$0.00
+0.48
+0.48
+$0.00
+$0.00
+0.49
+$0.00
+0.49
+$0.00
+$0.00
+(b) (4)
+=== page 4 ===
+22PO0008
+Mod No 0003
+Page 4 of 4
+Total pricing detail of premium barrels and quality differential owed to DOE can be seen in the table below.
+Pricing Detail
+2/9/2026 Argus Media: Weighted Average WTI Houston
+St. James Terminaling
+Redstick Tariff
+Redstick PLA
+$
+$
+$
+$
+Total $
+65.34
+0.3500
+0.4165
+0.1322
+66.2387
+Premium Barrel Variance
+Premium barrel value owed to DOE $
+Quality Differential owed to DOE_$
+Total Owed to DOE $
+480
+(b) (4)
+The parties also agree on final settlement under the contract as follows:
+Chevron U.S.A. Inc. has returned a total volume of return oil that is less than the contracted quantity by 480
+barrels. In accordance with Section 21 (Reconciliation) of the agreement, Chevron owes the DOE (b) (4)
+underdelivered barrels under Exchange Agreement 22PO0008. In accordance with Section 17 (Quality
+Differential) of the contract, Chevron owes the DOE (b) (4) net quality differential for sweet barrels received
+under contract 22PO0008. Chevron owes DOE a total of (D) (4)
+. Once payment has been received by DOE,
+this close out modification will constitute a full and final settlement under the contract. This includes all known
+quantity, quality, delivery and/or pricing issues resulting from, caused by, or incidental to this contract.

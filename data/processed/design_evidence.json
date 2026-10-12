@@ -30,6 +30,47 @@
    }
   ]
  },
+ "loans_2021_22": {
+  "total": 24420000,
+  "agreements": 13,
+  "by_type": {
+   "Refiner": {
+    "barrels": 13950000,
+    "pct": 57.1
+   },
+   "Major trading arm": {
+    "barrels": 5470000,
+    "pct": 22.4
+   },
+   "Trading house": {
+    "barrels": 5000000,
+    "pct": 20.5
+   }
+  },
+  "sour_only": {
+   "total": 21720000,
+   "agreements": 12,
+   "by_type": {
+    "Refiner": {
+     "barrels": 11250000,
+     "pct": 51.8
+    },
+    "Major trading arm": {
+     "barrels": 5470000,
+     "pct": 25.2
+    },
+    "Trading house": {
+     "barrels": 5000000,
+     "pct": 23.0
+    }
+   }
+  },
+  "return_2024_or_later": {
+   "agreements": 10,
+   "barrels": 18335000,
+   "dated_agreements": 12
+  }
+ },
  "bids_2022": {
   "Major trading arm": {
    "bidders": 2,
@@ -144,6 +185,7 @@
  },
  "loan_jan_2022": {
   "total": 13400000,
+  "agreements": 7,
   "by_type": {
    "Major trading arm": {
     "barrels": 4200000,

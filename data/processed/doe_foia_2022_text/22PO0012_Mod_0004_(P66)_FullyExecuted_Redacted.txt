@@ -1,0 +1,379 @@
+=== page 1 ===
+1. CONTRACT ID CODE
+PAGE OF PAGES
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+2. AMENDMENT/MODIFICATION NUMBER
+T3. EFFECTIVE DATE
+T1, REQUISITIONPURCHASE REQUISITION NUMBER 5. PROJECT NUMBER (I applicable)
+0004
+See Block 16C
+6. ISSUED BY
+CODE
+01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X) SA. AMENDMENT OF SOLICITATION NUMBER
+Phillips 66 Company
+2331 CityWest Blvd
+Houston, Texas 77042
+9B. DATED (SEE ITEM 11)
+1OA. MODIFICATION OF CONTRACT/ORDER NUMBER
+X
+22PO0012
+10B. DATED (SEE ITEM 13)
+CODE
+FACILITY CODE
+01/24/2022
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in Item 14. The hour and date specified for receipt of Offers is extended
+not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR OFFER.
+If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each letter or electronic
+communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified.
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+CHECK ONE
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+A. THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+B.
+THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Section 10, "Changes"
+D. OTHER (Specify type of modification and authority)
+E. IMPORTANT: Contractor is not
+X is required to sign this document and return
+1
+_copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UF section headings, including solicitation/contract subject matter where feasible.)
+Exchange Agreement No. 22PO0012 is modified as shown on the attached pages.
+Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect
+15A. NAME AND TITLE OE SIGNER (Type or print
+swAIN
+6A. NAME AND TITLE OF CONTRACTING OFFICER (Type or print
+Mary C. Roark
+MANAGER US. CRUDE OIL TRADING
+15B. CONTRACTOR/OFFEROR
+16B UNITED STATES OF Digitally signed by
+/16C. DATE SIGNED
+Ric Swai
+11/10/2023
+Date: 2023.11.13
+Signature of person authorized to siar
+signature si Cont0-28329a6'00
+11/13/2023
+Previous edition unusable
+STANDARD FORM 30 (REV. 11/2016)
+Prescribed by GSA FAR (48 CFR) 53.243
+=== page 2 ===
+22PO0012
+Mod No 0004
+Page 2 of 5
+SF 30 BLOCK 14 CONTINUATION PAGE
+Section 2 - Custody Transfer - The following return sites are added. All other provisions of the section remain
+the same.
+Sun Tank to Big Hill
+Custody transfer quantity and quality measurements will be the DOE meter skid and inline sampler located at the
+Sun Marine Terminal. Secondary measurement for quantity will be on the Sun shore tank and quality based on
+manual grab samples taken at the Sun/DOE inline sampler. The API Gravity, Sediment and Water, and Sulfur
+content will be performed by the DOE M&O contracted third party inspector. Contractor shall have the right to have
+a representative present to witness all sampling, measurements and testing analysis. The DOE M&O contracted
+third party inspection company will witness all measurement and testing and perform testing.
+Phillips 66 Tanks to Big Hill
+Custody transfer quantity and quality measurements will be the P66 tank gauge. Secondary custody transfer
+quantity and quality measurements will be the Big Hill site meter and inline sampler for deliveries into the Big Hill
+pipeline. The API Gravity, Sediment and Water, and Sulfur content will be performed by the DOE M&O contracted
+third party inspector lab. Contractor shall have the right to have a representative present to witness all sampling,
+measurements and testing analysis. The DOE M&O contracted third party inspection company will witness all
+measurement and testing and perform testing. Customers are also liable for $0. 13 per barrel charge for use of the
+P66 connection into the Big Hill site. The SPR will rebill charges if incurred from the terminal operator.
+Section 5 - Payment -
+Contractor agrees to pay a fixed rate of 0) (4) against all actual (NSV) barrels delivered in the (b) (4)
+November 12 - December 31, 2023 delivery period. The premium barrels and deferred premium barrels are due to
+the SPR when the exchange balance is returned in this period. All other provisions and prior modifications to this
+section remain unchanged.
+Basis
+Volume
+(b) (4)
+Premium Premium
+Rate
+Barrels
+Basis +
+Deferred
+Premium Premiums
+Total
+Owed to
+Section 17 - Oil Quality: The following is added to the first paragraph:
+The Crude Oil offered for return to the DOE shall meet the specifications in Exhibit A. Acceptance of any Crude Oil
+offered for delivery will be subject to the Contracting Officer's approval. The Contractor is required to supply: 1) a
+completed Sour Quality Statement Exhibit A of Crude Oil nominated for return into the SPR, 2) Certificate(s) of
+Analysis for the stream(s) identified on the Exhibit A will be recent (no older than 12 months) from the start of the
+return period (Generic domestic sour crude blends would need to have component streams identified and
+supported by COAs). An applicable Comprehensive Assay (link to SPR Comprehensive Assays for example)
+which supports data Contractors supply in Sour Quality Statement Exhibit A and submitted COAs, must be
+submitted to the SPR 30 days prior to delivery of Crude Oil to the SPR. Crudes which consist of blended market
+crude streams will require tank blend schedule with associated test results to be submitted at the same time with
+associated Comprehensive Assay 30 days prior to the return period. See table below for example of blend
+schedule. The SPR seeks to store crude oil with the widest range of application in the domestic market. To
+preserve SPR cavern homogeneity and maintain overall integrity of its respective crude streams, only crude oils of
+similar composition are commingled in storage. Please note that if a blended crude is to be submitted for
+=== page 3 ===
+22PO0012
+Mod No 0004
+Page 3 of 5
+consideration, then all component streams offered for blend must not exceed 45°API gravity or fall below 27.0° API
+gravity to be considered suitable for injection into SPR caverns. Any component(s) exceeding these thresholds will
+be cause for rejection. Due to natural geothermic heating, crude oils that demonstrate high bubble point pressures
+(BPP) and high gas-oil ratios (GOR) produce increased vapor pressure at standard cavern storage temperatures.
+High BPP-GOR oils have the potential to impact the existing SPR oil inventory, increasing levels of light end gases
+(C1-C3) and greatly restricting immediate deliverability which is the critical mission of the SPR. Light ends may not
+be immediately observed through analysis at ambient temperatures, but are entrained in certain crude types and
+released during underground storage. Lighter ends, Methane, Ethane and Propane are the single largest
+contributor to vapor pressure increase. Crude oils displaying C1-C3 volume percent outside of the required
+specifications and determined by the allowed methods listed in Exhibit A, will be considered outside of the SPR's
+acceptance criteria and deemed incompatible with existing SPR stocks. Blending heavier crudes with light end
+crudes may cause separation of the blend at higher temperature, thus rendering the stream undeliverable. SPR
+reserves the right to reject any crude oil in order to ensure the quality of the crude oil received, stored, and
+maintained within the SPR.
+Crude Type
+%
+Barrels
+WTI
+10%
+30,000
+Mars
+90%
+270,000
+Total
+100%
+300,000
+*tank blend schedule example table - values are for illusory purposes only. All components must be within
+thresholds in Exhibit C-1 and B. 1(c).*
+Attachment A - Attachment A is deleted in its entirety and replaced with the following Attachment A. This item
+will set quality parameters and serve as a document to be submitted to DOE for crude oil quality approval before
+delivery as noted in Section 17 modification.
+=== page 4 ===
+22PO0012
+Mod No 0004
+Page 4 of 5
+ATTACHMENT A
+(MUST BE FILLED OUT IN ITS ENTIRETY TO BE CONSIDERED FOR APPROVAL)
+Sour Statement of Quality Data Product Specifications
+Full name of crude and or define any
+acronyms:
+Company:
+Date:
+Crude Stream " (define any acronyms):
+Crude Components (define acronyms):
+Product Parameter
+1
+API Gravity
+2 Total Sulfur
+3
+Pour Point
+4 Salt Content
+5| Viscosity @15.6°C
+6 Viscosity @ 37.8°C
+7
+Vapor Pressure [VPCR4 (100ºF)]
+Vapor Pressure [VPCR 0.2 (100ºF)] @900
+8
+I sec.
+9| Total Acid Number
+10
+Water
+11
+Sediment
+12
+Water/Sediment Combined Value
+13| Asphaltenes
+14
+Stability
+15 Hydrogen Sulfide
+16 Mercaptan
+Yields [Vol. %]"
+17 | Naphtha [28-191°C]
+18
+Distillate [191-327°C]
+19
+Gas Oil [327-566°C]
+20
+Residuum [>566°C]
+Light Ends [Liquid Vol. %] °
+21
+22
+Methane (Ci)
+Ethane (C2)
+Test Method®
+D287, D1298 or D5002
+D4294, D2622
+D97
+| D6470 or D3230
+| D445, D7042
+| D445, D7042
+D6377
+D6377
+/ D664, D8045
+D4928 or D4006
+| D473, D4087
+D6560, IP143
+D4740
+| VOP163
+UOP163
+| D7169, D7900
+I D7169, D7900
+| D7169, D7900
+D7169, D7900
+D7900 or ITM6008
+D7900 or ITM6008
+Units
+[ºAPI]
+[Mass %]
+[°C]
+[mg/kg %]
+| [cSt]
+[cSt]
+psia (kPa)
+psia (kPa)
+[mg KOH/g]
+[Vol. %]
+[Mass. %]
+[Vol. %]
+][Mass%]
+ASTM Ref.
+mg/kg
+mg/kg
+|[Vol. %]
+|[Vol. %]
+[Vol. %]
+[Vol. %]
+[Liquid
+Vol.%]
+[Liquid
+VoÍ.%]
+Sour
+Specification
+Min
+Max
+28.5
+0.51
+35
+2.5
+-12
+500
+32
+13
+9.0(62.
+1)
+Report
+1
+Report
+Report
+1
+6.00%
+2
+Report |
+Report
+-
+17
+26
+-
+30
+31
+38
+19
+0.01
+0.1
+Result
+Method
+of
+Analysis
+=== page 5 ===
+22PO0012
+Mod No 0004
+Page 5 of 5
+23
+Propane (C3)
+24
+Normal Butane (NC4)
+25
+Isobutane (iC4)
+Distillation
+26
+IBP - 25°C
+27
+IBP - 79°C
+Contaminants
+28
+Organic Chlorides
+29
+Vanadium
+30 Nickel
+31
+Iron
+32
+Methanol
+33
+Total Nitrogen
+34 Basic Nitrogen
+D7900 or ITM6008
+D7900 or ITM6008
+D7900 or ITM6008
+[Liquid
+| [Liquid
+Vol.%]
+[Liquid
+Vol.%]
+1
+3
+4
+| D7169, D7900
+| D7169, D7900
+Wt.%
+Wt.%
+3.00%
+10.00%
+| D4929 B or C
+| D5708 (B), D5863,
+D8252
+D5708 (B), D5863,
+D8252
+D5708 (B), D5863,
+D8252
+D7059
+D4629/D5762
+| VOP269
+/ mg/kg
+mg/kg
+mg/kg
+mg/kg
+mg/kg
+Wt.%
+Wt. %
+1
+75
+10
+Report
+Report
+«Commonly traded crude petroleum suitable for normal refinery processing and free of foreign contaminants or chemicals
+including, but not limited to, pour point depressants, chlorinated and oxygenated hydrocarbons, and lead.
+B Alternate methods may be used if approved by the contracting officer.
+y D7169 and D7900 data may be provided in requesting conditional acceptance of a Crude Oil. Distillation data according to
+D2892 and D5236 will still be necessary for final qualification of a Crude Oil's acceptance.
+6 liple medi content specifications are interim and will be superseded if and when industry standards for light ends evaluation are
+NOTE 1: The Strategic Petroleum Reserve reserves the right to refuse to accept any Crude Oil which meets these specifications
+but is deemed to be incompatible with existing stocks, or which has the potential for adversely affecting handling.
+NOTE 2: The acceptability of any Crude Oil depends upon any assay, or certificates of analysis for each blend component,
+typical of current production quality of the stream. Any Crude Oil offered to the Strategic Petroleum Reserve that meets these
+specifications may be subject to additional testing for acceptance.
+NOTE 3: All Crude Oil shipments received by the SPR are tested to ensure they meet specifications.
+NOTE 4: All Crude Oil shipments received by the SPR pursuant to this solicitation must be sourced from U.S. production.

@@ -12,7 +12,8 @@ Writes data/processed/design_evidence.json and prints it. Five parts:
                 sale terms the buyer pays the market price around delivery plus
                 this gap, so the gap is all a bidder competes on.
   firms         which companies appear in the 2022 offers and the 2026 awards.
-  loan_jan_2022 who received the seven loans DOE announced on January 25, 2022.
+  loans_2021_22 who received every loan in DOE's file of 2021-22 agreements.
+  loan_jan_2022 the seven of those loans DOE announced on January 25, 2022.
   market        refinery runs, crude exports and the front-month price over the
                 fourth month, during each program (EIA weekly and daily data).
 
@@ -110,18 +111,29 @@ def main():
                  borrowers_2026_that_did_not_bid_in_2022=sorted(b26 - bidders22),
                  buyers_2022_not_in_2026_awards=sorted(buyers22 - b26))
 
-    # 4. The loans DOE announced on January 25, 2022.
-    loan = {}
+    # 4. The 2021-22 loans, from DOE's own agreements, and the round DOE announced on January 25, 2022.
+    def by_type(rows):
+        tot = sum(int(r["barrels"]) for r in rows)
+        out = {}
+        for r in rows:
+            out[r["type"]] = out.get(r["type"], 0) + int(r["barrels"])
+        return dict(total=tot, agreements=len(rows), by_type={t: dict(barrels=v, pct=round(v / tot * 100, 1)) for t, v in out.items()})
+    prog = read("data/processed/spr_2021_22_exchange.csv")
+    longest = [r for r in prog if "2024" in r["return_window_original"] or "2025" in r["return_window_original"]]
+    program_out = by_type(prog)
+    program_out.update(sour_only=by_type([r for r in prog if r["crude"] == "Sour"]),
+                       return_2024_or_later=dict(agreements=len(longest), barrels=sum(int(r["barrels"]) for r in longest),
+                                                 dated_agreements=sum(1 for r in prog if r["return_window_original"])))
     rows = read("data/reference/exchange_jan_2022.csv")
     for r in rows:
         if r["company_as_listed"] not in cmap:
             sys.exit(f"'{r['company_as_listed']}' is not in company_map.csv")
-        t = cmap[r["company_as_listed"]]["type"]
-        loan[t] = loan.get(t, 0) + int(r["barrels"])
-    ltot = sum(loan.values())
-    loan_out = dict(total=ltot, by_type={t: dict(barrels=v, pct=round(v / ltot * 100, 1)) for t, v in loan.items()},
-                    firms=[dict(company=cmap[r["company_as_listed"]]["company"], type=cmap[r["company_as_listed"]]["type"],
-                                barrels=int(r["barrels"])) for r in rows])
+        r["type"] = cmap[r["company_as_listed"]]["type"]
+    loan_out = by_type(rows)
+    loan_out["firms"] = [dict(company=cmap[r["company_as_listed"]]["company"], type=r["type"], barrels=int(r["barrels"])) for r in rows]
+    in_release = sum(int(r["barrels"]) for r in prog if "2022-01-21" <= r["signed"] <= "2022-01-25")
+    if in_release != loan_out["total"]:
+        sys.exit(f"agreements signed January 21 to 25, 2022 add to {in_release:,}; DOE's release says {loan_out['total']:,}")
 
     # 5. Market backdrop from EIA.
     eia = {}
@@ -146,7 +158,7 @@ def main():
                   rounds=[dict(round=r["round"], offered=int(r["offered_bbl"]), taken=taken[r["round"]]) for r in rounds])
 
     bids_out["_barrels_asked_on_lines_with_no_winner"] = no_winner
-    out = dict(uptake_2026=uptake, bids_2022=bids_out, paf_2022=paf_out, firms=firms, loan_jan_2022=loan_out, market=market)
+    out = dict(uptake_2026=uptake, loans_2021_22=program_out, bids_2022=bids_out, paf_2022=paf_out, firms=firms, loan_jan_2022=loan_out, market=market)
     (ROOT / "data/processed/design_evidence.json").write_text(json.dumps(out, indent=1))
     print(json.dumps(out, indent=1))
 

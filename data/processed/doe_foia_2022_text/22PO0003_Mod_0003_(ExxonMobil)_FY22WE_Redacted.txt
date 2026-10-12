@@ -1,0 +1,449 @@
+=== page 1 ===
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+1. CONTRACT ID CODE
+PAGE OF PAGES
+2. AMENDMENT/MODIFICATION NUMBER
+3. EFFECTIVE DATE
+1. REQUISITIONIP URCHASE REGUISITION NUMBER S. PROJECT NUMBER (if aplicable)
+0003
+See Block 16C
+6. ISSUED BY
+CODE
+[01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X)
+9A. AMENDMENT OF SOLICITATION NUMBER
+ExxonMobil Oil Corporation
+22777 Springwoods Village Parkway
+Spring, TX 77389
+9B. DATED (SEE ITEM 11)
+IOA. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0003
+TOB. DATED (SEE ITEM 13)
+12/30/2021
+CODE
+FACILITY CODE
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in lter 14. The hour and date specified for receipt of Offers is extended
+not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR
+ACKNOWLEDGMENT TO BE RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY
+RESULT IN REJECTION OF YOUR OFFER. If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or
+electronic communication, provided each letter or electronic communication makes reference to the solicitation and this amendment, and is received prior to the opening
+hour and date specified.
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+CHECK ONE
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+A.
+THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Section 21, "Reconciliation"
+D. OTHER (Specify type of modification and authority)
+E. IMPORTANT: Contractor • is not
+Xl is required to sign this document and retum 1
+_copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+Exchange Agreement No. 22PO0003 is modified as shown on the attached pages.
+ESA. NAME FAND LEO SIGNER condors of the document referenced in lem 9A 01 AM AND or Car Co TRACT Or reTread effect
+15A. NAME AND TITLE OF SIGNER (Type or print,
+KRIS HESTER (OIL TRADER)
+Kelly M. Gele'
+15B. CONTRACTOR/OFFEROR
+15C. DATE SIGNED
+16B UNITED STATES O bigaiy Bigfed by KELLY GELE
+]16C. DATE SIGNED
+2/2/26
+KELLY GELE Date: 202602.04 07:38:01
+- 06'00
+(Signature of person authorized to sign)
+(Signature of Contracting Officer)
+=== page 2 ===
+22PO0003
+Mod No 0003
+Page 2 of 4
+SF 30 BLOCK 14 CONTINUATION PAGE
+Exxon and the DOE entered into contract 22PO0003 on December 30, 2021, in which DOE agreed to deliver
+approximately 2,000,000 barrels sour crude for the FY2022 Winter Exchange by January 30, 2022. DOE delivered
+1,999,365 basis barrels to Exxon with a premium rate of 8.60% which results in premium sour barrels of 171,945 upon
+DOE receipt of all basis barrels. On February 28, 2025, the DOE and Exxon modified (Mod 0001) the contract to have al
+sour exchange return barrels, plus applicable sour premium barrels, to be returned to DOE SPR Bayou Choctaw no
+earlier than November 1, 2025. In August and September 2024, the DOE accepted early Winter Exchange returns from
+Exxon. Exxon delivered 816,745 sour basis barrels, no premium barrels were returned as part of early returns. As a result,
+1,182,620 sour basis barrels and 171,945 premium barrels remain.
+FY22 Winter Exchange
+ExxonMobil
+22P00003
+December 2021
+SPR oil delivered to contractor
+Basis Barrels owed to DOE
+Premium exchange oil due SPR
+Total Exch Volumes Due DOE
+Basis Barrels Delivered to DOE
+Premium Barrels Delivered to DOE
+Net Return Volume
+Variance (+ DOE owes / - Contractor owes)
+SOUR
+TOTAL
+1,999,365 bbls 1,999,365 bbs
+1,999,365 bbls 1,999,365 bbls
+171,945 bbls
+171,945 bbls
+2,171,310 bbls
+2,171,310 bbs
+816,745 bbls 816,745 bbls
+bbis
+_bbis
+816,745 bbls
+816,745_bbls
+(1,354,565) bbls (1,354,565) bbls
+On April 23, 2025, the DOE and Exxon modified (Mod 0002) the contract to convert all remaining basis and premium
+barrels from US Produced Sour to US Produced Sweet. Modifications can be seen in the tables below.
+Table 1
+Date
+1/11/2022 - 1/20/2022
+Contract
+22PO0003
+SPR
+Crude
+BC SOUR
+Premium
+Basis SPR Sour Exchange
+Sour
+Barrels
+Premium Barrels
+SPR Total Sour
+Delivered
+Ratio
+Owed
+Receivable
+1.999.365
+(b) (4)
+Table 2
+Date
+8/26/2024 - 9/9/2024
+22P00003
+BC SOUR
+Basis SPR Sour Exchange
+Premium
+Sour
+Barrels
+Premium
+Barrels
+SPR Total Sour
+Returned
+Ratio
+Owed
+Receivable
+816.745
+(b) (4)
+Table 3
+Contract
+22P00003
+22P00003
+SPR
+Crude
+BC
+SOUR
+BC
+SOUR
+Basis SPR
+Barrels
+outstanding
+1.182.620
+1,182,620
+Exchange
+Premium
+Ratio
+8.60%
+8.60%
+Premium
+Sour
+Barrels
+Owed
+70.240
+101,705
+171,945
+SPR Total
+Sour
+Receivable
+70,240
+1,284,325
+1,354.565
+Conversion to Sweet Barrels to be delivered to SPR Bayou Choctaw Site
+Proposed
+Proposed Proposed
+Proposed
+Conversion Modified
+Rato
+Premium
+(b) (4)
+Revised Schedule
+due to Site Pause
+11/1/2025 - 12/31/2025
+11/1/2025 - 12/31/2025
+=== page 3 ===
+22PO0003
+Mod No 0003
+Page 3 of 4
+In December 2025, the DOE accepted Winter Exchange returns from Exxon in the total amount of 1,244,055 sweet
+barrels, which consisted of 1,088,010 basis barrels and 156,045 premium barrels. Total sweet barrels returned as of
+December 31, 2025, can be seen in the table below.
+FY22 Winter Exchange
+ExxonMobil
+22P00003
+December 2021
+SPR oil delivered to contractor
+Basis Barrels owed to DOE
+Premium exchange oil due SPR
+Total Exch Volumes Due DOE
+Basis Barrels Delivered to DOE
+Premium Barrels Delivered to DOE
+Net Return Volume
+Variance (+ DOE owes / - Contractor Owes)
+SWEET._
+-
+bbls
+1,088,010 bbls
+158,190 bbis
+1,246,200 bbis
+1,088,010 bbls
+156,045 bbls
+1,244,055bbls
+(2,145) bbls"
+TOTAL
+- bbls
+1,088,010 bbis
+1 28.10 вы
+1,088,010 bbls
+156,045 bbls
+1,244,055 bbis
+(2,145) bbls
+In accordance with Section 21 of the Agreement, Exxon is responsible for the undelivered amount (2,145 barrels) based
+on the cost value of the exchange oil on the date of the last delivery as annotated on the DD250 plus any applicable
+transportation costs (12/30/25 - $59.5053/bbl). The calculation can be seen below:
+Pricing Detail
+12/30/2025 Argus Media: Weighted Average WTI Houston
+St. James Terminaling
+Redstick Tariff
+$
+$
+$
+Total S
+58.62
+0.3500 Market Estimate Terminaling Rate per OTC
+0.4165 Redstick Tariff to DOE
+0.1188 Rate @ 0.2%
+59.5053
+In accordance with Section 17 of the agreement, Quality Differential, the sour differential associated with the early returns
+in August and September 2024 totaled b 4)
+1 Per Mod 0002, quality differential was re-baselined due to the sweet
+conversion. None of the sweet cargoes delivered to the Bayou Choctaw site were subject to quality differential. Sour
+baseline quality differential per Section 17 of the contract is seen in the first table below. Total quality differential for all
+exchange return cargoes can be seen in the second table below:
+Company
+Cargo No.
+Contract
+crude Apital Sutract Delivered
+Quantity
+API Gravity
+Sulfur
+Delivered
+Delivered
+Delivered
+NSV
+DOE Delivery
+ExxonMobil
+ExxonMobil
+ExxonMobil
+ExxonMobil
+WE003BC034
+WE003BC035
+WE003BC036
+WE003BC037
+22P00003 BC SOUR
+22PO0003
+BC SOUR
+22P00003
+BC SOUR
+22PO0003
+BC SOUR
+31.9
+31.9
+31.9
+31.9
+1.46
+1.46
+1.46
+1.46
+01/11/22
+01/14/22
+01/18/22
+01/20/22
+271,920
+775,784
+271,906
+679,755
+31.5
+31.5
+31.4
+31.5
+1.35
+1,39
+1.39
+1.38
+Subtotal w/ wgt. Avg, of quality
+31.9
+1.46
+1,999,365
+31.5
+1.38
+=== page 4 ===
+22PO0003
+Mod No 0003
+Page 4 of 4
+Total Value
+Adjustment
+to Doly Crude
+Company
+Customer Return
+ExxonMobl
+ExxonMobil
+ExxonMobil
+Exxon Mobil
+ExxonMobil
+ExxonMobil
+ExxonMobil
+Exxon Mobil
+ExxonMobil
+Total
+Cargo No.
+Contract
+Crude Ap taet Contract
+WER03BC016
+22P00003 BC SOUR
+WER03BC017
+22P00003
+BC SOUR
+WER03BCO20
+WER03BC036
+22P00003
+BC SOUR
+22P00003 BC SWEET
+WER03BC037
+22P00003 BC SWEET
+WER03BC038
+22P00003 BC SWEET
+WER03BC039
+22P00003 BC SWEET
+WER03BC040BASI
+22PO0003
+BC SWEET
+VER03BC04OPREMIUM 22PO000
+BC SWEET
+31.9
+31.9
+31.9
+31.9
+31.9
+31.9
+31.9
+31.9
+31.9
+1.46
+1.46
+1,46
+1.46
+Date
+Delivered
+8/26/2024
+8/30/2024
+9/9/2024
+12/7/2025
+12/13/2025
+12/18/2025
+12/24/2025
+12/30/2025
+12/30/2025
+Quantity
+Delivered
+NSV
+319,696
+304,477
+192,572
+249,364
+249,898
+249,466
+249,665
+89,617
+156,045
+2,060,800
+API Gravity
+Sulfur
+API Gravity
+Sulfur
+Delivered Delivered Adjustment Adjustment
+$
+$
+29.0
+29.4
+29.4
+40.4
+38.0
+39.0
+38.8
+38.8
+38.8
+1.80
+1.81
+1.88
+0.39
+0.38
+0.40
+0.42
+0.37
+0.37
+(b) (4)
+Total pricing detail of premium barrels and quality differential owed to DOE can be seen in the table below.
+Pricing Detail
+12/30/2025 Argus Media: Weighted Average WTI Houston
+St. James Terminaling
+Redstick Tariff
+Redstick PLA
+$
+$
+$
+$
+Total $
+Premium Barrel Variance
+Premium barrel value owed to DOE $
+Quality Differential owed to DOE_$
+Total Owed to DOE $
+58.62
+0.3500
+0.4165
+0.1188
+59.5053
+2,145
+(b) (4)
+The parties also agree on final settlement under the contract as follows:
+ExxonMobil Oil Corporation has returned a total volume of return oil that is less than the contracted quantity by
+2,145 barrels. In accordance with Section 21 (Reconciliation) of the agreement, Exxon owes the DOE (D) (4)
+for underdelivered barrels under Exchange Agreement 22PO0003. In accordance with Section 17 (Quality
+Differential) of the contract, Exxon owes the DOE (D) (4)
+net quality differential for sour barrels receive
+under contract 22PO0003. Exxon owes DOE a total of (b) (4)
+Once payment has been received by DOE, thi
+close out modification will constitute a full and final settlement under the contract. This includes all known
+quantity, quality, delivery and/or pricing issues resulting from, caused by, or incident to this contract.

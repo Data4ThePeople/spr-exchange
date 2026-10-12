@@ -1,0 +1,82 @@
+=== page 1 ===
+1. CONTRACT ID CODE
+PAGE OF PAGES
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+1
+2 AMENDMENT/MODIFICATION NUMBER
+11
+3. EFFECTIVE DATE
+4 REQUISITION/PURCHASE REQUISITION NUMBER 5. PROJECT NUMBER (If applicable)
+0001
+See Block 16C
+6 ISSUED BY
+CODE
+01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X)
+9A. AMENDMENT OF SOLICITATION NUMBER
+Chevron USA, Inc.
+1500 Louisiana Street
+Houston, Texas 77002
+9B. DATED (SEE ITEM 11)
+10A. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0008
+TOB DATED (SEE ITEM 13)
+01/21/2022
+CODE
+FACILITY CODE
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in item 14. The hour and date specified for receipt of Offers is extended
+not extended
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods
+(a) By completing items 8 and 15, and returning copies of the amendment; (b) By acknowledging receipt of this amendment on each copy of the offer submitted;
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers FAILURE OF YOUR ACKNOWLEDGMENT TO BE
+RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF YOUR OFFER
+If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each letter or electronic
+communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14.
+THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authorty) THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropnation data, etc ) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Paragraph 10, "Changes" & Mutual Agreement of the Parties
+D. OTHER (Specify type of modification and authority)
+E.
+IMPORTANT: Contractor
+is not
+is required to sign this document and retum. 1
+copies to the issuing office.
+14 DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible)
+The return period of exchange agreement 22PO0008 is amended as follows:
+All return barrels (basis and applicable premium) are to be delivered to the SPR Bayou Choctaw site between November 1, 2024
+and December 31, 2024. There is no adjustment to the premium due as a result of this extension.
+As a result of the extension, the Irrevocable Standby Letter of Credit must remain in effect through February 28, 2025.
+All other provisions of the agreement remain the same.
+Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect
+15A NAME AND TITLE OF SIGNER (Type or pant)
+10A. NAME AND TITLE OF CONTRACTING OFFICER (Type or print)
+FREEMAN SHAHEEN
+VICE PRESADENT
+15B. CONTRACIOR/OFFEROR
+-
+Mary C. Roark
+15C. DATE SIGNED 16B UNITED STATES OF AMERICA
+08/9/222
+MaRCROaR Digitally signed by MARY ROARK
+Date: 2022.08.29 13:53:27 -05'00
+16C. DATE SIGNED
+08/29/2022
+(Signature of person authorized to sign)
+(Signature of Contracting Officer)
+Previous edition unusable
+STANDARD FORM 30 (REV. 11/2016)
+Prescribed by GSA FAR (48 CFR) 53.243

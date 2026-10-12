@@ -1,0 +1,422 @@
+=== page 1 ===
+1. CONTRACT ID CODE
+PAGE OF PAGES
+AMENDMENT OF SOLICITATION/MODIFICATION OF CONTRACT
+2. AMENDMENT/MODIFICATION NUMBER
+/ 3. EFFECTIVE DATE
+14. REQUISITIONPURCHASE REQUISITION NUMBER 5. PROJECT NUMBER (if aplicable)
+0002
+See Block 16C
+6. ISSUED BY
+CODE
+01601
+7. ADMINISTERED BY (If other than Item 6)
+CODE
+U.S. Department of Energy
+SPRPMO
+900 Commerce Road East
+New Orleans, LA 70123
+8. NAME AND ADDRESS OF CONTRACTOR (Number, street, county, State and ZIP Code)
+(X) 9A. AMENDMENT OF SOLICITATION NUMBER
+ExxonMobil Oil Corporation
+22777 Springwoods Village Parkway
+Spring, TX 77389
+9B. DATED (SEE ITEM 11)
+HOA. MODIFICATION OF CONTRACT/ORDER NUMBER
+22PO0003
+TOB. DATED (SEE ITEM 13)
+CODE
+FACILITY CODE
+12/30/2021
+11. THIS ITEM ONLY APPLIES TO AMENDMENTS OF SOLICITATIONS
+The above numbered solicitation is amended as set forth in item 14. The hour and date specified for receipt of Offers is extended
+not extended.
+Offers must acknowledge receipt of this amendment prior to the hour and date specified in the solicitation or as amended, by one of the following methods:
+(a) By completing items 8 and 15, and returning copies of the amendment: (b) By acknowledging receipt of this amendment on each copy of the offer submitted:
+or (c) By separate letter or electronic communication which includes a reference to the solicitation and amendment numbers. FAILURE OF YOUR ACKNOWLEDGMENT TO
+BE RECEIVED AT THE PLACE DESIGNATED FOR THE RECEIPT OF OFFERS PRIOR TO THE HOUR AND DATE SPECIFIED MAY RESULT IN REJECTION OF
+YOUR OFFER. If by virtue of this amendment you desire to change an offer already submitted, such change may be made by letter or electronic communication, provided each
+letter or electronic communication makes reference to the solicitation and this amendment, and is received prior to the opening hour and date specified
+12. ACCOUNTING AND APPROPRIATION DATA (If required)
+CHECK ONE
+13. THIS ITEM APPLIES ONLY TO MODIFICATIONS OF CONTRACTS/ORDERS.
+IT MODIFIES THE CONTRACT/ORDER NUMBER AS DESCRIBED IN ITEM 14
+A.
+THIS CHANGE ORDER IS ISSUED PURSUANT TO: (Specify authority THE CHANGES SET FORTH IN ITEM 14 ARE MADE IN THE CONTRACT ORDER
+NUMBER IN ITEM 10A.
+B.
+THE ABOVE NUMBERED CONTRACT/ORDER IS MODIFIED TO REFLECT THE ADMINISTRATIVE CHANGES (such as changes in paying office,
+appropriation data, etc.) SET FORTH IN ITEM 14, PURSUANT TO THE AUTHORITY OF FAR 43.103(b).
+THIS SUPPLEMENTAL AGREEMENT IS ENTERED INTO PURSUANT TO AUTHORITY OF:
+Paragraph 10 "Changes" & Mutual Agreement of the Parties
+D. OTHER (Specify type of modification and authority)
+E. IMPORTANT: Contractor
+is not
+X is required to sign this document and return 1
+_copies to the issuing office.
+14. DESCRIPTION OF AMENDMENT/MODIFICATION (Organized by UCF section headings, including solicitation/contract subject matter where feasible.)
+Exchange Agreement No. 22PO0003 is modified as follows:
+Payment -
+Table 1 below captures the deliveries made to ExxonMobil in January 2022 with basis and premium being in sour barrels.
+Table 2 records an early delivery made against contract 22PO0003 in August/September 2024 and reduces the overall
+obligation as show in Table 3. Please note that the sour premium barrels indicated in Table 2 are still outstanding and are
+converted to sweet in Table 3. Table 3 will capture the conversion ratio (sour to sweet) and adjust yield the Modified Basis and
+Modified Premium barrels owed to the SPR between November 1, 2025 and December 31, 2025.
+Except as provided herein, all terms and conditions of the document referenced in Item 9A or 10A, as heretofore changed, remains unchanged and in full force and effect
+15A. NAME AND TITLE OF SIGNER (Type or print)
+16A. NAME AND TITLE OF CONTRACTING OFFICER (Type or print)
+KRIS MESTER (SENIOR TRADER)
+Kelly M. Gele'
+15B. CONTRACTOR/OFFEROR
+15C. DATE SIGNED 16B
+KEEPSE Date 2025042315255 CLE
+4/21/25
+16C. DATE SIGNED
+(Signature of person authorized to sign)
+(Signature of Contracting Officer)
+=== page 2 ===
+22PO0003
+Mod No 0002
+Page 2 of 4
+The Irrevocable Standby Letter of Credit" established in favor of the United States Department of Energy to the Contracting
+Officer will have an expiration date of January 31, 2026.
+Table 1
+Date
+1/11/2022 - 1/20/2022
+Table 2
+Date
+8/26/2024 - 9/9/2024
+Table 3
+Contract
+22PO0003
+22P00003
+SPR
+Crude
+SOUR
+BC
+SOUR
+Basis SPR
+Barrels
+outstanding
+1,182,620
+1,182,620
+Contract
+22P00003
+22P00003
+SPR
+Crude
+BC SOUR
+Premium
+Basis SPR Sour Exchange Sour
+Barrels
+Delivered
+Owed
+1.999.365
+-(b) (4)
+Receivable
+BC SOUR
+Basis SPR Sour Exchange
+Barrels
+Premium
+Returned
+Ratio
+816.745
+) (4)
+Premium
+Sour
+Barrels SPR Total Sour
+Owed
+Receivable
+Conversion to Sweet Barrels to be delivered to SPR Bayou Choctaw Site
+Premium
+Exchange
+Sour
+Premium
+Barrels
+Ratio
+Owed
+(b)
+SPR Total
+Sour
+Receivable
+(4)
+Proposed
+Proposed
+Conversion Modified
+Ratio
+Basis
+Proposed
+Modified
+Premium
+Proposed
+Total
+Sweet
+Barrels
+Revised Schedule
+due to Site Pause
+11/1/2025 - 12/31/2025
+11/1/2025 - 12/31/2025
+Oil Quality -
+The new and updated Attachment A will indicate SPR specification thresholds and requirements for US Produced sweet
+crude oil nominated for delivery to SPR Bayou Choctaw site. It replaces the original Attachment A specifications but retains
+the footnotes of the original. The ExxonMobil supplied data in Attachment A will re-baseline crude oil API and sulfur values
+for purposes of calculating quality differential per terms of the contract. SPR will require a blend schedule and comprehensive
+All other provisions of the contract remain the same.
+=== page 3 ===
+ATTACHMENT A
+Sweet Statement of Quality Data and Product Specifications
+Company: ExxonMobil
+Date:2/27/25
+Crude Stream ® (define any acronyms): LLS (Light Louisiana Sweet)
+Crude Components (define scronyms): LLS (Light Louisiana Sweet)
+Product Parameter
+Test Method®
+Unit(s)
+API Gravity
+Total Sulfur
+Pour Point
+Salt Content
+Viscosity @ 15.6°C
+Viscosity @ 37.8°C
+Vapor Pressure (VPCR4
+(100"F)]
+Vapor Pressure [VPCR 0.2
+(100"F)) @900 sec.
+Total Acid Number
+Water
+Sediment
+Water/Sediment
+Combined Value
+Asphaltenes
+Stability
+Hydrogen Sulfide
+Mercaptan
+Vields [Vol. %)Y
+Naphtha (28-191°C]
+Distillate [191-327°C]
+Gas Oil [327-566°C)
+Residuum [>566°C]
+Light Ends [Liquid Vol. X)°
+Methane (Ci)
+Ethane (Ca)
+Propane (C3)
+Normal Butane (NC4)
+Isobutane (iC4)
+Distillation
+IBP - 25°C
+IBP . 79°C
+Contaminants
+Organic Chlorides
+Vanadium
+Nickel
+Iron
+Methanol
+Total Nitrogen
+Basic Nitrogen
+Specification
+Min
+34
+D287, D1298 or D5002
+D4294, D2622
+097
+D6470 or D3230
+D445, D7042
+D445, D7042
+D6377
+D6377
+D664, D8045
+D4928 or D4006
+D473, D4807
+D6560, IP143
+D4740
+UOP163
+UOP163
+D7169, D7900
+D7169, D7900
+D7169, D7900
+D7169, D7900
+D7900 or ITM6008
+D7900 or ITM6008
+D7900 or ITM6008
+D7900 or ITM6008
+D7900 or ITM6008
+D7169,D7900
+D7169,07900
+(API]
+(Mass %]
+(°C)
+[mg/kg %]
+(cSt]
+(cSt)
+psia (kPa)
+psia (kPa)
+[mg
+кон/g)
+(Vol. %]
+[Mass. %]
+[Vol. %]
+[Mass%
+ASTM Ref.
+mg/kg
+mg/kg
+[Vol. %
+[Vol. %
+[Vol.
+[Vol. %
+[Liquid
+Vol.%]
+[Liquid
+Vol.%]
+[Liquid
+Vol.%]
+(Liquid
+Vol.%]
+[Liquid
+Vol.%]
+wt.%
+W1%
+D4929 B or C
+D5708 (B), D5863, D8252
+D5708 (B), D5863, D8252
+D5708 (B), D5863, D8252
+D7059
+D4629/D5762
+UOP269
+mg/kg
+mg/kg
+mg/kg
+mg/kg
+mg/kg
+Wt %
+WL %
+21
+19
+20
+Specification
+Max
+41
+0.50
+-12
+500
+11
+6
+9.0(62.1)
+Report
+1.00
+Report
+Report
+1.0
+2.0%
+2
+1ppm
+Report
+42
+45
+42
+14
+0.01
+0.10
+10
+3.0
+4.0
+3.0%
+10.0%
+18
+8
+10
+30
+Report
+Report
+Result
+38 1
+0.40
+-59
+154 mg/g
+4.39
+8.6 psia
+14.2 psia
+0.37
+002
+0.28
+0.3
+0 24
+•0 1
+62
+29.5
+24 8
+33 1
+92
+0.001
+0.05
+0.54
+1.55
+0.41
+12 1
+17.9
+40 1
+45
+3 1
+129
+<15
+0.078
+0 025
+Method
+D5002
+D2622
+05853
+D3230
+D445
+D445
+D6377
+D6377
+D8045
+D4928
+D473
+DM928 8 D473
+06580
+D4740
+VOP 163
+UOP163
+D2892, D5236
+D2892. D5236
+D2892, D5236
+D2892, D5236
+D7900
+D7900
+D7900
+D7900
+D7900
+D2892 D5236
+D2892 D5236
+D4929B
+D57088
+D5708B
+D5708B
+D7059
+D5762
+U0p2eg
+=== page 4 ===
+NOTE 1:
+NOTE 3:
+NOTE 4:
+NOTE 5:
+Commonly traded crude petroleum suitable for normal U.S. Gulf Coast refinery processing and free of foreign
+contaminants or chemicals.
+Alternate methods may only be used if approved by the contracting officer.
+07/6 co ing 10 Data man be gro ed in eins on or a capacion or dedi is cance.
+Light ends content specifications are interim and will be superseded if and when industry standards for light
+ends evaluation are implemented.
+Vapor pressure changed to better reflect current domestic crude standards
+The Strategic Petroleum Reserve reserves the right to refuse to accept any Crude Oil which meets these
+specifications but is deemed to be incompatible with existing stocks, or which has the potential for
+adversely affecting handling. In the event the Strategic Petroleum Reserve refuses acceptance it may
+also exercise its rights under FAR 52.212-4.
+The acceptability of any Crude Oil depends upon any assay, or certificates of analysis for each blend
+omponent, typical of current production quality of the stream. Any Crude Oil offered to the Strategi
+etroleum Reserve that meets these specifications may be subiect to additional testine for acceptanc
+All Crude Oil shipments received by the SPR are tested to ensure they meet specifications.
+All Crude Oil shipments received by the SPR pursuant to this solicitation must be sourced from U.S.
+production.
+If a blended crude is to be submitted for consideration, then all component streams offered for blend
+must not exceed 45° API gravity or fall below 27.0° API gravity to be considered suitable for injection
+into SPR caverns.
