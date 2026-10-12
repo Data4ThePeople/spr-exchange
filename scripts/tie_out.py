@@ -205,5 +205,18 @@ for r in csv.DictReader((ROOT / "data/processed/round_uptake_2026.csv").open()):
     if r["taken_bbl"]:
         check(f"round {r['round']} uptake", int(r["taken_bbl"]), sum(x["barrels"] for x in ledger["ledger"] if x["round"] == r["round"]))
 
+# 10. Purchases: dollars straight from each sheet's "totaling $" figure, and sheets counted by outcome.
+bought = list(csv.DictReader((ROOT / "data/processed/spr_purchase_rounds.csv").open()))
+dollars, none = 0, 0
+for pdf in sorted((ROOT / "data/raw/doe_purchases").glob("*.pdf")):
+    text = re.sub(r"\s+", " ", " ".join(p.extract_text() or "" for p in PdfReader(pdf).pages))
+    m = re.search(r"totaling \$([\d,]+)\.00", text)
+    dollars += int(m.group(1).replace(",", "")) if m else 0
+    none += "NO AWARDS MADE" in text
+check("purchase dollars", sum(int(r["dollars"]) for r in bought), dollars)
+check("purchase solicitations with no award", sum(1 for r in bought if r["outcome"] != "Awarded"), none)
+check("purchase barrels, seller lines against round totals",
+      sum(int(r["barrels"]) for r in csv.DictReader((ROOT / "data/processed/spr_purchases.csv").open())), sum(int(r["barrels"]) for r in bought))
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

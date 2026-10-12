@@ -610,3 +610,44 @@ Petroleum Reserve Project Management Office.
 - **Checked against the RFPs by the independent tie-out:** all 25 lots match. Three things to know: the round 3 RFP contradicts itself (one table lists 14 and 15 million barrels at Big Hill, three others and the title give 11 and 14 million, which we use); round 1 lists West Hackberry sour as one 34-million-barrel lot with two return routes, which we show as 24 and 10 million; round 2 uses Amendment 0001's volumes.
 - **Bids were due before the market closed.** In rounds 1.a to 4 offers were due at 11:00 a.m. Central, and this uses that day's closing price, which a bidder could not have seen. Round 1 was due at 5:00 p.m.
 - **Limits:** five rounds have results, so this is five observations, not a statistical test. The front-month price is used in every round to keep one basis; the published trade card for round 4 uses the contract for the month after pickup and so shows a lower figure ($9.87 for its best lot) than this file ($11.21). Bids could come in above the minimum premium. The grade's price gap to WTI, shipping and the bank guarantee are left out. Prices moved between bid day and award day, so a bidder could not be sure of the bid-day figure.
+
+## Crude oil purchases for the reserve, 2023 to 2025 (U.S. Department of Energy)
+
+**What it is.** One-page "Award Information" sheets for each solicitation DOE
+ran to buy oil for the reserve after the 2022 sales. Each gives an "as of"
+date, the barrels bought, one dollar total, and the sellers with their barrels.
+Seven are marked "NO AWARDS MADE."
+
+**Where it comes from.** DOE's JSON listings at
+`https://www.spr.doe.gov/posting/PURCHASE/archive/` and `.../current/`.
+`scripts/fetch_doe_purchases.py` saves every award sheet in
+`data/raw/doe_purchases/` (28 files) with `manifest.json` and dated copies of
+both listings. Closed solicitations are served under `archive/`; an open one is
+served with no folder prefix (a path with `current/` returns a web page, not
+the file). Retrieved October 12, 2026.
+
+**Coverage.** 28 solicitations, 21 with awards, dated June 9, 2023 to November
+12, 2025: 61,443,350 barrels for $4,632,104,845, an average of $75.39 a barrel,
+from 10 sellers. By year of award: 15.32 million barrels in 2023, 45.22 million
+in 2024, 0.9 million in 2025.
+
+**How it is processed.** `scripts/build_purchases.py` writes
+`data/processed/spr_purchases.csv` (seller lines) and
+`spr_purchase_rounds.csv` (one row per solicitation). DOE writes quantities
+several ways on these sheets ("3.25MMB", "600MB", "2,774,658 barrels", and full
+barrel counts followed by "MMB" or "MB"); a number of 1,000 or more is read as
+barrels, otherwise MMB is millions and MB is thousands. The build stops unless
+each sheet's seller lines add to its stated total.
+
+**Units and rounding.** Price per barrel is a sheet's dollars over its
+barrels; the sheets give no price per seller. These are award figures, not
+deliveries or payments.
+
+**Known quirks and open questions.**
+- Two solicitations for Bryan Mound, January to March 2025, were both awarded to Macquarie two weeks apart: 2.475 million barrels (August 23, 2024) and "Version 2", 3.42 million barrels (September 9, 2024). They carry different solicitation numbers and both sheets say "awarded," so both are counted. Whether the second added to or replaced the first is not stated.
+- DOE's own running totals are lower than the award sheets add to. Read as search summaries, not the pages: a September 2024 DOE release said "over 56 million barrels" at about $76, and coverage of the November 2024 award said 59 million at under $76. The sheets add to 58.14 million through September 30, 2024 and 60.54 million through November 8, 2024. The gap of about 1.5 to 2 million barrels is unexplained; contracts changed or cancelled after award would not show on these sheets.
+- The same coverage puts the average price of the 2022 emergency sales at about $95 a barrel. Our figure for those sales, $104.25, is at the prices offered, before the contracts' adjustment to the market price at delivery. If $95 is right, DOE received about $17 billion, not $18.83 billion. We hold no document with the amount received.
+- What became of the 2022 sale proceeds beyond these purchases (how much stayed in the reserve's account, and what Congress did with it) has not been checked.
+
+**License and attribution.** U.S. government work, public domain. Credit: U.S.
+Department of Energy, Strategic Petroleum Reserve Project Management Office.

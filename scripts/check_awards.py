@@ -48,7 +48,9 @@ def main():
                     name = f["name"]
                     if "award" not in name.lower() or name in held:
                         continue
-                    url = BASE + urllib.parse.quote(f"{where}/{rel['name']}/{folder['name']}/{name}")
+                    # Closed rounds are served under archive/. Open rounds are served with no folder prefix.
+                    path = f"{rel['name']}/{folder['name']}/{name}"
+                    url = BASE + urllib.parse.quote(f"archive/{path}" if where == "archive" else path)
                     body = get(url, ua)
                     if not body.startswith(b"%PDF"):
                         sys.exit(f"{name}: download is not a PDF")
