@@ -143,7 +143,7 @@ html.embed .standfirst { font-size: 13.5px; }
   <div class="bids"><table id="bids"></table></div>
   <p class="after" id="bidafter"></p>
 
-  <h2>A loan made in January 2022 drew more trading houses than the sales that followed</h2>
+  <h2>One round of loans in January 2022 drew more trading houses than the sales that followed</h2>
   <p class="sub" id="loansub"></p>
   <div id="loanshares"></div>
   <p class="after" id="loanafter"></p>
@@ -217,7 +217,7 @@ document.getElementById("shares").innerHTML = DATA.programs.map(shareBlock).join
 // What a winner paid or owes, and how close 2022 bids sat to the market price.
 const money = v => (v < 0 ? "-$" : "$") + Math.abs(v).toFixed(2);
 const cents = v => Math.abs(v) < 1 ? Math.round(Math.abs(v) * 100) + " cents" : "$" + Math.abs(v).toFixed(2);
-const P = DATA.paf, C = DATA.curve_2022;
+const P = DATA.paf, C = DATA.curve_2022, U = DATA.uptake.rounds[0];
 document.getElementById("cards").innerHTML = `
   <section class="card"><h3>${esc(A.name)}</h3>
     <p class="formula">The market price around the day the oil is picked up, plus or minus the gap the buyer bid</p>
@@ -225,29 +225,29 @@ document.getElementById("cards").innerHTML = `
     <p class="q">From the sale notice: "The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor."</p></section>
   <section class="card"><h3>${esc(B.name)}</h3>
     <p class="formula">The same amount of oil later, plus extra barrels. No dollars.</p>
-    <p>A borrower can sell the oil now and, the same day, agree to buy the barrels it owes at a later price. When later oil is much cheaper than oil today, that gap can be locked in. A company needs a trading desk to do that. It does not need a refinery.</p>
+    <p>A borrower can sell the oil now and arrange to buy the barrels it owes at a later price. When later oil is much cheaper than oil today, there is a gap to capture. Any company with a trading desk can try this, with or without a refinery. How much any company did so is not public.</p>
     <p class="q">From the loan documents: "All Return Oil to SPR sites will include the awarded volume in addition to the premium."</p></section>`;
 document.getElementById("facts").innerHTML = `
   <div class="fact"><div class="v">${P.within_5_dollars_pct.toFixed(1)}%</div><div class="k">of the oil sold in ${A.key} was won at a bid within $5 of the government's reference price</div></div>
   <div class="fact"><div class="v">${cents(P.mean)} ${P.mean < 0 ? "below" : "above"}</div><div class="k">the reference price: the average winning bid in ${A.key}, per barrel</div></div>
-  <div class="fact"><div class="v">${P.pipeline_pct.toFixed(1)}%</div><div class="k">of the oil sold in ${A.key} left the reserve by pipeline, not by ship</div></div>`;
+  <div class="fact"><div class="v">${pct(U.taken, U.offered)}</div><div class="k">of the oil offered in the first ${B.key} round was taken. The rest went unclaimed.</div></div>`;
 
 // Who bid in 2022, how often they won, and their prices against the winners'.
 const totalBidders = DATA.bids.reduce((n, b) => n + b.bidders, 0) + Object.values(DATA.bids_other).reduce((n, b) => n + b.bidders, 0);
 document.getElementById("bidsub").textContent =
   `The government published every offer in the ${A.events.length} sales of ${A.key}: ${DATA.firms.offers_2022} offers from ${totalBidders} companies. Companies often filed several offers for the same oil at different prices, so read "barrels bid for" as who showed up, not how much they wanted.`;
 document.getElementById("bids").innerHTML =
-  `<thead><tr><th>Type of company</th><th class="num">Bidders</th><th class="num">Share of all barrels bid for</th><th>Won, as a share of what they bid for</th><th class="num">Their best price against the lowest winning price for the same oil</th></tr></thead><tbody>` +
+  `<thead><tr><th>Type of company</th><th class="num">Bidders</th><th class="num">Share of all barrels bid for</th><th>Won, as a share of what they bid for</th><th class="num">Their prices against the lowest winning price for the same oil and delivery point</th></tr></thead><tbody>` +
   DATA.bids.map(b => `<tr><td><div class="name"><span class="sw" style="background:${COLOR[b.type]}"></span>${PLURAL[b.type]}</div></td>
     <td class="num">${b.bidders}</td><td class="num">${b.share_of_bid_pct.toFixed(1)}%</td>
     <td><div class="meter"><div class="track"><div class="bar" style="width:${b.won_pct_of_bid}%;background:${COLOR[b.type]}"></div></div><b>${b.won_pct_of_bid.toFixed(1)}%</b></div></td>
-    <td class="num">${cents(b.best_price_vs_lowest_winner)} a barrel ${b.best_price_vs_lowest_winner < 0 ? "below" : "above"}</td></tr>`).join("") + "</tbody>";
+    <td class="num">${cents(b.price_vs_lowest_winner)} a barrel ${b.price_vs_lowest_winner < 0 ? "below" : "above"}</td></tr>`).join("") + "</tbody>";
 const th = DATA.bids.find(b => b.type === "Trading house");
 const absent = DATA.firms.borrowers_2026_that_did_not_bid_in_2022, gone = DATA.firms.buyers_2022_not_in_2026_awards;
 const list = a => a.length > 1 ? a.slice(0, -1).join(", ") + " and " + a[a.length - 1] : a[0];
 const nOther = Object.values(DATA.bids_other).reduce((n, b) => n + b.bidders, 0);
 document.getElementById("bidafter").textContent =
-  `${th.bid_below_lowest_winner_pct.toFixed(1)}% of the barrels trading houses bid for were priced below the lowest winning bid for the same oil. ` +
+  `${th.bid_below_lowest_winner_pct.toFixed(1)}% of the barrels trading houses asked for were priced below the lowest winning bid for the same oil and delivery point. The five trading houses did not bid alike: ${th.lowest_firm.company}'s prices averaged ${cents(th.lowest_firm.gap)} below the lowest winner and ${th.highest_firm.company}'s ${cents(th.highest_firm.gap)} below. ` +
   `${absent.length} of the ${B.firms.length} companies that borrowed oil in ${B.key} filed no offer in any ${A.key} sale: ${list(absent)}. ` +
   `${gone.length} companies that bought oil in ${A.key} do not appear in the ${B.key} awards: ${list(gone)}. The government has not published the offers made in ${B.key}, so we cannot tell whether they bid.` +
   (nOther ? ` ${nOther} other bidders that won nothing are left out of the table.` : "");
@@ -259,7 +259,7 @@ document.getElementById("loansub").textContent =
 document.getElementById("loanshares").innerHTML = [L, A, B].map(shareBlock).join("");
 document.getElementById("loanafter").textContent =
   `Trading houses took ${pct(lh, L.total)} of the January ${A.key} loans, ${pct(share(A, "Trading house"), A.total)} of the ${A.key} sales and ${pct(share(B, "Trading house"), B.total)} of the ${B.key} loans. ` +
-  `The January loans were one round of a larger loan program whose other awards the government's announcement does not list, and they used a fixed amount of extra oil, not bids.` +
+  `These ${L.firms.length} loans were one round of a larger loan program. Its other loans are not in this chart, and earlier government announcements name refiners and oil majors as the borrowers, so the trading houses' share of the whole program is lower than this round's. The program also used a fixed amount of extra oil, not bids.` +
   (C ? ` Oil for quick delivery cost more than oil for later delivery in ${A.key} too: ${C.mean.toFixed(1)}% more than oil four months out, on average, during the sales.` : "");
 
 const maxShare = Math.max(...DATA.programs.map(p => p.firms[0].barrels / p.total));
@@ -286,7 +286,7 @@ const foreign = A.firms.concat(B.firms).filter(f => f.type === "Foreign oil comp
 document.getElementById("notes").innerHTML = `
   <p><b>What this is.</b> Every award the Energy Department reported for the ${A.events.length} emergency crude oil sales of ${A.key} and for the ${B.events.length} rounds of the ${B.key} emergency loans that have results. The government calls the ${B.key} program an exchange; we call it a loan because the oil is owed back. A sale and a loan are different deals, so this compares who received the oil, not what they paid.</p>
   <p><b>Company types.</b> These are our labels, based on the company name the government listed. A company that refines oil can also trade it, and a trading company can sell to a U.S. refinery. The table does not show where any barrel ended up.${foreign.length ? " " + esc([...new Set(foreign)].join(" and ")) + ` are shown as their own group because they belong to oil companies with no U.S. refinery. Counted with trading houses, that group would be ${pct(share(A, "Trading house") + share(A, "Foreign oil company trading arm"), A.total)} in ${A.key}. Trading arms of oil majors belong to companies that do own U.S. refineries; counted with refiners, that group would be ${pct(share(A, "Refiner") + share(A, "Major trading arm"), A.total)} in ${A.key} and ${pct(share(B, "Refiner") + share(B, "Major trading arm"), B.total)} in ${B.key}.` : ""}</p>
-  <p><b>What this does and does not show.</b> The price terms are quoted from the government's documents. That a sale rewards a company that can use the oil, and a loan rewards one that can trade the gap between today's price and a later price, is our reading of those terms. The bids and the January ${A.key} loans fit that reading. They do not prove it: the two years also differ in other ways, listed below.</p>
+  <p><b>What this does and does not show.</b> The price terms are quoted from the government's documents. That a sale rewards a company that can use the oil, and a loan rewards one that can trade the gap between today's price and a later price, is our reading of those terms. The bids and the January ${A.key} loans fit that reading. They do not prove it. Another explanation fits the same facts: in ${B.key} oil has sold for much more abroad than in the U.S., which favors companies whose business is shipping oil. The data here cannot separate the two. Much of the oil offered in ${B.key} also went unclaimed (${mil(DATA.uptake.taken)} million of ${mil(DATA.uptake.offered)} million barrels offered across ${DATA.uptake.rounds.length} rounds were taken), so the ${B.key} shares show who chose to borrow, not who won a contest.</p>
   <p><b>What is left out.</b> Awards are not deliveries, and contracts can change after award. Oil sold under laws passed by Congress, apart from the emergency sales, is not included, and neither is a smaller oil loan made in late 2021. The two years also differ in oil prices, in the cause of the shortage and in what refineries needed, so the change in who got the oil cannot be put down to the program design alone.</p>
   <p><b>Source.</b> U.S. Department of Energy, Strategic Petroleum Reserve: Successful Awards Reports and Notices of Sale for ${A.key}; award sheets and requests for proposals for ${B.key}. Data and code: <a href="https://github.com/Data4ThePeople/spr-exchange" target="_blank" rel="noopener">github.com/Data4ThePeople/spr-exchange</a>. Built ${MON[m - 1]} ${d}, ${y}. Built by Data 4 The People.</p>`;
 

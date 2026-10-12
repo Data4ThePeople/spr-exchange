@@ -1,4 +1,35 @@
 {
+ "uptake_2026": {
+  "offered": 258500000,
+  "taken": 133560000,
+  "rounds": [
+   {
+    "round": "1",
+    "offered": 86000000,
+    "taken": 45220000
+   },
+   {
+    "round": "1.a",
+    "offered": 10000000,
+    "taken": 8480000
+   },
+   {
+    "round": "1.b",
+    "offered": 30000000,
+    "taken": 26030000
+   },
+   {
+    "round": "2",
+    "offered": 92500000,
+    "taken": 53330000
+   },
+   {
+    "round": "3",
+    "offered": 40000000,
+    "taken": 500000
+   }
+  ]
+ },
  "bids_2022": {
   "Major trading arm": {
    "bidders": 2,
@@ -6,8 +37,16 @@
    "share_of_bid_pct": 15.3,
    "barrels_won": 17755000,
    "won_pct_of_bid": 26.8,
-   "best_price_vs_lowest_winner": -0.13,
-   "bid_below_lowest_winner_pct": 45.8
+   "price_vs_lowest_winner": -1.26,
+   "bid_below_lowest_winner_pct": 73.1,
+   "lowest_firm": {
+    "company": "Atlantic Trading & Marketing (TotalEnergies)",
+    "gap": -1.33
+   },
+   "highest_firm": {
+    "company": "Shell Trading (US)",
+    "gap": -1.23
+   }
   },
   "Refiner": {
    "bidders": 8,
@@ -15,8 +54,16 @@
    "share_of_bid_pct": 65.9,
    "barrels_won": 139810000,
    "won_pct_of_bid": 48.9,
-   "best_price_vs_lowest_winner": 0.52,
-   "bid_below_lowest_winner_pct": 37.2
+   "price_vs_lowest_winner": -0.26,
+   "bid_below_lowest_winner_pct": 49.4,
+   "lowest_firm": {
+    "company": "Monroe Energy",
+    "gap": -2.94
+   },
+   "highest_firm": {
+    "company": "Motiva",
+    "gap": 1.13
+   }
   },
   "Foreign oil company trading arm": {
    "bidders": 3,
@@ -24,8 +71,16 @@
    "share_of_bid_pct": 6.6,
    "barrels_won": 13145000,
    "won_pct_of_bid": 45.8,
-   "best_price_vs_lowest_winner": 0.41,
-   "bid_below_lowest_winner_pct": 47.5
+   "price_vs_lowest_winner": -1.41,
+   "bid_below_lowest_winner_pct": 52.9,
+   "lowest_firm": {
+    "company": "PetroChina International (America)",
+    "gap": -5.09
+   },
+   "highest_firm": {
+    "company": "Equinor Marketing & Trading",
+    "gap": 1.69
+   }
   },
   "Trading house": {
    "bidders": 5,
@@ -33,8 +88,16 @@
    "share_of_bid_pct": 11.5,
    "barrels_won": 9950000,
    "won_pct_of_bid": 19.9,
-   "best_price_vs_lowest_winner": -4.38,
-   "bid_below_lowest_winner_pct": 74.1
+   "price_vs_lowest_winner": -5.12,
+   "bid_below_lowest_winner_pct": 80.1,
+   "lowest_firm": {
+    "company": "Vitol",
+    "gap": -9.79
+   },
+   "highest_firm": {
+    "company": "Macquarie",
+    "gap": -0.92
+   }
   },
   "Not classified": {
    "bidders": 2,
@@ -42,9 +105,18 @@
    "share_of_bid_pct": 0.7,
    "barrels_won": 0,
    "won_pct_of_bid": 0.0,
-   "best_price_vs_lowest_winner": -0.34,
-   "bid_below_lowest_winner_pct": 82.5
-  }
+   "price_vs_lowest_winner": -0.34,
+   "bid_below_lowest_winner_pct": 82.5,
+   "lowest_firm": {
+    "company": "Biomass Energy Services",
+    "gap": -0.34
+   },
+   "highest_firm": {
+    "company": "Upstream Petroleum",
+    "gap": -0.34
+   }
+  },
+  "_barrels_asked_on_lines_with_no_winner": 4925000
  },
  "paf_2022": {
   "mean": -0.52,

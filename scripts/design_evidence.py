@@ -5,7 +5,9 @@ Writes data/processed/design_evidence.json and prints it. Five parts:
 
   bids_2022     who bid in the seven 2022 sales and how often they won, by firm
                 type, and how each type's prices compared with the lowest
-                winning price for the same oil (same sale and line item).
+                winning price on the same delivery line (same sale, line item
+                and delivery choice), which is the level DOE ranked offers at.
+  uptake_2026   barrels offered and taken in each 2026 round with results.
   paf_2022      how far winning offers sat from DOE's reference price. Under the
                 sale terms the buyer pays the market price around delivery plus
                 this gap, so the gap is all a bidder competes on.
@@ -57,23 +59,35 @@ def main():
         w.writerow(["sale", "mli", "site", "crude_type"])
         w.writerows([s, m, *v] for (s, m), v in sorted(st.items()))
 
-    # 1. Bids: who showed up, how often they won, and their price against the lowest winner on the same oil.
+    # 1. Bids: who showed up and how often they won, by firm type. Prices are compared
+    #    delivery line by delivery line, because that is the level DOE ranked offers at.
+    choices = read("data/processed/spr_2022_sale_offer_choices.csv")
     cut = {}
     for r in awards:
-        k = (r["sale"], r["mli"])
+        k = (r["sale"], r["mli"], r["dli"])
         cut[k] = min(cut.get(k, 1e9), float(r["unit_price"]))
     bid_total = sum(int(r["barrels_bid"]) for r in offers)
     bids = {}
     for r in offers:
-        b = bids.setdefault(r["type"], dict(bidders=set(), bid=0, won=0, gap=[]))
+        b = bids.setdefault(r["type"], dict(bidders=set(), bid=0, won=0, gap=[], firm={}))
         b["bidders"].add(r["company"]); b["bid"] += int(r["barrels_bid"]); b["won"] += int(r["barrels_awarded"])
-        if (r["sale"], r["mli"]) in cut:
-            b["gap"].append((float(r["high_price"]) - cut[r["sale"], r["mli"]], int(r["barrels_bid"])))
-    bids_out = {t: dict(bidders=len(b["bidders"]), barrels_bid=b["bid"], share_of_bid_pct=round(b["bid"] / bid_total * 100, 1),
-                        barrels_won=b["won"], won_pct_of_bid=round(b["won"] / b["bid"] * 100, 1),
-                        best_price_vs_lowest_winner=round(wmean(b["gap"]), 2),
-                        bid_below_lowest_winner_pct=round(sum(w for g, w in b["gap"] if g < 0) / sum(w for _, w in b["gap"]) * 100, 1))
-                for t, b in bids.items()}
+    no_winner = 0
+    for r in choices:
+        k = (r["sale"], r["mli"], r["dli"])
+        if k not in cut:
+            no_winner += int(r["barrels_asked"])     # a delivery line nobody won; nothing to compare with
+            continue
+        pair = (float(r["price"]) - cut[k], int(r["barrels_asked"]))
+        bids[r["type"]]["gap"].append(pair)
+        bids[r["type"]]["firm"].setdefault(r["company"], []).append(pair)
+    bids_out = {}
+    for t, b in bids.items():
+        firms = sorted((round(wmean(v), 2), c) for c, v in b["firm"].items())
+        bids_out[t] = dict(bidders=len(b["bidders"]), barrels_bid=b["bid"], share_of_bid_pct=round(b["bid"] / bid_total * 100, 1),
+                           barrels_won=b["won"], won_pct_of_bid=round(b["won"] / b["bid"] * 100, 1),
+                           price_vs_lowest_winner=round(wmean(b["gap"]), 2),
+                           bid_below_lowest_winner_pct=round(sum(w for g, w in b["gap"] if g < 0) / sum(w for _, w in b["gap"]) * 100, 1),
+                           lowest_firm=dict(company=firms[0][1], gap=firms[0][0]), highest_firm=dict(company=firms[-1][1], gap=firms[-1][0]))
 
     # 2. Winning offers against the reference price for their crude type.
     paf = []
@@ -125,7 +139,14 @@ def main():
         m["front_over_fourth_month_pct"] = dict(days=len(g), mean=round(sum(g) / len(g), 1), high=round(max(g), 1)) if g else None
         market[year] = m
 
-    out = dict(bids_2022=bids_out, paf_2022=paf_out, firms=firms, loan_jan_2022=loan_out, market=market)
+    # 6. How much of the oil offered in 2026 was taken, round by round.
+    rounds = [r for r in read("data/reference/rounds.csv") if r["award_sheet_posted"] == "yes"]
+    taken = {r["round"]: sum(int(x["barrels"]) for x in a26 if x["round"] == r["round"]) for r in rounds}
+    uptake = dict(offered=sum(int(r["offered_bbl"]) for r in rounds), taken=sum(taken.values()),
+                  rounds=[dict(round=r["round"], offered=int(r["offered_bbl"]), taken=taken[r["round"]]) for r in rounds])
+
+    bids_out["_barrels_asked_on_lines_with_no_winner"] = no_winner
+    out = dict(uptake_2026=uptake, bids_2022=bids_out, paf_2022=paf_out, firms=firms, loan_jan_2022=loan_out, market=market)
     (ROOT / "data/processed/design_evidence.json").write_text(json.dumps(out, indent=1))
     print(json.dumps(out, indent=1))
 

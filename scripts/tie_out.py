@@ -147,10 +147,11 @@ check("no 2022 offer from Trafigura", sum(1 for _, _, n in heads if "trafigura" 
 by_type = {}
 for name in {n for _, _, n in heads}:
     by_type.setdefault(cmap[name]["type"], set()).add(cmap[name]["company"])
-for t, b in ev["bids_2022"].items():
+bid_types = {t: b for t, b in ev["bids_2022"].items() if isinstance(b, dict)}   # one key is a plain count
+for t, b in bid_types.items():
     check(f"2022 bidders, {t}", b["bidders"], len(by_type[t]))
     check(f"2022 barrels won, {t}", b["barrels_won"], sum(x for n, x, _ in awards if cmap[n]["type"] == t))
-check("2022 barrels won across bidders", sum(b["barrels_won"] for b in ev["bids_2022"].values()), p22["total"])
+check("2022 barrels won across bidders", sum(b["barrels_won"] for b in bid_types.values()), p22["total"])
 release = re.sub(r"<[^>]+>", " ", next((ROOT / "data/raw/doe_press").glob("2022-01-25*.html")).read_text(errors="ignore"))
 listed = {n.strip(): round(float(v) * 1e6) for n, v in re.findall(r"([A-Z][\w .&]+?) \(([\d.]+) million barrels\)", release)}
 keyed = {r["company_as_listed"]: int(r["barrels"]) for r in csv.DictReader((ROOT / "data/reference/exchange_jan_2022.csv").open())}
@@ -168,7 +169,7 @@ for year, m in ev["market"].items():
 
 # 7. The comparison page carries the evidence file's figures unchanged.
 check("page bids match the evidence file", {b["type"]: b["barrels_won"] for b in comp["bids"]},
-      {t: b["barrels_won"] for t, b in ev["bids_2022"].items() if t in comp["types"]})
+      {t: b["barrels_won"] for t, b in bid_types.items() if t in comp["types"]})
 check("page price gaps match the evidence file", comp["paf"], ev["paf_2022"])
 check("page January 2022 loan total", comp["loan"]["total"], sum(listed.values()))
 check("page January 2022 loan types", {t["type"]: t["barrels"] for t in comp["loan"]["types"] if t["barrels"]},

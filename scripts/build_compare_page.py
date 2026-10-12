@@ -120,9 +120,9 @@ def main():
     if loan["total"] != ev["loan_jan_2022"]["total"]:
         sys.exit("January 2022 loans: reference table and evidence file disagree")
     bids = [dict(type=t, **ev["bids_2022"][t]) for t in TYPES if t in ev["bids_2022"]]
-    other = {t: v for t, v in ev["bids_2022"].items() if t not in TYPES}
+    other = {t: v for t, v in ev["bids_2022"].items() if t not in TYPES and isinstance(v, dict)}
     data = dict(built=datetime.date.today().isoformat(), types=TYPES, programs=[a, b], features=features,
-                loan=loan, bids=bids, bids_other=other, paf=ev["paf_2022"], firms=ev["firms"],
+                loan=loan, bids=bids, bids_other=other, uptake=ev["uptake_2026"], paf=ev["paf_2022"], firms=ev["firms"],
                 curve_2022=ev["market"]["2022"]["front_over_fourth_month_pct"])
     logo = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "logo/d4tp-text-dark.svg").read_bytes()).decode()
     html = (ROOT / "scripts/compare_template.html").read_text()
