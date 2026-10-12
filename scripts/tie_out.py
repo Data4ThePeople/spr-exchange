@@ -218,17 +218,22 @@ check("purchase solicitations with no award", sum(1 for r in bought if r["outcom
 check("purchase barrels, seller lines against round totals",
       sum(int(r["barrels"]) for r in csv.DictReader((ROOT / "data/processed/spr_purchases.csv").open())), sum(int(r["barrels"]) for r in bought))
 
-# 11. Where the 2022 sale money went: each keyed figure's phrase must be on the cited page of DOE's report,
-#     and the remainder is arithmetic on those figures and the purchase ledger.
+# 11. Where the 2022 sale money went: each keyed figure's phrase must be in its source (a page of a DOE report,
+#     or the saved passages of the law and the Budget Appendix), and the totals are arithmetic on them.
 squash = lambda s: re.sub(r"[^a-z0-9$.]", "", s.lower())
 money = {}
 for r in csv.DictReader((ROOT / "data/reference/sale_proceeds_2022.csv").open()):
-    page = PdfReader(ROOT / "data/raw/doe_reports" / r["source_file"]).pages[int(r["pdf_page"]) - 1].extract_text() or ""
-    check(f"proceeds: '{r['item']}' is on p. {r['pdf_page']}", squash(r["check_phrase"]) in squash(page), True)
+    if r["source_file"].endswith(".pdf"):
+        text = PdfReader(ROOT / "data/raw/doe_reports" / r["source_file"]).pages[int(r["pdf_page"]) - 1].extract_text() or ""
+    else:
+        text = (ROOT / "data/raw/law" / r["source_file"]).read_text()
+    check(f"proceeds: '{r['item']}' is in {r['source_file']}", squash(r["check_phrase"]) in squash(text), True)
     money[r["item"]] = int(r["value"])
 use = json.loads((ROOT / "data/processed/sale_proceeds_use.json").read_text())
-check("proceeds left after the rescission and purchases", use["left_after_rescission_and_purchases"],
-      money["Received from the 2022 emergency sales"] - money["Rescinded by Congress in exchange for cancelling mandated sales"] - sum(int(r["dollars"]) for r in bought))
+both = money["Rescinded with the cancelled mandated sales"] + money["Rescinded in the annual energy appropriation"]
+check("proceeds: two rescissions", use["rescinded_total"], both)
+check("proceeds left after both rescissions", use["left_after_rescissions"], money["Received from the 2022 emergency sales"] - both)
+check("purchases awarded through 2024", use["purchases_awarded_through_2024_dollars"], sum(int(r["dollars"]) for r in bought if r["as_of"][:4] <= "2024" and r["outcome"] == "Awarded"))
 check("loan program: contract barrels within 1% of DOE's delivered total",
       abs(sum(int(r["barrels"]) for r in agreements) - money["Oil delivered under the 2021-22 Winter Exchange"]) / money["Oil delivered under the 2021-22 Winter Exchange"] < 0.01, True)
 

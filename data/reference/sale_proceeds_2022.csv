@@ -1,6 +1,10 @@
 item,value,unit,source_file,pdf_page,check_phrase
 Received from the 2022 emergency sales,16993463785,dollars,spr_annual_report_2022.pdf,36,"In CY 2022, the SPR Petroleum Account received $16,993,463,785 from emergency sales, or over $94 per barrel on average"
-Rescinded by Congress in exchange for cancelling mandated sales,10400000000,dollars,spr_annual_report_2022.pdf,30,"in exchange for a recission of $10.4 billion from the SPR Petroleum Account, with the money coming from revenue earned from emergency sales in 2022"
-Mandated sales cancelled in that exchange,140000000,barrels,spr_annual_report_2022.pdf,30,"cancellation of 140 million barrels of sales in FY 2024 through FY 2027"
+Rescinded with the cancelled mandated sales,10395000000,dollars,PLAW-117publ328_spr_passages.txt,,"Of the unobligated balances from amounts deposited in the SPR Petroleum Account pursuant to section 167(b)(3) of the Energy Policy and Conservation Act (42 U.S.C. 6247(b)(3)), $10,395,000,000 is hereby permanently rescinded not later than September 30, 2023"
+Rescinded in the annual energy appropriation,2052000000,dollars,PLAW-117publ328_spr_passages.txt,,"Provided, That of the unobligated balances from amounts deposited under this heading pursuant to section 167(b)(3) of the Energy Policy and Conservation Act (42 U.S.C. 6247(b)(3)), $2,052,000,000 is hereby permanently rescinded not later than September 30, 2023"
+Mandated sales cancelled,140000000,barrels,spr_annual_report_2022.pdf,30,"cancellation of 140 million barrels of sales in FY 2024 through FY 2027"
+DOE's description of the rescission,10400000000,dollars,spr_annual_report_2022.pdf,30,"in exchange for a recission of $10.4 billion from the SPR Petroleum Account, with the money coming from revenue earned from emergency sales in 2022"
+Account balance at the end of fiscal year 2023,4148000000,dollars,budget_appendix_fy2025_spr_petroleum_account.txt,,"2,6164,14810,977Unobligated balance brought forward, Oct 1"
 Oil delivered under the 2021-22 Winter Exchange,24368326,barrels,spr_annual_report_2022.pdf,40,"the SPR delivered a total of 24,368,326 barrels to 9 different customers"
 Cost of moving oil paid from the account in 2022,33200000,dollars,spr_annual_report_2022.pdf,36,"The SPR Petroleum Account spent $33.2 million related to the cost of moving oil in CY 2022"
+Purchase contract cancelled after award,1500000,barrels,spr_annual_report_2023.pdf,40,"a contract for 1.5 MMbbl was subsequently cancelled by mutual agreement"

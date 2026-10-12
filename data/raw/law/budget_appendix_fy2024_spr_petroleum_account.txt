@@ -1,0 +1,144 @@
+Source: https://www.govinfo.gov/content/pkg/BUDGET-2024-APP/pdf/BUDGET-2024-APP-1-9.pdf
+PDF page: 22
+Retrieved: 2026-10-12
+SHA-256 of the PDF: 2079315251b8c787b49d829d498869e8673e4051d0ba8a4c81b70f1997a2ab81
+
+NAVAL PETROLEUM AND OIL SHALE RESERVES—Continued
+for the closure of the landfill in compliance with National Environmental Policy Act and
+Wyoming Department of Environmental Quality requirements.
+✦
+STRATEGIC PETROLEUM RESERVE
+For Department of Energy expenses necessary for Strategic Petroleum Reserve facility devel-
+opment and operations and program management activities pursuant to the Energy Policy and
+Conservation Act (42 U.S.C. 6201 et seq.), [$207,175,000] $280,969,000, to remain available
+until expended.  (Energy and Water Development and Related Agencies Appropriations Act,
+2023.)
+Program and Financing (in millions of dollars)
+2024 est.2023 est.2022 actualIdentification code 089–0218–0–1–274
+Obligations by program activity:
+312426SPR Management ......................................................................0001
+234161178SPR Storage Facilities Development ..........................................0002
+..................................42Emergency Appropriation ..........................................................0003
+162224Northeast Gasoline Supply Reserve ...........................................0004
+281207270Total new obligations, unexpired accounts ....................................0900
+Budgetary resources:
+Unobligated balance:
+111119Unobligated balance brought forward, Oct 1 .........................1000
+Budget authority:
+Appropriations, discretionary:
+281207219Appropriation ....................................................................1100
+..................................43Appropriation [Emergency, P.L. 117–43] ...........................1100
+281207262Appropriation, discretionary (total) .......................................1160
+292218281Total budgetary resources available ..............................................1930
+Memorandum (non-add) entries:
+111111Unexpired unobligated balance, end of year ..........................1941
+Change in obligated balance:
+Unpaid obligations:
+146203152Unpaid obligations, brought forward, Oct 1 ..........................3000
+281207270New obligations, unexpired accounts ....................................3010
+–271–264–219Outlays (gross) ......................................................................3020
+156146203Unpaid obligations, end of year .................................................3050
+Memorandum (non-add) entries:
+146203152Obligated balance, start of year ............................................3100
+156146203Obligated balance, end of year ..............................................3200
+Budget authority and outlays, net:
+Discretionary:
+281207262Budget authority, gross .........................................................4000
+Outlays, gross:
+15511488Outlays from new discretionary authority ..........................4010
+116150131Outlays from discretionary balances .................................4011
+271264219Outlays, gross (total) .............................................................4020
+281207262Budget authority, net (total) ..........................................................4180
+271264219Outlays, net (total) ........................................................................4190
+The Strategic Petroleum Reserve (SPR) provides strategic and economic security against
+foreign and domestic disruptions in oil supplies via an emergency stockpile of crude oil. The
+program fulfills United States obligations under the International Energy Program, which commits
+the United States to support the International Energy Agency through its coordinated energy
+emergency response plans and provides a deterrent against energy supply disruptions. The FY
+2024 Budget will support the SPR's operational readiness and drawdown capabilities of 4.4
+MB/d. The program will perform cavern wellbore testing and maintenance activities to ensure
+the availability of the SPR's crude oil inventory. Additional funding is included in the Major
+Maintenance Program for required upgrades to the West Hackberry Physical Security Program
+following DOE Order 473.3A and the SPR Level III Criteria. The FY 2024 Budget will continue
+to fund the Northeast Gasoline Supply Reserve which currently holds one million barrels of re-
+fined product in reserve.
+Object Classification (in millions of dollars)
+2024 est.2023 est.2022 actualIdentification code 089–0218–0–1–274
+Direct obligations:
+121212Personnel compensation: Full-time permanent .........................11.1
+444Civilian personnel benefits ........................................................12.1
+111Rental payments to GSA ............................................................23.1
+333Communications, utilities, and miscellaneous charges ............23.3
+111Advisory and assistance services ..............................................25.1
+383838Other services from non-Federal sources ..................................25.2
+17298161Operation and maintenance of facilities ...................................25.4
+505050Land and structures ..................................................................32.0
+281207270Direct obligations ..................................................................99.0
+281207270Total new obligations, unexpired accounts ............................99.9
+Employment Summary
+2024 est.2023 est.2022 actualIdentification code 089–0218–0–1–274
+110110110Direct civilian full-time equivalent employment ............................1001
+161613Reimbursable civilian full-time equivalent employment ...............2001
+✦
+SPR PETROLEUM ACCOUNT
+[For the acquisition, transportation, and injection of petroleum products, and for other neces-
+sary expenses pursuant to the Energy Policy and Conservation Act of 1975, as amended (42
+U.S.C. 6201 et seq.), sections 403 and 404 of the Bipartisan Budget Act of 2015 (42 U.S.C.
+6241, 6239 note), section 32204 of the Fixing America's Surface Transportation Act (42 U.S.C.
+6241 note), and section 30204 of the Bipartisan Budget Act of 2018 (42 U.S.C. 6241 note),
+$100,000, to remain available until expended: Provided, That of the unobligated balances from
+amounts deposited under this heading pursuant to section 167(b)(3) of the Energy Policy and
+Conservation Act (42 U.S.C. 6247(b)(3)), $2,052,000,000 is hereby permanently rescinded not
+later than September 30, 2023.] (Energy and Water Development and Related Agencies Appro-
+priations Act, 2023.)
+Program and Financing (in millions of dollars)
+2024 est.2023 est.2022 actualIdentification code 089–0233–0–1–274
+Obligations by program activity:
+.................813SPR Petroleum Account .............................................................0001
+.................30058Proceeds from Oil Sales .............................................................0801
+.................30871Total new obligations, unexpired accounts ....................................0900
+Budgetary resources:
+Unobligated balance:
+3,97510,9789Unobligated balance brought forward, Oct 1 .........................1000
+..................................6Discretionary unobligated balance brought fwd, Oct 1 ......1001
+..................................3Recoveries of prior year unpaid obligations ...........................1021
+3,97510,97812Unobligated balance (total) ...........................................................1070
+Budget authority:
+Appropriations, discretionary:
+..................................7Appropriation ....................................................................1100
+Appropriations, mandatory:
+.................–11,206.................
+Appropriations and/or unobligated balance of
+appropriations permanently reduced ............................
+1230
+Spending authority from offsetting collections, discretionary:
+..................................4Collected ...........................................................................1700
+Spending authority from offsetting collections, mandatory:
+.................5,96211,026Collected ...........................................................................1800
+.................–1,451.................
+Spending authority from offsetting collections permanently
+reduced .........................................................................
+1821
+.................4,51111,026Spending auth from offsetting collections, mand (total) .......1850
+.................–6,69511,037Budget authority (total) .............................................................1900
+3,9754,28311,049Total budgetary resources available ..............................................1930
+Memorandum (non-add) entries:
+3,9753,97510,978Unexpired unobligated balance, end of year ..........................1941
+Change in obligated balance:
+Unpaid obligations:
+1115521Unpaid obligations, brought forward, Oct 1 ..........................3000
+.................30871New obligations, unexpired accounts ....................................3010
+–2–252–34Outlays (gross) ......................................................................3020
+..................................–3Recoveries of prior year unpaid obligations, unexpired .........3040
+10911155Unpaid obligations, end of year .................................................3050
+Memorandum (non-add) entries:
+1115521Obligated balance, start of year ............................................3100
+10911155Obligated balance, end of year ..............................................3200
+Budget authority and outlays, net:
+Discretionary:
+..................................11Budget authority, gross .........................................................4000
+Outlays, gross:
+..................................5Outlays from new discretionary authority ..........................4010
+2216Outlays from discretionary balances .................................4011
+2221Outlays, gross (total) .............................................................4020
+THE BUDGET FOR FISCAL YEAR 2024382 Energy Programs—ContinuedFederal Funds—Continued

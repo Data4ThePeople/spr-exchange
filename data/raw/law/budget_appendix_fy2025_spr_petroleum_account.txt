@@ -1,0 +1,136 @@
+Source: https://www.govinfo.gov/content/pkg/BUDGET-2025-APP/pdf/BUDGET-2025-APP-1-9.pdf
+PDF page: 22
+Retrieved: 2026-10-12
+SHA-256 of the PDF: 2cd06682a057baaa516b87b48103130e4d31b1b2f0441f15382132668c7f243b
+
+STRATEGIC PETROLEUM RESERVE—Continued
+Program and Financing—Continued
+2025 est.2024 est.2023 actualIdentification code 089–0218–0–1–274
+Change in obligated balance:
+Unpaid obligations:
+173191203Unpaid obligations, brought forward, Oct 1 ..........................3000
+241208208New obligations, unexpired accounts ....................................3010
+–235–226–219Outlays (gross) ......................................................................3020
+..................................–1Recoveries of prior year unpaid obligations, unexpired .........3040
+179173191Unpaid obligations, end of year .................................................3050
+Memorandum (non-add) entries:
+173191203Obligated balance, start of year ............................................3100
+179173191Obligated balance, end of year ..............................................3200
+Budget authority and outlays, net:
+Discretionary:
+241207207Budget authority, gross .........................................................4000
+Outlays, gross:
+968375Outlays from new discretionary authority ..........................4010
+139143144Outlays from discretionary balances .................................4011
+235226219Outlays, gross (total) .............................................................4020
+241207207Budget authority, net (total) ..........................................................4180
+235226219Outlays, net (total) ........................................................................4190
+The Strategic Petroleum Reserve (SPR) protects the United States from severe petroleum
+supply interruptions through the acquisition, storage, distribution, and management of emergency
+petroleum stocks, and to carry out the U.S. obligations under the International Energy Program.
+This account supports the SPR's operational readiness and drawdown capabilities, including
+cavern wellbore testing and maintenance activities to ensure the availability of the SPR's crude
+oil inventory. Additional funding is included in the Major Maintenance Program for required
+upgrades and repairs to the West Hackberry site. Included in this account is funding for the
+Northeast Gasoline Supply Reserve up and until its closure, as proposed in the Budget.
+Object Classification (in millions of dollars)
+2025 est.2024 est.2023 actualIdentification code 089–0218–0–1–274
+Direct obligations:
+151414Personnel compensation: Full-time permanent .........................11.1
+777Civilian personnel benefits ........................................................12.1
+111Rental payments to GSA ............................................................23.1
+222Rental payments to others ........................................................23.2
+111Communications, utilities, and miscellaneous charges ............23.3
+222Advisory and assistance services ..............................................25.1
+282929Other services from non-Federal sources ..................................25.2
+222Other goods and services from Federal sources ........................25.3
+183150150Operation and maintenance of facilities ...................................25.4
+241208208Direct obligations ..................................................................99.0
+241208208Total new obligations, unexpired accounts ............................99.9
+Employment Summary
+2025 est.2024 est.2023 actualIdentification code 089–0218–0–1–274
+117117117Direct civilian full-time equivalent employment ............................1001
+✦
+SPR PETROLEUM ACCOUNT
+For the acquisition, transportation, and injection of petroleum products, and for other neces-
+sary expenses pursuant to the Energy Policy and Conservation Act, as amended (42 U.S.C.
+6201 et seq.), $100,000, to remain available until expended.
+Note.—A full-year 2024 appropriation for this account was not enacted at the time the Budget
+was prepared; therefore, the Budget assumes this account is operating under the Continuing
+Appropriations Act, 2024 and Other Extensions Act (Division A of Public Law 118–15, as
+amended). The amounts included for 2024 reflect the annualized level provided by the continuing
+resolution.
+Program and Financing (in millions of dollars)
+2025 est.2024 est.2023 actualIdentification code 089–0233–0–1–274
+Obligations by program activity:
+.................1,532351Proceeds from Oil Sales .............................................................0801
+Budgetary resources:
+Unobligated balance:
+2,6164,14810,977Unobligated balance brought forward, Oct 1 .........................1000
+..................................8Discretionary unobligated balance brought fwd, Oct 1 ......1001
+..................................1Recoveries of prior year unpaid obligations ...........................1021
+2,6164,14810,978Unobligated balance (total) ...........................................................1070
+Budget authority:
+Appropriations, mandatory:
+..................................–12,447
+Appropriations and/or unobligated balance of
+appropriations permanently reduced ............................
+1230
+Spending authority from offsetting collections, mandatory:
+..................................5,968Collected ...........................................................................1800
+..................................–6,479Budget authority (total) .............................................................1900
+2,6164,1484,499Total budgetary resources available ..............................................1930
+Memorandum (non-add) entries:
+2,6162,6164,148Unexpired unobligated balance, end of year ..........................1941
+Change in obligated balance:
+Unpaid obligations:
+23023054Unpaid obligations, brought forward, Oct 1 ..........................3000
+.................1,532351New obligations, unexpired accounts ....................................3010
+.................–1,532–174Outlays (gross) ......................................................................3020
+..................................–1Recoveries of prior year unpaid obligations, unexpired .........3040
+230230230Unpaid obligations, end of year .................................................3050
+Memorandum (non-add) entries:
+23023054Obligated balance, start of year ............................................3100
+230230230Obligated balance, end of year ..............................................3200
+Budget authority and outlays, net:
+Discretionary:
+Outlays, gross:
+..................................2Outlays from discretionary balances .................................4011
+Mandatory:
+..................................–6,479Budget authority, gross .........................................................4090
+Outlays, gross:
+.................1,532172Outlays from mandatory balances ....................................4101
+Offsets against gross budget authority and outlays:
+Offsetting collections (collected) from:
+..................................–5,968Non-Federal sources .....................................................4123
+..................................–12,447Budget authority, net (total) ..........................................................4180
+.................1,532–5,794Outlays, net (total) ........................................................................4190
+The SPR Petroleum Account funds activities related to the acquisition, transportation, and
+injection of petroleum products into the Strategic Petroleum Reserve (SPR), as well as costs
+related to the drawdown, sale, and delivery of petroleum products from the Reserve. Balances
+in the account are expected to support partial refill of the SPR.
+Object Classification (in millions of dollars)
+2025 est.2024 est.2023 actualIdentification code 089–0233–0–1–274
+Reimbursable obligations:
+..................................1Communications, utilities, and miscellaneous charges ............23.3
+.................1,532350Other services from non-Federal sources ..................................25.2
+.................1,532351Reimbursable obligations .....................................................99.0
+.................1,532351Total new obligations, unexpired accounts ............................99.9
+✦
+ENERGY SECURITY AND INFRASTRUCTURE MODERNIZATION FUND
+Program and Financing (in millions of dollars)
+2025 est.2024 est.2023 actualIdentification code 089–5615–0–2–274
+Obligations by program activity:
+12615Energy security and infrastructure modernization .....................0010
+12615Total new obligations, unexpired accounts (object class 25.2) .......0900
+Budgetary resources:
+Unobligated balance:
+3798103Unobligated balance brought forward, Oct 1 .........................1000
+3798103Total budgetary resources available ..............................................1930
+Memorandum (non-add) entries:
+253798Unexpired unobligated balance, end of year ..........................1941
+Change in obligated balance:
+Unpaid obligations:
+300603814Unpaid obligations, brought forward, Oct 1 ..........................3000
+12615New obligations, unexpired accounts ....................................3010
+THE BUDGET FOR FISCAL YEAR 2025364 Energy Programs—ContinuedFederal Funds—Continued
