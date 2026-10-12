@@ -332,3 +332,100 @@ original article located and read before it is used.
 - **Supertanker rates ($30,000 to $1.4 million a day):** Baltic Exchange weekly tanker reports, route TD3C (Middle East Gulf to China), time-charter equivalent, as collected in the D4TP VLCC project (`github.com/Data4ThePeople/VLCC`, `data/baltic_td3c_weekly.csv`). Week 41 report, October 9, 2026: $1,412,594 a day. "Normal $30,000" is Eric's rounding; the median weekly value in that file from December 2020 through February 27, 2026 is $31,477. Read from that project's file on October 11, 2026, not pulled again here.
 - **Front-month WTI closes in the closing section:** $68.55 on July 6, 2026 (lowest close since March 20) and $91.85 on October 9, from `data/raw/futures/CL=F.json`. The close the day before the conflict, February 27, was $67.02.
 - **Trafigura and gas stations:** Trafigura's Puma Energy unit bought retail station networks in Puerto Rico in 2011 and 2012, per Trafigura press releases. Current ownership not checked. The post says "Trafigura-branded" for that reason.
+
+## 2022 emergency sales: award reports and notices of sale (U.S. Department of Energy)
+
+**What it is.** For each of the seven emergency crude oil sales of 2022, DOE
+posts a Notice of Sale and three reports from its "Sales Offer Evaluation
+Program": Offeror Abstract, Apparently Successful Offers, and Successful
+Awards. The Successful Awards Report has one page per contract: the buyer, a
+contract number, and one line per delivery line item with the unit price
+offered, the barrels awarded (in thousands) and the total price.
+
+**Where it comes from.** DOE's folder listing is a JSON feed at
+`https://www.spr.doe.gov/posting/SALE/archive/`. `scripts/fetch_doe_sales.py`
+downloads everything in the `1-Reports` folder of sale folders 12 to 18
+("12-FY22 Emergency Drawdown" to "18-FY23 Emergency Drawdown No. 3D") into
+`data/raw/doe_sales_2022/`: 28 PDFs, with `manifest.json` (URL, bytes,
+SHA-256) and a dated copy of the listing. Retrieved October 12, 2026.
+
+**Version and vintage.** Award reports are dated March 16, April 21, June 9,
+July 10, August 11, October 6 and November 3, 2022 ("RUN DATE" on the report,
+which is when DOE ran the report, not a signing date). DOE's listing shows the
+files as posted June 26, 2023.
+
+**Coverage.** 300 contracts, 16 buyers, 180,660,000 barrels,
+$18,834,706,087 at the prices offered (an average of $104.25 a barrel). The
+notices offered 190,100,000 barrels in all. Not included: the sales Congress
+ordered by law (DOE folders 10, 11 and 19, "Mandatory Sale"), and oil lent
+rather than sold (the December 2021 "FY22 Winter Exchange").
+
+**How it is processed.** `scripts/build_sales_2022.py` reads the seven
+Successful Awards Reports into `data/processed/spr_2022_sale_awards.csv`, one
+row per line item. The build stops unless every line's price times barrels
+equals its total, every master line item adds to its stated sub-total, and
+every contract adds to its "TOTAL OFFER AWARD" line. Buyer names are kept as
+DOE printed them; `data/reference/company_map.csv` gives the merged name and
+firm type, the same file the 2026 ledger uses.
+
+**Changes over time.** Names vary from 2026 ("Marathon Petroleum Supply and
+Trading LLC" in 2022, "Marathon Petroleum Company LP" in 2026; "BP Oil Suppply
+a Division of BPPNA", DOE's spelling, and "BP Products North America"). We
+merge these under one company name. They may be different legal entities
+inside the same group.
+
+**Suppressed, censored or masked values.** None in the award reports. The
+reports give a master line item number and a delivery line letter, not the site
+or crude stream in words; those are in each notice's Attachment A and are not
+used here.
+
+**Missing data.** None found. The line items add to every stated total.
+
+**Revisions.** Each report is marked "V.1". We pin the PDFs in the repo.
+
+**Units and rounding.** Barrels in thousands on the reports, shown here in
+barrels. Prices to four decimals. Dollars are unit price times barrels at the
+price offered. The contracts adjust that price by an index up to delivery
+(Notice of Sale, price adjustment provision), and deliveries can vary by 10%,
+so the dollar figures are not cash received.
+
+**Known quirks.** The "MAXQ" column is sometimes blank, and continuation lines
+drop the offer and line item numbers; the parser handles both. Awards are not
+deliveries, and DOE does not post later contract changes.
+
+**Uncertainty.** None stated by DOE. The gap between awarded and delivered
+volumes is not published per contract.
+
+**License and attribution.** U.S. government work, public domain. Credit: U.S.
+Department of Energy, Strategic Petroleum Reserve Project Management Office.
+
+### Terms read from the notices (`data/reference/sales_2022.csv`, `program_comparison.csv`)
+
+- **Offered volume per sale:** the sentence "The intent of this sale is to award up to ..." on page 3 of each notice: 30.0, 30.0, 40.1, 45, 20.0, 10.0 and 15 million barrels.
+- **Reference price:** "the BRP is $..." in each notice. The base reference price is the average of daily index prices over the five trading days ending two trading days before the notice. Sour crude: $83.856 to $114.208 across the six notices that offered sour oil.
+- **How offers are ranked:** "Award on each DLI will be made to the responsible offerors that submit the highest priced offers" (amendment to Standard Sales Provision B.22).
+- **Exports:** each notice removes Standard Sales Provision B.6, "Export Limitations and Licensing," and tells offerors to comply with U.S. export laws.
+- **2026 side of the table:** from the 2026 RFPs and `data/reference/rounds.csv`, as documented above. "Oil offered" for 2026 adds the five rounds with results (258.5 million barrels). That is more than the 172 million barrels the U.S. committed, so some oil was probably offered more than once; the documents do not say. The page says so and gives no percentage for 2026.
+
+### Firm types added for 2022
+
+| Type | Rule | Firms added |
+|---|---|---|
+| Refiner | The company, or its parent, refines crude oil in the U.S. | Valero, Motiva (owned by Saudi Aramco), Chevron |
+| Trading house | Main business is commodity trading; no U.S. refinery in the group | Glencore |
+| Foreign oil company trading arm | U.S. trading company of an oil company based abroad with no U.S. refinery | Equinor Marketing & Trading (Norway), Unipec America (Sinopec, China) |
+
+The new group is a judgment call. Equinor and Unipec are not trading houses
+(their parents produce or refine oil) and do not meet the "major trading arm"
+rule (no U.S. refinery). Together they took 7.3% of the 2022 oil. Counted with
+trading houses, that group would be 12.8% in 2022 instead of 5.5%. Parent
+ownership and refinery holdings in the notes column are from general knowledge
+and have not been checked against a primary source.
+
+## Comparison page (`scripts/build_compare_page.py` -> `dist/compare.html`)
+
+- **What it is:** who got the oil in the 2022 emergency sales and the 2026 emergency loans, by firm type and by company, with a feature table of how the two programs work.
+- **Inputs:** `spr_2022_sale_awards.csv`, `spr_2026_exchange_awards.csv`, `sales_2022.csv`, `rounds.csv`, `program_comparison.csv`. Numbers in the feature table are slots filled from the data at build time.
+- **Shares** are barrels awarded to the group divided by all barrels awarded in that program.
+- **Limits:** a sale and a loan are different deals; the page compares who received oil, not what they paid. The years differ in price, in the cause of the shortage and in refinery demand, so the page does not say the program design caused the change.
+- **Bank guarantee:** not a difference between the December 2021 loan and the 2026 loans. Both require a letter of credit equal to 100% of the oil's value at award (2021 RFP p. 157; 2026 Release No. 4 RFP p. 149).

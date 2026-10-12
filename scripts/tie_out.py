@@ -94,5 +94,42 @@ check("returns latest last date", ret["latest"][-1][0], "2029-07-31")
 check("receipt rate total", ret["receipt_per_month"],
       sum(int(r["nominal_receipt_bbl_per_month"]) for r in csv.DictReader((ROOT / "data/reference/site_receipt_rates.csv").open())))
 
+# 5. Comparison page: 2022 sale totals straight from the award reports' own
+#    "TOTAL OFFER AWARD" lines, without the line-item parser, and again from
+#    DOE's separate Apparently Successful Offers reports.
+comp = page_data("compare.html")
+p22, p26 = comp["programs"]
+SALES = ROOT / "data/raw/doe_sales_2022"
+cmap = {r["company_as_listed"]: r for r in csv.DictReader((ROOT / "data/reference/company_map.csv").open())}
+
+
+def offer_totals(pdf):
+    """[(buyer as listed, barrels, dollars)] from each page's header and total line."""
+    out = []
+    for page in PdfReader(pdf).pages:
+        text = page.extract_text()
+        head = re.search(r"OFR# OFFEROR INFORMATION AGENT INFORMATION\n\d+ (.+)", text)
+        tot = re.search(r"TOTAL OFFER AWARD ([\d,]+) TOTAL PRICE \$([\d,]+)", text)
+        if head and tot:
+            out.append((head.group(1).strip(), int(tot.group(1).replace(",", "")) * 1000, int(tot.group(2).replace(",", ""))))
+    return out
+
+
+awards = [x for pdf in sorted(SALES.glob("*Successful Awards Report.pdf")) for x in offer_totals(pdf)]
+apparent = [x for pdf in sorted(SALES.glob("*Apparently Successful Offers Report.pdf")) for x in offer_totals(pdf)]
+check("2022 barrels, award reports", p22["total"], sum(b for _, b, _ in awards))
+check("2022 dollars, award reports", p22["dollars"], sum(d for _, _, d in awards))
+check("2022 barrels, apparently successful offers reports", p22["total"], sum(b for _, b, _ in apparent))
+check("2022 buyers", len(p22["firms"]), len({cmap[n]["company"] for n, _, _ in awards}))
+for f in p22["firms"]:
+    check(f"2022 {f['company']}", f["barrels"], sum(b for n, b, _ in awards if cmap[n]["company"] == f["company"]))
+for t in p22["types"]:
+    check(f"2022 type {t['type']}", t["barrels"], sum(b for n, b, _ in awards if cmap[n]["type"] == t["type"]))
+check("2022 offered", p22["offered"], sum(int(r["offered_bbl"]) for r in csv.DictReader((ROOT / "data/reference/sales_2022.csv").open())))
+check("2026 total matches the ledger page", p26["total"], sum(r["barrels"] for r in ledger["ledger"]))
+for t in p26["types"]:
+    check(f"2026 type {t['type']}", t["barrels"], sum(r["barrels"] for r in ledger["ledger"] if r["type"] == t["type"]))
+check("2026 borrowers", len(p26["firms"]), len({r["company"] for r in ledger["ledger"]}))
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

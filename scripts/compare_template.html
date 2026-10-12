@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Got the Oil: the 2022 Sales and the 2026 Loans</title>
+<meta name="description" content="Who received oil from the Strategic Petroleum Reserve in the 2022 emergency sales and the 2026 emergency loans, by type of company, with a side-by-side comparison of how the two programs work.">
+<style>
+/* Light scheme painted explicitly so the page holds inside the Prismic frame
+   whatever the viewer's OS theme. Colors are the first five slots of the
+   validated reference palette, in fixed order, one per firm type. The first
+   four match the ledger page. */
+:root {
+  --bg: #FBFAF7; --panel: #ffffff; --ink: #14181d; --muted: #5b6470;
+  --grid: #d9d6cf; --hair: #ebe8e1; --teal: #085041;
+  --t-house: #2a78d6; --t-arm: #eb6834; --t-refiner: #1baf7a; --t-mid: #eda100; --t-foreign: #e87ba4;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.45; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 24px 24px 32px; container-type: inline-size; position: relative; }
+.logo { height: 24px; width: auto; display: block; margin-bottom: 12px; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.standfirst { font-size: 15px; color: var(--muted); margin: 0; max-width: 76ch; }
+header.masthead { border-bottom: 1px solid var(--grid); padding-bottom: 12px; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+h2 { font-size: 16px; margin: 20px 0 2px; }
+.sub { font-size: 13px; color: var(--muted); margin: 0 0 10px; max-width: 100ch; }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 2px; flex: 0 0 11px; }
+
+.tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+.tile { background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; padding: 12px 14px; }
+.tile .k { font-size: 13px; color: var(--muted); }
+.tile .pair { display: flex; gap: 22px; align-items: baseline; flex-wrap: wrap; }
+.tile .v { font-size: 30px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.tile .v small { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 5px; }
+
+.share { background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.share h3 { font-size: 15px; margin: 0; }
+.share .meta { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+svg { display: block; width: 100%; }
+svg .hit { fill: transparent; cursor: default; }
+.vals { display: flex; flex-wrap: wrap; gap: 3px 18px; margin: 8px 0 0; padding: 0; list-style: none; font-size: 13px; }
+.vals li { display: flex; align-items: center; gap: 6px; }
+.vals b { font-variant-numeric: tabular-nums; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.list { background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; padding: 12px 14px; min-width: 0; }
+.list h3 { font-size: 15px; margin: 0 0 8px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 5px 0; border-bottom: 1px solid var(--hair); font-size: 13.5px; cursor: default; }
+.row:last-of-type { border-bottom: 0; }
+.row .name { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.row .name span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .num { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.row .num small { font-weight: 400; color: var(--muted); margin-left: 6px; }
+.row .track { grid-column: 1 / -1; height: 8px; }
+.row .bar { height: 8px; border-radius: 0 4px 4px 0; min-width: 2px; }
+.rest { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
+
+.feat { border: 1px solid var(--grid); border-radius: 6px; background: var(--panel); overflow: hidden; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+thead th { font-weight: 700; border-bottom: 1px solid var(--grid); }
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+.feat tbody th { font-weight: 600; width: 22%; }
+.feat td { width: 39%; }
+td.num, th.num { text-align: right; }
+.yr { display: none; font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+.tip { position: absolute; pointer-events: none; z-index: 5; max-width: 280px; padding: 9px 11px; background: var(--ink); color: #fff; border-radius: 6px; font-size: 13px; line-height: 1.4; box-shadow: 0 6px 20px rgba(20,24,29,.25); opacity: 0; transition: opacity .1s; }
+.tip.on { opacity: 1; }
+.tip .dim { color: #b8c0c9; font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+
+details { margin-top: 14px; font-size: 13.5px; }
+summary { cursor: pointer; font-weight: 600; color: var(--teal); }
+.tblwrap { overflow: auto; border: 1px solid var(--grid); border-radius: 6px; background: var(--panel); margin-top: 8px; }
+.notes { font-size: 12.5px; color: var(--muted); margin-top: 14px; border-top: 1px solid var(--grid); padding-top: 10px; }
+.notes p { margin: 0 0 6px; max-width: 100ch; }
+.notes a { color: var(--teal); }
+
+@container (max-width: 830px) {
+  .cols, .tiles { grid-template-columns: 1fr; }
+  .feat thead { display: none; }
+  .feat table, .feat tbody, .feat tr, .feat th, .feat td { display: block; width: 100%; }
+  .feat tbody th { border-bottom: 0; padding-bottom: 0; font-size: 14px; width: 100%; }
+  .feat td { border-bottom: 0; padding-top: 4px; padding-bottom: 4px; width: 100%; }
+  .feat tr { border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  .feat tr:last-child { border-bottom: 0; }
+  .yr { display: block; }
+}
+
+html.embed .wrap { padding: 12px 14px 12px; }
+html.embed .logo { height: 18px; margin-bottom: 6px; }
+html.embed h1 { font-size: 21px; }
+html.embed .standfirst { font-size: 13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <header class="masthead">
+    <a href="https://www.data4thepeople.com" aria-label="Data 4 The People"><img class="logo" alt="Data 4 The People" src="__LOGO__"></a>
+    <h1>Who got the oil: the 2022 sales and the 2026 loans</h1>
+    <p class="standfirst" id="standfirst"></p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <h2>Share of the oil, by type of company</h2>
+  <p class="sub">Each bar is all of the oil awarded in that program. The company types are our labels, not the government's.</p>
+  <div id="shares"></div>
+
+  <h2>The companies that took the most oil</h2>
+  <p class="sub">Share of the oil awarded in each program. Bars use the same scale in both lists.</p>
+  <div class="cols" id="lists"></div>
+
+  <h2>Two ways to release the oil</h2>
+  <p class="sub">How the two programs work, from the government's own sale notices and loan documents.</p>
+  <div class="feat"><table id="feat"></table></div>
+
+  <details>
+    <summary>See every company as a table</summary>
+    <div class="tblwrap"><table id="tbl"></table></div>
+  </details>
+
+  <div class="notes" id="notes"></div>
+  <div class="tip" id="tip" role="status"></div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const framed = window.self !== window.top;
+if (framed) document.documentElement.classList.add("embed");
+
+const TOP = 8;   // companies shown in each list; the table below has all of them
+const COLOR = { "Trading house": "var(--t-house)", "Major trading arm": "var(--t-arm)", "Foreign oil company trading arm": "var(--t-foreign)", "Refiner": "var(--t-refiner)", "Midstream": "var(--t-mid)" };
+const PLURAL = { "Trading house": "Trading houses", "Major trading arm": "Trading arms of oil majors", "Foreign oil company trading arm": "Trading arms of foreign oil companies", "Refiner": "Refiners", "Midstream": "Pipeline companies" };
+const RULE = {
+  "Trading house": "Buys and sells commodities. Its corporate group owns no U.S. refinery.",
+  "Major trading arm": "Trading company inside an oil major that owns at least one U.S. refinery.",
+  "Foreign oil company trading arm": "U.S. trading company of an oil company based abroad that owns no U.S. refinery.",
+  "Refiner": "The company, or its parent, is in the business of refining crude oil in the U.S.",
+  "Midstream": "The marketing arm of a pipeline company." };
+const MON = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const pct = (v, t) => (Math.round(v / t * 1000) / 10).toFixed(1) + "%";
+const mil = v => (v / 1e6).toFixed(2);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const share = (p, type) => p.types.find(t => t.type === type).barrels;
+
+const tip = document.getElementById("tip"), wrap = document.getElementById("wrap");
+function showTip(e, html) {
+  tip.innerHTML = html; tip.classList.add("on");
+  const w = wrap.getBoundingClientRect(), x = e.clientX - w.left, y = e.clientY - w.top;
+  tip.style.left = Math.max(8, Math.min(x + 12, w.width - tip.offsetWidth - 8)) + "px";
+  tip.style.top = (y + 14) + "px";
+}
+const hideTip = () => tip.classList.remove("on");
+
+const [A, B] = DATA.programs;
+document.getElementById("standfirst").textContent =
+  `In ${A.key} the government sold ${mil(A.total)} million barrels from its emergency reserve to ${A.firms.length} companies. In ${B.key} it has lent ${mil(B.total)} million barrels to ${B.firms.length} so far. The oil went to different kinds of companies each time.`;
+
+document.getElementById("tiles").innerHTML = ["Trading house", "Refiner"].map(t =>
+  `<div class="tile"><div class="k">Share of the oil that went to ${PLURAL[t].toLowerCase()}</div><div class="pair">` +
+  DATA.programs.map(p => `<div class="v">${pct(share(p, t), p.total)}<small>${p.key}</small></div>`).join("") + `</div></div>`).join("");
+
+function stacked(p) {
+  const W = 1000, H = 30, live = p.types.filter(t => t.barrels > 0);
+  let at = 0, s = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="height:30px" role="img" aria-label="${esc(live.map(t => PLURAL[t.type] + " " + pct(t.barrels, p.total)).join(", "))}">`;
+  live.forEach((t, i) => {
+    const w = W * t.barrels / p.total, x0 = at + (i ? 2 : 0);   // 2px surface gap between segments
+    s += `<rect x="${x0}" y="0" width="${Math.max(w - (i ? 2 : 0), 1.5)}" height="${H}" fill="${COLOR[t.type]}"/>` +
+         `<rect class="hit" x="${at}" y="0" width="${w}" height="${H}" data-tip="${esc(`<b>${PLURAL[t.type]}: ${pct(t.barrels, p.total)}</b><br>${mil(t.barrels)} million barrels in the ${p.name}<br><span class="dim">${RULE[t.type]}</span>`)}"/>`;
+    at += w;
+  });
+  return s + "</svg>";
+}
+document.getElementById("shares").innerHTML = DATA.programs.map(p =>
+  `<section class="share"><h3>${esc(p.name)}</h3><p class="meta">${mil(p.total)} million barrels ${p.verb} by ${p.firms.length} companies</p>${stacked(p)}
+   <ul class="vals">${p.types.filter(t => t.barrels > 0).map(t => `<li><span class="sw" style="background:${COLOR[t.type]}"></span>${PLURAL[t.type]} <b>${pct(t.barrels, p.total)}</b></li>`).join("")}</ul></section>`).join("");
+
+const maxShare = Math.max(...DATA.programs.map(p => p.firms[0].barrels / p.total));
+document.getElementById("lists").innerHTML = DATA.programs.map(p => {
+  const top = p.firms.slice(0, TOP), rest = p.firms.slice(TOP);
+  return `<section class="list"><h3>${esc(p.name)}</h3>` + top.map(f =>
+    `<div class="row" data-tip="${esc(`<b>${f.company}</b><br>${mil(f.barrels)} million barrels, ${pct(f.barrels, p.total)} of the oil ${p.verb} in ${p.key}<br><span class="dim">${PLURAL[f.type]}. ${RULE[f.type]}</span>`)}">
+       <div class="name"><span class="sw" style="background:${COLOR[f.type]}"></span><span>${esc(f.company)}</span></div>
+       <div class="num">${pct(f.barrels, p.total)}<small>${mil(f.barrels)}M</small></div>
+       <div class="track"><div class="bar" style="width:${f.barrels / p.total / maxShare * 100}%;background:${COLOR[f.type]}"></div></div></div>`).join("") +
+    (rest.length ? `<p class="rest">${rest.length} other ${rest.length === 1 ? "company" : "companies"} took the remaining ${pct(rest.reduce((n, f) => n + f.barrels, 0), p.total)}. They are in the table below.</p>` : "") + `</section>`;
+}).join("");
+
+document.getElementById("feat").innerHTML =
+  `<thead><tr><th></th><th>${esc(A.name)}</th><th>${esc(B.name)}</th></tr></thead><tbody>` +
+  DATA.features.map(f => `<tr><th scope="row">${esc(f.feature)}</th><td><span class="yr">${A.key}</span>${esc(f.a)}</td><td><span class="yr">${B.key}</span>${esc(f.b)}</td></tr>`).join("") + "</tbody>";
+
+document.getElementById("tbl").innerHTML =
+  `<thead><tr><th>Program</th><th>Company</th><th>Type</th><th class="num">Million barrels</th><th class="num">Share</th></tr></thead><tbody>` +
+  DATA.programs.map(p => p.firms.map(f => `<tr><td>${esc(p.name)}</td><td>${esc(f.company)}</td><td>${PLURAL[f.type]}</td><td class="num">${mil(f.barrels)}</td><td class="num">${pct(f.barrels, p.total)}</td></tr>`).join("")).join("") + "</tbody>";
+
+const [y, m, d] = DATA.built.split("-").map(Number);
+const foreign = A.firms.concat(B.firms).filter(f => f.type === "Foreign oil company trading arm").map(f => f.company);
+document.getElementById("notes").innerHTML = `
+  <p><b>What this is.</b> Every award the Energy Department reported for the ${A.events.length} emergency crude oil sales of ${A.key} and for the ${B.events.length} rounds of the ${B.key} emergency loans that have results. A sale and a loan are different deals, so this compares who received the oil, not what they paid.</p>
+  <p><b>Company types.</b> These are our labels, based on the company name the government listed. A company that refines oil can also trade it, and a trading company can sell to a U.S. refinery. The table does not show where any barrel ended up.${foreign.length ? " " + esc([...new Set(foreign)].join(" and ")) + " are shown as their own group because they are part of oil companies with no U.S. refinery." : ""}</p>
+  <p><b>What is left out.</b> Awards are not deliveries, and contracts can change after award. Oil sold under laws passed by Congress, apart from the emergency sales, is not included, and neither is a smaller oil loan made in late 2021. The two years also differ in oil prices, in the cause of the shortage and in what refineries needed, so the change in who got the oil cannot be put down to the program design alone.</p>
+  <p><b>Source.</b> U.S. Department of Energy, Strategic Petroleum Reserve: Successful Awards Reports and Notices of Sale for ${A.key}; award sheets and requests for proposals for ${B.key}. Data and code: <a href="https://github.com/Data4ThePeople/spr-exchange" target="_blank" rel="noopener">github.com/Data4ThePeople/spr-exchange</a>. Built ${MON[m - 1]} ${d}, ${y}. Built by Data 4 The People.</p>`;
+
+wrap.addEventListener("mousemove", e => { const t = e.target.closest("[data-tip]"); t ? showTip(e, t.dataset.tip) : hideTip(); });
+wrap.addEventListener("mouseleave", hideTip);
+</script>
+</body>
+</html>
