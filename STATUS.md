@@ -75,3 +75,4 @@ None.
 - 2026-10-11: Eric rewrote EMAIL.md; seven proposed edits accepted and applied.
 - 2026-10-12: Eric confirmed step 2g. Post complete. Still open: round 4 award sheet not posted when last checked (October 11); post 2 (2021-22 compared with 2026) is teased in the post and not started.
 - 2026-10-12: SOCIAL.md written (X single, X thread of 4, LinkedIn with first comment); two chart screenshots saved in social/.
+- 2026-10-12: round 4 award sheet checked, not posted. Weekly check set up: scripts/check_awards.py and check_awards_weekly.sh, launchd job Mondays 10:30.

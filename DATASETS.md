@@ -20,7 +20,14 @@ byte-identical to DOE's archive copies. DOE's folder listing is a JSON feed at
 **Version and vintage.** Rounds 1, 1.a, 1.b, 2 and 3, dated March 20, April 10,
 April 17, May 11 and June 22, 2026. DOE moves a round from `current/` to
 `archive/` after it closes, which changes the URL. Round 4 (RFP issued
-September 29, bids due October 6) had no award sheet posted as of October 10.
+September 29, bids due October 6) had no award sheet posted as of October 12.
+
+**Weekly check.** `scripts/check_awards.py` reads both DOE folder listings and
+downloads any award sheet not yet in `data/raw/doe_awards/`; it also reports a
+release that is not in `rounds.csv`. `scripts/check_awards_weekly.sh` runs it
+every Monday at 10:30 through a launchd job on Eric's Mac
+(`org.data4thepeople.spr-awards-weekly`), commits a new sheet, and shows an
+alert. It does not rebuild the ledger or the charts.
 
 **Coverage.** Every contract DOE announced: 31 contracts, 13 firms,
 133,560,000 barrels. All values are DOE's own figures; nothing is estimated.
