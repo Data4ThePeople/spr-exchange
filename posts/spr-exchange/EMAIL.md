@@ -54,7 +54,7 @@ Rather, it's America, and by extension its people, who speculated that the war w
 
 So I am giving the SPR a new name: the Speculative Petroleum Reserve.
 
-In the post, I walk through the math one barrel at a time, show every company that took the oil, and chart when it is due back.
+For the post, we created three interactive visualizations to help illustrate how the process works: who took the oil, the math on one barrel, and when the oil is due back.
 ```
 
 ## 6. Call to action
