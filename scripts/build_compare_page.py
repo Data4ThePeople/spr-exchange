@@ -78,7 +78,11 @@ def main():
     b["events"].sort(key=lambda e: e["date"])
 
     sour = [float(r["base_reference_price_sour"]) for r in sales if r["base_reference_price_sour"]]
-    first, low = min(posted, key=lambda r: r["award_date"]), min(posted, key=lambda r: float(r["min_premium_low_pct"]))
+    by_date = sorted(rounds, key=lambda r: r["bids_due"])
+    first, last = by_date[0], by_date[-1]
+    low = min(posted, key=lambda r: float(r["min_premium_low_pct"]))     # lowest among rounds with results
+    top = max(rounds, key=lambda r: float(r["min_premium_high_pct"]))
+    month = lambda r: MONTHS[int(r["bids_due"].split("-")[1]) - 1]
     num = lambda v: f"{float(v):g}"
     slots = dict(
         n_sales=len(sales), first_2022=month_year(a["events"][0]["date"]), last_2022=month_year(a["events"][-1]["date"]),
@@ -90,9 +94,11 @@ def main():
         brp_low=f"{min(sour):.2f}", brp_high=f"{max(sour):.2f}",
         prem_first_low=num(first["min_premium_low_pct"]), prem_first_high=num(first["min_premium_high_pct"]),
         prem_low_low=num(low["min_premium_low_pct"]), prem_low_high=num(low["min_premium_high_pct"]),
-        low_round_month=MONTHS[int(low["bids_due"].split("-")[1]) - 1],
+        low_round_month=month(low), prem_max=num(top["min_premium_high_pct"]), max_round_month=month(top),
+        prem_last_low=num(last["min_premium_low_pct"]), prem_last_high=num(last["min_premium_high_pct"]),
+        last_round_month=month(last),
         dollars_2022=f"{a['dollars'] / 1e9:.2f}", avg_price_2022=f"{a['dollars'] / a['total']:.2f}",
-        last_return_2026=long_date(max(r["last_return_date"] for r in posted)))
+        last_return_2026=month_year(max(r["last_return_date"] for r in posted)))   # the RFP gives a month, not a day
     features, seen = [], set()
     for r in read("data/reference/program_comparison.csv"):
         if r["feature"] in seen:

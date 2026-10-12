@@ -363,7 +363,7 @@ rather than sold (the December 2021 "FY22 Winter Exchange").
 **How it is processed.** `scripts/build_sales_2022.py` reads the seven
 Successful Awards Reports into `data/processed/spr_2022_sale_awards.csv`, one
 row per line item. The build stops unless every line's price times barrels
-equals its total, every master line item adds to its stated sub-total, and
+equals its total to within one dollar (DOE drops the half dollar on 13 lines), every master line item adds to its stated sub-total, and
 every contract adds to its "TOTAL OFFER AWARD" line. Buyer names are kept as
 DOE printed them; `data/reference/company_map.csv` gives the merged name and
 firm type, the same file the 2026 ledger uses.
@@ -414,6 +414,25 @@ Department of Energy, Strategic Petroleum Reserve Project Management Office.
 | Refiner | The company, or its parent, refines crude oil in the U.S. | Valero, Motiva (owned by Saudi Aramco), Chevron |
 | Trading house | Main business is commodity trading; no U.S. refinery in the group | Glencore |
 | Foreign oil company trading arm | U.S. trading company of an oil company based abroad with no U.S. refinery | Equinor Marketing & Trading (Norway), Unipec America (Sinopec, China) |
+
+**How much the shares depend on the labels (from the independent tie-out, October 12, 2026).**
+
+| Reading of the rules | Trading houses 2022 | Trading houses 2026 | Refiners 2022 | Refiners 2026 |
+|---|---|---|---|---|
+| As published | 5.5% | 45.0% | 77.4% | 38.3% |
+| Equinor and Unipec counted as trading houses | 12.8% | 45.0% | 77.4% | 38.3% |
+| Majors' trading arms (Shell Trading, Atlantic Trading & Marketing) counted as refiners | 5.5% | 45.0% | 87.2% | 53.1% |
+| Majors' trading arms counted as trading houses | 15.3% | 59.8% | 77.4% | 38.3% |
+| Macquarie (a financial group) not counted as a trading house | 3.1% | 36.7% | 77.4% | 38.3% |
+
+Marathon, Valero and BP appear in 2022 through supply and trading units
+("Marathon Petroleum Supply and Trading LLC", "Valero Marketing and Supply
+Company", "BP Oil Suppply a Division of BPPNA"). We count them as refiners
+because the group's business is U.S. refining. Those three took 90,920,000
+barrels, 50.3% of the 2022 oil; a reader who counts only the entity named would
+get a much lower refiner share. The most stable cut is by corporate group:
+groups with no U.S. refinery (trading houses, the Equinor and Unipec group, and
+the pipeline company) took 12.8% in 2022 and 46.9% in 2026.
 
 The new group is a judgment call. Equinor and Unipec are not trading houses
 (their parents produce or refine oil) and do not meet the "major trading arm"
