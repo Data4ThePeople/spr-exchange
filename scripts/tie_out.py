@@ -218,5 +218,19 @@ check("purchase solicitations with no award", sum(1 for r in bought if r["outcom
 check("purchase barrels, seller lines against round totals",
       sum(int(r["barrels"]) for r in csv.DictReader((ROOT / "data/processed/spr_purchases.csv").open())), sum(int(r["barrels"]) for r in bought))
 
+# 11. Where the 2022 sale money went: each keyed figure's phrase must be on the cited page of DOE's report,
+#     and the remainder is arithmetic on those figures and the purchase ledger.
+squash = lambda s: re.sub(r"[^a-z0-9$.]", "", s.lower())
+money = {}
+for r in csv.DictReader((ROOT / "data/reference/sale_proceeds_2022.csv").open()):
+    page = PdfReader(ROOT / "data/raw/doe_reports" / r["source_file"]).pages[int(r["pdf_page"]) - 1].extract_text() or ""
+    check(f"proceeds: '{r['item']}' is on p. {r['pdf_page']}", squash(r["check_phrase"]) in squash(page), True)
+    money[r["item"]] = int(r["value"])
+use = json.loads((ROOT / "data/processed/sale_proceeds_use.json").read_text())
+check("proceeds left after the rescission and purchases", use["left_after_rescission_and_purchases"],
+      money["Received from the 2022 emergency sales"] - money["Rescinded by Congress in exchange for cancelling mandated sales"] - sum(int(r["dollars"]) for r in bought))
+check("loan program: contract barrels within 1% of DOE's delivered total",
+      abs(sum(int(r["barrels"]) for r in agreements) - money["Oil delivered under the 2021-22 Winter Exchange"]) / money["Oil delivered under the 2021-22 Winter Exchange"] < 0.01, True)
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

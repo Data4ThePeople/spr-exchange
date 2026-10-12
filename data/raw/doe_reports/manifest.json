@@ -1,0 +1,34 @@
+[
+ {
+  "file": "spr_annual_report_2022.pdf",
+  "url": "https://www.energy.gov/ceser/articles/spr-2022-annual-report-congress",
+  "final_url": "https://www.energy.gov/ceser/articles/spr-2022-annual-report-congress",
+  "bytes": 1710933,
+  "sha256": "15cfe79685b16a42e4a4a1f39814304d3b332b86542a475f1fcbded7f46c47c0",
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "spr_annual_report_2023.pdf",
+  "url": "https://www.energy.gov/documents/spr-2023-annual-report-congress",
+  "final_url": "https://www.energy.gov/documents/spr-2023-annual-report-congress",
+  "bytes": 1661313,
+  "sha256": "baedae3cf69308397d874036df0054685c3a7050d5ff589a810bbe873f406f6d",
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "doe_fy2026_budget_vol3_spr.pdf",
+  "url": "https://www.energy.gov/sites/default/files/2025-06/doe-fy-2026-vol-3-spr-v1.pdf",
+  "final_url": "https://www.energy.gov/sites/default/files/2025-06/doe-fy-2026-vol-3-spr-v1.pdf",
+  "bytes": 522932,
+  "sha256": "722cac803b784952d3e840cd4e78a853219ba8b0d67fdd079d9078a7132101f5",
+  "retrieved": "2026-10-12"
+ },
+ {
+  "file": "doe_fy2024_budget_vol3_spr.pdf",
+  "url": "https://www.energy.gov/sites/default/files/2023-03/doe-fy-2024-budget-vol-3-spr-v2.pdf",
+  "final_url": "https://www.energy.gov/sites/default/files/2023-03/doe-fy-2024-budget-vol-3-spr-v2.pdf",
+  "bytes": 1259089,
+  "sha256": "f8d70eaf823dc13171cae8f3827c8664f611d5073cb85c467e67c92c667471e6",
+  "retrieved": "2026-10-12"
+ }
+]

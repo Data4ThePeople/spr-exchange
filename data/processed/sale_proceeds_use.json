@@ -1,0 +1,19 @@
+{
+ "barrels_sold": 180660000,
+ "dollars_at_prices_bid": 18834706087,
+ "price_bid": 104.25,
+ "dollars_received": 16993463785,
+ "price_received_per_awarded_barrel": 94.06,
+ "received_below_bid_pct": 9.8,
+ "rescinded": 10400000000,
+ "rescinded_pct_of_received": 61.2,
+ "mandated_sales_cancelled_bbl": 140000000,
+ "rescission_per_cancelled_barrel": 74.29,
+ "purchases_bbl": 61443350,
+ "purchases_dollars": 4632104845,
+ "purchases_pct_of_received": 27.3,
+ "purchase_price": 75.39,
+ "purchases_pct_of_barrels_sold": 34.0,
+ "left_after_rescission_and_purchases": 1961358940,
+ "left_pct_of_received": 11.5
+}
