@@ -76,7 +76,7 @@ What matters is the gap between the two prices. In April, oil sold now cost 44.9
 
 Fast forward to June and the oil now vs. oil later gap had shrunk to 14.4%. For that round, the department cut its minimum premium to between 8% and 9%, or 10% for the return date shown in the chart. But that wasn't enough to get much interest - only 500,000 of the 40 million barrels offered were taken.
 
-Remember this cut. In the 2021 and 2022 loans the premium was fixed and never changed. We will come back to this tomorrow.
+Remember this cut. In the smaller loans the government made in late 2021 and early 2022, the premium was fixed and never changed. We will come back to this tomorrow.
 
 The cool thing here is that now that we understand the general math, we can get a sense of what to expect. Results for the latest round, with bids due on October 6, have not been posted. But we can run the same math on this round, and it shows $9.87 a barrel for the longest return dates. So on paper this round pays far better than June's, but well short of April's.
 

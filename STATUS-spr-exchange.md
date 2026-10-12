@@ -76,3 +76,4 @@ None.
 - 2026-10-12: Eric confirmed step 2g. Post complete. Still open: round 4 award sheet not posted when last checked (October 11); post 2 (2021-22 compared with 2026) is teased in the post and not started.
 - 2026-10-12: SOCIAL.md written (X single, X thread of 4, LinkedIn with first comment); two chart screenshots saved in social/.
 - 2026-10-12: round 4 award sheet checked, not posted. Weekly check set up: scripts/check_awards.py and check_awards_weekly.sh, launchd job Mondays 10:30.
+- 2026-10-12 Post 1 (spr-exchange) correction accepted by Eric: the fixed-premium sentence now refers to the smaller loans of late 2021 and early 2022, not "the 2021 and 2022 loans." Applied to posts/spr-exchange/POST.md only. Eric is making the same fix by hand in the live Prismic draft; not pushed to Prismic by Claude.
