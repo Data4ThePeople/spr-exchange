@@ -192,5 +192,18 @@ check("loan modifications keyed", len(mods), len(list((ROOT / "data/raw/doe_foia
 late = list(csv.DictReader((ROOT / "data/processed/spr_2021_22_return_delays.csv").open()))
 check("loan agreements in the delay table", len(late), len(agreements))
 
+# 9. Lot margins: the best lot in a round must equal the published trade card where both use the front-month price,
+#    and each round's lots must add to the barrels offered.
+lots = list(csv.DictReader((ROOT / "data/processed/lot_margins_2026.csv").open()))
+for r in trade["rounds"]:
+    if r["example"]["sale_basis"] == "front":
+        check(f"lot margins, round {r['round']} best lot matches the trade page",
+              max(float(l["left_per_barrel"]) for l in lots if l["round"] == r["round"]), r["example"]["left"])
+for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open()):
+    check(f"lot margins, round {r['round']} barrels offered", sum(int(l["offered_bbl"]) for l in lots if l["round"] == r["round"]), int(r["offered_bbl"]))
+for r in csv.DictReader((ROOT / "data/processed/round_uptake_2026.csv").open()):
+    if r["taken_bbl"]:
+        check(f"round {r['round']} uptake", int(r["taken_bbl"]), sum(x["barrels"] for x in ledger["ledger"] if x["round"] == r["round"]))
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)
