@@ -526,12 +526,38 @@ dates are not keyed. Agreement 22PO0013's first page was not found in the
 recognized text; its number comes from DOE's file names for its modifications
 and its date is not keyed. Delivery points were not keyed.
 
-**Modifications.** Not yet keyed. A first read of the recognized text shows
-return dates moved more than once, with several agreements (including
-Trafigura's, modified April 16, 2024) changed to return oil in July through
-October 2026 or May through June 2026. These need a page-by-page read before
-any of it is published. Some modification pages carry redactions marked
-"(b) (4)".
+**Modifications (`data/reference/exchange_2021_22_mods.csv` -> `data/processed/spr_2021_22_exchange_mods.csv`).**
+All 30 modification files were read and keyed by hand: agreement, the date DOE
+signed, the kind of change, any new return window and guarantee date, a plain
+description, and a short phrase copied from the document.
+`scripts/build_exchange_mods.py` stops unless every file has exactly one row,
+every copied phrase is in that file's recognized text, and every date and
+barrel count in a description is in the text too. Result: 17 changes moved a
+return date (on 10 of the 13 agreements, 6 of the 9 borrowers), 6 set terms for
+an early return, 5 are final settlements, 2 changed a delivery point. Ten
+changes set a return window in 2026:
+
+| DOE signed | Agreement | Borrower | New return window |
+|---|---|---|---|
+| March 18, 2024 | 22PO0011 | Macquarie | July to October 2026 |
+| March 26, 2024 | 22PO0005 | Atlantic Trading & Marketing (TotalEnergies) | July to October 2026 |
+| April 11, 2024 | 22PO0004, 22PO0006 | Shell Trading (US) | May 15 to June 30, 2026 |
+| April 15, 2024 | 22PO0007 | ExxonMobil | July to October 2026 |
+| April 15, 2024 | 22PO0013 | ExxonMobil | April 1 to May 14, 2026 |
+| April 16, 2024 | 22PO0010 | Trafigura | July to October 2026 |
+| December 10, 2025 | 22PO0007, DE-AC96-22PO00003 | ExxonMobil | November 1 to December 31, 2026 |
+| February 24, 2026 | 22PO0013 | ExxonMobil | October 1 to November 30, 2026 |
+
+Limits: the files show what was scheduled, not whether oil was returned on
+those dates; only the five final settlements (Marathon, BP, Phillips 66, one
+ExxonMobil agreement, Chevron) record returns. Volumes outstanding are mostly
+redacted. Two modifications referred to in later ones (22PO0003 Mod 0001 of
+February 28, 2025 and 22PO0008 Mod 0002 of April 3, 2025) are not in DOE's
+file. DOE's signature date could not be read on four modifications. Where an
+extension was granted, the documents that speak to it say "There is no
+adjustment to the premium as a result of this extension"; two December 2025
+changes for ExxonMobil reduce the premium barrels owed by a redacted amount.
+Whether this file is every modification DOE has signed is not known.
 
 **Units and rounding.** Barrels as written in each agreement, "approximately"
 and "plus/minus 10%". These are contract volumes, not delivered volumes; the

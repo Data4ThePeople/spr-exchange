@@ -172,13 +172,13 @@ check("page bids match the evidence file", {b["type"]: b["barrels_won"] for b in
       {t: b["barrels_won"] for t, b in bid_types.items() if t in comp["types"]})
 check("page price gaps match the evidence file", comp["paf"], ev["paf_2022"])
 agreements = list(csv.DictReader((ROOT / "data/reference/exchange_2021_22.csv").open()))
-check("page 2021-22 loan total", comp["loan"]["total"], sum(int(r["barrels"]) for r in agreements))
+check("2021-22 loan total in the evidence file", ev["loans_2021_22"]["total"], sum(int(r["barrels"]) for r in agreements))
 check("2021-22 agreements signed January 21 to 25 match DOE's release",
       sum(int(r["barrels"]) for r in agreements if "2022-01-21" <= r["signed"] <= "2022-01-25"), sum(listed.values()))
 want = {}
 for r in agreements:
     want[cmap[r["company_as_listed"]]["type"]] = want.get(cmap[r["company_as_listed"]]["type"], 0) + int(r["barrels"])
-check("page 2021-22 loan types", {t["type"]: t["barrels"] for t in comp["loan"]["types"] if t["barrels"]}, want)
+check("2021-22 loan types in the evidence file", {t: v["barrels"] for t, v in ev["loans_2021_22"]["by_type"].items()}, want)
 
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

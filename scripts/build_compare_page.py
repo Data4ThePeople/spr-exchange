@@ -8,7 +8,6 @@ Inputs
   data/reference/rounds.csv                    2026 rounds
   data/reference/program_comparison.csv        the feature table; {slots} are filled from the data here
   data/processed/design_evidence.json          from scripts/design_evidence.py: 2022 bids, price gaps, the January 2022 loans
-  data/processed/spr_2021_22_exchange.csv      from scripts/build_exchange_2021_22.py: every 2021-22 loan agreement
   scripts/compare_template.html, logo/d4tp-text-dark.svg
 
 Output
@@ -114,20 +113,11 @@ def main():
 
     ev = json.loads((ROOT / "data/processed/design_evidence.json").read_text())
     cmap = {r["company_as_listed"]: r for r in read("data/reference/company_map.csv")}
-    prog = read("data/processed/spr_2021_22_exchange.csv")
-    loan = side(prog, None)
-    loan.update(key="2021-22", name="2021-22 loans", verb="borrowed", noun="borrowers", agreements=len(prog),
-                first=min(r["signed"] for r in prog if r["signed"]), last=max(r["signed"] for r in prog if r["signed"]),
-                premium_low=min(float(x) for r in prog for x in re.findall(r"[\d.]+", r["premium_pct"])),
-                premium_high=max(float(x) for r in prog for x in re.findall(r"[\d.]+", r["premium_pct"])),
-                late=ev["loans_2021_22"]["return_2024_or_later"])
-    if loan["total"] != ev["loans_2021_22"]["total"]:
-        sys.exit("2021-22 loans: ledger and evidence file disagree")
     bids = [dict(type=t, **ev["bids_2022"][t]) for t in TYPES if t in ev["bids_2022"]]
     other = {t: v for t, v in ev["bids_2022"].items() if t not in TYPES and isinstance(v, dict)}
     data = dict(built=datetime.date.today().isoformat(), types=TYPES, programs=[a, b], features=features,
-                loan=loan, bids=bids, bids_other=other, uptake=ev["uptake_2026"], paf=ev["paf_2022"], firms=ev["firms"],
-                curve_2022=ev["market"]["2022"]["front_over_fourth_month_pct"])
+                bids=bids, bids_other=other, uptake=ev["uptake_2026"], paf=ev["paf_2022"], firms=ev["firms"],
+                )
     logo = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "logo/d4tp-text-dark.svg").read_bytes()).decode()
     html = (ROOT / "scripts/compare_template.html").read_text()
     if "/*__DATA__*/null" not in html or "__LOGO__" not in html:

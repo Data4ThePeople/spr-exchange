@@ -143,11 +143,6 @@ html.embed .standfirst { font-size: 13.5px; }
   <div class="bids"><table id="bids"></table></div>
   <p class="after" id="bidafter"></p>
 
-  <h2>The loans of 2021-22 drew more trading houses than the sales that followed, and fewer than 2026</h2>
-  <p class="sub" id="loansub"></p>
-  <div id="loanshares"></div>
-  <p class="after" id="loanafter"></p>
-
   <h2>Two ways to release the oil</h2>
   <p class="sub">How the two programs work, from the government's own sale notices and loan documents. The last two rows are our reading of what those terms mean.</p>
   <div class="feat"><table id="feat"></table></div>
@@ -217,7 +212,7 @@ document.getElementById("shares").innerHTML = DATA.programs.map(shareBlock).join
 // What a winner paid or owes, and how close 2022 bids sat to the market price.
 const money = v => (v < 0 ? "-$" : "$") + Math.abs(v).toFixed(2);
 const cents = v => Math.abs(v) < 1 ? Math.round(Math.abs(v) * 100) + " cents" : "$" + Math.abs(v).toFixed(2);
-const P = DATA.paf, C = DATA.curve_2022, U = DATA.uptake.rounds[0];
+const P = DATA.paf, U = DATA.uptake.rounds[0];
 document.getElementById("cards").innerHTML = `
   <section class="card"><h3>${esc(A.name)}</h3>
     <p class="formula">The market price around the day the oil is picked up, plus or minus the gap the buyer bid</p>
@@ -252,18 +247,6 @@ document.getElementById("bidafter").textContent =
   `${gone.length} companies that bought oil in ${A.key} do not appear in the ${B.key} awards: ${list(gone)}. The government has not published the offers made in ${B.key}, so we cannot tell whether they bid.` +
   (nOther ? ` ${nOther} other bidders that won nothing are left out of the table.` : "");
 
-// The 2021-22 loans beside the two programs.
-const L = DATA.loan, lh = L.types.find(t => t.type === "Trading house").barrels;
-const my = iso => MON[Number(iso.split("-")[1]) - 1] + " " + iso.split("-")[0];
-document.getElementById("loansub").textContent =
-  `Before the ${A.key} sales, the government lent ${mil(L.total)} million barrels in ${L.agreements} agreements signed from ${my(L.first)} to ${my(L.last)}. Each bar is all of the oil in that program.`;
-document.getElementById("loanshares").innerHTML = [L, A, B].map(shareBlock).join("");
-document.getElementById("loanafter").textContent =
-  `Trading houses took ${pct(lh, L.total)} of the ${L.key} loans, ${pct(share(A, "Trading house"), A.total)} of the ${A.key} sales and ${pct(share(B, "Trading house"), B.total)} of the ${B.key} loans. ` +
-  `The ${L.key} loans were not an auction: the extra oil owed was fixed by the government, at ${L.premium_low}% to ${L.premium_high}%, and oil went first to whoever could take it soonest. ` +
-  `${L.late.agreements} of the ${L.late.dated_agreements} agreements with a return date we could read set it in 2024 or later, the longest choices on offer, and refiners chose those dates as well as trading houses.` +
-  (C ? ` Oil for quick delivery cost more than oil for later delivery in ${A.key} too: ${C.mean.toFixed(1)}% more than oil four months out, on average, during the sales.` : "");
-
 document.getElementById("feat").innerHTML =
   `<thead><tr><th></th><th>${esc(A.name)}</th><th>${esc(B.name)}</th></tr></thead><tbody>` +
   DATA.features.map(f => `<tr><th scope="row">${esc(f.feature)}</th><td><span class="yr">${A.key}</span>${esc(f.a)}</td><td><span class="yr">${B.key}</span>${esc(f.b)}</td></tr>`).join("") + "</tbody>";
@@ -277,9 +260,9 @@ const foreign = A.firms.concat(B.firms).filter(f => f.type === "Foreign oil comp
 document.getElementById("notes").innerHTML = `
   <p><b>What this is.</b> Every award the Energy Department reported for the ${A.events.length} emergency crude oil sales of ${A.key} and for the ${B.events.length} rounds of the ${B.key} emergency loans that have results. The government calls the ${B.key} program an exchange; we call it a loan because the oil is owed back. A sale and a loan are different deals, so this compares who received the oil, not what they paid.</p>
   <p><b>Company types.</b> These are our labels, based on the company name the government listed. A company that refines oil can also trade it, and a trading company can sell to a U.S. refinery. The table does not show where any barrel ended up.${foreign.length ? " " + esc([...new Set(foreign)].join(" and ")) + ` are shown as their own group because they belong to oil companies with no U.S. refinery. Counted with trading houses, that group would be ${pct(share(A, "Trading house") + share(A, "Foreign oil company trading arm"), A.total)} in ${A.key}. Trading arms of oil majors belong to companies that do own U.S. refineries; counted with refiners, that group would be ${pct(share(A, "Refiner") + share(A, "Major trading arm"), A.total)} in ${A.key} and ${pct(share(B, "Refiner") + share(B, "Major trading arm"), B.total)} in ${B.key}.` : ""}</p>
-  <p><b>What this does and does not show.</b> The price terms are quoted from the government's documents. That a sale rewards a company that can use the oil, and a loan rewards one that can trade the gap between today's price and a later price, is our reading of those terms. The bids and the 2021-22 loans fit that reading in part: refiners still took most of those loans. They do not prove it. Another explanation fits the same facts: in ${B.key} oil has sold for much more abroad than in the U.S., which favors companies whose business is shipping oil. The data here cannot separate the two. Much of the oil offered in ${B.key} also went unclaimed (${mil(DATA.uptake.taken)} million of ${mil(DATA.uptake.offered)} million barrels offered across ${DATA.uptake.rounds.length} rounds were taken), so the ${B.key} shares show who chose to borrow, not who won a contest.</p>
-  <p><b>What is left out.</b> Awards are not deliveries, and contracts can change after award. Oil sold under laws passed by Congress, apart from the emergency sales, is not included, and the 2021-22 loans are shown only in their own chart. The two years also differ in oil prices, in the cause of the shortage and in what refineries needed, so the change in who got the oil cannot be put down to the program design alone.</p>
-  <p><b>Source.</b> U.S. Department of Energy, Strategic Petroleum Reserve: Successful Awards Reports and Notices of Sale for ${A.key}; award sheets and requests for proposals for ${B.key}; loan agreements for 2021-22 from the department's public reading room. Data and code: <a href="https://github.com/Data4ThePeople/spr-exchange" target="_blank" rel="noopener">github.com/Data4ThePeople/spr-exchange</a>. Built ${MON[m - 1]} ${d}, ${y}. Built by Data 4 The People.</p>`;
+  <p><b>What this does and does not show.</b> The price terms are quoted from the government's documents. That a sale rewards a company that can use the oil, and a loan rewards one that can trade the gap between today's price and a later price, is our reading of those terms. The 2022 bids fit that reading. They do not prove it. Another explanation fits the same facts: in ${B.key} oil has sold for much more abroad than in the U.S., which favors companies whose business is shipping oil. The data here cannot separate the two. Much of the oil offered in ${B.key} also went unclaimed (${mil(DATA.uptake.taken)} million of ${mil(DATA.uptake.offered)} million barrels offered across ${DATA.uptake.rounds.length} rounds were taken), so the ${B.key} shares show who chose to borrow, not who won a contest.</p>
+  <p><b>What is left out.</b> Awards are not deliveries, and contracts can change after award. Oil sold under laws passed by Congress, apart from the emergency sales, is not included, and neither are the smaller oil loans the government made in late 2021 and early 2022. The two years also differ in oil prices, in the cause of the shortage and in what refineries needed, so the change in who got the oil cannot be put down to the program design alone.</p>
+  <p><b>Source.</b> U.S. Department of Energy, Strategic Petroleum Reserve: Successful Awards Reports and Notices of Sale for ${A.key}; award sheets and requests for proposals for ${B.key}. Data and code: <a href="https://github.com/Data4ThePeople/spr-exchange" target="_blank" rel="noopener">github.com/Data4ThePeople/spr-exchange</a>. Built ${MON[m - 1]} ${d}, ${y}. Built by Data 4 The People.</p>`;
 
 wrap.addEventListener("mousemove", e => { const t = e.target.closest("[data-tip]"); t ? showTip(e, t.dataset.tip) : hideTip(); });
 wrap.addEventListener("mouseleave", hideTip);
