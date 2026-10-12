@@ -97,6 +97,7 @@ summary { cursor: pointer; font-weight: 600; color: var(--teal); }
 .notes { font-size: 12.5px; color: var(--muted); margin-top: 14px; border-top: 1px solid var(--grid); padding-top: 10px; }
 .notes p { margin: 0 0 6px; max-width: 100ch; }
 .notes a { color: var(--teal); }
+section[hidden] { display: none; }
 
 @container (max-width: 830px) {
   .cols, .tiles, .cards, .facts { grid-template-columns: 1fr; }
@@ -123,6 +124,7 @@ html.embed .standfirst { font-size: 13.5px; }
     <p class="standfirst" id="standfirst"></p>
   </header>
 
+  <section data-part="who">
   <div class="tiles" id="tiles"></div>
 
   <h2>Share of the oil, by type of company</h2>
@@ -133,24 +135,38 @@ html.embed .standfirst { font-size: 13.5px; }
   <p class="sub">Share of the oil awarded in each program. Bars use the same scale in both lists.</p>
   <div class="cols" id="lists"></div>
 
+  </section>
+
+  <section data-part="terms">
   <h2>What a winner paid in 2022, and what a winner owes in 2026</h2>
   <p class="sub">The two programs ask for different things, and that changes what the oil is worth to a bidder.</p>
   <div class="cards" id="cards"></div>
   <div class="facts" id="facts"></div>
 
+  </section>
+
+  <section data-part="bids">
   <h2>In the 2022 sales, trading houses bid and were outbid</h2>
   <p class="sub" id="bidsub"></p>
   <div class="bids"><table id="bids"></table></div>
   <p class="after" id="bidafter"></p>
 
+  </section>
+
+  <section data-part="terms">
   <h2>Two ways to release the oil</h2>
   <p class="sub">How the two programs work, from the government's own sale notices and loan documents. The last two rows are our reading of what those terms mean.</p>
   <div class="feat"><table id="feat"></table></div>
 
+  </section>
+
+  <section data-part="who">
   <details>
     <summary>See every company as a table</summary>
     <div class="tblwrap"><table id="tbl"></table></div>
   </details>
+
+  </section>
 
   <div class="notes" id="notes"></div>
   <div class="tip" id="tip" role="status"></div>
@@ -160,6 +176,17 @@ html.embed .standfirst { font-size: 13.5px; }
 const DATA = /*__DATA__*/null;
 const framed = window.self !== window.top;
 if (framed) document.documentElement.classList.add("embed");
+
+// The page can be embedded whole or one part at a time: ?part=who, ?part=terms or ?part=bids.
+const PARTS = { who: "Who got the oil: the 2022 sales and the 2026 loans",
+                terms: "What the 2022 sales and the 2026 loans ask of a winner",
+                bids: "Who bid in the 2022 oil sales, and who won" };
+const part = new URLSearchParams(location.search).get("part");
+if (PARTS[part]) {
+  document.querySelectorAll("section[data-part]").forEach(s => { if (s.dataset.part !== part) s.hidden = true; });
+  document.querySelector("h1").textContent = PARTS[part];
+  document.title = PARTS[part];
+}
 
 const TOP = 8;   // companies shown in each list; the table below has all of them
 const COLOR = { "Trading house": "var(--t-house)", "Major trading arm": "var(--t-arm)", "Foreign oil company trading arm": "var(--t-foreign)", "Refiner": "var(--t-refiner)", "Midstream": "var(--t-mid)" };
@@ -186,8 +213,11 @@ function showTip(e, html) {
 const hideTip = () => tip.classList.remove("on");
 
 const [A, B] = DATA.programs;
-document.getElementById("standfirst").textContent =
-  `In ${A.key} the government sold ${mil(A.total)} million barrels from its emergency reserve to ${A.firms.length} companies. In ${B.key} it has lent ${mil(B.total)} million barrels to ${B.firms.length} so far. The oil went to different kinds of companies each time.`;
+document.getElementById("standfirst").textContent = part === "terms"
+  ? `In ${A.key} the government sold oil from its emergency reserve. In ${B.key} it lent oil. The two deals ask a winning bidder for different things.`
+  : part === "bids"
+  ? `The government published every offer made in the ${A.events.length} emergency oil sales of ${A.key}, from winners and losers. It has not done so for the ${B.key} loans.`
+  : `In ${A.key} the government sold ${mil(A.total)} million barrels from its emergency reserve to ${A.firms.length} companies. In ${B.key} it has lent ${mil(B.total)} million barrels to ${B.firms.length} so far. The oil went to different kinds of companies each time.`;
 
 document.getElementById("tiles").innerHTML = ["Trading house", "Refiner"].map(t =>
   `<div class="tile"><div class="k">Share of the oil that went to ${PLURAL[t].toLowerCase()}</div><div class="pair">` +
@@ -246,6 +276,17 @@ document.getElementById("bidafter").textContent =
   `${absent.length} of the ${B.firms.length} companies that borrowed oil in ${B.key} filed no offer in any ${A.key} sale: ${list(absent)}. ` +
   `${gone.length} companies that bought oil in ${A.key} do not appear in the ${B.key} awards: ${list(gone)}. The government has not published the offers made in ${B.key}, so we cannot tell whether they bid.` +
   (nOther ? ` ${nOther} other bidders that won nothing are left out of the table.` : "");
+
+const maxShare = Math.max(...DATA.programs.map(p => p.firms[0].barrels / p.total));
+document.getElementById("lists").innerHTML = DATA.programs.map(p => {
+  const top = p.firms.slice(0, TOP), rest = p.firms.slice(TOP);
+  return `<section class="list"><h3>${esc(p.name)}</h3>` + top.map(f =>
+    `<div class="row" data-tip="${esc(`<b>${f.company}</b><br>${mil(f.barrels)} million barrels, ${pct(f.barrels, p.total)} of the oil ${p.verb} in ${p.key}<br><span class="dim">${PLURAL[f.type]}. ${RULE[f.type]}</span>`)}">
+       <div class="name"><span class="sw" style="background:${COLOR[f.type]}"></span><span>${esc(f.company)}</span></div>
+       <div class="num">${pct(f.barrels, p.total)}<small>${mil(f.barrels)}M</small></div>
+       <div class="track"><div class="bar" style="width:${f.barrels / p.total / maxShare * 100}%;background:${COLOR[f.type]}"></div></div></div>`).join("") +
+    (rest.length ? `<p class="rest">${rest.length} other ${rest.length === 1 ? "company" : "companies"} took the remaining ${pct(rest.reduce((n, f) => n + f.barrels, 0), p.total)}. They are in the table below.</p>` : "") + `</section>`;
+}).join("");
 
 document.getElementById("feat").innerHTML =
   `<thead><tr><th></th><th>${esc(A.name)}</th><th>${esc(B.name)}</th></tr></thead><tbody>` +

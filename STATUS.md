@@ -5,15 +5,15 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: (slug not set) post 2, the 2021-22 exchange compared with 2026
-Step: 1
+Post: spr-sale-vs-loan
+Step: 2a
 Since: 2026-10-12
 
 ## Steps
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
-| 1  | Exploration and analysis | | |
+| 1  | Exploration and analysis | 2026-10-12 | Own tie-out passes; four independent tie-outs and one adversarial review, findings applied |
 | 2a | Draft with brackets resolved | | |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
@@ -51,3 +51,5 @@ None.
 - 2026-10-12 Eric: stop researching and lay out the report; put the sale-money section right before the closing. Independent tie-out of the purchases and proceeds launched. Structure proposed to Eric in chat (nine sections; the money section is eighth, before his closing). Step 1 stays open until that tie-out reports and Eric confirms.
 - 2026-10-12 Independent tie-out of the purchases and proceeds: every number reproduced, but my account of the money was wrong in substance. Public Law 117-328 rescinded money from the reserve's account twice, $10.395 billion (with the cancelled sales) and $2.052 billion (in the annual energy appropriation), $12.447 billion in all, 73.2% of the $16.99 billion received. I had only the first, from DOE's reports, which do not mention the second. Verified by me in the law's text and in the Budget Appendix (balance $4,148 million at the end of FY2023), both now saved in data/raw/law/. About $4.55 billion was left, and nearly all of it bought about 59 million barrels; one 1.5 million barrel purchase contract was cancelled after award, which explains the gap to DOE's public totals. sale_proceeds.py, the reference table, DATASETS.md and tie_out.py rewritten. Not verified by me: balances after FY2023 and the source of funds for the November 2025 purchase.
 - 2026-10-12 Eric dropped the proposed section on borrowing following the profit round by round ("we covered that yday"). Structure is now eight sections; the round data stays in the repo.
+- 2026-10-12 Chart for the sale-money section built: dist/proceeds.html. The comparison page can now be embedded one part at a time (?part=who, terms or bids). Restored the top-company lists, which I had removed by mistake with the loan section. Embed heights at 1,200px wide: who 1,518; terms 1,666; bids 984; proceeds 1,064.
+- 2026-10-12 Eric confirmed Step 1 ("step 1 complete") and opened 2a. Working slug spr-sale-vs-loan, chosen by Claude, for Eric to change. At Eric's instruction ("you go ahead and draft this. i will edit. 7/8 grade reading level") Claude wrote the whole draft, an exception to the rule that Claude never drafts from nothing. Draft in posts/spr-sale-vs-loan/POST.md, eight sections as agreed.

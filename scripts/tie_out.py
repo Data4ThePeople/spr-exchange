@@ -237,5 +237,10 @@ check("purchases awarded through 2024", use["purchases_awarded_through_2024_doll
 check("loan program: contract barrels within 1% of DOE's delivered total",
       abs(sum(int(r["barrels"]) for r in agreements) - money["Oil delivered under the 2021-22 Winter Exchange"]) / money["Oil delivered under the 2021-22 Winter Exchange"] < 0.01, True)
 
+# 12. The money chart carries the proceeds file unchanged, and its three parts add to the money received.
+pro = page_data("proceeds.html")
+check("money chart matches the proceeds file", {k: pro[k] for k in use}, use)
+check("money chart parts add to receipts", pro["rescinded_with_cancelled_sales"] + pro["rescinded_in_energy_appropriation"] + pro["left_after_rescissions"], pro["dollars_received"])
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

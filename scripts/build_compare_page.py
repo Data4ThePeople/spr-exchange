@@ -7,6 +7,7 @@ Inputs
   data/reference/sales_2022.csv                offered volume and reference price per sale, from the notices
   data/reference/rounds.csv                    2026 rounds
   data/reference/program_comparison.csv        the feature table; {slots} are filled from the data here
+  data/processed/sale_proceeds_use.json        from scripts/sale_proceeds.py: the money received in 2022
   data/processed/design_evidence.json          from scripts/design_evidence.py: 2022 bids, price gaps, the January 2022 loans
   scripts/compare_template.html, logo/d4tp-text-dark.svg
 
@@ -99,6 +100,7 @@ def main():
         prem_last_low=num(last["min_premium_low_pct"]), prem_last_high=num(last["min_premium_high_pct"]),
         last_round_month=month(last),
         dollars_2022=f"{a['dollars'] / 1e9:.2f}", avg_price_2022=f"{a['dollars'] / a['total']:.2f}",
+        received_2022=f"{json.loads((ROOT / 'data/processed/sale_proceeds_use.json').read_text())['dollars_received'] / 1e9:.2f}",
         last_return_2026=month_year(max(r["last_return_date"] for r in posted)))   # the RFP gives a month, not a day
     features, seen = [], set()
     for r in read("data/reference/program_comparison.csv"):
