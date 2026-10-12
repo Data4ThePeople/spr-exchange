@@ -1,0 +1,171 @@
+{
+ "bids_2022": {
+  "Major trading arm": {
+   "bidders": 2,
+   "barrels_bid": 66225000,
+   "share_of_bid_pct": 15.3,
+   "barrels_won": 17755000,
+   "won_pct_of_bid": 26.8,
+   "best_price_vs_lowest_winner": -0.13,
+   "bid_below_lowest_winner_pct": 45.8
+  },
+  "Refiner": {
+   "bidders": 8,
+   "barrels_bid": 285900000,
+   "share_of_bid_pct": 65.9,
+   "barrels_won": 139810000,
+   "won_pct_of_bid": 48.9,
+   "best_price_vs_lowest_winner": 0.52,
+   "bid_below_lowest_winner_pct": 37.2
+  },
+  "Foreign oil company trading arm": {
+   "bidders": 3,
+   "barrels_bid": 28720000,
+   "share_of_bid_pct": 6.6,
+   "barrels_won": 13145000,
+   "won_pct_of_bid": 45.8,
+   "best_price_vs_lowest_winner": 0.41,
+   "bid_below_lowest_winner_pct": 47.5
+  },
+  "Trading house": {
+   "bidders": 5,
+   "barrels_bid": 50000000,
+   "share_of_bid_pct": 11.5,
+   "barrels_won": 9950000,
+   "won_pct_of_bid": 19.9,
+   "best_price_vs_lowest_winner": -4.38,
+   "bid_below_lowest_winner_pct": 74.1
+  },
+  "Not classified": {
+   "bidders": 2,
+   "barrels_bid": 2850000,
+   "share_of_bid_pct": 0.7,
+   "barrels_won": 0,
+   "won_pct_of_bid": 0.0,
+   "best_price_vs_lowest_winner": -0.34,
+   "bid_below_lowest_winner_pct": 82.5
+  }
+ },
+ "paf_2022": {
+  "mean": -0.52,
+  "low": -7.65,
+  "high": 5.86,
+  "within_5_dollars_pct": 96.7,
+  "pipeline_pct": 88.0
+ },
+ "firms": {
+  "bidders_2022": 20,
+  "offers_2022": 583,
+  "borrowers_2026_that_did_not_bid_in_2022": [
+   "Alon USA",
+   "Energy Transfer Crude Marketing",
+   "Trafigura"
+  ],
+  "buyers_2022_not_in_2026_awards": [
+   "Chevron",
+   "Equinor Marketing & Trading",
+   "Glencore",
+   "Motiva",
+   "Unipec America",
+   "Valero"
+  ]
+ },
+ "loan_jan_2022": {
+  "total": 13400000,
+  "by_type": {
+   "Major trading arm": {
+    "barrels": 4200000,
+    "pct": 31.3
+   },
+   "Trading house": {
+    "barrels": 5000000,
+    "pct": 37.3
+   },
+   "Refiner": {
+    "barrels": 4200000,
+    "pct": 31.3
+   }
+  },
+  "firms": [
+   {
+    "company": "Shell Trading (US)",
+    "type": "Major trading arm",
+    "barrels": 4200000
+   },
+   {
+    "company": "Trafigura",
+    "type": "Trading house",
+    "barrels": 3000000
+   },
+   {
+    "company": "Phillips 66",
+    "type": "Refiner",
+    "barrels": 2300000
+   },
+   {
+    "company": "Macquarie",
+    "type": "Trading house",
+    "barrels": 2000000
+   },
+   {
+    "company": "Chevron",
+    "type": "Refiner",
+    "barrels": 885000
+   },
+   {
+    "company": "ExxonMobil",
+    "type": "Refiner",
+    "barrels": 515000
+   },
+   {
+    "company": "BP Products North America",
+    "type": "Refiner",
+    "barrels": 500000
+   }
+  ]
+ },
+ "market": {
+  "2022": {
+   "window": [
+    "2022-03-01",
+    "2022-11-30"
+   ],
+   "refinery_utilization_pct": {
+    "weeks": 39,
+    "mean": 92.1
+   },
+   "refiner_crude_inputs_weekly_kbd": {
+    "weeks": 39,
+    "mean": 16032.5
+   },
+   "crude_exports_weekly_kbd": {
+    "weeks": 39,
+    "mean": 3648.7
+   },
+   "front_over_fourth_month_pct": {
+    "days": 191,
+    "mean": 5.1,
+    "high": 13.3
+   }
+  },
+  "2026": {
+   "window": [
+    "2026-03-20",
+    "2026-10-02"
+   ],
+   "refinery_utilization_pct": {
+    "weeks": 29,
+    "mean": 94.4
+   },
+   "refiner_crude_inputs_weekly_kbd": {
+    "weeks": 29,
+    "mean": 16828.1
+   },
+   "crude_exports_weekly_kbd": {
+    "weeks": 29,
+    "mean": 4283.0
+   },
+   "front_over_fourth_month_pct": null
+  }
+ }
+}
