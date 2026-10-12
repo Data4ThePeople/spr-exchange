@@ -6,8 +6,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-exchange
-Step: 2g
-Since: 2026-10-11
+Step: complete
+Since: 2026-10-12
 
 ## Steps
 
@@ -20,7 +20,7 @@ Since: 2026-10-11
 | 2d | Hero 1680x1080 + alt text | 2026-10-11 | Used car auction with an SPR barrel, AI image, center crop |
 | 2e | SEO | 2026-10-11 | Targets: how the SPR works, why it is drawing down; six-question FAQ |
 | 2f | Pushed to Prismic (draft) | 2026-10-11 | doc aswH9xEAACkAt-Zz, Migration Release |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-10-12 | EMAIL.md, Eric's rewrite; email hero JPG exported |
 
 ## Stale
 
@@ -73,3 +73,4 @@ None.
 - 2026-10-11: Eric confirmed step 2f. Step 2g open.
 - 2026-10-11: EMAIL.md drafted from the post text; email hero JPG exported under 300KB. Awaiting approve or reject.
 - 2026-10-11: Eric rewrote EMAIL.md; seven proposed edits accepted and applied.
+- 2026-10-12: Eric confirmed step 2g. Post complete. Still open: round 4 award sheet not posted when last checked (October 11); post 2 (2021-22 compared with 2026) is teased in the post and not started.
