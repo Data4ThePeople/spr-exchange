@@ -71,3 +71,4 @@ None.
 - 2026-10-11: publication moved to October 11, 2026 at 6:30 p.m. EDT at Eric's instruction. Prismic draft needs a re-push to carry it.
 - 2026-10-11: Prismic draft aswH9xEAACkAt-Zz updated with the new date and time (Migration Release, still a draft).
 - 2026-10-11: Eric confirmed step 2f. Step 2g open.
+- 2026-10-11: EMAIL.md drafted from the post text; email hero JPG exported under 300KB. Awaiting approve or reject.
