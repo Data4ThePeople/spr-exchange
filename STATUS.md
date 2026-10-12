@@ -72,3 +72,4 @@ None.
 - 2026-10-11: Prismic draft aswH9xEAACkAt-Zz updated with the new date and time (Migration Release, still a draft).
 - 2026-10-11: Eric confirmed step 2f. Step 2g open.
 - 2026-10-11: EMAIL.md drafted from the post text; email hero JPG exported under 300KB. Awaiting approve or reject.
+- 2026-10-11: Eric rewrote EMAIL.md; seven proposed edits accepted and applied.

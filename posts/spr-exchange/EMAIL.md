@@ -40,11 +40,21 @@ Line chart titled U.S. Petroleum Inventories, Weekly Seasonality, set to the Str
 ```
 Here is how it works. This year's oil is not being sold. It is being lent. A company borrows crude from the reserve now and promises to return the same amount later, plus extra barrels, like interest paid in oil. Companies bid on how much extra they will return, and the highest offers win.
 
-Returning 120 barrels for every 100 borrowed may sound like a bad deal, until you do the math. In April, oil sold now cost 44.9% more than oil delivered in late 2028, and the government asked for just 20% "interest." Companies snapped up 86.8% of the oil offered in that round.
+Returning 120 barrels for every 100 borrowed may sound like a bad deal, until you do the math. In April, oil sold then cost 44.9% more than oil delivered in late 2028, and the government asked for just 20% "interest." With a gap that large, companies snapped up 86.8% of the oil offered in that round.
 
-So who is taking it? Thirteen companies have won 133.56 million barrels so far. The largest borrower is Trafigura, a global oil trading firm, with 25.7% of the total. There is nothing wrong with Trafigura. We need global oil traders. But they can lock in their prices the day they bid. The one making a bet is the U.S. government. In effect, it is betting that 2026 is the worst of the oil crisis, and that 2027 will be far better.
+So who is taking the oil? Thirteen companies have won 133.56 million barrels so far. The largest borrower is not a refinery, but Trafigura, a global oil trading firm.
 
-That bet may backfire. On the latest dates the contracts allow, only 6% of the lent oil is due back by the end of 2027. So I am giving the SPR a new name: the Speculative Petroleum Reserve. In the post, I walk through the math one barrel at a time, show every company that took the oil, and chart when it is due back.
+Why are oil traders distributing our emergency oil? Because the oil goes to the highest bidder, and traders are excellent at getting oil out into the world. Nothing in the contracts says it has to stay here to lower our energy prices. In effect, the U.S. is betting that we can flood the global oil market with our emergency oil for a few months, and that by the time we are done, the war will be resolved, everything will settle down, and we can start refilling.
+
+That bet may backfire. The war is not over. And on the latest dates the contracts allow, only 6% of the lent oil is due back by the end of 2027. We are headed into 2027 with the lowest SPR we have had since 1982, and most of the oil we lent in 2026 to cushion the blow of the war does not have to come back until 2028 or later.
+
+The oil traders are not on the hook for this risk. They can use the magic of financial markets to hedge out their risk and lock in their profits.
+
+Rather, it's America, and by extension its people, who speculated that the war would end quickly and may now have to deal with the consequences in 2027.
+
+So I am giving the SPR a new name: the Speculative Petroleum Reserve.
+
+In the post, I walk through the math one barrel at a time, show every company that took the oil, and chart when it is due back.
 ```
 
 ## 6. Call to action
