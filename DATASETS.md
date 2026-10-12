@@ -306,7 +306,7 @@ original article located and read before it is used.
 
 - **Argus, March 16, 2023, "US delays return of 8mn bl of crude to SPR" (Chris Knight).** Read through a page fetch, not saved. Reports: borrowers took more than 27.4 million barrels between September 2021 and June 2022; original contracts carried an in-kind premium of 2.3% to 14.6% with most oil due back by 2024; DOE revised contracts in February 2022 (ExxonMobil, TotalEnergies, 3.5 million barrels), August 2022 (Chevron, 939,000 barrels, delayed more than a year), four others in 2022 (nearly 4.5 million barrels), and March 2023 (Shell, 3.6 million barrels, to July-August 2025). Argus says it obtained nearly two dozen contracts and modifications through public records requests. No added premium for the delays is mentioned.
 - **Argus, May 9, 2024, "US delays return of SPR crude until 2026" (Chris Knight).** Reports at least nine contract modifications signed March 26 to April 16, 2024, with ExxonMobil, Shell and others, delaying about 15.3 million barrels to July-October 2026. DOE's stated reason: to buy oil directly "at a good price for taxpayers" during "stable crude oil market windows." Obtained through a Freedom of Information Act request.
-- **Primary documents:** corrected October 12, 2026. The contracts and about 30 modifications are public in DOE's FOIA reading room, `https://www.spr.doe.gov/FOIA/FY22WtrEx.htm` (a 374-page file of the agreements, about half of it scanned images). Found by the adversarial review; not yet downloaded into this repo or read in full by us. That review reconstructed the program at about 21.7 million barrels lent of 32 million offered: refiners about 52%, Shell's and TotalEnergies' trading arms about 25%, trading houses (Trafigura and Macquarie) about 23%. Unverified by us until the file is read.
+- **Primary documents:** corrected October 12, 2026. The contracts and 30 modifications are public in DOE's FOIA reading room and are now held in `data/raw/doe_foia_2022/`. See the section "2021-22 loan agreements" below. An earlier version of this note said they were not public; the adversarial review found them.
 - **Open lead, unverified:** EIA weekly SPR stocks show no weekly increase from March 20 to October 2, 2026, and the total decline (132.46 million barrels) is within 1.1 million of the 133.56 million awarded in 2026. If 15.3 million barrels were returned in July-October 2026, it does not show in the net figures. Returns may have been delayed again, made earlier, or offset by deliveries; the weekly series is net and cannot say which.
 
 ## Return schedule bounds (`scripts/return_schedule.py` -> `data/processed/return_schedule.csv`, `dist/returns.html`)
@@ -477,3 +477,66 @@ Every figure below is computed by the script; none is typed in.
 - **2022 sale:** "The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor (PAF) as provided in this provision, subject to any additional adjustments provided for elsewhere in the contract." The DRP is "the average ... of the Daily Index Prices for the five trading days surrounding the delivery 'price date'"; the index is Argus's Mars (sour) or WTI Houston (sweet) month-1 price. "The PAF is the purchaser's offered price minus the Base Reference Price (BRP). The PAF may be either positive or negative." (Notice of Sale, Contract Price Adjustment provision, with two worked examples; PDF pages 16 to 20 depending on the notice.) So a buyer pays the market price around the day it takes delivery, plus or minus the gap it bid.
 - **2026 loan:** "All Return Oil to SPR sites will include the awarded volume in addition to the premium." (RFP section B.5(b).) The obligation is in barrels, and no index sets a price for the oil lent. Money does appear in other terms: quality adjustments; a cash remedy if a borrower returns less than it owes, priced at "the cost value of the Exchange Oil on the date of the last delivery" (section B.7); and the guarantees, sized from "the five (5) day average of NYMEX WTI from Argus Direct." The words "hedge" and "futures" do not appear in the readable text of the five RFPs (one scanned page in each of four RFPs could not be searched).
 - **D4TP's reading, not stated in any document:** under the sale terms there is no gap between today's price and a later price for a buyer to lock in, so the oil is worth most to a company that can use it at the delivery point; under the loan terms the borrower owes a fixed number of barrels years later, which can be bought forward at a known price the day it bids.
+
+## 2021-22 loan agreements (U.S. Department of Energy, FOIA reading room)
+
+**What it is.** The exchange (loan) agreements DOE signed under the December
+2021 "FY22 Winter Exchange" RFP, and 30 later modifications. One 374-page PDF
+holds ExxonMobil's first contract (pages 1 to 107) and twelve agreements of
+about 22 pages each; each modification is its own PDF.
+
+**Where it comes from.** `https://www.spr.doe.gov/FOIA/FY22WtrEx.htm`.
+`scripts/fetch_doe_foia_2022.py` downloads every PDF linked there into
+`data/raw/doe_foia_2022/` (31 files, 451 pages) with `manifest.json` (URL,
+bytes, SHA-256) and a copy of the index page. Retrieved October 12, 2026.
+
+**Reading the scans.** 152 of the 374 pages in the main file, and many of the
+modifications, are scanned images with no text. `scripts/ocr_pdf.swift` reads
+every page with macOS's built-in text recognition (Vision framework, 200 dots
+per inch) and writes `data/processed/doe_foia_2022_text/<file>.txt` with a
+"=== page N ===" line per page. Recognized text has errors (a zero for a
+capital O in agreement numbers, dropped punctuation), so it is used to find and
+confirm terms, not quoted without a look at the page.
+
+**How the ledger is built.** The terms of each agreement were keyed by hand into
+`data/reference/exchange_2021_22.csv` with the PDF page it starts on.
+`scripts/build_exchange_2021_22.py` then checks that every keyed company name,
+barrel count, premium and guarantee amount appears in the recognized text of
+that agreement's first four pages, stops if one does not, and writes
+`data/processed/spr_2021_22_exchange.csv` with the merged name and firm type.
+
+**Coverage.** 13 agreements, 9 borrowers, 24,420,000 barrels: 21,720,000
+barrels of sour crude in 12 agreements signed December 10, 2021 to January 25,
+2022, and one ExxonMobil agreement for 2,700,000 barrels of sweet crude at a
+14.6% premium, which is outside the RFP's 32 million barrels of sour crude. The
+seven agreements signed January 21 to 25, 2022 add to the 13.4 million barrels
+in DOE's release of January 25, 2022. By firm type, all 13: refiners 57.1%,
+majors' trading arms 22.4%, trading houses 20.5%. Sour only: 51.8%, 25.2%,
+23.0%.
+
+**Terms.** The premium is fixed in each agreement ("Contractor agrees to a
+fixed 8.6% premium return of sour crude oil"): 2.3%, 6.1%, 8.6% or 9.1% for
+sour, 14.6% for the sweet agreement. Each agreement names a letter of credit in
+dollars and its expiration date. Ten of the twelve agreements with a return
+window we keyed set it in 2024 or later.
+
+**Missing or unread.** ExxonMobil's first contract uses the RFP's contract
+form, which gives return period numbers, not dates; its premium and return
+dates are not keyed. Agreement 22PO0013's first page was not found in the
+recognized text; its number comes from DOE's file names for its modifications
+and its date is not keyed. Delivery points were not keyed.
+
+**Modifications.** Not yet keyed. A first read of the recognized text shows
+return dates moved more than once, with several agreements (including
+Trafigura's, modified April 16, 2024) changed to return oil in July through
+October 2026 or May through June 2026. These need a page-by-page read before
+any of it is published. Some modification pages carry redactions marked
+"(b) (4)".
+
+**Units and rounding.** Barrels as written in each agreement, "approximately"
+and "plus/minus 10%". These are contract volumes, not delivered volumes; the
+modifications give delivered "basis barrels" for some.
+
+**License and attribution.** U.S. government records released under the
+Freedom of Information Act. Credit: U.S. Department of Energy, Strategic
+Petroleum Reserve Project Management Office.
