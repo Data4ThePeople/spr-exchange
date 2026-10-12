@@ -517,47 +517,64 @@ majors' trading arms 22.4%, trading houses 20.5%. Sour only: 51.8%, 25.2%,
 **Terms.** The premium is fixed in each agreement ("Contractor agrees to a
 fixed 8.6% premium return of sour crude oil"): 2.3%, 6.1%, 8.6% or 9.1% for
 sour, 14.6% for the sweet agreement. Each agreement names a letter of credit in
-dollars and its expiration date. Ten of the twelve agreements with a return
-window we keyed set it in 2024 or later.
+dollars and its expiration date. Eleven of the thirteen agreements set the
+return in 2024 or later (23,135,000 barrels).
 
-**Missing or unread.** ExxonMobil's first contract uses the RFP's contract
-form, which gives return period numbers, not dates; its premium and return
-dates are not keyed. Agreement 22PO0013's first page was not found in the
-recognized text; its number comes from DOE's file names for its modifications
-and its date is not keyed. Delivery points were not keyed.
+**ExxonMobil's first contract** (pages 1 to 107) uses the RFP's contract form.
+The form on page 4 gives a return period number for each line item and the
+table on page 20 defines the periods: all three line items are June 1 to
+September 30, 2024 at 8.6%. The contract names no letter of credit amount.
+
+**"Signed" dates** are the "entered into this ... day" date in each agreement's
+first line. Only the first contract carries a DOE signature date. Delivery
+points were not keyed.
 
 **Modifications (`data/reference/exchange_2021_22_mods.csv` -> `data/processed/spr_2021_22_exchange_mods.csv`).**
 All 30 modification files were read and keyed by hand: agreement, the date DOE
-signed, the kind of change, any new return window and guarantee date, a plain
-description, and a short phrase copied from the document.
-`scripts/build_exchange_mods.py` stops unless every file has exactly one row,
-every copied phrase is in that file's recognized text, and every date and
-barrel count in a description is in the text too. Result: 17 changes moved a
-return date (on 10 of the 13 agreements, 6 of the 9 borrowers), 6 set terms for
-an early return, 5 are final settlements, 2 changed a delivery point. Ten
-changes set a return window in 2026:
+signed, the kind of change, any new return window and guarantee date, any
+reason the document gives, a plain description, and a short phrase copied from
+the document. `scripts/build_exchange_mods.py` stops unless every file has
+exactly one row, every copied phrase is in that file's recognized text, and
+every date and barrel count in a description is in the text too. DOE's
+signature dates were read from the page images (`scripts/pdf_page_png.swift`),
+because text recognition misreads the signature stamps; several were first
+keyed with the borrower's date and were corrected after the independent
+tie-out of October 12, 2026.
+
+Result: 16 changes moved a return date later (on 10 of the 13 agreements, 6 of
+the 9 borrowers), 1 narrowed a window, 6 set terms for an early return or
+counted oil already in a cavern, 5 are final settlements, 2 changed a delivery
+point. Ten changes set a return window in 2026:
 
 | DOE signed | Agreement | Borrower | New return window |
 |---|---|---|---|
-| March 18, 2024 | 22PO0011 | Macquarie | July to October 2026 |
 | March 26, 2024 | 22PO0005 | Atlantic Trading & Marketing (TotalEnergies) | July to October 2026 |
-| April 11, 2024 | 22PO0004, 22PO0006 | Shell Trading (US) | May 15 to June 30, 2026 |
+| March 27, 2024 | 22PO0011 | Macquarie | July to October 2026 |
+| April 11, 2024 | 22PO0004 | Shell Trading (US) | May 15 to June 30, 2026 |
+| April 11, 2024 | 22PO0006 | Shell Trading (US) | May 15 to June 30, 2026 for 2,653,861 basis barrels; July to October 2026 for the remaining 515,937 |
 | April 15, 2024 | 22PO0007 | ExxonMobil | July to October 2026 |
 | April 15, 2024 | 22PO0013 | ExxonMobil | April 1 to May 14, 2026 |
 | April 16, 2024 | 22PO0010 | Trafigura | July to October 2026 |
-| December 10, 2025 | 22PO0007, DE-AC96-22PO00003 | ExxonMobil | November 1 to December 31, 2026 |
+| December 10, 2025 | 22PO0007 | ExxonMobil | November 1 to December 31, 2026 |
+| December 10, 2025 | DE-AC96-22PO00003 (line items 2 and 3) | ExxonMobil | November 1 to December 31, 2026 |
 | February 24, 2026 | 22PO0013 | ExxonMobil | October 1 to November 30, 2026 |
+
+What the documents say about why and at what cost:
+
+- **Every move is a modification signed by DOE.** None of the files records a missed deadline.
+- **Reason given:** three documents attribute a move to a "Site Pause," a pause at the government's receiving site (22PO0003 Mod 0002, DE-AC96-22PO00003 Mod 0003, and Chevron's close-out describing its Mod 0002). The 2023 and 2024 moves give no reason.
+- **Premium:** five of the 16 moves say there is no adjustment to the premium ("There is no adjustment to the premium as a result of this extension"). Seven, the March and April 2024 moves to 2026, say nothing about the premium; rates in their tables are redacted. One raised it (Atlantic Trading & Marketing, 2.3% to 8.6%, three weeks after signing). Two cut the premium barrels owed by redacted amounts (ExxonMobil, December 2025).
+- **Early returns** in late 2023 were at a different, redacted rate; BP's close-out calls it "a reduced premium rate."
+- **Sour to sweet:** where oil owed was converted from sour to sweet, the barrels owed fell: ExxonMobil's 22PO0003 from 1,354,565 sour to 1,246,200 sweet (8.0% fewer), Chevron's from 938,578 to 872,878 (7.0% fewer).
 
 Limits: the files show what was scheduled, not whether oil was returned on
 those dates; only the five final settlements (Marathon, BP, Phillips 66, one
 ExxonMobil agreement, Chevron) record returns. Volumes outstanding are mostly
-redacted. Two modifications referred to in later ones (22PO0003 Mod 0001 of
-February 28, 2025 and 22PO0008 Mod 0002 of April 3, 2025) are not in DOE's
-file. DOE's signature date could not be read on four modifications. Where an
-extension was granted, the documents that speak to it say "There is no
-adjustment to the premium as a result of this extension"; two December 2025
-changes for ExxonMobil reduce the premium barrels owed by a redacted amount.
-Whether this file is every modification DOE has signed is not known.
+redacted. At least four modifications referred to or implied by later ones are
+not in DOE's file (22PO0003 Mod 0001, 22PO0008 Mod 0002, and DE-AC96-22PO00003
+Mods 0001 and 0002). One file (22PO0013 Mod 0001) carries no DOE signature
+although its name says "FullyExecuted." Whether this file is every
+modification DOE has signed is not known.
 
 **Units and rounding.** Barrels as written in each agreement, "approximately"
 and "plus/minus 10%". These are contract volumes, not delivered volumes; the
@@ -573,13 +590,15 @@ Petroleum Reserve Project Management Office.
 - **Vintage:** pulled October 12, 2026. Weekly series run through October 2, 2026; monthly exports through July 2026; Persian Gulf imports through June 2026. The series pulled on October 10 were left as saved, so published charts do not shift; `_retrieved.json` records the date per series.
 - **How they are compared (`design_evidence.json`, `market`):** weekly series are averaged over the same two windows as the national series (March 1 to November 30, 2022; March 20 to October 2, 2026). Monthly series lag, so the same months are compared in both years: March to July for Gulf Coast exports, March to June for Persian Gulf imports.
 - **Figures:** Gulf Coast refinery utilization 95.0% and 96.8%; crude inputs 8.79 and 9.45 million barrels a day; Gulf Coast crude imports 1.27 and 1.33 million barrels a day; Gulf Coast crude exports 3.30 and 4.61 million barrels a day (5.44 in April and 5.60 in May 2026); U.S. crude imports from the Persian Gulf 742,000 and 370,000 barrels a day (113,000 in June 2026).
-- **Limits:** EIA weekly figures are estimates and are revised; monthly figures are the firmer ones. PADD 3 covers Texas, Louisiana, Mississippi, Alabama, Arkansas and New Mexico, not only the refineries near SPR sites. Exports are by the district the oil left from, not by who sold it, so they cannot be tied to SPR barrels or to any company. Nothing here separates sour from sweet crude.
+- **Limits:** EIA weekly figures are estimates and are revised; monthly figures are the firmer ones. Gulf Coast exports fell back to 3.47 million barrels a day in July 2026, inside the 2022 range, so the five-month average hides the path. PADD 3 covers Texas, Louisiana, Mississippi, Alabama, Arkansas and New Mexico, not only the refineries near SPR sites. Exports are by the district the oil left from, not by who sold it, so they cannot be tied to SPR barrels or to any company. Nothing here separates sour from sweet crude.
 
 ## Return delays on the 2021-22 loans (`data/processed/spr_2021_22_return_delays.csv`)
 
-- **What it is:** one row per loan agreement, written by `scripts/build_exchange_mods.py`: the original return window (from the agreement), how many times the window was moved, the latest window on file, and the months between the end of the original window and either the last return recorded in a final settlement or, where there is no settlement, the end of the latest scheduled window.
-- **Result:** the window moved on 10 of 13 agreements. On five agreements (6,800,000 barrels) the gap is 24 months or more: Atlantic Trading & Marketing 49 months, Chevron 29, ExxonMobil (22PO0007) 27, Trafigura 25, Macquarie 25. Shell's two loans are 21 months, ExxonMobil's sweet loan 16, ExxonMobil's 22PO0003 15. Marathon, BP and Phillips 66 returned on time or early.
-- **Read with care:** only Chevron's 29 months and ExxonMobil's 15 are completed returns recorded in a settlement. The others are scheduled dates; the files do not say whether oil came back then. Atlantic Trading & Marketing's first move, from September 2022 to mid-2024, came three weeks after signing and raised its premium from 2.3% to 8.6%; measured from that 2024 date its gap is 25 months. ExxonMobil's first contract (4,800,000 barrels) has no original date keyed, so it has no gap figure, though its latest window is November to December 2026. Agreement 22PO0013's "original" window is the one in the agreement text on file; its first modification calls the same months an extension, so the true original may have been earlier.
+- **What it is:** one row per loan agreement, written by `scripts/build_exchange_mods.py`: the original return window (from the agreement), how many times the window was moved later in the documents on file, the latest window on file, the months between the end of the original window and either the last return recorded in a final settlement or, where there is no settlement, the end of the latest scheduled window, and a note (`data/reference/exchange_2021_22_delay_notes.csv`).
+- **Result:** the window moved on 10 of 13 agreements. On seven agreements the gap is 24 months or more for all or part of the oil: Atlantic Trading & Marketing 49 months, Chevron 29, ExxonMobil's first contract 27 (line items 2 and 3), ExxonMobil 22PO0007 27, Shell 22PO0006 25 (for 515,937 barrels; 21 for the rest), Trafigura 25, Macquarie 25. Shell's other loan is 21 months, ExxonMobil's sweet loan 16, ExxonMobil's 22PO0003 15. Marathon returned inside its window; BP and Phillips 66 returned nine months early (shown as 0).
+- **Do not state a barrel total for the delays.** The table carries contract volumes. Several borrowers had already returned part of their oil, and the amounts still out are redacted.
+- **These are agreed dates, not lateness.** Every move was signed by DOE, three are attributed to a pause at the government's own site, and no file records a missed deadline. Only Chevron's 29 months and ExxonMobil's 15 are completed returns; the rest are scheduled dates, and the files do not say whether oil came back then.
+- **Times moved undercounts** where a modification is missing from DOE's file (22PO0003, 22PO0008, and ExxonMobil's first contract).
 
 ## Trade margin and uptake by 2026 round (`scripts/lot_uptake.py` -> `lot_margins_2026.csv`, `round_uptake_2026.csv`)
 
@@ -588,4 +607,6 @@ Petroleum Reserve Project Management Office.
 - **Round 1** offers one continuous return window per lot (for example November 1, 2026 to September 30, 2028), not a menu. It is priced at the last three months of the window.
 - **Round averages** weight each lot by barrels offered. "Taken" is the round's awarded barrels from the ledger over the barrels offered in `rounds.csv`.
 - **Why by round and not by lot:** DOE's award sheets give barrels per company per round. They do not say which site, crude type, pickup month or return window was awarded, so uptake cannot be measured for a single lot.
+- **Checked against the RFPs by the independent tie-out:** all 25 lots match. Three things to know: the round 3 RFP contradicts itself (one table lists 14 and 15 million barrels at Big Hill, three others and the title give 11 and 14 million, which we use); round 1 lists West Hackberry sour as one 34-million-barrel lot with two return routes, which we show as 24 and 10 million; round 2 uses Amendment 0001's volumes.
+- **Bids were due before the market closed.** In rounds 1.a to 4 offers were due at 11:00 a.m. Central, and this uses that day's closing price, which a bidder could not have seen. Round 1 was due at 5:00 p.m.
 - **Limits:** five rounds have results, so this is five observations, not a statistical test. The front-month price is used in every round to keep one basis; the published trade card for round 4 uses the contract for the month after pickup and so shows a lower figure ($9.87 for its best lot) than this file ($11.21). Bids could come in above the minimum premium. The grade's price gap to WTI, shipping and the bank guarantee are left out. Prices moved between bid day and award day, so a bidder could not be sure of the bid-day figure.

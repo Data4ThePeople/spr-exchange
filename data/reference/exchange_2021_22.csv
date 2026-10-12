@@ -1,14 +1,14 @@
 agreement_no,company_as_listed,barrels,crude,signed,premium_pct,return_window_original,guarantee_usd,page,note
-DE-AC96-22PO00003,ExxonMobil Corporation,4800000,Sour,2021-12-10,,,,4,"Contract form lists three line items: 3,300,000, 900,000 and 600,000 barrels. Premium and return dates are set by return period number on the form and are not keyed here."
+DE-AC96-22PO00003,ExxonMobil Corporation,4800000,Sour,2021-12-10,8.6,June to September 2024,,4,"Contract form (p. 4) lists three line items: 3,300,000 barrels from Bayou Choctaw on return period 2, and 900,000 from Bryan Mound and 600,000 from West Hackberry on return period 3. The table on p. 20 gives those periods as June 1 to September 30, 2024 at 8.6% for all three. No letter of credit amount is in the contract."
 22PO0002,Marathon Petroleum Supply and Trading LLC,250000,Sour,2021-12-22,8.6,June to September 2024,17235000,108,
 22PO0003,ExxonMobil Oil Corporation,2000000,Sour,2021-12-30,8.6,June to September 2024,141220000,130,
 22PO0004,Shell Trading (US) Company,870000,Sour,2022-01-12,9.1,September 2024,66694200,152,
 22PO0005,"Atlantic Trading & Marketing, Inc.",400000,Sour,2022-01-18,2.3,September 2022,31232000,174,
-22PO0006,Shell Trading (US) Company,4200000,Sour,2022-01-21,9.1 and 8.6,June to September 2024,314286000,196,"2,430,000 barrels to Big Hill at 9.1%, 1,770,000 to West Hackberry at 8.6%"
+22PO0006,Shell Trading (US) Company,4200000,Sour,2022-01-21,9.1 and 8.6,June to September 2024,314286000,196,"2,430,000 barrels to Big Hill at 9.1%, due August to September 2024; 1,770,000 to West Hackberry at 8.6%, due June to September 2024"
 22PO0007,ExxonMobil Oil Corporation,515000,Sour,2022-01-21,8.6,June to September 2024,39433550,219,
 22PO0008,Chevron U.S.A. Inc.,885000,Sour,2022-01-21,6.1,September 2023,67844100,241,
 22PO0009,BP Products North America,500000,Sour,2022-01-21,8.6,June to September 2024,32496000,263,
 22PO0010,Trafigura Trading LLC,3000000,Sour,2022-01-24,8.6,June to September 2024,243720000,285,
 22PO0011,"Macquarie Commodities Trading US, LLC",2000000,Sour,2022-01-25,8.6,June to September 2024,161320000,307,
 22PO0012,Phillips 66 Company,2300000,Sour,2022-01-24,8.6,June to September 2024,185518000,330,
-22PO0013,ExxonMobil,2700000,Sweet,2022-03-03,14.6,June and July 2025,284067000,353,"Sweet crude, outside the 32 million barrels of sour crude in the RFP. The agreement's first page could not be read; its number and its date (March 3, 2022) come from the modifications to it, which cite the agreement they change."
+22PO0013,ExxonMobil,2700000,Sweet,2022-03-03,14.6,June and July 2025,284067000,353,"Sweet crude, outside the 32 million barrels of sour crude in the RFP. Page 353 reads ""entered into this 3 day of March 2022"" with the 3 handwritten. The first 40,000 barrels are Bayou Choctaw sour, to be returned as sweet."

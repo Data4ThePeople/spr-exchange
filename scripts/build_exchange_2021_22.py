@@ -32,6 +32,8 @@ def main():
         seen.add(r["agreement_no"])
         start = int(r["page"])
         text = " ".join(pages[n] for n in range(start, start + SPAN))
+        if r["agreement_no"] == "DE-AC96-22PO00003":
+            text += " " + pages[20]              # this contract's premiums and return periods are in the table on page 20
         loose = re.sub(r"[^a-z0-9]", "", text.lower())          # recognition drops and swaps punctuation
         need = [r["company_as_listed"]] + re.findall(r"[\d.]+", r["premium_pct"])
         need += [f"{int(r['guarantee_usd']):,}"] if r["guarantee_usd"] else []

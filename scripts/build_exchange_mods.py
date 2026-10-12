@@ -67,7 +67,7 @@ def main():
         kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
     print(f"wrote {OUT.relative_to(ROOT)}: {len(rows)} modifications, every one checked against its document")
     print("  " + ", ".join(f"{k}: {v}" for k, v in sorted(kinds.items(), key=lambda x: -x[1])))
-    moved = [r for r in rows if r["kind"] == "Return date moved"]
+    moved = [r for r in rows if r["kind"] == "Return date moved"]      # moved later; a narrowed window is its own kind
     print(f"  return dates moved: {len(moved)} changes on {len({r['agreement_no'] for r in moved})} agreements, "
           f"{len({r['company'] for r in moved})} companies; {sum(1 for r in moved if '2026' in r['new_return_window'])} set a window in 2026")
     for r in moved:
@@ -94,15 +94,16 @@ def months_between(a, b):
 def delays(mods):
     """One row per agreement: the original return window against the latest one on file."""
     out = []
+    notes = {r["agreement_no"]: r["note"] for r in csv.DictReader((ROOT / "data/reference/exchange_2021_22_delay_notes.csv").open())}
     for a in csv.DictReader((ROOT / "data/processed/spr_2021_22_exchange.csv").open()):
         mine = [r for r in mods if r["agreement_no"] == a["agreement_no"]]
         moved = sorted((r for r in mine if r["kind"] == "Return date moved"),
                        key=lambda r: window_end(r["new_return_window"]))     # latest window last; some changes are undated
         returned = next((r["last_return"] for r in mine if r["last_return"]), "")
-        row = dict(agreement_no=a["agreement_no"], company=a["company"], type=a["type"], barrels=a["barrels"],
+        row = dict(agreement_no=a["agreement_no"], company=a["company"], type=a["type"], contract_barrels=a["barrels"],
                    original_window=a["return_window_original"], times_moved=len(moved),
                    latest_window=moved[-1]["new_return_window"] if moved else "", latest_change_signed=moved[-1]["doe_signed"] if moved else "",
-                   last_return_on_file=returned, months_later="", basis="")
+                   last_return_on_file=returned, months_later="", basis="", note=notes.get(a["agreement_no"], ""))
         if a["return_window_original"]:
             start = window_end(a["return_window_original"])
             if returned:
@@ -120,10 +121,11 @@ def delays(mods):
         w.writerows(out)
     print(f"wrote {path.relative_to(ROOT)}")
     for r in sorted(out, key=lambda r: -(r["months_later"] or -1)):
-        print(f"    {r['agreement_no']:18s} {r['company'][:28]:28s} {int(r['barrels']):>9,}  {r['original_window'] or '(not keyed)':24s} -> "
+        print(f"    {r['agreement_no']:18s} {r['company'][:28]:28s} {int(r['contract_barrels']):>9,}  {r['original_window'] or '(not keyed)':24s} -> "
               f"{r['latest_window'] or '-':30s} moved {r['times_moved']}x  {str(r['months_later']):>3} months  {r['basis']}")
     two = [r for r in out if r["months_later"] != "" and r["months_later"] >= 24]
-    print(f"  24 months or more: {len(two)} agreements, {sum(int(r['barrels']) for r in two):,} barrels")
+    print(f"  24 months or more, for all or part of the oil: {len(two)} agreements "
+          f"(contract volumes are not the barrels still out; see the notes column)")
 
 
 if __name__ == "__main__":

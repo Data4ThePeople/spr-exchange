@@ -25,6 +25,7 @@ actually bid, the grade's price gap to WTI, shipping, and the bank guarantee.
 Writes data/processed/lot_margins_2026.csv and data/processed/round_uptake_2026.csv.
 """
 import csv, re, sys
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 sys.argv = sys.argv[:1]                       # trade_math reads a round from argv at import
@@ -95,7 +96,7 @@ def main():
         taken = sum(int(a["barrels"]) for a in awards if a["round"] == rnd) if posted else ""
         wavg = lambda k: sum(l[k] * l["offered_bbl"] for l in mine) / offered
         out.append(dict(round=rnd, bids_due=meta["bids_due"], lots=len(mine), offered_bbl=offered, taken_bbl=taken,
-                        taken_pct=round(taken / offered * 100, 1) if posted else "",
+                        taken_pct=float(Decimal(str(round(taken / offered * 100, 6))).quantize(Decimal("0.1"), ROUND_HALF_UP)) if posted else "",   # halves up
                         min_premium_low_pct=min(l["min_premium_pct"] for l in mine), min_premium_high_pct=max(l["min_premium_pct"] for l in mine),
                         sale_front_month=mine[0]["sale_front_month"], avg_gap_pct=round(wavg("gap_pct"), 1),
                         avg_premium_pct=round(wavg("premium_pct"), 1), avg_left_per_barrel=cents(wavg("left_per_barrel")),
