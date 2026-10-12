@@ -131,5 +131,40 @@ for t in p26["types"]:
     check(f"2026 type {t['type']}", t["barrels"], sum(r["barrels"] for r in ledger["ledger"] if r["type"] == t["type"]))
 check("2026 borrowers", len(p26["firms"]), len({r["company"] for r in ledger["ledger"]}))
 
+# 6. Design evidence: recount the 2022 offers straight from the Offeror Abstract
+#    Reports (one page per offer), and check the January 2022 loan table against
+#    the saved DOE release.
+ev = json.loads((ROOT / "data/processed/design_evidence.json").read_text())
+heads = []
+for pdf in sorted(SALES.glob("*Offeror Abstract Report.pdf")):
+    for page in PdfReader(pdf).pages:
+        m = re.search(r"OFR# OFFEROR INFORMATION AGENT INFORMATION\n(\d+) (.+)", page.extract_text())
+        if m:
+            heads.append((pdf.name, m.group(1), m.group(2).strip()))
+check("2022 offers filed", ev["firms"]["offers_2022"], len({(f, n) for f, n, _ in heads}))
+check("2022 bidders", ev["firms"]["bidders_2022"], len({cmap[n]["company"] for _, _, n in heads}))
+check("no 2022 offer from Trafigura", sum(1 for _, _, n in heads if "trafigura" in n.lower()), 0)
+by_type = {}
+for name in {n for _, _, n in heads}:
+    by_type.setdefault(cmap[name]["type"], set()).add(cmap[name]["company"])
+for t, b in ev["bids_2022"].items():
+    check(f"2022 bidders, {t}", b["bidders"], len(by_type[t]))
+    check(f"2022 barrels won, {t}", b["barrels_won"], sum(x for n, x, _ in awards if cmap[n]["type"] == t))
+check("2022 barrels won across bidders", sum(b["barrels_won"] for b in ev["bids_2022"].values()), p22["total"])
+release = re.sub(r"<[^>]+>", " ", next((ROOT / "data/raw/doe_press").glob("2022-01-25*.html")).read_text(errors="ignore"))
+listed = {n.strip(): round(float(v) * 1e6) for n, v in re.findall(r"([A-Z][\w .&]+?) \(([\d.]+) million barrels\)", release)}
+keyed = {r["company_as_listed"]: int(r["barrels"]) for r in csv.DictReader((ROOT / "data/reference/exchange_jan_2022.csv").open())}
+check("January 2022 loans match DOE's release", keyed, listed)
+check("January 2022 loan total", ev["loan_jan_2022"]["total"], sum(listed.values()))
+eia = {}
+for r in csv.DictReader((ROOT / "data/processed/eia_series.csv").open()):
+    if r["value"]:
+        eia.setdefault(r["series_id"], {})[r["period"]] = float(r["value"])
+for year, m in ev["market"].items():
+    a, b = m["window"]
+    for sid, key in (("PET.WPULEUS3.W", "refinery_utilization_pct"), ("PET.WCRRIUS2.W", "refiner_crude_inputs_weekly_kbd"), ("PET.WCREXUS2.W", "crude_exports_weekly_kbd")):
+        raw = [float(x["value"]) for x in json.loads((ROOT / "data/raw/eia" / f"{sid}.json").read_text()) if x["value"] is not None and a <= x["period"] <= b]
+        check(f"{year} {key}", m[key]["mean"], round(sum(raw) / len(raw), 1))
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)
