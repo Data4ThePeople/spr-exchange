@@ -166,5 +166,13 @@ for year, m in ev["market"].items():
         raw = [float(x["value"]) for x in json.loads((ROOT / "data/raw/eia" / f"{sid}.json").read_text()) if x["value"] is not None and a <= x["period"] <= b]
         check(f"{year} {key}", m[key]["mean"], round(sum(raw) / len(raw), 1))
 
+# 7. The comparison page carries the evidence file's figures unchanged.
+check("page bids match the evidence file", {b["type"]: b["barrels_won"] for b in comp["bids"]},
+      {t: b["barrels_won"] for t, b in ev["bids_2022"].items() if t in comp["types"]})
+check("page price gaps match the evidence file", comp["paf"], ev["paf_2022"])
+check("page January 2022 loan total", comp["loan"]["total"], sum(listed.values()))
+check("page January 2022 loan types", {t["type"]: t["barrels"] for t in comp["loan"]["types"] if t["barrels"]},
+      {t: v["barrels"] for t, v in ev["loan_jan_2022"]["by_type"].items()})
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

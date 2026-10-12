@@ -446,6 +446,7 @@ and have not been checked against a primary source.
 - **What it is:** who got the oil in the 2022 emergency sales and the 2026 emergency loans, by firm type and by company, with a feature table of how the two programs work.
 - **Inputs:** `spr_2022_sale_awards.csv`, `spr_2026_exchange_awards.csv`, `sales_2022.csv`, `rounds.csv`, `program_comparison.csv`. Numbers in the feature table are slots filled from the data at build time.
 - **Shares** are barrels awarded to the group divided by all barrels awarded in that program.
+- **Added October 12, 2026:** three sections fed by `design_evidence.json`: what a winner paid in 2022 and owes in 2026 (with the two contract quotations), who bid in the 2022 sales, and the January 2022 loans beside the two programs. The page states that the sale-against-loan explanation is D4TP's reading and that the bids and the January loans fit it without proving it.
 - **Limits:** a sale and a loan are different deals; the page compares who received oil, not what they paid. The years differ in price, in the cause of the shortage and in refinery demand, so the page does not say the program design caused the change.
 - **Bank guarantee:** not a difference between the December 2021 loan and the 2026 loans. Both require a letter of credit equal to 100% of the oil's value at award (2021 RFP p. 157; 2026 Release No. 4 RFP p. 149).
 
