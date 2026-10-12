@@ -24,7 +24,7 @@ Meet the Speculative Petroleum Reserve
 ```
 Over the past few months, I have watched the U.S. drain its Strategic Petroleum Reserve, right alongside you. The reserve held 283.0 million barrels on October 2, the lowest weekly level since October 1982. It's easy to see that our emergency oil has been depleted. The harder part is why and how.
 
-Over the weekend I did that analysis, and was shocked at what I found. The SPR is not what we thought it was. Maybe it's just me, but I thought this was oil of last resort to protect Americans from crises. That's not quite how it works, at least not the way we are drawing it down in 2026. It's more like a used car auction, where the buyer can lock in a profit the day it bids. Where this oil goes? The government doesn't say.
+Over the weekend I did that analysis, and was shocked at what I found. The SPR is not what I thought it was. Maybe it's just me, but I thought this was oil of last resort to protect Americans from crises. That's not quite how it works, at least not the way we are drawing it down in 2026. It's more like a used car auction, where the buyer can lock in a profit the day it bids - and then ship that car off anywhere in the world it wants.
 ```
 
 ## 4. Chart
