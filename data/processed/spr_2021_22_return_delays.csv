@@ -1,0 +1,14 @@
+agreement_no,company,type,barrels,original_window,times_moved,latest_window,latest_change_signed,last_return_on_file,months_later,basis
+DE-AC96-22PO00003,ExxonMobil,Refiner,4800000,,2,November 1 to December 31 2026,2025-12-10,,,
+22PO0002,Marathon Petroleum,Refiner,250000,June to September 2024,0,,,2024-09-27,0,last return recorded in the final settlement
+22PO0003,ExxonMobil,Refiner,2000000,June to September 2024,1,November 1 to December 31 2025,2025-04-23,2025-12-30,15,last return recorded in the final settlement
+22PO0004,Shell Trading (US),Major trading arm,870000,September 2024,2,May 15 to June 30 2026,2024-04-11,,21,end of the latest scheduled window; no settlement on file
+22PO0005,Atlantic Trading & Marketing (TotalEnergies),Major trading arm,400000,September 2022,2,July to October 2026,2024-03-26,,49,end of the latest scheduled window; no settlement on file
+22PO0006,Shell Trading (US),Major trading arm,4200000,June to September 2024,2,May 15 to June 30 2026,2024-04-11,,21,end of the latest scheduled window; no settlement on file
+22PO0007,ExxonMobil,Refiner,515000,June to September 2024,2,November 1 to December 31 2026,2025-12-10,,27,end of the latest scheduled window; no settlement on file
+22PO0008,Chevron,Refiner,885000,September 2023,1,November 1 to December 31 2024,2022-08-29,2026-02-09,29,last return recorded in the final settlement
+22PO0009,BP Products North America,Refiner,500000,June to September 2024,0,,,2023-12-28,0,last return recorded in the final settlement
+22PO0010,Trafigura,Trading house,3000000,June to September 2024,1,July to October 2026,2024-04-16,,25,end of the latest scheduled window; no settlement on file
+22PO0011,Macquarie,Trading house,2000000,June to September 2024,1,July to October 2026,2024-03-18,,25,end of the latest scheduled window; no settlement on file
+22PO0012,Phillips 66,Refiner,2300000,June to September 2024,0,,,2023-12,0,last return recorded in the final settlement
+22PO0013,ExxonMobil,Refiner,2700000,June and July 2025,3,October 1 to November 30 2026,2026-02-24,,16,end of the latest scheduled window; no settlement on file

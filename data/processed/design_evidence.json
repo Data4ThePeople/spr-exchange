@@ -260,6 +260,45 @@
     "days": 191,
     "mean": 5.1,
     "high": 13.3
+   },
+   "gulf_refinery_utilization_pct": {
+    "weeks": 39,
+    "mean": 95.0
+   },
+   "gulf_refiner_crude_inputs_weekly_kbd": {
+    "weeks": 39,
+    "mean": 8790.8
+   },
+   "gulf_crude_imports_weekly_kbd": {
+    "weeks": 39,
+    "mean": 1270.8
+   },
+   "gulf_commercial_crude_stocks_kbbl": {
+    "first": 229255.0,
+    "last": 230132.0
+   },
+   "gulf_crude_exports_monthly_kbd": {
+    "months": [
+     "2022-03",
+     "2022-04",
+     "2022-05",
+     "2022-06",
+     "2022-07"
+    ],
+    "mean": 3302.2,
+    "low": 3050.0,
+    "high": 3525.0
+   },
+   "us_crude_imports_persian_gulf_monthly_kbd": {
+    "months": [
+     "2022-03",
+     "2022-04",
+     "2022-05",
+     "2022-06"
+    ],
+    "mean": 742.0,
+    "low": 670.0,
+    "high": 880.0
    }
   },
   "2026": {
@@ -279,7 +318,46 @@
     "weeks": 29,
     "mean": 4283.0
    },
-   "front_over_fourth_month_pct": null
+   "front_over_fourth_month_pct": null,
+   "gulf_refinery_utilization_pct": {
+    "weeks": 29,
+    "mean": 96.8
+   },
+   "gulf_refiner_crude_inputs_weekly_kbd": {
+    "weeks": 29,
+    "mean": 9446.0
+   },
+   "gulf_crude_imports_weekly_kbd": {
+    "weeks": 29,
+    "mean": 1333.2
+   },
+   "gulf_commercial_crude_stocks_kbbl": {
+    "first": 265907.0,
+    "last": 243599.0
+   },
+   "gulf_crude_exports_monthly_kbd": {
+    "months": [
+     "2026-03",
+     "2026-04",
+     "2026-05",
+     "2026-06",
+     "2026-07"
+    ],
+    "mean": 4607.8,
+    "low": 3467.0,
+    "high": 5604.0
+   },
+   "us_crude_imports_persian_gulf_monthly_kbd": {
+    "months": [
+     "2026-03",
+     "2026-04",
+     "2026-05",
+     "2026-06"
+    ],
+    "mean": 369.8,
+    "low": 113.0,
+    "high": 682.0
+   }
   }
  }
 }

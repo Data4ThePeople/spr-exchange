@@ -163,7 +163,9 @@ for r in csv.DictReader((ROOT / "data/processed/eia_series.csv").open()):
         eia.setdefault(r["series_id"], {})[r["period"]] = float(r["value"])
 for year, m in ev["market"].items():
     a, b = m["window"]
-    for sid, key in (("PET.WPULEUS3.W", "refinery_utilization_pct"), ("PET.WCRRIUS2.W", "refiner_crude_inputs_weekly_kbd"), ("PET.WCREXUS2.W", "crude_exports_weekly_kbd")):
+    for sid, key in (("PET.WPULEUS3.W", "refinery_utilization_pct"), ("PET.WCRRIUS2.W", "refiner_crude_inputs_weekly_kbd"), ("PET.WCREXUS2.W", "crude_exports_weekly_kbd"),
+                     ("PET.W_NA_YUP_R30_PER.W", "gulf_refinery_utilization_pct"), ("PET.WCRRIP32.W", "gulf_refiner_crude_inputs_weekly_kbd"),
+                     ("PET.WCEIMP32.W", "gulf_crude_imports_weekly_kbd")):
         raw = [float(x["value"]) for x in json.loads((ROOT / "data/raw/eia" / f"{sid}.json").read_text()) if x["value"] is not None and a <= x["period"] <= b]
         check(f"{year} {key}", m[key]["mean"], round(sum(raw) / len(raw), 1))
 
@@ -179,6 +181,16 @@ want = {}
 for r in agreements:
     want[cmap[r["company_as_listed"]]["type"]] = want.get(cmap[r["company_as_listed"]]["type"], 0) + int(r["barrels"])
 check("2021-22 loan types in the evidence file", {t: v["barrels"] for t, v in ev["loans_2021_22"]["by_type"].items()}, want)
+
+# 8. Monthly Gulf Coast exports and Persian Gulf imports, and the loan return delays.
+for year, m in ev["market"].items():
+    for sid, key in (("PET.MCREXP32.M", "gulf_crude_exports_monthly_kbd"), ("PET.MCRIMUSPG2.M", "us_crude_imports_persian_gulf_monthly_kbd")):
+        raw = {x["period"]: float(x["value"]) for x in json.loads((ROOT / "data/raw/eia" / f"{sid}.json").read_text()) if x["value"] is not None}
+        check(f"{year} {key}", m[key]["mean"], round(sum(raw[p] for p in m[key]["months"]) / len(m[key]["months"]), 1))
+mods = list(csv.DictReader((ROOT / "data/reference/exchange_2021_22_mods.csv").open()))
+check("loan modifications keyed", len(mods), len(list((ROOT / "data/raw/doe_foia_2022").glob("*Mod*.pdf"))))
+late = list(csv.DictReader((ROOT / "data/processed/spr_2021_22_return_delays.csv").open()))
+check("loan agreements in the delay table", len(late), len(agreements))
 
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

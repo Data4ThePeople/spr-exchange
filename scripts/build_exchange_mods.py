@@ -11,7 +11,9 @@ This script stops unless every modification file has exactly one row, every
 check phrase is found in that file's text, and every date and barrel count
 written in a row's new return window and description is also in the text
 (ignoring punctuation and spacing, which text recognition gets wrong). It then
-writes data/processed/spr_2021_22_exchange_mods.csv and prints a summary.
+writes data/processed/spr_2021_22_exchange_mods.csv, and
+data/processed/spr_2021_22_return_delays.csv with one row per agreement: the
+original return window against the latest one on file.
 """
 import csv, datetime, re, sys
 from pathlib import Path
@@ -50,6 +52,11 @@ def main():
                 sys.exit(f"{r['file']}: '{item}' in the description is not in the document text")
         if r["doe_signed"]:
             datetime.date.fromisoformat(r["doe_signed"])
+        if r["last_return"]:      # date of the last delivery back to the reserve, from a final settlement
+            y, m, *d = r["last_return"].split("-")
+            forms = [f"{int(m)}/{int(d[0])}/{y}", f"{int(m)}/{int(d[0])}/{y[2:]}"] if d else [f"{MONTHS[int(m) - 1]} {y}"]
+            if not any(loose(f) in text for f in forms):
+                sys.exit(f"{r['file']}: last return date {r['last_return']} is not in the document text")
     rows.sort(key=lambda r: (r["doe_signed"] or "9999", r["agreement_no"], r["mod_no"]))
     with OUT.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
@@ -66,6 +73,57 @@ def main():
     for r in moved:
         if "2026" in r["new_return_window"]:
             print(f"    {r['doe_signed'] or 'undated':10s} {r['agreement_no']:18s} {r['company']:45s} {r['new_return_window']}")
+    delays(rows)
+
+
+def window_end(text):
+    """Last day of a return window written like 'June to September 2024' or 'May 15 to June 30 2026'."""
+    m = re.findall(r"(%s)(?: (\d{1,2}))?(?= |$)" % "|".join(MONTHS), text)
+    year = int(re.search(r"(\d{4})$", text).group(1))
+    month, day = MONTHS.index(m[-1][0]) + 1, m[-1][1]
+    if day:
+        return datetime.date(year, month, int(day))
+    nxt = datetime.date(year + month // 12, month % 12 + 1, 1)
+    return nxt - datetime.timedelta(days=1)
+
+
+def months_between(a, b):
+    return (b.year - a.year) * 12 + b.month - a.month
+
+
+def delays(mods):
+    """One row per agreement: the original return window against the latest one on file."""
+    out = []
+    for a in csv.DictReader((ROOT / "data/processed/spr_2021_22_exchange.csv").open()):
+        mine = [r for r in mods if r["agreement_no"] == a["agreement_no"]]
+        moved = sorted((r for r in mine if r["kind"] == "Return date moved"),
+                       key=lambda r: window_end(r["new_return_window"]))     # latest window last; some changes are undated
+        returned = next((r["last_return"] for r in mine if r["last_return"]), "")
+        row = dict(agreement_no=a["agreement_no"], company=a["company"], type=a["type"], barrels=a["barrels"],
+                   original_window=a["return_window_original"], times_moved=len(moved),
+                   latest_window=moved[-1]["new_return_window"] if moved else "", latest_change_signed=moved[-1]["doe_signed"] if moved else "",
+                   last_return_on_file=returned, months_later="", basis="")
+        if a["return_window_original"]:
+            start = window_end(a["return_window_original"])
+            if returned:
+                y, m, *d = map(int, returned.split("-"))
+                row["months_later"] = max(months_between(start, datetime.date(y, m, d[0] if d else 1)), 0)
+                row["basis"] = "last return recorded in the final settlement"
+            elif moved:
+                row["months_later"] = months_between(start, window_end(moved[-1]["new_return_window"]))
+                row["basis"] = "end of the latest scheduled window; no settlement on file"
+        out.append(row)
+    path = ROOT / "data/processed/spr_2021_22_return_delays.csv"
+    with path.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(out[0]))
+        w.writeheader()
+        w.writerows(out)
+    print(f"wrote {path.relative_to(ROOT)}")
+    for r in sorted(out, key=lambda r: -(r["months_later"] or -1)):
+        print(f"    {r['agreement_no']:18s} {r['company'][:28]:28s} {int(r['barrels']):>9,}  {r['original_window'] or '(not keyed)':24s} -> "
+              f"{r['latest_window'] or '-':30s} moved {r['times_moved']}x  {str(r['months_later']):>3} months  {r['basis']}")
+    two = [r for r in out if r["months_later"] != "" and r["months_later"] >= 24]
+    print(f"  24 months or more: {len(two)} agreements, {sum(int(r['barrels']) for r in two):,} barrels")
 
 
 if __name__ == "__main__":

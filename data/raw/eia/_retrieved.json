@@ -1,5 +1,29 @@
 {
  "retrieved": "2026-10-10",
+ "retrieved_by_series": {
+  "PET.WCSSTUS1.W": "2026-10-10",
+  "PET.WCESTUS1.W": "2026-10-10",
+  "PET.WCREXUS2.W": "2026-10-10",
+  "PET.WCRIMUS2.W": "2026-10-10",
+  "PET.WCRFPUS2.W": "2026-10-10",
+  "PET.WCRRIUS2.W": "2026-10-10",
+  "PET.WPULEUS3.W": "2026-10-10",
+  "PET.WDISTUS1.W": "2026-10-10",
+  "PET.MCREXUS2.M": "2026-10-10",
+  "PET.MCSSTUS1.M": "2026-10-10",
+  "PET.RWTC.D": "2026-10-10",
+  "PET.RBRTE.D": "2026-10-10",
+  "PET.RCLC1.D": "2026-10-10",
+  "PET.RCLC2.D": "2026-10-10",
+  "PET.RCLC3.D": "2026-10-10",
+  "PET.RCLC4.D": "2026-10-10",
+  "PET.W_NA_YUP_R30_PER.W": "2026-10-12",
+  "PET.WCRRIP32.W": "2026-10-12",
+  "PET.WCESTP31.W": "2026-10-12",
+  "PET.WCEIMP32.W": "2026-10-12",
+  "PET.MCREXP32.M": "2026-10-12",
+  "PET.MCRIMUSPG2.M": "2026-10-12"
+ },
  "series": {
   "PET.WCSSTUS1.W": "Weekly U.S. ending stocks of crude oil in the SPR, thousand barrels",
   "PET.WCESTUS1.W": "Weekly U.S. ending stocks of crude oil excluding SPR, thousand barrels",
@@ -16,6 +40,12 @@
   "PET.RCLC1.D": "Cushing, OK crude oil future contract 1, dollars per barrel, daily",
   "PET.RCLC2.D": "Cushing, OK crude oil future contract 2, dollars per barrel, daily",
   "PET.RCLC3.D": "Cushing, OK crude oil future contract 3, dollars per barrel, daily",
-  "PET.RCLC4.D": "Cushing, OK crude oil future contract 4, dollars per barrel, daily"
+  "PET.RCLC4.D": "Cushing, OK crude oil future contract 4, dollars per barrel, daily",
+  "PET.W_NA_YUP_R30_PER.W": "Weekly Gulf Coast (PADD 3) percent utilization of refinery operable capacity",
+  "PET.WCRRIP32.W": "Weekly Gulf Coast (PADD 3) refiner net input of crude oil, thousand barrels per day",
+  "PET.WCESTP31.W": "Weekly Gulf Coast (PADD 3) ending stocks of crude oil excluding SPR, thousand barrels",
+  "PET.WCEIMP32.W": "Weekly Gulf Coast (PADD 3) commercial crude oil imports excluding SPR, thousand barrels per day",
+  "PET.MCREXP32.M": "Monthly Gulf Coast (PADD 3) exports of crude oil, thousand barrels per day",
+  "PET.MCRIMUSPG2.M": "Monthly U.S. imports of crude oil from Persian Gulf countries, thousand barrels per day"
  }
 }

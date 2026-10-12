@@ -15,7 +15,9 @@ Writes data/processed/design_evidence.json and prints it. Five parts:
   loans_2021_22 who received every loan in DOE's file of 2021-22 agreements.
   loan_jan_2022 the seven of those loans DOE announced on January 25, 2022.
   market        refinery runs, crude exports and the front-month price over the
-                fourth month, during each program (EIA weekly and daily data).
+                fourth month, during each program (EIA weekly and daily data),
+                with the same measures for the Gulf Coast, Gulf Coast crude
+                exports and U.S. crude imports from the Persian Gulf.
 
 Also writes data/processed/spr_2022_sale_streams.csv: the site and crude type
 of each master line item, read from Attachment A of each Notice of Sale.
@@ -27,6 +29,8 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/doe_sales_2022"
 WINDOWS = {"2022": ("2022-03-01", "2022-11-30"), "2026": ("2026-03-20", "2026-10-02")}   # first award report to last; first award to latest EIA week
+GULF_EXPORT_MONTHS = range(3, 8)     # March to July: EIA's monthly Gulf Coast exports run through July 2026
+PG_IMPORT_MONTHS = range(3, 7)       # March to June: monthly imports from the Persian Gulf run through June 2026
 
 
 def read(path):
@@ -149,6 +153,15 @@ def main():
         f1, f4 = eia["wti_fut1_usd"], eia["wti_fut4_usd"]
         g = [(f1[d] / f4[d] - 1) * 100 for d in f1 if a <= d <= b and d in f4]
         m["front_over_fourth_month_pct"] = dict(days=len(g), mean=round(sum(g) / len(g), 1), high=round(max(g), 1)) if g else None
+        for name in ("gulf_refinery_utilization_pct", "gulf_refiner_crude_inputs_weekly_kbd", "gulf_crude_imports_weekly_kbd"):
+            v = [x for d, x in eia[name].items() if a <= d <= b]
+            m[name] = dict(weeks=len(v), mean=round(sum(v) / len(v), 1))
+        stocks = sorted((d, x) for d, x in eia["gulf_commercial_crude_stocks_kbbl"].items() if a <= d <= b)
+        m["gulf_commercial_crude_stocks_kbbl"] = dict(first=stocks[0][1], last=stocks[-1][1])
+        # Monthly series lag: compare the same months in both years, as far as the later year has data.
+        for name, months in (("gulf_crude_exports_monthly_kbd", GULF_EXPORT_MONTHS), ("us_crude_imports_persian_gulf_monthly_kbd", PG_IMPORT_MONTHS)):
+            v = [eia[name][f"{year}-{mo:02d}"] for mo in months]
+            m[name] = dict(months=[f"{year}-{mo:02d}" for mo in months], mean=round(sum(v) / len(v), 1), low=min(v), high=max(v))
         market[year] = m
 
     # 6. How much of the oil offered in 2026 was taken, round by round.
