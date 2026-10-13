@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-sale-vs-loan
-Step: 2d
+Step: 2e
 Since: 2026-10-13
 
 ## Steps
@@ -17,7 +17,7 @@ Since: 2026-10-13
 | 2a | Draft with brackets resolved | 2026-10-12 | Claude drafted at Eric's instruction; Eric rewrote; edits accepted by number |
 | 2b | Eric's edit, Claude's look-over | 2026-10-13 | Five look-over edits accepted; every number traced in DATASETS.md; final independent tie-out matched |
 | 2c | Slice markup | 2026-10-13 | No changes needed; 62 blocks, 3 embeds, divider once |
-| 2d | Hero 1680x1080 + alt text | | |
+| 2d | Hero 1680x1080 + alt text | 2026-10-13 | Gemini desk scene, Eric's edit; alt 413 characters |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
@@ -61,3 +61,4 @@ None.
 - 2026-10-13 Eric confirmed 2b (second pass). Step 2c opened.
 - 2026-10-13 Eric confirmed 2c. Step 2d opened. Eric has not sent a hero idea for this post, so Claude wrote three prompts on his theme ("the devil is in the details") into posts/spr-sale-vs-loan/hero-prompt.md for him to accept or replace: the barrel from post 1 beside two contracts stamped SOLD and LENT, with a magnifying glass over fine print.
 - 2026-10-13 Step 2d: Eric generated the desk scene from Prompt 1 and removed the devil himself ("it wasnt working"). Source kept as images/spr-sale-vs-loan-hero-source.jpg (2752x1536); cropped from the center to images/spr-sale-vs-loan-hero-1680x1080.png. Lettering checked: STRATEGIC PETROLEUM RESERVE, CONTRACT twice, SOLD, LENT, all spelled correctly. Alt text 413 characters. Hero check and importer pass with no warnings.
+- 2026-10-13 Eric confirmed 2d. Step 2e opened. Eric gave no target searches, so Claude chose them (the 2022 sale money, who bought the oil, sale against exchange, refill, return delays) and wrote meta_title, description and keywords; a "Common questions" section is proposed to Eric, not applied.

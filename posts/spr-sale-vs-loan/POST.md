@@ -7,9 +7,9 @@ time: 06:30:00-04:00
 section: Data 4 Thought
 hero: images/spr-sale-vs-loan-hero-1680x1080.png
 hero_alt: An AI-generated illustration of a dark wooden desk under a lamp. On the left stands a dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE. Beside it lie two thick stacks of paper, each headed CONTRACT and held with a binder clip. The left one is stamped SOLD in red. The right one is stamped LENT in blue. A brass magnifying glass rests across the gap between the two contracts, over the fine print.
-meta_title:
-description:
-keywords:
+meta_title: Where the 2022 SPR Oil Sale Money Went, and Who Got the Oil
+description: In 2022 the U.S. sold 180.66 million barrels of emergency oil. In 2026 it is lending. Who got the oil each time, and what happened to the $16.99 billion.
+keywords: 2022 SPR sale, what happened to the SPR sale money, who bought SPR oil in 2022, SPR sale vs exchange, was the SPR refilled after 2022, SPR exchange return delays, Strategic Petroleum Reserve rescission, SPR drawdown 2026
 schema_type: article
 drop_cap: true
 heading_spacer: 20px

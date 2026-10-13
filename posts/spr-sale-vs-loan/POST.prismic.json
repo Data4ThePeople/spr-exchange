@@ -3,6 +3,9 @@
   "page_subtitle": "Refiners took most of the oil when the government sold it. Trading firms took the largest share when the government lent it. The rules of each deal help explain why.",
   "published_date": "2026-10-13",
   "updated_date": "2026-10-13",
+  "meta_title": "Where the 2022 SPR Oil Sale Money Went, and Who Got the Oil",
+  "meta_description": "In 2022 the U.S. sold 180.66 million barrels of emergency oil. In 2026 it is lending. Who got the oil each time, and what happened to the $16.99 billion.",
+  "meta_keywords": "2022 SPR sale, what happened to the SPR sale money, who bought SPR oil in 2022, SPR sale vs exchange, was the SPR refilled after 2022, SPR exchange return delays, Strategic Petroleum Reserve rescission, SPR drawdown 2026",
   "make_this_main_post": false,
   "slices": [
     {
@@ -737,5 +740,5 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-10-13T06:30:00-04:00\",\n  \"dateModified\": \"2026-10-13T06:30:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n  }\n}"
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details\",\n  \"description\": \"In 2022 the U.S. sold 180.66 million barrels of emergency oil. In 2026 it is lending. Who got the oil each time, and what happened to the $16.99 billion.\",\n  \"datePublished\": \"2026-10-13T06:30:00-04:00\",\n  \"dateModified\": \"2026-10-13T06:30:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"keywords\": [\n    \"2022 SPR sale\",\n    \"what happened to the SPR sale money\",\n    \"who bought SPR oil in 2022\",\n    \"SPR sale vs exchange\",\n    \"was the SPR refilled after 2022\",\n    \"SPR exchange return delays\",\n    \"Strategic Petroleum Reserve rescission\",\n    \"SPR drawdown 2026\"\n  ],\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n  }\n}"
 }
