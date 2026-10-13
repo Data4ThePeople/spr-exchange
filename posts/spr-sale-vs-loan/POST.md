@@ -1,5 +1,5 @@
 ---
-title: In 2022 We Sold Our Emergency Oil. In 2026 We Lent It. Different Companies Won.
+title: Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details
 subtitle: Refiners took most of the oil when the government sold it. Trading firms took the largest share when the government lent it. The rules of each deal help explain why.
 slug: spr-sale-vs-loan
 date: 2026-10-12
@@ -16,7 +16,7 @@ caption_spacer: 20px
 dividers: false
 ---
 
-# In 2022 We Sold Our Emergency Oil. In 2026 We Lent It. Different Companies Won.
+# Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details
 
 Yesterday I showed you [how the government is lending out our emergency oil in 2026](https://www.data4thepeople.com/p/spr-exchange/), and I promised to compare it with the last big release, in 2022. I thought that would be straightforward after the first post. Boy was I wrong.
 
