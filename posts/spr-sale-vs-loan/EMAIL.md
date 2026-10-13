@@ -44,7 +44,7 @@ Why? In my view, structuring the release as a sale rewards the company that need
 
 Then there is the risk of lending oil: getting it back on time. We pulled the government's own records from the last time it lent oil. Return dates moved back on 10 of the 13 loans. On seven loans, all or part of the oil was pushed back by two years or more. The government agreed to every change. And it still chose to lend again in 2026.
 
-The 2022 sales had their own problem. The reserve's account received $16.99 billion. One would think we would spend that on buying back oil. Not so fast. Congress took most of this money back, $12.45 billion of it, and the law does not say what it was used for instead. We sold 180.66 million barrels. We bought back about a third of that.
+The 2022 sales had their own problem. The reserve's account received $16.99 billion. One would think we would spend that on buying back oil. Not so fast. Congress took most of this money back, $12.45 billion of it, and the law does not say what it was used for instead. We sold 180.66 million barrels. We bought back about a third of that. That gap is also part of why our emergency oil stockpile is so low today.
 
 In the post, I walk through the contracts, the bids and the money trail, with three interactive charts.
 ```

@@ -20,7 +20,7 @@ Since: 2026-10-13
 | 2d | Hero 1680x1080 + alt text | 2026-10-13 | Gemini desk scene, Eric's edit; alt 413 characters |
 | 2e | SEO | 2026-10-13 | Meta title 59, description 153, 8 keywords; Common questions, six entries |
 | 2f | Pushed to Prismic (draft) | 2026-10-13 | Draft as4CvREAACgAuyJp, Migration Release; updated four times after Eric's changes |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-10-13 | Approved with two of Eric's sentences |
 
 ## Stale
 
@@ -69,3 +69,4 @@ None.
 - 2026-10-13 Eric renamed the closing section from "My view" to "Unearthing the devilish details". Prismic draft updated again.
 - 2026-10-13 Eric: "after each html embed we need a 20px spacer". Added `::: spacer 20px` after all three embeds. Prismic draft updated again.
 - 2026-10-13 Eric confirmed 2f. Step 2g opened: EMAIL.md drafted from the post text only; hero exported as images/spr-sale-vs-loan-hero-email.jpg (296KB); email chart images/01-who-got-the-oil.png is a screenshot of the top of dist/compare.html?part=who. Waiting for Eric to approve or reject.
+- 2026-10-13 Eric approved the email with two changes of his own and confirmed 2g. Post spr-sale-vs-loan is complete through 2g. Not done: social posts (not yet asked for). Still open from Step 1: the round 4 award sheet, and the unverified items listed in DATASETS.md.
