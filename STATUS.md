@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-sale-vs-loan
-Step: 2b
+Step: 2c
 Since: 2026-10-12
 
 ## Steps
@@ -15,7 +15,7 @@ Since: 2026-10-12
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-12 | Own tie-out passes; four independent tie-outs and one adversarial review, findings applied |
 | 2a | Draft with brackets resolved | 2026-10-12 | Claude drafted at Eric's instruction; Eric rewrote; edits accepted by number |
-| 2b | Eric's edit, Claude's look-over | | |
+| 2b | Eric's edit, Claude's look-over | 2026-10-12 | Five look-over edits accepted; every number traced in DATASETS.md; final independent tie-out matched |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
@@ -55,3 +55,4 @@ None.
 - 2026-10-12 Eric confirmed Step 1 ("step 1 complete") and opened 2a. Working slug spr-sale-vs-loan, chosen by Claude, for Eric to change. At Eric's instruction ("you go ahead and draft this. i will edit. 7/8 grade reading level") Claude wrote the whole draft, an exception to the rule that Claude never drafts from nothing. Draft in posts/spr-sale-vs-loan/POST.md, eight sections as agreed.
 - 2026-10-12 Eric confirmed 2a. His rewrite plus accepted edits: 13 tightening and accuracy edits; the section on whether the government steered oil to refiners dropped, with the bid evidence moved into the sale-vs-loan section and the bids table no longer embedded; bank guarantee added to the mortgage comparison; the rescission told as one $12.45 billion figure with the department's "trade" for 140 million barrels in one sentence; his `[how do i wrap this up?]` bracket resolved by his own closing. Post is about 1,790 words. Step 2b opened. The post 1 sentence fix (46e1d97) is still unpushed at Eric's instruction.
 - 2026-10-12 Step 2b: Eric asked whether every number in the post is independently tied out and sourced in a file on GitHub. Not quite: the redone bid price gaps ($5.12, 26 cents), the count of trading houses that bid, "five of the six" and the site-pause count had no independent check, and several numbers were not written out in DATASETS.md. Fixed: a fresh agent rebuilt the bid comparison from the raw PDFs and matched every figure; DATASETS.md now has a table tracing each number in the post to its source, script and tie-out. The sale-money figures were read again from a new download of Public Law 117-328, DOE's 2022 report and the Budget Appendix; all match. One wording point open with Eric: two modifications cite the site pause; the third record is a close-out describing a modification missing from DOE's file.
+- 2026-10-12 Eric confirmed 2b and accepted the site-pause wording. He picks up on October 13. 2c not started. To settle then: the post opens "Yesterday I showed you" and is dated October 12, so the date and that word need changing if it runs on a later day; title and slug are still Claude's working choices.

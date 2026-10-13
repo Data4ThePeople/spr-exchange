@@ -77,7 +77,7 @@ In late 2021 and early 2022, before the big sales, the Energy Department made 13
 - **Trafigura borrowed 3 million barrels in January 2022, due back between June and September 2024.** A change signed on April 16, 2024 moved that to July through October 2026.
 - **The extra oil owed did not grow with the wait.** Several of the changes say so directly: "There is no adjustment to the premium as a result of this extension." Others do not mention it. Go back to our mortgage example. Imagine the bank agreed to let you pay two years late and wrote that no extra interest was due.
 
-To be fair, the companies did not miss deadlines. The government agreed to every change, and three say the reason was a pause at the government's own storage site. The records also do not show whether the oil came back on the new dates.
+To be fair, the companies did not miss deadlines. The government agreed to every change, and the records tie three of them to a pause at the government's own storage site. The records also do not show whether the oil came back on the new dates.
 
 But look at what this means for the reserve. Oil lent in 2022 and promised for 2024 was rescheduled for 2026, in the middle of the next emergency.
 
