@@ -131,4 +131,30 @@ The bad news is we may not like what we find.
 - **Whether the lent oil came back on the new dates.** The contract changes show what was scheduled. Most have no final settlement on file, and many of the amounts are blacked out.
 - **Exactly how much oil was delivered or paid for.** Our sale and purchase figures are awards. The $16.99 billion received is the department's own count.
 
+## Common questions
+
+### Who bought the oil sold from the Strategic Petroleum Reserve in 2022?
+
+Sixteen companies bought 180.66 million barrels in seven emergency sales. Refiners took 77.4% of the oil, and trading houses took 5.5%. The largest buyer was Valero, with 25.7%.
+
+### What happened to the money from the 2022 SPR sales?
+
+The Energy Department reports that the reserve's account received $16.99 billion. In the spending law passed in December 2022, Congress cancelled $12.45 billion of it, or 73.2%. The department says just over $10 billion of that was in exchange for cancelling 140 million barrels of oil sales Congress had ordered for later years. About $4.55 billion was left, and nearly all of it was used to buy oil.
+
+### Was the SPR refilled after the 2022 sales?
+
+Partly. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel. That is about a third of the 180.66 million barrels sold.
+
+### What is the difference between an SPR sale and an SPR exchange?
+
+In a sale, a company pays cash for the oil and the oil does not come back. In an exchange, which is a loan, the company pays no cash. It returns the same amount of oil later, plus extra barrels. The 2022 release was a sale. The 2026 release is an exchange.
+
+### Have SPR oil loans been returned on time?
+
+The government made 13 smaller oil loans in late 2021 and early 2022. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. The government agreed to every change. The records do not show whether the oil came back on the new dates.
+
+### Why did trading companies get more SPR oil in 2026 than in 2022?
+
+There are two likely reasons, and the data cannot separate them. A sale rewards a company that needs the oil now, and a loan rewards a company that can trade the gap between today's price and a later price. Also, oil has sold for much more overseas in 2026, which pulls barrels toward export.
+
 The data, code and method notes are public at [github.com/Data4ThePeople/spr-exchange](https://github.com/Data4ThePeople/spr-exchange).
