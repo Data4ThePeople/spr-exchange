@@ -42,7 +42,7 @@ That small-sounding choice helps explain who ended up with the barrels. In 2022,
 
 Why? In my view, structuring the release as a sale rewards the company that needs the oil now. Structuring it as a loan rewards the company that can trade the gap between today's price and a later price. There is a second explanation, and the data cannot rule it out: in 2026, oil has sold for much more overseas than it has in the United States.
 
-Then there is the risk of lending oil: getting it back on time. We pulled the government's own records from the last time it lent oil. Return dates moved back on 10 of the 13 loans. On seven loans, all or part of the oil was pushed back by two years or more. The government agreed to every change. And it still chose to lend again.
+Then there is the risk of lending oil: getting it back on time. We pulled the government's own records from the last time it lent oil. Return dates moved back on 10 of the 13 loans. On seven loans, all or part of the oil was pushed back by two years or more. The government agreed to every change. And it still chose to lend again in 2026.
 
 The 2022 sales had their own problem. The reserve's account received $16.99 billion. One would think we would spend that on buying back oil. Not so fast. Congress took most of this money back, $12.45 billion of it, and the law does not say what it was used for instead. We sold 180.66 million barrels. We bought back about a third of that.
 
