@@ -121,6 +121,16 @@
       }
     },
     {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
       "slice_type": "paragarph_text",
       "slice_label": null,
       "variation": "default",
@@ -225,6 +235,16 @@
           }
         ],
         "embed_height": "1700px"
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
       }
     },
     {
@@ -357,20 +377,31 @@
         "paragraph_text": [
           {
             "type": "heading2",
-            "text": "What a loan turns into",
+            "text": "The risk of lending oil: getting it back on time",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "One risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.",
+            "text": "We now have the government's own records on this, from the last time it lent oil.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
             "text": "In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We pulled them all. Here is what they show.",
-            "spans": [],
+            "spans": [
+              {
+                "start": 209,
+                "end": 227,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/spr-exchange/blob/main/DATASETS.md#2021-22-loan-agreements-us-department-of-energy-foia-reading-room",
+                  "target": "_blank"
+                }
+              }
+            ],
             "direction": "ltr"
           },
           {
@@ -510,6 +541,16 @@
       }
     },
     {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
       "slice_type": "paragarph_text",
       "slice_label": null,
       "variation": "default",
@@ -588,7 +629,7 @@
         "paragraph_text": [
           {
             "type": "heading2",
-            "text": "My view",
+            "text": "Unearthing the devilish details",
             "spans": [],
             "direction": "ltr"
           },
@@ -718,6 +759,231 @@
               }
             ],
             "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Common questions",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Who bought the oil sold from the Strategic Petroleum Reserve in 2022?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Sixteen companies bought 180.66 million barrels in seven emergency sales. Refiners took 77.4% of the oil, and trading houses took 5.5%. The largest buyer was Valero, with 25.7%.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What happened to the money from the 2022 SPR sales?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Energy Department reports that the reserve's account received $16.99 billion. In the spending law passed in December 2022, Congress cancelled $12.45 billion of it, or 73.2%. The department says just over $10 billion of that was in exchange for cancelling 140 million barrels of oil sales Congress had ordered for later years. About $4.55 billion was left, and nearly all of it was used to buy oil.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Was the SPR refilled after the 2022 sales?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Partly. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel. That is about a third of the 180.66 million barrels sold.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What is the difference between an SPR sale and an SPR exchange?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In a sale, a company pays cash for the oil and the oil does not come back. In an exchange, which is a loan, the company pays no cash. It returns the same amount of oil later, plus extra barrels. The 2022 release was a sale. The 2026 release is an exchange.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Have SPR oil loans been returned on time?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The government made 13 smaller oil loans in late 2021 and early 2022. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. The government agreed to every change. The records do not show whether the oil came back on the new dates.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Why did trading companies get more SPR oil in 2026 than in 2022?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "There are two likely reasons, and the data cannot separate them. A sale rewards a company that needs the oil now, and a loan rewards a company that can trade the gap between today's price and a later price. Also, oil has sold for much more overseas in 2026, which pulls barrels toward export.",
+            "spans": [],
+            "direction": "ltr"
           },
           {
             "type": "paragraph",
@@ -740,5 +1006,23 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details\",\n  \"description\": \"In 2022 the U.S. sold 180.66 million barrels of emergency oil. In 2026 it is lending. Who got the oil each time, and what happened to the $16.99 billion.\",\n  \"datePublished\": \"2026-10-13T06:30:00-04:00\",\n  \"dateModified\": \"2026-10-13T06:30:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"keywords\": [\n    \"2022 SPR sale\",\n    \"what happened to the SPR sale money\",\n    \"who bought SPR oil in 2022\",\n    \"SPR sale vs exchange\",\n    \"was the SPR refilled after 2022\",\n    \"SPR exchange return delays\",\n    \"Strategic Petroleum Reserve rescission\",\n    \"SPR drawdown 2026\"\n  ],\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n  }\n}"
+  "featured_image": {
+    "id": "b8jLcWyB5sURovIm",
+    "alt": "An AI-generated illustration of a dark wooden desk under a lamp. On the left stands a dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE. Beside it lie two thick stacks of paper, each headed CONTRACT and held with a binder clip. The left one is stamped SOLD in red. The right one is stamped LENT in blue. A brass magnifying glass rests across the gap between the two contracts, over the fine print.",
+    "copyright": null,
+    "dimensions": {
+      "width": 1680,
+      "height": 1080
+    }
+  },
+  "meta_image": {
+    "id": "b8jLcWyB5sURovIm",
+    "alt": "An AI-generated illustration of a dark wooden desk under a lamp. On the left stands a dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE. Beside it lie two thick stacks of paper, each headed CONTRACT and held with a binder clip. The left one is stamped SOLD in red. The right one is stamped LENT in blue. A brass magnifying glass rests across the gap between the two contracts, over the fine print.",
+    "copyright": null,
+    "dimensions": {
+      "width": 1680,
+      "height": 1080
+    }
+  },
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details\",\n      \"description\": \"In 2022 the U.S. sold 180.66 million barrels of emergency oil. In 2026 it is lending. Who got the oil each time, and what happened to the $16.99 billion.\",\n      \"image\": \"https://images.prismic.io/data4thepeople/b8jLcWyB5sURovIm_spr-sale-vs-loan-hero-1680x1080.png?auto=format,compress\",\n      \"datePublished\": \"2026-10-13T06:30:00-04:00\",\n      \"dateModified\": \"2026-10-13T06:30:00-04:00\",\n      \"articleSection\": \"Data 4 Thought\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"inLanguage\": \"en-US\",\n      \"isAccessibleForFree\": true,\n      \"keywords\": [\n        \"2022 SPR sale\",\n        \"what happened to the SPR sale money\",\n        \"who bought SPR oil in 2022\",\n        \"SPR sale vs exchange\",\n        \"was the SPR refilled after 2022\",\n        \"SPR exchange return delays\",\n        \"Strategic Petroleum Reserve rescission\",\n        \"SPR drawdown 2026\"\n      ],\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n      },\n      \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan#article\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who bought the oil sold from the Strategic Petroleum Reserve in 2022?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Sixteen companies bought 180.66 million barrels in seven emergency sales. Refiners took 77.4% of the oil, and trading houses took 5.5%. The largest buyer was Valero, with 25.7%.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What happened to the money from the 2022 SPR sales?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The Energy Department reports that the reserve's account received $16.99 billion. In the spending law passed in December 2022, Congress cancelled $12.45 billion of it, or 73.2%. The department says just over $10 billion of that was in exchange for cancelling 140 million barrels of oil sales Congress had ordered for later years. About $4.55 billion was left, and nearly all of it was used to buy oil.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Was the SPR refilled after the 2022 sales?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Partly. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel. That is about a third of the 180.66 million barrels sold.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between an SPR sale and an SPR exchange?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"In a sale, a company pays cash for the oil and the oil does not come back. In an exchange, which is a loan, the company pays no cash. It returns the same amount of oil later, plus extra barrels. The 2022 release was a sale. The 2026 release is an exchange.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Have SPR oil loans been returned on time?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The government made 13 smaller oil loans in late 2021 and early 2022. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. The government agreed to every change. The records do not show whether the oil came back on the new dates.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why did trading companies get more SPR oil in 2026 than in 2022?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"There are two likely reasons, and the data cannot separate them. A sale rewards a company that needs the oil now, and a loan rewards a company that can trade the gap between today's price and a later price. Also, oil has sold for much more overseas in 2026, which pulls barrels toward export.\"\n          }\n        }\n      ]\n    }\n  ]\n}"
 }
