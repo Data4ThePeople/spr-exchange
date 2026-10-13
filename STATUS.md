@@ -65,3 +65,4 @@ None.
 - 2026-10-13 Eric accepted the Common questions section and confirmed 2e. Step 2f opened.
 - 2026-10-13 Step 2f: dry run clean (75 blocks, 39 slices, 3 embeds, divider once), then pushed. Prismic draft as4CvREAACgAuyJp, uid spr-sale-vs-loan, in the Migration Release; hero uploaded; tags and author empty. No read token, so the push could not be verified from this side.
 - 2026-10-13 After the push, Eric renamed one heading: "What a loan turns into" is now "The risk of lending oil: getting it back on time", and the sentence under it that repeated it was dropped. Pushed to Prismic again; same draft updated.
+- 2026-10-13 At Eric's request, "We pulled them all" now links to the 2021-22 loan agreements section of DATASETS.md on GitHub. Prismic draft updated again.

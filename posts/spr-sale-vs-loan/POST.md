@@ -73,7 +73,7 @@ So both things are likely at work: the design of the deal, and the pull of highe
 
 We now have the government's own records on this, from the last time it lent oil.
 
-In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We pulled them all. Here is what they show.
+In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. [We pulled them all](https://github.com/Data4ThePeople/spr-exchange/blob/main/DATASETS.md#2021-22-loan-agreements-us-department-of-energy-foia-reading-room). Here is what they show.
 
 - **Return dates moved back on 10 of the 13 loans.** The department signed each change.
 - **On seven loans, all or part of the oil was pushed back by two years or more.**
