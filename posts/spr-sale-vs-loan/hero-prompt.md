@@ -69,6 +69,46 @@ from between the lines. 35mm documentary style, natural color, sharp focus on
 the barrel and the glass, high detail. No other readable text, no watermark,
 no people.
 
+## Prompt 4 (October 13, after Eric's first try with Prompt 1)
+
+Eric liked the desk scene but the devil's tail came back as a red arrow drawn
+on the page. Two changes: the devil becomes a tiny, plainly recognizable
+cartoon devil, and the magnifying glass lies across both contracts, so it
+does not single out the loan.
+
+To edit the existing image:
+
+Keep this image exactly as it is, with three changes. First, remove the red
+arrow on the right contract completely. Second, move the brass magnifying
+glass so it lies across the gap between the two contracts, covering the inner
+edge of each one. Third, inside the lens of the magnifying glass, among the
+enlarged fine print, add one tiny bright red cartoon devil, about the size of
+a thumbnail, with two small horns, a pointed tail and a little pitchfork,
+peeking out from behind a line of text as if it had been hiding in the fine
+print. Simple friendly cartoon style, like a doodle, clearly a devil at a
+glance. It appears only inside the lens. Also remove the period after the
+word RESERVE on the barrel. Change nothing else.
+
+As a full prompt, if starting over:
+
+Photorealistic wide shot of a plain office desk under a desk lamp, dark wood,
+seen from slightly above. On the left stands one small navy blue steel oil
+barrel, dented, with white stenciled capital letters on three lines and no
+punctuation: STRATEGIC / PETROLEUM / RESERVE. In front of it lie two thick
+paper contracts side by side, each held with a binder clip, each headed
+CONTRACT, the body text tiny gray fine print too small to read. The left
+contract has a large red rubber stamp across it reading only SOLD. The right
+contract has a large blue rubber stamp across it reading only LENT. A brass
+magnifying glass lies across the gap between the two contracts, its lens
+covering the inner edge of each. Inside the lens, among the enlarged and
+still unreadable fine print, one tiny bright red cartoon devil, the size of a
+thumbnail, with two small horns, a pointed tail and a little pitchfork, peeks
+out from behind a line of text. Simple doodle style, clearly a devil at a
+glance, and it appears only inside the lens. Warm lamp light, shallow depth
+of field, sharp focus on the magnifying glass and the barrel. 35mm
+documentary style, high detail. No arrows, no other readable text, no
+watermark, no people.
+
 ## Notes for generating
 
 - The most common failure is misspelled lettering. Check the three words on
@@ -85,3 +125,8 @@ no people.
 - Prompt 1 is the closest to the concept and carries the barrel over from the
   first post. Prompt 2 reads best at thumbnail size because the magnifying
   glass is large in the frame.
+
+## Chosen
+
+File: images/spr-sale-vs-loan-hero-source.jpg (Gemini, from Prompt 1 as edited by Eric; cropped center to images/spr-sale-vs-loan-hero-1680x1080.png). Eric removed the devil: "it wasnt working." The final image has the barrel, the two contracts stamped SOLD and LENT, and the magnifying glass across the gap between them.
+Alt (under 500 characters): An AI-generated illustration of a dark wooden desk under a lamp. On the left stands a dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE. Beside it lie two thick stacks of paper, each headed CONTRACT and held with a binder clip. The left one is stamped SOLD in red. The right one is stamped LENT in blue. A brass magnifying glass rests across the gap between the two contracts, over the fine print.

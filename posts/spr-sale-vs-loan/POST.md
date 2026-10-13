@@ -6,7 +6,7 @@ date: 2026-10-13
 time: 06:30:00-04:00
 section: Data 4 Thought
 hero: images/spr-sale-vs-loan-hero-1680x1080.png
-hero_alt:
+hero_alt: An AI-generated illustration of a dark wooden desk under a lamp. On the left stands a dented navy blue oil barrel stenciled STRATEGIC PETROLEUM RESERVE. Beside it lie two thick stacks of paper, each headed CONTRACT and held with a binder clip. The left one is stamped SOLD in red. The right one is stamped LENT in blue. A brass magnifying glass rests across the gap between the two contracts, over the fine print.
 meta_title:
 description:
 keywords:
