@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-sale-vs-loan
-Step: 2b
+Step: 2c
 Since: 2026-10-13
 
 ## Steps
@@ -15,7 +15,7 @@ Since: 2026-10-13
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-12 | Own tie-out passes; four independent tie-outs and one adversarial review, findings applied |
 | 2a | Draft with brackets resolved | 2026-10-12 | Claude drafted at Eric's instruction; Eric rewrote; edits accepted by number |
-| 2b | Eric's edit, Claude's look-over | 2026-10-12 | Five look-over edits accepted; every number traced in DATASETS.md; final independent tie-out matched |
+| 2b | Eric's edit, Claude's look-over | 2026-10-13 | Five look-over edits accepted; every number traced in DATASETS.md; final independent tie-out matched |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
@@ -58,3 +58,4 @@ None.
 - 2026-10-12 Eric confirmed 2b and accepted the site-pause wording. He picks up on October 13. 2c not started. To settle then: the post opens "Yesterday I showed you" and is dated October 12, so the date and that word need changing if it runs on a later day; title and slug are still Claude's working choices.
 - 2026-10-13 Eric set the theme: "the devil is in the details". Title changed to "Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details". He will work the theme through the post himself, so 2b is reopened; 2c had not started and nothing is stale.
 - 2026-10-13 Step 2b, second pass: Eric reworked the post around "the devil is in the details". Nine edits accepted (three in the intro, six in the rest), his hyperlink bracket resolved, every "yesterday" replaced. Publish date set by Eric: October 13, 2026, 6:30 a.m. EDT. The 283 million barrel figure added to the trace table in DATASETS.md.
+- 2026-10-13 Eric confirmed 2b (second pass). Step 2c opened.

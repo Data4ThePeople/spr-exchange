@@ -1,8 +1,8 @@
 {
-  "page_title": "In 2022 We Sold Our Emergency Oil. In 2026 We Lent It. Different Companies Won.",
+  "page_title": "Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details",
   "page_subtitle": "Refiners took most of the oil when the government sold it. Trading firms took the largest share when the government lent it. The rules of each deal help explain why.",
-  "published_date": "2026-10-12",
-  "updated_date": "2026-10-12",
+  "published_date": "2026-10-13",
+  "updated_date": "2026-10-13",
   "make_this_main_post": false,
   "slices": [
     {
@@ -15,11 +15,11 @@
         "drop_cap_text": [
           {
             "type": "paragraph",
-            "text": "Yesterday I showed you how the government is lending out our emergency oil in 2026, and I promised to compare it with the last big release, in 2022. I expected to compare two loans. That is not what I found.",
+            "text": "In my last research post, I showed you how the government is lending out our emergency oil in 2026, and promised to compare it with the last big release, in 2022. I thought that would be straightforward. Boy was I wrong.",
             "spans": [
               {
-                "start": 23,
-                "end": 82,
+                "start": 39,
+                "end": 98,
                 "type": "hyperlink",
                 "data": {
                   "link_type": "Web",
@@ -43,7 +43,13 @@
         "paragraph_text": [
           {
             "type": "paragraph",
-            "text": "In 2022 the government did not lend most of that oil. It sold it. That one difference changes who ended up with the barrels, and it changes what the country was left holding afterward.",
+            "text": "You see, this comparison meant studying details that look harmless. But when it comes to the Strategic Petroleum Reserve, or SPR, the devil is lurking throughout the details.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The detail that mattered most was this - does the government sell its emergency oil, or lend it? In 2022 it sold. In 2026 it is lending. That small-sounding choice helps explain who ended up with the barrels, and it changes what the country was left holding afterward.",
             "spans": [],
             "direction": "ltr"
           }
@@ -76,7 +82,7 @@
           },
           {
             "type": "paragraph",
-            "text": "In 2022 the Energy Department held seven emergency sales and sold 180.66 million barrels to 16 companies. In 2026 it has lent 133.56 million barrels to 13 companies so far. The chart below shows what kinds of companies got the oil each time.",
+            "text": "In 2022, as a response to Russia's invasion of Ukraine and the resulting oil market chaos, the Energy Department held seven emergency sales and sold 180.66 million barrels to 16 companies. In 2026 it has lent 133.56 million barrels to 13 companies so far. The chart below shows what kinds of companies got the oil each time.",
             "spans": [],
             "direction": "ltr"
           }
@@ -121,14 +127,25 @@
         "paragraph_text": [
           {
             "type": "paragraph",
-            "text": "In 2022, refiners took 77.4% of the oil. Refiners are the companies that turn crude oil into gasoline and diesel. Trading houses, which buy and sell oil but do not refine it, took 5.5%.",
+            "text": "In 2022, refiners took 77.4% of the oil. Refiners are the companies that turn crude oil into gasoline and diesel. Trading houses, which buy and sell oil but do not refine it, took just 5.5%.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "In 2026 the picture is very different. Trading houses have taken 45.0%, and refiners 38.3%.",
-            "spans": [],
+            "text": "If you read our last post, you already know the picture in 2026 is very different. Trading houses have taken 45.0%, and refiners 38.3%.",
+            "spans": [
+              {
+                "start": 12,
+                "end": 25,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/spr-exchange/",
+                  "target": "_blank"
+                }
+              }
+            ],
             "direction": "ltr"
           },
           {
@@ -139,7 +156,7 @@
           },
           {
             "type": "paragraph",
-            "text": "One caution. The company types are our labels, based on the name the government listed. A refiner can also trade oil, and a trading house can sell to a refinery here. The labels tell you who signed the deal. They do not tell you where any barrel ended up.",
+            "text": "One caution: the company types are our labels. They tell you who signed the deal, not where any barrel ended up.",
             "spans": [],
             "direction": "ltr"
           }
@@ -166,109 +183,13 @@
         "paragraph_text": [
           {
             "type": "heading2",
-            "text": "Did the government steer the oil to refiners in 2022?",
+            "text": "Structuring the release as a sale vs. a loan had big implications",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "That was my first guess, and the records say no. Each sale notice says \"the sale will be by price competition.\" Any qualified company could bid, and the highest prices won. I found nothing in the rules that favored refiners.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "We can check this because, in 2022, the government published every offer from winners and losers. There were 583 offers from 20 companies. The table below groups them by type of company.",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ]
-      }
-    },
-    {
-      "slice_type": "spacer",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "spacer_value": "20px"
-      }
-    },
-    {
-      "slice_type": "html_embed",
-      "slice_label": null,
-      "variation": "fullWidth",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "html_content": [
-          {
-            "type": "preformatted",
-            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/spr-exchange/dist/compare.html?part=bids\" width=\"100%\" height=\"1010\" loading=\"lazy\" style=\"border:0\" title=\"Who bid in the 2022 oil sales, and who won\"></iframe>",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ],
-        "embed_height": "1010px"
-      }
-    },
-    {
-      "slice_type": "paragarph_text",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "paragraph_text": [
-          {
-            "type": "paragraph",
-            "text": "Trading houses did show up. Five of them bid. But they bid low. On average their prices were $5.12 a barrel below the lowest winning price for the same oil at the same delivery point. Refiners' prices were 26 cents below it on average, and refiners won far more often.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "The five trading houses did not all bid alike. One bid far below the winners, and another came within a dollar.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "Trafigura did not file an offer in any of the seven sales. There is nothing wrong with that. A company bids when a deal makes sense for it. The question is why this year's deal made sense when 2022's did not.",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ]
-      }
-    },
-    {
-      "slice_type": "spacer",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "spacer_value": "20px"
-      }
-    },
-    {
-      "slice_type": "paragarph_text",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "paragraph_text": [
-          {
-            "type": "heading2",
-            "text": "The two deals ask for different things",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "Here is the part I think matters most. The chart below puts the two deals side by side.",
+            "text": "So why did different companies win? Here is the part I think matters most. The chart below puts the two deals side by side.",
             "spans": [],
             "direction": "ltr"
           }
@@ -313,7 +234,7 @@
         "paragraph_text": [
           {
             "type": "paragraph",
-            "text": "In a 2022 sale, the winner paid the market price around the day it picked up the oil, plus or minus the small gap it had bid. The sale notice puts it this way: \"The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor.\"",
+            "text": "In a 2022 sale, the winner paid the market price around the day it picked up the oil, plus or minus the small gap it had bid. The sale notice says, in part: \"The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor.\"",
             "spans": [],
             "direction": "ltr"
           },
@@ -325,32 +246,44 @@
           },
           {
             "type": "paragraph",
-            "text": "So what made a barrel worth more to one company than another? Being able to use it. A refinery with a pipeline to the reserve could put that oil to work right away.",
+            "text": "So what made a barrel worth more to one company than another? My take - being able to use it. A refinery with a pipeline to the reserve could put that oil to work right away.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "A 2026 loan works differently. The borrower owes no dollars. It owes the same amount of oil later, plus extra barrels. As we saw yesterday, when oil for later delivery costs much less than oil today, a borrower can sell the oil now and arrange to buy back what it owes for less. Any company with a trading desk can try that. It does not need a refinery.",
+            "text": "The 2022 bids fit that. Any qualified company could bid, and the highest prices won. Five trading houses did bid, but their prices averaged $5.12 a barrel below the lowest winning price for the same oil. Refiners' prices averaged 26 cents below.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "In my view, that is the key difference. A sale rewards the company that needs the oil. A loan rewards the company that can trade the gap between today's price and a later price.",
+            "text": "A 2026 loan works differently. The borrower owes no dollars. It owes the same amount of oil later, plus extra barrels. Remember the days when you could get a zero down mortgage? It's like that. The borrower pays the government nothing up front. It only needs a bank to guarantee the value of the oil. And it makes no interest payments until the loan comes due (or even later... we'll come back to that).",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "Yesterday's post showed the same thing from another angle. In June, when that price gap nearly closed, companies took only 500,000 of the 40 million barrels offered.",
+            "text": "As we saw in the last post, when oil for later delivery costs much less than oil today, a borrower can sell the oil now and arrange to buy back what it owes for less. Any company with a trading desk can try that. It does not need a refinery.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "I want to be careful here. This is my reading of the rules. The bids from 2022 fit it. They do not prove it.",
+            "text": "In my view, that is the key difference:",
             "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Structuring the release as a sale rewards the company that needs the oil now. Structuring it as a loan rewards the company that can trade the gap between today's price and a later price.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 186,
+                "type": "strong"
+              }
+            ],
             "direction": "ltr"
           }
         ]
@@ -394,18 +327,6 @@
           },
           {
             "type": "paragraph",
-            "text": "It was not that refiners sat idle. Gulf Coast refineries ran at 96.8% of capacity during the 2026 loans, compared with 95.0% during the 2022 sales. They also lost a supply line. From March through June, crude oil imports from the Persian Gulf were about half what they were in the same months of 2022.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "And refiners were not pushed out of the 2026 loans. In the first round, companies took 45.22 million of the 86 million barrels offered. The rest went unclaimed. Valero and Motiva, two of the three largest buyers in 2022, do not appear in the 2026 awards at all. We cannot tell whether they bid, because in 2026 the government has not published the offers.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
             "text": "So both things are likely at work: the design of the deal, and the pull of higher prices abroad. I cannot tell you how much of the change belongs to each.",
             "spans": [],
             "direction": "ltr"
@@ -439,23 +360,23 @@
           },
           {
             "type": "paragraph",
-            "text": "Yesterday I said one risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.",
+            "text": "One risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We read all of them. Here is what they show.",
+            "text": "In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We pulled them all. Here is what they show.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "list-item",
-            "text": "Return dates moved on 10 of the 13 loans. The department signed each change.",
+            "text": "Return dates moved back on 10 of the 13 loans. The department signed each change.",
             "spans": [
               {
                 "start": 0,
-                "end": 41,
+                "end": 46,
                 "type": "strong"
               }
             ],
@@ -487,23 +408,11 @@
           },
           {
             "type": "list-item",
-            "text": "One change was signed on February 24, 2026. It moved the return of the oil still owed on a 2.7-million-barrel loan to October and November 2026.",
+            "text": "Several of the later dates came at no extra cost. Several of the changes say so directly: \"There is no adjustment to the premium as a result of this extension.\" Others do not mention it. Go back to our mortgage example. Imagine the bank agreed to let you pay two years late and wrote that no extra interest was due.",
             "spans": [
               {
                 "start": 0,
-                "end": 43,
-                "type": "strong"
-              }
-            ],
-            "direction": "ltr"
-          },
-          {
-            "type": "list-item",
-            "text": "The extra oil owed did not grow with the wait. Several of the changes say so directly: \"There is no adjustment to the premium as a result of this extension.\" Others do not mention it.",
-            "spans": [
-              {
-                "start": 0,
-                "end": 46,
+                "end": 49,
                 "type": "strong"
               }
             ],
@@ -511,14 +420,26 @@
           },
           {
             "type": "paragraph",
-            "text": "It is important to be fair about this. The companies did not miss deadlines. The government agreed to every one of these changes, and three of them say the reason was a pause at the government's own storage site. The records also do not show whether the oil came back on the new dates. Only five of the loans have a final settlement on file.",
+            "text": "To be fair, the companies did not miss deadlines. The government agreed to every change, and the records tie three of them to a pause at the government's own storage site. The records also do not show whether the oil came back on the new dates.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "But look at what this means for the reserve. Oil that was lent in 2022 and promised for 2024 was scheduled to come back in 2026, in the middle of the next emergency. A loan is a promise of oil, and the date on that promise has moved for most of the loans the government made last time.",
+            "text": "But look at what this means for the reserve. Oil lent in 2022 and promised for 2024 was rescheduled for 2026, in the middle of the next emergency.",
             "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "And the government knew about these delays going into 2026. It still chose to lend again. Five of the six companies whose return dates were pushed back on those earlier loans are borrowing again this year.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 59,
+                "type": "strong"
+              }
+            ],
             "direction": "ltr"
           }
         ]
@@ -544,19 +465,13 @@
         "paragraph_text": [
           {
             "type": "heading2",
-            "text": "What a sale turns into",
+            "text": "What happened to the sale proceeds in 2022?",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "A sale has the opposite problem. The oil is gone for good, but the government gets money. In theory, it can use that money to buy oil back later.",
-            "spans": [],
-            "direction": "ltr"
-          },
-          {
-            "type": "paragraph",
-            "text": "So I followed the money. The chart below shows what happened to it.",
+            "text": "The 2022 sales had their own problem. Yes, we got money for the oil, and more of the oil went to refiners. But follow the money. The chart below shows where it went.",
             "spans": [],
             "direction": "ltr"
           }
@@ -607,25 +522,43 @@
           },
           {
             "type": "paragraph",
-            "text": "Then, in the spending law passed in December 2022, Congress rescinded $12.45 billion of it. To rescind money is to cancel the authority to spend it. That was 73.2% of what the sales brought in.",
+            "text": "One would think if just under $17 billion went into some bank account to buy back oil, we would spend that $17 billion on buying back oil.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "It happened in two parts of the same law. The larger part, $10.395 billion, sits in the same section that cancelled oil sales Congress had ordered for later years. The department counts those cancelled sales at 140 million barrels, so the reserve did keep oil it had been due to lose. The smaller part, $2.052 billion, is in the yearly energy spending bill. The records do not say what the rescinded money was used for after that.",
+            "text": "Not so fast.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "That left about $4.55 billion. Nearly all of it went to buying oil. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel.",
+            "text": "What really happened was Congress took most of this money back. In the spending law passed in December 2022, it cancelled $12.45 billion of the money in the reserve's account. That was 73.2% of what the sales brought in. The department could no longer spend that money on oil, and the law does not say what it was used for instead.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that.",
+            "text": "If that wasn't confusing enough, it gets better. The department said that just over $10 billion of this was a trade: in the same law, Congress cancelled 140 million barrels of oil sales it had ordered for later years, and in return, took $10 billion and change back.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "If this doesn't make any sense, welcome to the club.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Anyway, this entire convoluted back-and-forth left about $4.55 billion, nearly all of which was used to buy oil. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that. That gap is part of why our emergency reserve holds just 283 million barrels today. And we still do not know what became of the more than $12 billion Congress took back.",
             "spans": [],
             "direction": "ltr"
           }
@@ -658,31 +591,31 @@
           },
           {
             "type": "paragraph",
-            "text": "I went into this thinking a sale and a loan were two ways of doing the same thing. They are not.",
+            "text": "We covered a lot of ground today. We started with a choice that sounds small, sell or lend, and saw very different companies end up with the oil. And somehow we ended with Congress taking back 73% of the 2022 sale money.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "A sale puts the oil in the hands of whoever needs it most that day, and it leaves the country with money. But money can be redirected, and most of it was. A loan promises that the oil comes back, with more on top. But the companies that find that deal most attractive are the ones best at trading a price gap, and the return dates can move.",
+            "text": "What ties these two findings together? They are details buried in government files, and they help explain why our emergency oil reserve is where it is today.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "In my view, neither design did the one thing I assumed the reserve was built to do, which is to make sure the oil is there the next time we need it.",
+            "text": "Besides now having a headache, I walk away from today's post with a greater appreciation for how important it is to pay attention to the minute details when it comes to how our government is being run.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "There is one more difference, and it may be the simplest to fix. In 2022 the government published every bid, from winners and losers alike. That is how we know who showed up and who lost. In 2026 it publishes a single page for each round, with company names and barrel counts. We cannot see who bid, what they offered, or which return dates they chose.",
+            "text": "The great news is that we now have the technology to help anyone dig into these details.",
             "spans": [],
             "direction": "ltr"
           },
           {
             "type": "paragraph",
-            "text": "Yesterday I renamed it the Speculative Petroleum Reserve. After reading the last round's contracts and following the last round's money, I am keeping the name.",
+            "text": "The bad news is we may not like what we find.",
             "spans": [],
             "direction": "ltr"
           }
@@ -804,5 +737,5 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"In 2022 We Sold Our Emergency Oil. In 2026 We Lent It. Different Companies Won.\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-10-12T07:00:00-04:00\",\n  \"dateModified\": \"2026-10-12T07:00:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n  }\n}"
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-10-13T06:30:00-04:00\",\n  \"dateModified\": \"2026-10-13T06:30:00-04:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-sale-vs-loan\"\n  }\n}"
 }
