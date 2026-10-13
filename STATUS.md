@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-sale-vs-loan
-Step: 2a
+Step: 2b
 Since: 2026-10-12
 
 ## Steps
@@ -14,7 +14,7 @@ Since: 2026-10-12
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-12 | Own tie-out passes; four independent tie-outs and one adversarial review, findings applied |
-| 2a | Draft with brackets resolved | | |
+| 2a | Draft with brackets resolved | 2026-10-12 | Claude drafted at Eric's instruction; Eric rewrote; edits accepted by number |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
@@ -53,3 +53,4 @@ None.
 - 2026-10-12 Eric dropped the proposed section on borrowing following the profit round by round ("we covered that yday"). Structure is now eight sections; the round data stays in the repo.
 - 2026-10-12 Chart for the sale-money section built: dist/proceeds.html. The comparison page can now be embedded one part at a time (?part=who, terms or bids). Restored the top-company lists, which I had removed by mistake with the loan section. Embed heights at 1,200px wide: who 1,518; terms 1,666; bids 984; proceeds 1,064.
 - 2026-10-12 Eric confirmed Step 1 ("step 1 complete") and opened 2a. Working slug spr-sale-vs-loan, chosen by Claude, for Eric to change. At Eric's instruction ("you go ahead and draft this. i will edit. 7/8 grade reading level") Claude wrote the whole draft, an exception to the rule that Claude never drafts from nothing. Draft in posts/spr-sale-vs-loan/POST.md, eight sections as agreed.
+- 2026-10-12 Eric confirmed 2a. His rewrite plus accepted edits: 13 tightening and accuracy edits; the section on whether the government steered oil to refiners dropped, with the bid evidence moved into the sale-vs-loan section and the bids table no longer embedded; bank guarantee added to the mortgage comparison; the rescission told as one $12.45 billion figure with the department's "trade" for 140 million barrels in one sentence; his `[how do i wrap this up?]` bracket resolved by his own closing. Post is about 1,790 words. Step 2b opened. The post 1 sentence fix (46e1d97) is still unpushed at Eric's instruction.
