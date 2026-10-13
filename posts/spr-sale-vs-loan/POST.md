@@ -69,9 +69,9 @@ In 2026, oil has sold for much more overseas than it has in the United States. T
 
 So both things are likely at work: the design of the deal, and the pull of higher prices abroad. I cannot tell you how much of the change belongs to each.
 
-## What a loan turns into
+## The risk of lending oil: getting it back on time
 
-One risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.
+We now have the government's own records on this, from the last time it lent oil.
 
 In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We pulled them all. Here is what they show.
 
