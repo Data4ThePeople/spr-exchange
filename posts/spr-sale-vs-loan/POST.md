@@ -108,7 +108,7 @@ Anyway, this entire convoluted back-and-forth left about $4.55 billion, nearly a
 
 Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that. That gap is part of why our emergency reserve holds just 283 million barrels today. And we still do not know what became of the more than $12 billion Congress took back.
 
-## My view
+## Unearthing the devilish details
 
 We covered a lot of ground today. We started with a choice that sounds small, sell or lend, and saw very different companies end up with the oil. And somehow we ended with Congress taking back 73% of the 2022 sale money.
 
