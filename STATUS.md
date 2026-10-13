@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-sale-vs-loan
-Step: 2c
+Step: 2d
 Since: 2026-10-13
 
 ## Steps
@@ -16,7 +16,7 @@ Since: 2026-10-13
 | 1  | Exploration and analysis | 2026-10-12 | Own tie-out passes; four independent tie-outs and one adversarial review, findings applied |
 | 2a | Draft with brackets resolved | 2026-10-12 | Claude drafted at Eric's instruction; Eric rewrote; edits accepted by number |
 | 2b | Eric's edit, Claude's look-over | 2026-10-13 | Five look-over edits accepted; every number traced in DATASETS.md; final independent tie-out matched |
-| 2c | Slice markup | | |
+| 2c | Slice markup | 2026-10-13 | No changes needed; 62 blocks, 3 embeds, divider once |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
@@ -59,3 +59,4 @@ None.
 - 2026-10-13 Eric set the theme: "the devil is in the details". Title changed to "Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details". He will work the theme through the post himself, so 2b is reopened; 2c had not started and nothing is stale.
 - 2026-10-13 Step 2b, second pass: Eric reworked the post around "the devil is in the details". Nine edits accepted (three in the intro, six in the rest), his hyperlink bracket resolved, every "yesterday" replaced. Publish date set by Eric: October 13, 2026, 6:30 a.m. EDT. The 283 million barrel figure added to the trace table in DATASETS.md.
 - 2026-10-13 Eric confirmed 2b (second pass). Step 2c opened.
+- 2026-10-13 Eric confirmed 2c. Step 2d opened. Eric has not sent a hero idea for this post, so Claude wrote three prompts on his theme ("the devil is in the details") into posts/spr-sale-vs-loan/hero-prompt.md for him to accept or replace: the barrel from post 1 beside two contracts stamped SOLD and LENT, with a magnifying glass over fine print.
