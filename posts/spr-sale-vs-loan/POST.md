@@ -20,7 +20,7 @@ dividers: false
 
 Yesterday I showed you [how the government is lending out our emergency oil in 2026](https://www.data4thepeople.com/p/spr-exchange/), and I promised to compare it with the last big release, in 2022. I thought that would be straightforward after the first post. Boy was I wrong.
 
-Here is the main difference. In 2022 the government did not lend most of that oil. **It sold it.** That small-sounding choice changes who ended up with the barrels, and it changes what the country was left holding afterward.
+Here is the main difference. In 2022 the government did not lend most of that oil. **It sold it.** That small-sounding choice helps explain who ended up with the barrels, and it changes what the country was left holding afterward.
 
 ## Same reserve, different winners
 
@@ -42,7 +42,7 @@ So why did different companies win? Here is the part I think matters most. The c
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/compare.html?part=terms" width="100%" height="1700" loading="lazy" style="border:0" title="What the 2022 sales and the 2026 loans ask of a winner"></iframe>
 
-In a 2022 sale, the winner paid the market price around the day it picked up the oil, plus or minus the small gap it had bid. The sale notice puts it this way: "The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor."
+In a 2022 sale, the winner paid the market price around the day it picked up the oil, plus or minus the small gap it had bid. The sale notice says, in part: "The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor."
 
 In plain words, a buyer could not lock in today's price and wait. Whatever oil cost at pickup, that is what it paid. All a bidder could compete on was a few dollars above or below the market. The bids show it: 96.7% of the oil was won at a bid within $5 of the government's reference price.
 
@@ -50,11 +50,11 @@ So what made a barrel worth more to one company than another? My take - being ab
 
 The 2022 bids fit that. Any qualified company could bid, and the highest prices won. Five trading houses did bid, but their prices averaged $5.12 a barrel below the lowest winning price for the same oil. Refiners' prices averaged 26 cents below.
 
-A 2026 loan works differently. The borrower owes no dollars. It owes the same amount of oil later, plus extra barrels. Remember the days when you could get a zero down mortgage? It's like that. The borrower pays the government nothing up front. It only needs a bank to guarantee the value of the oil. And it makes no interest payments until the loan comes due (or even later... we'll come back to that). 
+A 2026 loan works differently. The borrower owes no dollars. It owes the same amount of oil later, plus extra barrels. Remember the days when you could get a zero down mortgage? It's like that. The borrower pays the government nothing up front. It only needs a bank to guarantee the value of the oil. And it makes no interest payments until the loan comes due (or even later... we'll come back to that).
 
 As we saw yesterday, when oil for later delivery costs much less than oil today, a borrower can sell the oil now and arrange to buy back what it owes for less. Any company with a trading desk can try that. It does not need a refinery.
 
-In my view, that is the key difference: 
+In my view, that is the key difference:
 
 **Structuring the release as a sale rewards the company that needs the oil now. Structuring it as a loan rewards the company that can trade the gap between today's price and a later price.**
 
@@ -99,9 +99,9 @@ What really happened was Congress took most of this money back. In the spending 
 
 If that wasn't confusing enough, it gets better. The department said that just over $10 billion of this was a trade: in the same law, Congress cancelled 140 million barrels of oil sales it had ordered for later years, and in return, took $10 billion and change back.
 
-If this doesn't make any sense, welcome to the club. 
+If this doesn't make any sense, welcome to the club.
 
-Anyway, this entire convoluted back-and-forth left about $4.55 billion, which was nearly all used to buy oil. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel.
+Anyway, this entire convoluted back-and-forth left about $4.55 billion, nearly all of which was used to buy oil. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel.
 
 Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that.
 
@@ -109,11 +109,11 @@ Put those numbers side by side. We sold 180.66 million barrels. We bought back a
 
 We covered a lot of ground today. We started with a choice that sounds small, sell or lend, and saw very different companies end up with the oil. And somehow we ended with Congress taking back 73% of the 2022 sale money.
 
-What ties these two findings together? Neither is what I would expect from an emergency oil reserve. And yet the data and the paper trail are clear that this all happened. 
+What ties these two findings together? Neither is what I would expect from an emergency oil reserve. And yet the data and the paper trail are clear that this all happened.
 
 Besides now having a headache, I walk away from today's post with a greater appreciation for how important it is to pay attention to the minute details when it comes to how our government is being run.
 
-The great news is that we have the technology to democratize this sort of investigative journalism now. 
+The great news is that we have the technology to democratize this sort of investigative journalism now.
 
 The bad news is we may not like what we find.
 
