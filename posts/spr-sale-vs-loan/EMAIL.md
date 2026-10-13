@@ -46,7 +46,7 @@ Then there is the risk of lending oil: getting it back on time. We pulled the go
 
 The 2022 sales had their own problem. The reserve's account received $16.99 billion. One would think we would spend that on buying back oil. Not so fast. Congress took most of this money back, $12.45 billion of it, and the law does not say what it was used for instead. We sold 180.66 million barrels. We bought back about a third of that. That gap is also part of why our emergency oil stockpile is so low today.
 
-In the post, I walk through the contracts, the bids and the money trail, with three interactive charts.
+In the post, I walk through the contracts, the bids and the money trail, with three interactive charts. Buckle up!
 ```
 
 ## 6. Call to action
