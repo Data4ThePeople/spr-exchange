@@ -2,7 +2,8 @@
 title: Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details
 subtitle: Refiners took most of the oil when the government sold it. Trading firms took the largest share when the government lent it. The rules of each deal help explain why.
 slug: spr-sale-vs-loan
-date: 2026-10-12
+date: 2026-10-13
+time: 06:30:00-04:00
 section: Data 4 Thought
 hero: images/spr-sale-vs-loan-hero-1680x1080.png
 hero_alt:
@@ -18,9 +19,11 @@ dividers: false
 
 # Sell It or Lend It? With Our Emergency Oil, the Devil Is in the Details
 
-Yesterday I showed you [how the government is lending out our emergency oil in 2026](https://www.data4thepeople.com/p/spr-exchange/), and I promised to compare it with the last big release, in 2022. I thought that would be straightforward after the first post. Boy was I wrong.
+In my last research post, I showed you [how the government is lending out our emergency oil in 2026](https://www.data4thepeople.com/p/spr-exchange/), and promised to compare it with the last big release, in 2022. I thought that would be straightforward. Boy was I wrong.
 
-Here is the main difference. In 2022 the government did not lend most of that oil. **It sold it.** That small-sounding choice helps explain who ended up with the barrels, and it changes what the country was left holding afterward.
+You see, this comparison meant studying details that look harmless. But when it comes to the Strategic Petroleum Reserve, or SPR, the devil is lurking throughout the details.
+
+The detail that mattered most was this - does the government sell its emergency oil, or lend it? In 2022 it sold. In 2026 it is lending. That small-sounding choice helps explain who ended up with the barrels, and it changes what the country was left holding afterward.
 
 ## Same reserve, different winners
 
@@ -30,7 +33,7 @@ In 2022, as a response to Russia's invasion of Ukraine and the resulting oil mar
 
 In 2022, refiners took 77.4% of the oil. Refiners are the companies that turn crude oil into gasoline and diesel. Trading houses, which buy and sell oil but do not refine it, took just 5.5%.
 
-If you read our post yesterday, you already know the picture in 2026 is very different. Trading houses have taken 45.0%, and refiners 38.3%.
+If you read [our last post](https://www.data4thepeople.com/p/spr-exchange/), you already know the picture in 2026 is very different. Trading houses have taken 45.0%, and refiners 38.3%.
 
 The largest buyer in 2022 was Valero, a refiner, with 25.7% of the oil. The largest borrower in 2026 is Trafigura, a trading house, also with 25.7%.
 
@@ -52,7 +55,7 @@ The 2022 bids fit that. Any qualified company could bid, and the highest prices 
 
 A 2026 loan works differently. The borrower owes no dollars. It owes the same amount of oil later, plus extra barrels. Remember the days when you could get a zero down mortgage? It's like that. The borrower pays the government nothing up front. It only needs a bank to guarantee the value of the oil. And it makes no interest payments until the loan comes due (or even later... we'll come back to that).
 
-As we saw yesterday, when oil for later delivery costs much less than oil today, a borrower can sell the oil now and arrange to buy back what it owes for less. Any company with a trading desk can try that. It does not need a refinery.
+As we saw in the last post, when oil for later delivery costs much less than oil today, a borrower can sell the oil now and arrange to buy back what it owes for less. Any company with a trading desk can try that. It does not need a refinery.
 
 In my view, that is the key difference:
 
@@ -68,20 +71,20 @@ So both things are likely at work: the design of the deal, and the pull of highe
 
 ## What a loan turns into
 
-Yesterday I said one risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.
+One risk of lending oil is getting it back on time. We now have the government's own records on that, from the last time it lent oil.
 
 In late 2021 and early 2022, before the big sales, the Energy Department made 13 smaller oil loans totaling 24.42 million barrels. The department has posted the contracts, along with 30 later changes to them. We pulled them all. Here is what they show.
 
 - **Return dates moved back on 10 of the 13 loans.** The department signed each change.
 - **On seven loans, all or part of the oil was pushed back by two years or more.**
 - **Trafigura borrowed 3 million barrels in January 2022, due back between June and September 2024.** A change signed on April 16, 2024 moved that to July through October 2026.
-- **The extra oil owed did not grow with the wait.** Several of the changes say so directly: "There is no adjustment to the premium as a result of this extension." Others do not mention it. Go back to our mortgage example. Imagine the bank agreed to let you pay two years late and wrote that no extra interest was due.
+- **Several of the later dates came at no extra cost.** Several of the changes say so directly: "There is no adjustment to the premium as a result of this extension." Others do not mention it. Go back to our mortgage example. Imagine the bank agreed to let you pay two years late and wrote that no extra interest was due.
 
 To be fair, the companies did not miss deadlines. The government agreed to every change, and the records tie three of them to a pause at the government's own storage site. The records also do not show whether the oil came back on the new dates.
 
 But look at what this means for the reserve. Oil lent in 2022 and promised for 2024 was rescheduled for 2026, in the middle of the next emergency.
 
-And the government knew about these delays going into 2026. It still chose to lend again. Five of the six companies whose return dates moved are borrowing again this year.
+**And the government knew about these delays going into 2026.** It still chose to lend again. Five of the six companies whose return dates were pushed back on those earlier loans are borrowing again this year.
 
 ## What happened to the sale proceeds in 2022?
 
@@ -103,17 +106,17 @@ If this doesn't make any sense, welcome to the club.
 
 Anyway, this entire convoluted back-and-forth left about $4.55 billion, nearly all of which was used to buy oil. From 2023 through 2024 the department bought back about 59 million barrels, at an average of about $76 a barrel.
 
-Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that.
+Put those numbers side by side. We sold 180.66 million barrels. We bought back about a third of that. That gap is part of why our emergency reserve holds just 283 million barrels today. And we still do not know what became of the more than $12 billion Congress took back.
 
 ## My view
 
 We covered a lot of ground today. We started with a choice that sounds small, sell or lend, and saw very different companies end up with the oil. And somehow we ended with Congress taking back 73% of the 2022 sale money.
 
-What ties these two findings together? Neither is what I would expect from an emergency oil reserve. And yet the data and the paper trail are clear that this all happened.
+What ties these two findings together? They are details buried in government files, and they help explain why our emergency oil reserve is where it is today.
 
 Besides now having a headache, I walk away from today's post with a greater appreciation for how important it is to pay attention to the minute details when it comes to how our government is being run.
 
-The great news is that we have the technology to democratize this sort of investigative journalism now.
+The great news is that we now have the technology to help anyone dig into these details.
 
 The bad news is we may not like what we find.
 

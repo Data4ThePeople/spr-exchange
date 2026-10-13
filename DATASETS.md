@@ -706,6 +706,7 @@ One row per number in `posts/spr-sale-vs-loan/POST.md` as it stood at Step 2b. "
 | About $4.55 billion left | $4,546,463,785 | Derived: received less rescinded | Where the 2022 sale money went | `sale_proceeds.py` | Yes, same |
 | About 59 million barrels bought back, about $76 a barrel | 59,043,350 after one cancelled contract; $75.59 a barrel across awards through 2024 | DOE purchase award sheets, 2023 to 2024; DOE annual report for 2023 | Crude oil purchases for the reserve | `build_purchases.py`, `sale_proceeds.py` | Yes, same |
 | Bought back about a third | 32.7% of 180,660,000 | Derived | Where the 2022 sale money went | `sale_proceeds.py` | Yes, same |
+| The reserve holds just 283 million barrels today | 283.0 million barrels in the week ending October 2, 2026 | EIA weekly SPR crude stocks | Weekly and monthly petroleum series; EIA weekly SPR stocks: coverage check | `fetch_eia.py`; the same figure as in the first post | Yes, post 1 tie-out |
 
 What the post says without a number, and where it rests: "the law does not say what it was used for" (our reading of Public Law 117-328; the law rescinds and names no use); "the companies did not miss deadlines" and "the government agreed to every change" (every one of the 30 modifications is signed by DOE and none records a missed deadline); "the records do not show whether the oil came back on the new dates" (only five agreements have a close-out on file).
 
