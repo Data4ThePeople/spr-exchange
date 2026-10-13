@@ -31,6 +31,8 @@ In 2022, as a response to Russia's invasion of Ukraine and the resulting oil mar
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/compare.html?part=who" width="100%" height="1540" loading="lazy" style="border:0" title="Who got the oil: the 2022 sales and the 2026 loans"></iframe>
 
+::: spacer 20px
+
 In 2022, refiners took 77.4% of the oil. Refiners are the companies that turn crude oil into gasoline and diesel. Trading houses, which buy and sell oil but do not refine it, took just 5.5%.
 
 If you read [our last post](https://www.data4thepeople.com/p/spr-exchange/), you already know the picture in 2026 is very different. Trading houses have taken 45.0%, and refiners 38.3%.
@@ -44,6 +46,8 @@ One caution: the company types are our labels. They tell you who signed the deal
 So why did different companies win? Here is the part I think matters most. The chart below puts the two deals side by side.
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/compare.html?part=terms" width="100%" height="1700" loading="lazy" style="border:0" title="What the 2022 sales and the 2026 loans ask of a winner"></iframe>
+
+::: spacer 20px
 
 In a 2022 sale, the winner paid the market price around the day it picked up the oil, plus or minus the small gap it had bid. The sale notice says, in part: "The unit price for crude oil under the contract shall be the Delivery Reference Price (DRP) adjusted by the Price Adjustment Factor."
 
@@ -91,6 +95,8 @@ But look at what this means for the reserve. Oil lent in 2022 and promised for 2
 The 2022 sales had their own problem. Yes, we got money for the oil, and more of the oil went to refiners. But follow the money. The chart below shows where it went.
 
 <iframe src="https://data4thepeople.github.io/spr-exchange/dist/proceeds.html" width="100%" height="1090" loading="lazy" style="border:0" title="Where the money from the 2022 oil sales went"></iframe>
+
+::: spacer 20px
 
 The Energy Department reports that the reserve's account received $16.99 billion from the 2022 emergency sales.
 

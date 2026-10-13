@@ -67,3 +67,4 @@ None.
 - 2026-10-13 After the push, Eric renamed one heading: "What a loan turns into" is now "The risk of lending oil: getting it back on time", and the sentence under it that repeated it was dropped. Pushed to Prismic again; same draft updated.
 - 2026-10-13 At Eric's request, "We pulled them all" now links to the 2021-22 loan agreements section of DATASETS.md on GitHub. Prismic draft updated again.
 - 2026-10-13 Eric renamed the closing section from "My view" to "Unearthing the devilish details". Prismic draft updated again.
+- 2026-10-13 Eric: "after each html embed we need a 20px spacer". Added `::: spacer 20px` after all three embeds. Prismic draft updated again.
