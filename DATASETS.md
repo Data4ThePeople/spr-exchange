@@ -20,7 +20,11 @@ byte-identical to DOE's archive copies. DOE's folder listing is a JSON feed at
 **Version and vintage.** Rounds 1, 1.a, 1.b, 2 and 3, dated March 20, April 10,
 April 17, May 11 and June 22, 2026. DOE moves a round from `current/` to
 `archive/` after it closes, which changes the URL. Round 4 (RFP issued
-September 29, bids due October 6) had no award sheet posted as of October 12.
+September 29, bids due October 6) had no award sheet posted as of October 19.
+DOE moved it to `archive/` on October 16 with only its RFP, exhibits and Q&A.
+The FY27 Release No. 1 RFP (October 16) says return windows "will cede
+priority to awards under DE-RP96-26PO00006," which is round 4's RFP number,
+so round 4 appears to have made awards, but DOE has not posted who or how much.
 
 **Weekly check.** `scripts/check_awards.py` reads both DOE folder listings and
 downloads any award sheet not yet in `data/raw/doe_awards/`; it also reports a
@@ -90,6 +94,23 @@ return windows, and the title clause.
 `data/raw/doe_rfps/`. `manifest.json` there lists 29 files with URLs and SHA-256
 hashes: these 24 plus the five award sheets held in `data/raw/doe_awards/`. Spreadsheet
 exhibits (offer form, contract template) were not downloaded.
+
+**FY27 SPR Oil Release No. 1** (RFP DE-RP96-27PO00001, issued October 16,
+2026, proposals due 11:00 a.m. Central on October 21) is keyed in `rounds.csv`
+and `rfp_terms.csv` as round `FY27-1`: up to 17,000,000 barrels of sour crude in
+four lots at Bryan Mound and Big Hill, delivery November 2026 to January 2027,
+minimum premium 12.5% to 14%, minimum offer 3,000,000 barrels, at most
+10,000,000 barrels to one offeror unless barrels are left over. Its RFP and sour
+exhibit are in `data/raw/doe_rfps/` with the October 19 folder listings. Two
+things differ from earlier rounds. First, the premium table marks some return
+windows "--" where round 4 printed "0.0%". We read "--" as a window not offered
+for that lot (so Bryan Mound has no Jan-Mar 2029 option and the Big Hill
+January lot has no Oct-Dec 2028 option); the RFP does not define the mark, and
+no Q&A has been posted yet. Second, round 4 awards get priority over this
+round's returns (Section B.6(c)). Lot margins for this round are computed only
+after its bid day, when futures for that day are held; `lot_uptake.py` and
+`tie_out.py` skip a round whose bids are not yet due. Not checked by an
+independent tie-out.
 
 **Version and vintage.** RFPs DE-RP96-26PO00001 through 00006. Round 1 has three
 amendments; round 2 has one, which moved 3 million barrels from Bryan Mound

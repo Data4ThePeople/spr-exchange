@@ -5,3 +5,4 @@ round,release_name,rfp_no,rfp_issued,bids_due,award_date,offered_bbl,sites_offer
 2,FY26 SPR Oil Release No. 2,DE-RP96-26PO00004,2026-04-30,2026-05-04,2026-05-11,92500000,Bryan Mound; Bayou Choctaw; West Hackberry; Big Hill,3000000,40000000,18,24,2029-07-31,yes
 3,FY26 SPR Oil Release No. 3,DE-RP96-26PO00005,2026-06-10,2026-06-15,2026-06-22,40000000,Bryan Mound; Big Hill,3000000,20000000,8,9,2028-03-31,yes
 4,FY26 SPR Oil Release No. 4,DE-RP96-26PO00006,2026-09-29,2026-10-06,,40000000,Bryan Mound; Big Hill,3000000,20000000,7,9.5,2029-12-31,no
+FY27-1,FY27 SPR Oil Release No. 1,DE-RP96-27PO00001,2026-10-16,2026-10-21,,17000000,Bryan Mound; Big Hill,3000000,10000000,12.5,14,2029-12-31,no

@@ -24,3 +24,7 @@ round,rfp_no,site,stream,offered_bbl,delivery_period,return_site,min_premium_pct
 4,DE-RP96-26PO00006,Bryan Mound,Sour,10000000,Dec 2026,Bryan Mound,7,"Apr-Jun 2027 +0.0; Jan-Mar 2029 +7.0; Aug-Oct 2029 +9.0; Nov-Dec 2029 +10.0",B-1
 4,DE-RP96-26PO00006,Big Hill,Sour,10000000,Nov 2026,Big Hill,9.5,"Jul-Sep 2027 +0.0; Oct-Dec 2028 +5.0; Jan-Mar 2029 +6.0; Apr-Jun 2029 +7.0",B-1
 4,DE-RP96-26PO00006,Big Hill,Sour,10000000,Dec 2026,Big Hill,9,"Jul-Sep 2027 +0.0; Oct-Dec 2028 +5.0; Jan-Mar 2029 +6.0; Apr-Jun 2029 +7.0",B-1
+FY27-1,DE-RP96-27PO00001,Bryan Mound,Sour,1000000,Nov 2026,Bryan Mound,14,"Aug-Sep 2029 +2.5; Oct 2029 +3.5; Dec 2029 +4.5",B-1
+FY27-1,DE-RP96-27PO00001,Bryan Mound,Sour,6000000,Dec 2026,Bryan Mound,12.5,"Aug-Sep 2029 +2.5; Oct 2029 +3.5; Dec 2029 +5.0",B-1
+FY27-1,DE-RP96-27PO00001,Big Hill,Sour,3000000,Dec 2026,Big Hill,13.5,"Oct-Dec 2028 +0.5; Jul-Aug 2029 +4.0; Sep-Oct 2029 +5.0; Nov-Dec 2029 +6.0",B-1
+FY27-1,DE-RP96-27PO00001,Big Hill,Sour,7000000,Jan 2027,Big Hill,12.5,"Jul-Aug 2029 +4.0; Sep-Oct 2029 +5.0; Nov-Dec 2029 +6.0",B-1

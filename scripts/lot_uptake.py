@@ -24,7 +24,7 @@ actually bid, the grade's price gap to WTI, shipping, and the bank guarantee.
 
 Writes data/processed/lot_margins_2026.csv and data/processed/round_uptake_2026.csv.
 """
-import csv, re, sys
+import csv, datetime, re, sys
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
@@ -48,7 +48,8 @@ def options(text):
 
 def main():
     terms = list(csv.DictReader((ROOT / "data/reference/rfp_terms.csv").open()))
-    rounds = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
+    rounds = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())
+              if r["bids_due"] <= datetime.date.today().isoformat()}   # no bid-day prices yet for a round still open
     awards = list(csv.DictReader((ROOT / "data/processed/spr_2026_exchange_awards.csv").open()))
     curve = {}
     for r in csv.DictReader((ROOT / "data/processed/futures_closes.csv").open()):
@@ -58,6 +59,8 @@ def main():
 
     lots, seen = [], set()
     for t in terms:
+        if t["round"] not in rounds:
+            continue
         day = rounds[t["round"]]["bids_due"]
         best = None
         for label, months, add in options(t["return_options"]):

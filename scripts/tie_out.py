@@ -200,6 +200,8 @@ for r in trade["rounds"]:
         check(f"lot margins, round {r['round']} best lot matches the trade page",
               max(float(l["left_per_barrel"]) for l in lots if l["round"] == r["round"]), r["example"]["left"])
 for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open()):
+    if r["bids_due"] > datetime.date.today().isoformat():
+        continue   # priced on bid day, so a round still open has no lot margins yet
     check(f"lot margins, round {r['round']} barrels offered", sum(int(l["offered_bbl"]) for l in lots if l["round"] == r["round"]), int(r["offered_bbl"]))
 for r in csv.DictReader((ROOT / "data/processed/round_uptake_2026.csv").open()):
     if r["taken_bbl"]:

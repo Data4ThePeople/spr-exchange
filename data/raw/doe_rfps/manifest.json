@@ -259,5 +259,23 @@
   "sha256": "db5883ce98d703be5e178d014c6ce65f2b3051678d01a93e5f2e8142061fcd1b",
   "is_pdf": true,
   "retrieved": "2026-10-10"
+ },
+ {
+  "round": "FY27 SPR Oil Release No. 1",
+  "file": "FY27 SPR Oil Release No. 1 Request for Proposal.pdf",
+  "url": "https://www.spr.doe.gov/posting/EXCHANGE/FY27%20SPR%20Oil%20Release%20No.%201/1-Request%20for%20Proposal/FY27%20SPR%20Oil%20Release%20No.%201%20Request%20for%20Proposal.pdf",
+  "bytes": 3550182,
+  "sha256": "689154fffd5f3c3e5fcdcf0aca1e1f5ae4d708c3609349ef3f3a9e7412fa6c80",
+  "is_pdf": true,
+  "retrieved": "2026-10-19"
+ },
+ {
+  "round": "FY27 SPR Oil Release No. 1",
+  "file": "FY27 SPR Oil Release No. 1 Exhibit C-1.1 Sour Quality Data Specs Returns.pdf",
+  "url": "https://www.spr.doe.gov/posting/EXCHANGE/FY27%20SPR%20Oil%20Release%20No.%201/2-Request%20for%20Proposal%20Exhibits/FY27%20SPR%20Oil%20Release%20No.%201%20Exhibit%20C-1.1%20Sour%20Quality%20Data%20Specs%20Returns.pdf",
+  "bytes": 339098,
+  "sha256": "6ec87c0d26d83d17fea55ac7b52d91bdca94b4d736e462fdf0aa2e3b5dcd3537",
+  "is_pdf": true,
+  "retrieved": "2026-10-19"
  }
 ]
