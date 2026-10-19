@@ -109,8 +109,14 @@ January lot has no Oct-Dec 2028 option); the RFP does not define the mark, and
 no Q&A has been posted yet. Second, round 4 awards get priority over this
 round's returns (Section B.6(c)). Lot margins for this round are computed only
 after its bid day, when futures for that day are held; `lot_uptake.py` and
-`tie_out.py` skip a round whose bids are not yet due. Not checked by an
-independent tie-out.
+`tie_out.py` skip a round whose bids are not yet due. The independent tie-out
+of October 19, 2026 (fresh agent, its own download of the RFP, pages 7 and 12
+read from images) matched every field of both CSVs. It also read "--" as a
+window not offered, with moderate to high confidence: round 4 printed "0.0%"
+when it meant no extra premium, and the FY27 table footnote says capacity "may
+be lower than the table due to previous SPR tenders." Whether an offeror could
+still pick such a window at the minimum premium alone is open until DOE posts a
+Q&A or amendment (questions were due October 19).
 
 **Version and vintage.** RFPs DE-RP96-26PO00001 through 00006. Round 1 has three
 amendments; round 2 has one, which moved 3 million barrels from Bryan Mound
