@@ -4,7 +4,7 @@
 Chart 01: who borrowed oil in round 4 and FY27-1.
   data/processed/spr_2026_exchange_awards.csv   from scripts/build_ledger.py
   data/reference/rounds.csv                     offered barrels, award dates, release names
-Chart 02: what round 4 borrowers could make per barrel, every lot and return window.
+Chart 02: post 1's round 4 trade card as a static image, results filled in (best lot and window).
   data/processed/trade_example_round_4.csv      from scripts/trade_math.py (bid day, saved futures)
   data/reference/rounds.csv                     bid due date
 
@@ -46,8 +46,8 @@ def money(v):
 
 
 class Svg:
-    def __init__(self):
-        self.parts, self.y = [], 0
+    def __init__(self, width=W):
+        self.parts, self.y, self.w = [], 0, width
 
     def text(self, x, y, txt, size=15, fill=INK, weight=400, anchor="start"):
         self.parts.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{fill}" font-weight="{weight}" '
@@ -66,7 +66,7 @@ class Svg:
         self.parts.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{stroke}" stroke-width="1"/>')
 
     def render(self, name, rows, header):
-        H = int(self.y + 24)
+        H, W = int(self.y + 24), self.w
         svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
                f'font-family="-apple-system, Helvetica Neue, Arial, sans-serif"><rect width="{W}" height="{H}" fill="{BG}"/>'
                + "".join(self.parts) + "</svg>")
@@ -135,68 +135,72 @@ def chart_awards(rounds):
 
 
 def chart_profit(rounds):
+    """Post 1's round 4 trade card, as a static image, with the results filled in."""
     meta = rounds["4"]
     rows = [r for r in csv.DictReader((ROOT / "data/processed/trade_example_round_4.csv").open())
             if r["priced_on"] == "bids due"]
     if not rows or {r["date"] for r in rows} != {meta["bids_due"]}:
         sys.exit("round 4 trade example is not priced on the bid due date")
-    keys = [(r["site"], r["delivery"], r["return_window"]) for r in rows]
-    if len(set(keys)) != len(keys):
-        sys.exit("duplicate lot and window")
     for r in rows:
-        for k in ("premium_pct", "return_price", "cost_to_return", "sale_delivery_contract", "margin_delivery_contract"):
+        for k in ("premium_pct", "return_price", "cost_to_return", "sale_delivery_contract", "margin_delivery_contract",
+                  "breakeven_premium_delivery_pct"):
             r[k] = float(r[k])
-        # the margin must follow from the parts shown on the chart
-        if abs(r["sale_delivery_contract"] - (1 + r["premium_pct"] / 100) * r["return_price"] - r["margin_delivery_contract"]) > 0.011:
-            sys.exit(f"margin does not follow from its parts: {r}")
-    best = max(rows, key=lambda r: r["margin_delivery_contract"])
-    lots = []
-    for r in rows:
-        if (r["site"], r["delivery"]) not in lots:
-            lots.append((r["site"], r["delivery"]))
+    e = max(rows, key=lambda r: r["margin_delivery_contract"])   # the card shows the best lot and window, as in post 1
+    sale, prem, later, cost, left = (e["sale_delivery_contract"], e["premium_pct"], e["return_price"],
+                                     e["cost_to_return"], e["margin_delivery_contract"])
+    if abs(sale - (1 + prem / 100) * later - left) > 0.011 or abs(sale - cost - left) > 0.011:
+        sys.exit("card arithmetic does not hold")
+    ledger = [r for r in csv.DictReader((ROOT / "data/processed/spr_2026_exchange_awards.csv").open()) if r["round"] == "4"]
+    taken, offered = sum(int(r["barrels"]) for r in ledger), int(meta["offered_bbl"])
+    traders = sum(int(r["barrels"]) for r in ledger if r["type"] == "Trading house")
+    profit = left * traders
+    big = profit / 1e6
+    big_txt = f"${round(big):,} million" if big >= 10 else f"${big:.1f} million"   # post 1's rounding
+    win = " to ".join(MONTHS[["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].index(m)]
+                      for m in e["return_window"][:7].split("-")) + " " + e["return_window"][-4:]
 
-    vals = [r["margin_delivery_contract"] for r in rows]
-    lo, hi = min(0, min(vals)), max(vals)
-    label_w, right_pad, bar_h, gap = 430, 90, 22, 8
-    plot_l = label_w + 100   # room for a negative bar and its label left of zero
-    x = lambda v: plot_l + (v - lo) / (hi - lo) * (W - 24 - plot_l - right_pad)
-    s = Svg()
-    s.y += 40; s.text(24, s.y, "What round 4 borrowers could make per barrel", 28, BRIGHT, 700)
-    s.y += 30; s.text(24, s.y, f"Dollars per barrel borrowed, using futures prices on {long_date(meta['bids_due'])}, the day bids were due, and the lowest premium allowed.", 16)
-    s.y += 22; s.text(24, s.y, "The borrower sells the oil now and locks in the price of the oil it owes back by buying futures for the return months.", 16)
-    owe = 1 + best["premium_pct"] / 100
-    s.y += 40; s.text(24, s.y, "The math for the best lot and window", 17, BRIGHT, 700)
-    s.y += 26; s.text(24, s.y, f"{best['site']}, {best['delivery']} pickup, returned {best['return_window']}:", 16)
-    s.y += 24; s.text(44, s.y, f"Sell 1 barrel at the futures price for the month after pickup: {money(best['sale_delivery_contract'])}", 16)
-    s.y += 24; s.text(44, s.y, f"Owe {owe:.3f} barrels back ({best['premium_pct']:g}% extra), bought ahead at {money(best['return_price'])} each: "
-                               f"{money(best['cost_to_return'])}", 16)
-    s.y += 24; s.text(44, s.y, f"Left per barrel borrowed: {money(best['sale_delivery_contract'])} - {money(best['cost_to_return'])} = "
-                               f"{money(best['margin_delivery_contract'])}", 16, BRIGHT, 700)
-    s.y += 16
-    out = []
-    for site, deliv in lots:
-        mine = [r for r in rows if r["site"] == site and r["delivery"] == deliv]
-        s.y += 36; s.text(24, s.y, f"{site}, {deliv} pickup (sold at {money(mine[0]['sale_delivery_contract'])})", 17, BRIGHT, 700)
-        s.y += 8
-        top = s.y
-        for r in mine:
-            s.y += gap
-            v = r["margin_delivery_contract"]
-            s.text(label_w + 12, s.y + bar_h / 2 + 5, f"Returned {r['return_window']}, {r['premium_pct']:g}% extra owed", 15, anchor="end")
-            s.bar(x(0), x(v), s.y, bar_h, BAR)
-            s.text(x(v) + (8 if v >= 0 else -8), s.y + bar_h / 2 + 5, money(v), 15, weight=700, anchor="start" if v >= 0 else "end")
-            s.y += bar_h
-            out.append([site, deliv, r["return_window"], r["premium_pct"], r["sale_delivery_contract"], r["return_price"],
-                        r["cost_to_return"], v])
-        s.line(x(0), top, x(0), s.y, "#5A5E62")
-    s.y += 40; s.text(24, s.y, "This is the most a borrower could make: the premium each company bid is not public and can be higher than the minimum.", 13, MUTED)
-    s.y += 20; s.text(24, s.y, "Leaves out shipping, differences in crude quality, the cost of the required bank guarantee, and interest on the sale money.", 13, MUTED)
-    s.y += 20; s.text(24, s.y, "Source: U.S. Department of Energy request for proposals DE-RP96-26PO00006; NYMEX WTI futures closes as relayed by Yahoo Finance,", 13, MUTED)
-    s.y += 20; s.text(24, s.y, "retrieved October 11, 2026. A return price is the average of the window's monthly contracts; Yahoo does not serve September and", 13, MUTED)
-    s.y += 20; s.text(24, s.y, "October 2029, so Aug-Oct 2029 uses August alone.", 13, MUTED)
-    s.y += 20; s.text(24, s.y, "Built by Data 4 The People", 13, INK, 700)
-    s.render("02-round-4-profit", out, ["site", "pickup", "return_window", "premium_pct", "sale_price", "return_price",
-                                         "cost_to_return_per_barrel_borrowed", "left_per_barrel"])
+    CW, L, R = 640, 32, 608
+    s = Svg(CW)
+    s.y += 44; s.text(L, s.y, "October round", 26, BRIGHT, 700)
+    s.y += 26; s.text(L, s.y, f"Round 4. Bids due {long_date(meta['bids_due'])}", 15, MUTED)
+    s.y += 26; s.text(L, s.y, f"Companies took {mil(taken)} million of the {mil(offered)} million barrels offered ({taken / offered * 100:.1f}%).", 15)
+    x = lambda v: L + v / sale * (R - L)
+    def row(label, value, segs):
+        s.y += 34; s.text(L, s.y, label, 16, BRIGHT); s.text(R, s.y, money(value), 16, BRIGHT, 700, "end")
+        s.y += 10; at = 0
+        for j, (v, fill) in enumerate(segs):
+            x0 = x(at) + (2 if j else 0)
+            s.parts.append(f'<rect x="{x0:.1f}" y="{s.y}" width="{max(x(at + v) - x0, 1.5):.1f}" height="24" rx="4" fill="{fill}"/>')
+            at += v
+        s.y += 24
+    row("Sell one barrel now", sale, [(sale, "#3987e5")])
+    row(f"Buy back 1 barrel + {prem:g}% extra", cost, [(later, "#d95926"), (cost - later, "#c98500")])
+    row("Left over", left, [(left, "#199e70")])
+    s.y += 22; s.line(L, s.y, R, s.y)
+    s.y += 28; s.text(L, s.y, "Left over per barrel", 15, MUTED)
+    s.y += 44; s.text(L, s.y, money(left), 44, BRIGHT, 700)
+    s.y += 20; s.line(L, s.y, R, s.y)
+    s.y += 28; s.text(L, s.y, "How much higher the price on bid day was than", 16); s.text(R, s.y, f"{e['breakeven_premium_delivery_pct']:g}%", 16, BRIGHT, 700, "end")
+    s.y += 22; s.text(L, s.y, f"the price for {win}", 16)
+    s.y += 14; s.line(L, s.y, R, s.y)
+    s.y += 28; s.text(L, s.y, "Extra oil the government asked for", 16); s.text(R, s.y, f"{prem:g}%", 16, BRIGHT, 700, "end")
+    s.y += 14; s.line(L, s.y, R, s.y)
+    s.y += 28; s.text(L, s.y, "Estimated profit before transportation costs, if prices", 15, MUTED)
+    s.y += 20; s.text(L, s.y, "were locked in the day bids were due", 15, MUTED)
+    s.y += 40; s.text(L, s.y, big_txt, 34, BRIGHT, 700)
+    s.y += 26; s.text(L, s.y, f"Trading companies borrowed {mil(traders)} million barrels, times {money(left)}.", 15)
+    s.y += 22; s.text(L, s.y, "The real figure could be much lower or higher.", 15)
+    s.y += 36; s.text(L, s.y, f"Best lot and return window: {e['site']}, {e['delivery']} pickup, returned {e['return_window']}, at the", 12, MUTED)
+    s.y += 17; s.text(L, s.y, "lowest premium allowed. Bids above the minimum would leave less. Sale price is the futures contract", 12, MUTED)
+    s.y += 17; s.text(L, s.y, "for the month after pickup. Leaves out shipping, crude quality, the bank guarantee and interest.", 12, MUTED)
+    s.y += 17; s.text(L, s.y, "Sources: U.S. Department of Energy award sheet and RFP DE-RP96-26PO00006; NYMEX WTI", 12, MUTED)
+    s.y += 17; s.text(L, s.y, "futures closes as relayed by Yahoo Finance, retrieved October 11, 2026.", 12, MUTED)
+    s.y += 22; s.text(L, s.y, "Built by Data 4 The People", 12, INK, 700)
+    s.render("02-round-4-profit", [[meta["bids_due"], e["site"], e["delivery"], e["return_window"], prem, sale, later, cost, left,
+                                    e["breakeven_premium_delivery_pct"], taken, offered, traders, round(profit)]],
+             ["bids_due", "site", "pickup", "return_window", "premium_pct", "sale_price", "return_price", "cost_to_return",
+              "left_per_barrel", "bid_day_price_above_return_price_pct", "barrels_taken", "barrels_offered",
+              "trading_house_barrels", "estimated_profit_trading_houses"])
 
 
 def main():

@@ -292,17 +292,16 @@ pro = page_data("proceeds.html")
 check("money chart matches the proceeds file", {k: pro[k] for k in use}, use)
 check("money chart parts add to receipts", pro["rescinded_with_cancelled_sales"] + pro["rescinded_in_energy_appropriation"] + pro["left_after_rescissions"], pro["dollars_received"])
 
-# 13. Post 3 chart 02: round 4 margin for every lot and window, from the raw futures files and rfp_terms.csv.
-#     Sale = close of the contract for the month after pickup on the bid due date; return price = mean close of
-#     the window's contract months that day; margin = sale - (1 + minimum premium + add-on) x return price.
+# 13. Post 3 chart 02 (the round 4 trade card): every lot and window recomputed from the raw futures files and
+#     rfp_terms.csv; the card must show the best one. Sale = close of the contract for the month after pickup on the
+#     bid due date; return price = mean close of the window's months that are served; margin = sale - (1 + premium) x return.
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 def months_in(label):   # "Apr-Jun 2027", "Oct 2029", "Nov-Dec 2029"
     m = re.fullmatch(r"(\w{3})(?:-(\w{3}))? (\d{4})", label.strip())
     a, b, yr = MON.index(m.group(1)), MON.index(m.group(2) or m.group(1)), int(m.group(3))
     return [(yr, k + 1) for k in range(a, b + 1)]
 day4 = rinfo["4"]["bids_due"]
-c2 = {(r["site"], r["pickup"], r["return_window"]): r for r in csv.DictReader((ROOT / "charts/02-round-4-profit.csv").open())}
-n2 = 0
+cand = []
 for t in terms:
     if t["round"] != "4":
         continue
@@ -313,16 +312,24 @@ for t in terms:
         served = [(y, m) for y, m in months_in(label)
                   if (ROOT / "data/raw/futures" / f"CL{'FGHJKMNQUVXZ'[m - 1]}{y % 100:02d}.NYM.json").exists()]
         if len(served) < len(months_in(label)):
-            print(f"INFO chart 02: {label} priced on {len(served)} of {len(months_in(label))} months (Yahoo does not serve the rest)")
+            print(f"INFO chart 02: {t['site']} {t['delivery_period']} {label} priced on {len(served)} of {len(months_in(label))} months")
         later = sum(wti(y, m)[day4] for y, m in served) / len(served)
         prem = float(t["min_premium_pct"]) + float(add)
-        row = c2[(t["site"], t["delivery_period"], label)]
-        check(f"chart 02: {t['site']} {t['delivery_period']} {label} premium", float(row["premium_pct"]), prem)
-        check(f"chart 02: {t['site']} {t['delivery_period']} {label} sale price", float(row["sale_price"]), round(sale, 2), 0.005)
-        check(f"chart 02: {t['site']} {t['delivery_period']} {label} return price", float(row["return_price"]), round(later, 2), 0.006)
-        check(f"chart 02: {t['site']} {t['delivery_period']} {label} left per barrel", float(row["left_per_barrel"]), sale - (1 + prem / 100) * later, 0.011)
-        n2 += 1
-check("chart 02: every lot and window drawn", len(c2), n2)
+        cand.append(dict(site=t["site"], pickup=t["delivery_period"], window=label, prem=prem, sale=sale, later=later,
+                         left=sale - (1 + prem / 100) * later))
+best = max(cand, key=lambda c: c["left"])
+card = next(csv.DictReader((ROOT / "charts/02-round-4-profit.csv").open()))
+check("chart 02: card shows the best lot and window", (card["site"], card["pickup"], card["return_window"]), (best["site"], best["pickup"], best["window"]))
+check("chart 02: premium", float(card["premium_pct"]), best["prem"])
+check("chart 02: sale price", float(card["sale_price"]), round(best["sale"], 2), 0.005)
+check("chart 02: return price", float(card["return_price"]), round(best["later"], 2), 0.006)
+check("chart 02: cost to return", float(card["cost_to_return"]), (1 + best["prem"] / 100) * best["later"], 0.011)
+check("chart 02: left per barrel", float(card["left_per_barrel"]), best["left"], 0.011)
+check("chart 02: bid-day price above return price, %", float(card["bid_day_price_above_return_price_pct"]), round((best["sale"] / best["later"] - 1) * 100, 1), 0.051)
+check("chart 02: barrels taken and offered", (int(card["barrels_taken"]), int(card["barrels_offered"])), (sheets["4"]["total"], int(rinfo["4"]["offered_bbl"])))
+traders4 = sum(b for n, b in sheets["4"]["lines"] if CMAP[n] == "Trading house")
+check("chart 02: trading house barrels", int(card["trading_house_barrels"]), traders4)
+check("chart 02: estimated profit = barrels x rounded margin", int(card["estimated_profit_trading_houses"]), round(traders4 * float(card["left_per_barrel"])))
 
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

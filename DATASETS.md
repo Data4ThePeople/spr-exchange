@@ -787,12 +787,13 @@ What the post says without a number, and where it rests: "the law does not say w
 
 ## Post 3 chart 02 (`scripts/build_update_chart.py` -> `charts/02-round-4-profit.png`)
 
-- **What it is:** the borrower's margin per barrel for every round 4 lot and return window (16 bars), at the minimum premium plus the window's add-on, priced on the bid due date (October 6, 2026), with the arithmetic written out for the best one. Values drawn are in `charts/02-round-4-profit.csv`, taken from `trade_example_round_4.csv` (`scripts/trade_math.py`).
-- **Sale price:** the futures contract for the month after pickup (December 2026 contract for a November pickup, January 2027 for December), the basis post 1 used for its round 4 example, so the two posts agree ($9.87 for the best lot in both). The front-month basis in `lot_margins_2026.csv` gives higher figures ($11.21 best lot).
-- **Return price:** mean close of the window's contract months that day. Yahoo does not serve September and October 2029, so Aug-Oct 2029 uses August alone; the chart says so.
-- **Profit potential across the round (not on the chart):** if every one of the 23,800,000 barrels awarded had used its lot's best window at the minimum premium, the total would fall between $178.7 million (all at the lowest best-lot figure, $7.51) and $234.9 million (all at $9.87). Which lots and windows were awarded is not public, and premiums bid can be higher, so this is a ceiling range before costs.
-- **Prices:** the saved Yahoo closes (retrieved October 11, 2026; matched by the independent re-pull of October 12). Yahoo has revised these since (see futures Revisions); on its November 2 numbers the round 4 figures are about $1.10 lower.
-- **Not on the chart:** FY27-1. Its bid day (October 21) is after the saved closes end, and the independent tie-out of November 2 found no free source for that day's settlements.
+- **What it is:** post 1's round 4 trade card as a static image, results filled in: one barrel sold, bought back with the extra owed, and what is left, for the lot and return window that leave the most (Bryan Mound, November 2026 pickup, returned Nov-Dec 2029), at the minimum premium plus that window's add-on, priced on the bid due date (October 6, 2026). Values drawn are in `charts/02-round-4-profit.csv`, from `trade_example_round_4.csv` (`scripts/trade_math.py`).
+- **Sale price:** the futures contract for the month after pickup (December 2026 for a November pickup), the basis post 1 used for round 4, so the two posts agree ($9.87). The front-month basis in `lot_margins_2026.csv` gives $11.21 for the same lot.
+- **Return price:** mean close of the window's contract months that day. Yahoo does not serve September and October 2029; the Nov-Dec 2029 window shown is not affected.
+- **Estimated profit:** post 1's method: the amount left per barrel times the barrels awarded to trading houses in the round (4,800,000 x $9.87 = $47.4 million, shown as "$47 million" with post 1's rounding). Before costs, assumes every barrel used this lot and window at these prices.
+- **Range across the round (not on the card):** if all 23,800,000 barrels awarded had used their lot's best window, $178.7 million to $234.9 million. Which lots and windows were awarded is not public, and premiums bid can be higher, so this is a ceiling.
+- **Prices:** the saved Yahoo closes (retrieved October 11, 2026; matched by the independent re-pull of October 12). Yahoo has revised these since (see futures Revisions); on its November 2 numbers round 4 comes out about $1.10 lower.
+- **Not shown:** FY27-1. Its bid day (October 21) is after the saved closes end, and the independent tie-out of November 2 found no free source for that day's settlements.
 
 ## Figures for post 3 (round 4 and FY27-1), traced
 
@@ -820,6 +821,6 @@ What the post says without a number, and where it rests: "the law does not say w
 - **Borrower's margin, round 4** (`lot_margins_2026.csv`, saved futures, bid day October 6, 2026, minimum premium plus the best window's add-on): $9.18 to $11.21 a barrel by lot, $10.20 averaged over barrels offered. Front-month sale price $89.44.
 - **Borrower's margin, FY27-1: not computed.** Bids were due October 21; the saved futures end October 9. Yahoo's November 2 re-pull (not saved, see futures Revisions) would give $15.79 to $17.61, but the same re-pull also moves every earlier round (round 4 to $8.09 to $10.09; round 1.b from $17.03 to $9.63; round 3 from $2.47 to -$0.54). Against EIA's daily Cushing spot price (`PET.RWTC.D`), the saved front-month closes sit closer than the re-pull for March to October 2026 (mean gap $2.16 against $3.54; January and February identical at $0.23). That favors the saved copy for the front month; it says nothing about the 2028-29 contracts, for which we have no second source.
 | Round 4 margin per barrel, best lot and window | $9.87: sell $88.43, owe 1.175 x $66.86 = $78.56 | RFP DE-RP96-26PO00006; saved WTI futures, October 6, 2026 | `trade_math.py`, `build_update_chart.py` | `tie_out.py` chart 02 checks (from raw futures files) |
-| Round 4 margins, all 16 lot-window pairs | -$1.11 to $9.87 | Same | Same | Same |
-| Round 4 profit potential, ceiling | $178.7 million to $234.9 million | 23,800,000 barrels x $7.51 and $9.87 | arithmetic | Not yet independently checked |
+| Round 4 estimated profit, trading houses | $47 million: 4,800,000 x $9.87 | Award sheet; card above | `build_update_chart.py` | `tie_out.py` chart 02 checks |
+| Round 4 profit potential, ceiling (not on the card) | $178.7 million to $234.9 million | 23,800,000 barrels x $7.51 and $9.87 | arithmetic | Independent tie-out of November 2 matched |
 
