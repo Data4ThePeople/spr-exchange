@@ -43,6 +43,8 @@ These are still loans. Companies pick up the oil from November 2026 through Janu
 
 Those are the minimums. Companies could offer more extra oil to win, and the department does not publish what each one offered. Its requests for proposals say it may post each winner's offer data "excluding exchange ratio," which is the extra oil.
 
+The last time the government lent oil, the return dates did not hold. In late 2021 and early 2022, it made 13 smaller oil loans. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. Some of that oil was rescheduled to come back this year. What remained of a 3 million barrel loan Trafigura took in January 2022 was moved to July through October 2026, and the records do not show whether it has come back. Oil from an ExxonMobil loan is now due between October 1 and November 30 of this year. Several of the changes say directly that the delay cost the borrower nothing extra: "There is no adjustment to the premium as a result of this extension." The government agreed to every change, so the companies did not miss their deadlines. [We covered those loans in detail in our second post](https://www.data4thepeople.com/p/spr-sale-vs-loan/).
+
 ## What the first round could pay
 
 The chart below repeats the math from our first post for the first of the two rounds, using futures prices on October 6, the day bids were due, and the smallest amount of extra oil the government would accept.
