@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2a
+Step: 2b
 Since: 2026-11-02
 
 ## Steps
@@ -44,3 +44,4 @@ None.
 - 2026-11-02 Eric asked to add to the due-back section: the last loans "didnt come back on time", "we are still waiting for much of it", no penalties when pushed back, link the earlier post. Written to match post 2 and the records: dates moved on 10 of 13, two years or more on seven; companies did not miss deadlines (government agreed); Trafigura's remaining oil moved to July-October 2026, return not shown in the records; ExxonMobil 22PO0013 now due October 1 to November 30, 2026; "no adjustment to the premium" quoted from the modifications (several say so, others are silent). "Still waiting for much of it" not stated: not known from the records. Link to post 2.
 - 2026-11-02 Independent fact-check of the 2a draft (fresh agent, own downloads): every number matched (282.6M, 242M, lowest since February 1982, $96.24/$103.95, 67.2%, 20.2%, 91.9%, 49.8%, pickups, return windows, "excluding exchange ratio", June 500,000, round 1 returns from September 1, 2026). Hochstein, DOE 70M, Rapidan, Dallas Fed and the statute supported. Fixed: two Misra phrases were CNBC paraphrase, not quotes; "share taken fell when the trade paid less" rested on two rounds (now just the June comparison); the 8% spot rise now says it helps only if 2028-29 prices rose less, which we cannot check. Flagged to Eric, not changed: "we are about to find out whether those experts are right" (his lead) may be more certain than the data allow; October 29 is the files' last-modified date.
 - 2026-11-02 Eric confirmed 2a. Next: 2b, Eric edits POST.md (closing bracket still open); Claude looks it over.
+- 2026-11-02 Step 2b opened. Waiting for Eric's edits to POST.md.
