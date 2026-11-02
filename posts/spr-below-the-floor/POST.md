@@ -60,14 +60,14 @@ We cannot do the same math for the second round yet. We do not have futures pric
 
 It's becoming clear, based on the disagreement in expert opinions, that the true bottom is not known.
 
-- **The Energy Department** has said at least 70 million barrels must stay in the reserve to safely manage the underground salt caverns that hold the oil.
-- **Siddharth Misra,** a petroleum engineering professor at Texas A&M, told CNBC that 70 million barrels is the strict physical minimum, and that "the practical operational floor for the crude inventory is between 250 million and 300 million barrels." Below 300 million, he said, the reserve loses its ability to pump oil quickly in an emergency.
-- **Amos Hochstein,** a former senior energy adviser to President Biden, told CNBC: "I don't know anyone who believes we can go below 300."
-- **Analysts at Rapidan Energy** describe a "soft-ish floor" of about 170 million barrels.
-- **Oil executives** surveyed by the Federal Reserve Bank of Dallas in September split widely. The largest group, 31%, put the absolute minimum at 100 million to 150 million barrels. Another 19% put it at 250 million to 300 million.
-- **Congress** has written one number into law: 252.4 million barrels. It applies only to one kind of short emergency drawdown, not to loans like these. Congress lowered it from 340 million in 2021.
+- **The Energy Department** has said at least 70 million barrels must stay in the reserve to safely manage the underground salt caverns that hold the oil, [according to CNBC](https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html).
+- **Siddharth Misra,** a petroleum engineering professor at Texas A&M, [told CNBC](https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html) that 70 million barrels is the strict physical minimum, and that "the practical operational floor for the crude inventory is between 250 million and 300 million barrels." Below 300 million, he said, the reserve loses its ability to pump oil quickly in an emergency.
+- **Amos Hochstein,** a former senior energy adviser to President Biden, [told CNBC](https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html): "I don't know anyone who believes we can go below 300."
+- **Analysts at Rapidan Energy** describe a "soft-ish floor" of about 170 million barrels, [according to CNBC](https://www.cnbc.com/2026/08/15/strategic-petroleum-reserve-spr-oil-iran-war-caverns.html).
+- **Oil executives** surveyed by the Federal Reserve Bank of Dallas in September [split widely](https://www.dallasfed.org/research/surveys/des/2026/2603). The largest group, 31%, put the absolute minimum at 100 million to 150 million barrels. Another 19% put it at 250 million to 300 million.
+- **Congress** has [written one number into law](https://www.law.cornell.edu/uscode/text/42/6241): 252.4 million barrels. It applies only to one kind of short emergency drawdown, not to loans like these. Congress lowered it from 340 million in 2021.
 
-The reserve held 282.6 million barrels in the week ending October 23, according to the Energy Information Administration. Take away 40.55 million and it would hold about 242 million. That is below Misra's range and below the line Congress set for short drawdowns. It is still well above the department's 70 million barrels and Rapidan's 170 million.
+The reserve held 282.6 million barrels in the week ending October 23, according to the [Energy Information Administration](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCSSTUS1&f=W). Take away 40.55 million and it would hold about 242 million. That is below Misra's range and below the line Congress set for short drawdowns. It is still well above the department's 70 million barrels and Rapidan's 170 million.
 
 The real low point depends on timing. If oil from the first 2026 loans comes back starting this fall (I'm not holding my breath), we could stay above 250 million barrels after these withdrawals.
 
