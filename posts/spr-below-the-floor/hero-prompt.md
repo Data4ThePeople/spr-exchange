@@ -52,5 +52,5 @@ wide landscape frame, no people, no logos.
 
 ## Chosen
 
-File: images/spr-below-the-floor-hero-source.<ext>
-Alt (under 500 characters): written after the image is chosen.
+File: images/spr-below-the-floor-hero-source.jpg (Gemini, 2752x1536, Prompt 1 as revised), cropped from the center to images/spr-below-the-floor-hero-1680x1080.png; the barrel is partly cut off at the right, which Eric accepted.
+Alt (479 characters): An AI-generated cutaway illustration of an underground salt cavern beneath a flat, grassy Gulf Coast landscape. A pipe runs down from a wellhead at the surface into the top of the teardrop-shaped cavern. Black crude oil fills the lower part. Yellow lines painted across the cavern at several heights each carry a small sign reading FLOOR?, two above the oil and two below its surface. At the right edge, a navy blue barrel stenciled STRATEGIC PETROLEUM RESERVE is partly cut off.

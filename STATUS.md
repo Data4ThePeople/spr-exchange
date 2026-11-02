@@ -51,3 +51,5 @@ None.
 - 2026-11-02 Step 2c opened. Convert-only: 41 blocks (drop cap, 6 headings, 2 images with captions, 14 list items, 17 paragraphs), divider once before the limits; no embeds, so no iframe spacers. Hero warnings expected until 2d.
 - 2026-11-02 Eric confirmed 2c. Next: 2d, hero 1680x1080 and alt text.
 - 2026-11-02 Step 2d opened. No hero idea from Eric, so Claude wrote two prompts in posts/spr-below-the-floor/hero-prompt.md: a salt cavern cutaway with low oil under a painted FLOOR? line (recommended), and the navy SPR barrel with a measuring stick. Waiting for Eric's image or his own idea.
+- 2026-11-02 Step 2d: Eric generated the cavern image from the revised Prompt 1 (several FLOOR? lines). Source kept as images/spr-below-the-floor-hero-source.jpg (2752x1536); cropped from the center to images/spr-below-the-floor-hero-1680x1080.png; the barrel is partly cut off at the right, as Eric expected. Lettering: four FLOOR? signs spelled correctly, plus a mirror-image reflection of one on the oil surface; barrel text partly cropped. Alt 479 characters; hero check ok. Waiting for Eric to confirm.
+

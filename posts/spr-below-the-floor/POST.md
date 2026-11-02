@@ -6,7 +6,7 @@ date: 2026-11-03
 time: 06:30:00-05:00
 section: Data 4 Thought
 hero: images/spr-below-the-floor-hero-1680x1080.png
-hero_alt:
+hero_alt: An AI-generated cutaway illustration of an underground salt cavern beneath a flat, grassy Gulf Coast landscape. A pipe runs down from a wellhead at the surface into the top of the teardrop-shaped cavern. Black crude oil fills the lower part. Yellow lines painted across the cavern at several heights each carry a small sign reading FLOOR?, two above the oil and two below its surface. At the right edge, a navy blue barrel stenciled STRATEGIC PETROLEUM RESERVE is partly cut off.
 meta_title:
 description:
 keywords:
