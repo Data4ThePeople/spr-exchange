@@ -9,8 +9,6 @@ Inputs
 
 Output
   dist/ledger.html   self-contained page, data inlined, no CDN
-  --out <path>       write somewhere else instead. dist/ledger.html is embedded in a
-                     published post and is frozen; later posts get their own file.
 
 Nothing is hardcoded in the page: the template carries a /*__DATA__*/ slot and
 every figure on the page is computed from the inlined data at render time.
@@ -50,7 +48,7 @@ def main():
     if "/*__DATA__*/null" not in html or "__LOGO__" not in html:
         sys.exit("template slots missing")
     html = html.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":"))).replace("__LOGO__", logo)
-    out = ROOT / (sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else "dist/ledger.html")
+    out = ROOT / "dist/ledger.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(html)
     print(f"wrote {out.relative_to(ROOT)}: {len(html):,} bytes, {len(ledger)} contracts, {len(spr)} weeks of SPR stocks")

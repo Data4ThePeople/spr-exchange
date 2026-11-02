@@ -278,7 +278,7 @@ html.embed .filters { margin-top: 10px; }
         base += g.v;
       });
       if (shown > 0) s += '<text class="val" x="' + cx + '" y="' + (y(Math.max(shown, off)) - 6) + '" text-anchor="middle">' + mil(shown * 1e6) + '</text>';
-      s += '<text class="name" x="' + cx + '" y="' + (H - m.b + 16) + '" text-anchor="middle">' + (band < 64 ? "" : "Round ") + r.round + '</text>' +   /* narrow bars: the round alone, so labels do not run together */
+      s += '<text class="name" x="' + cx + '" y="' + (H - m.b + 16) + '" text-anchor="middle">Round ' + r.round + '</text>' +
            '<text x="' + cx + '" y="' + (H - m.b + 31) + '" text-anchor="middle">' + shortDate(r.award_date) + '</text>';
     });
     s += '<line class="axis" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(0) + '" y2="' + y(0) + '"/>';

@@ -51,11 +51,10 @@ All values are DOE's own figures; nothing is estimated.
 **Published pages are frozen.** Post 1 embeds `dist/ledger.html`,
 `dist/trade.html` and `dist/returns.html`, and post 2 embeds
 `dist/compare.html`, from GitHub Pages. Their text quotes the 31 contracts and
-133,560,000 barrels of rounds 1 to 3, so those pages are not rebuilt. A later
-post gets its own file: post 3 uses `dist/ledger-2026-11.html`
-(`build_ledger_page.py --out`), same template, all seven rounds. `tie_out.py`
-checks the frozen pages against the sheets for the rounds they hold, and the
-new page against every sheet.
+133,560,000 barrels of rounds 1 to 3, so those pages are not rebuilt. Post 3
+uses static charts (`charts/`). `tie_out.py` checks the frozen pages against
+the sheets for the rounds they hold, and `spr_2026_exchange_awards.csv` against
+every sheet.
 
 **Changes over time.** Company names are not spelled the same way from sheet to
 sheet ("Marathon Petroleum Company LP" and "Marathon Petroleum Company";
@@ -780,11 +779,11 @@ What the post says without a number, and where it rests: "the law does not say w
 
 **The sale money, checked again the same day.** Public Law 117-328 was downloaded again from govinfo.gov. The two rescissions appear once each, as quoted above: $10,395,000,000 in section 1301(a) of Division M and $2,052,000,000 under the heading "SPR Petroleum Account" in Division D. Both are "of the unobligated balances from amounts deposited" in the account "pursuant to section 167(b)(3) of the Energy Policy and Conservation Act", which is the provision for money from drawdown sales. The $16,993,463,785, the 140 million barrels and "in exchange for a recission of $10.4 billion ... with the money coming from revenue earned from emergency sales in 2022" were read again from pages 36 and 30 of DOE's 2022 annual report, and the Budget Appendix line "appropriations permanently reduced", -12,447 (millions), from the saved page. Two limits: DOE ties only the $10.4 billion to the 2022 sale money in so many words, so counting the $2.052 billion against the same receipts rests on the law's wording; and the law rescinds the money without naming any use for it. Section 1301 sits in Division M, the Additional Ukraine Supplemental Appropriations Act, 2023; the post draws no conclusion from where it sits.
 
-## Post 3 page (`scripts/build_ledger_page.py --out dist/ledger-2026-11.html`)
+## Post 3 chart (`scripts/build_update_chart.py` -> `charts/01-newest-rounds.png`)
 
-- **What it is:** the ledger page from post 1, rebuilt from the same template with all seven rounds (42 contracts, 174,110,000 barrels) and EIA weekly SPR stocks through October 23, 2026. Embed height at 1,200px wide, framed: 1,536px of content; use 1,560.
-- **Template change:** at narrow widths the bar labels show the round alone ("FY27-1") instead of "Round FY27-1", so seven labels do not run together. The frozen `dist/ledger.html` was not rebuilt.
-- **Wording to settle:** the page's title block calls the contracts "the 2026 Strategic Petroleum Reserve emergency exchange." Neither the round 4 nor the FY27-1 RFP uses "emergency" for the program (only in standard clauses on national emergencies and force majeure). FY27-1 is tied to round 4 in its RFP (return priority to round 4's awards, Section B.6(c)), and its awards are dated October 28, 2026.
+- **What it is:** a static chart, horizontal bars per company for round 4 and FY27-1, colored by firm type, with each round's awarded and offered barrels and its award date in the panel heading. Data drawn are in `charts/01-newest-rounds.csv`.
+- **Style:** dark palette for static PNGs (background `#181A1B`, text `#BBBDC0`); legend as colored words; firm-type hues are the ledger page's, stepped for the dark surface (`#3987e5`, `#d95926`, `#199e70`, `#c98500`) and passed the dataviz palette validator on that surface. Rendered by headless Chrome at 2x (2400 x 1540).
+- **Wording:** no "emergency." Neither RFP uses the word for the program, only in standard clauses on national emergencies and force majeure.
 
 ## Figures for post 3 (round 4 and FY27-1), traced
 

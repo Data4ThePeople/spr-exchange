@@ -41,7 +41,7 @@ def wti(year, month):
 # 1. Ledger: every award sheet's stated total and its contract lines, straight from the PDF text.
 #    The round id comes from rounds.csv by release name ("FY27 SPR Oil Release No. 1" is round FY27-1, not 1).
 #    dist/ledger.html is embedded in post 1 and frozen: it is checked against the sheets for the rounds it holds.
-#    dist/ledger-2026-11.html (post 3) must hold every sheet.
+#    data/processed/spr_2026_exchange_awards.csv must hold every sheet.
 RELEASE = {r["release_name"]: r["round"] for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
 CMAP = {r["company_as_listed"]: r["type"] for r in csv.DictReader((ROOT / "data/reference/company_map.csv").open())}
 sheets = {}
@@ -56,13 +56,18 @@ for rnd in sorted({r["round"] for r in frozen["ledger"]}):
     check(f"ledger.html (frozen) round {rnd} total", sum(r["barrels"] for r in frozen["ledger"] if r["round"] == rnd), sheets[rnd]["total"])
 stated = sum(r["barrels"] for r in frozen["ledger"])   # what the frozen post-1 pages hold
 check("ledger.html (frozen) grand total, as published in post 1", stated, 133560000)
-ledger = page_data("ledger-2026-11.html")
+# The full ledger file (all rounds) stands in for a page: post 3 publishes static charts only.
+ledger = {"ledger": [dict(r, barrels=int(r["barrels"]), offered_bbl=int(r["offered_bbl"]))
+                     for r in csv.DictReader((ROOT / "data/processed/spr_2026_exchange_awards.csv").open())],
+          "spr": [(r["period"], float(r["value"])) for r in csv.DictReader((ROOT / "data/processed/eia_series.csv").open())
+                  if r["name"] == "spr_stocks_kbbl"]}
+ledger["spr"].sort()
 for rnd, sh in sheets.items():
-    check(f"ledger-2026-11 round {rnd} total", sum(r["barrels"] for r in ledger["ledger"] if r["round"] == rnd), sh["total"])
-    check(f"ledger-2026-11 round {rnd} contracts", sorted((r["company_as_listed"], r["barrels"]) for r in ledger["ledger"] if r["round"] == rnd), sorted(sh["lines"]))
+    check(f"ledger file round {rnd} total", sum(r["barrels"] for r in ledger["ledger"] if r["round"] == rnd), sh["total"])
+    check(f"ledger file round {rnd} contracts", sorted((r["company_as_listed"], r["barrels"]) for r in ledger["ledger"] if r["round"] == rnd), sorted(sh["lines"]))
 stated_all = sum(sh["total"] for sh in sheets.values())
-check("ledger-2026-11 grand total", sum(r["barrels"] for r in ledger["ledger"]), stated_all)
-check("ledger-2026-11 contracts", len(ledger["ledger"]), len({(r["round"], r["company_as_listed"]) for r in ledger["ledger"]}))
+check("ledger file grand total", sum(r["barrels"] for r in ledger["ledger"]), stated_all)
+check("ledger file contracts", len(ledger["ledger"]), len({(r["round"], r["company_as_listed"]) for r in ledger["ledger"]}))
 
 # 1b. Post 3 figures for round 4 and FY27-1, recomputed from the sheet lines and company_map.csv.
 rinfo = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
@@ -77,12 +82,20 @@ for rnd in ("4", "FY27-1"):
     below = sorted(n for n, b in sh["lines"] if b < int(meta["min_offer_bbl"]))
     print(f"INFO post 3: round {rnd} awards below the {int(meta['min_offer_bbl']):,}-barrel minimum offer: {below}")
 check("post 3: round 4 plus FY27-1", sheets["4"]["total"] + sheets["FY27-1"]["total"], 40550000)
+chart = list(csv.DictReader((ROOT / "charts/01-newest-rounds.csv").open()))
+for rnd in ("4", "FY27-1"):
+    names = {r["company"]: r["company_as_listed"] for r in ledger["ledger"] if r["round"] == rnd}
+    check(f"chart 01: round {rnd} bars match the award sheet",
+          sorted((names[r["company"]], int(r["barrels"])) for r in chart if r["round"] == rnd), sorted(sheets[rnd]["lines"]))
+    check(f"chart 01: round {rnd} type colors follow company_map",
+          all(CMAP[names[r["company"]]] == r["type"] for r in chart if r["round"] == rnd), True)
+    check(f"chart 01: round {rnd} offered", {int(r["offered_bbl"]) for r in chart if r["round"] == rnd}, {int(rinfo[rnd]["offered_bbl"])})
 
 # 2. SPR weekly stocks on both ledger pages against the raw EIA response.
 raw = {r["period"]: float(r["value"]) for r in json.loads((ROOT / "data/raw/eia/PET.WCSSTUS1.W.json").read_text()) if r["value"] is not None}
 check("SPR weeks on ledger.html (frozen) match raw EIA", sum(1 for d, v in frozen["spr"] if raw.get(d) != v), 0)
-check("SPR weeks on ledger-2026-11 match raw EIA", sum(1 for d, v in ledger["spr"] if raw.get(d) != v), 0)
-check("SPR latest week on ledger-2026-11", ledger["spr"][-1][1], raw[max(raw)])
+check("SPR weeks on ledger file match raw EIA", sum(1 for d, v in ledger["spr"] if raw.get(d) != v), 0)
+check("SPR latest week in eia_series.csv", ledger["spr"][-1][1], raw[max(raw)])
 
 # 3. Trade page: recompute each card from the raw futures files.
 terms = list(csv.DictReader((ROOT / "data/reference/rfp_terms.csv").open()))

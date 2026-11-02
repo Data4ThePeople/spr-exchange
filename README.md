@@ -18,6 +18,7 @@ Data and code behind two Data 4 The People posts on the U.S. Strategic Petroleum
 
 - `posts/<slug>/POST.md`: the text of each post, with its images in `images/`.
 - `dist/`: the built charts. Each page is self-contained, with its data inlined and no outside scripts.
+- `charts/`: static chart images (PNG), each with the CSV of the values drawn, built by `scripts/build_update_chart.py`. The pages in `dist/` that are embedded in published posts are not rebuilt when new rounds are added.
 - `scripts/`: fetch, build and check scripts (listed below), plus the HTML templates for each page.
 - `data/raw/`: source files as downloaded, with `manifest.json` files (URL, size, SHA-256) where the script writes them.
 - `data/reference/`: tables keyed by hand from source documents, such as RFP terms, round dates, company name merges and firm types.
