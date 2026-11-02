@@ -7,9 +7,9 @@ time: 06:30:00-05:00
 section: Data 4 Thought
 hero: images/spr-below-the-floor-hero-1680x1080.png
 hero_alt: An AI-generated cutaway illustration of an underground salt cavern beneath a flat, grassy Gulf Coast landscape. A pipe runs down from a wellhead at the surface into the top of the teardrop-shaped cavern. Black crude oil fills the lower part. Yellow lines painted across the cavern at several heights each carry a small sign reading FLOOR?, two above the oil and two below its surface. At the right edge, a navy blue barrel stenciled STRATEGIC PETROLEUM RESERVE is partly cut off.
-meta_title:
-description:
-keywords:
+meta_title: How Low Can the Strategic Petroleum Reserve Go?
+description: The U.S. just lent 40.55 million more barrels of emergency oil. If all of it leaves, the reserve would fall to about 242 million, below some experts' floor.
+keywords: how low can the SPR go, SPR minimum operating level, Strategic Petroleum Reserve floor, SPR level 2026, SPR exchange November 2026, SPR oil loans trading companies, SPR oil return dates
 schema_type: article
 drop_cap: true
 heading_spacer: 20px
