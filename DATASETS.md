@@ -59,7 +59,7 @@ every sheet.
 **Changes over time.** Company names are not spelled the same way from sheet to
 sheet ("Marathon Petroleum Company LP" and "Marathon Petroleum Company";
 "Vitol Inc." and "Vitol"; "Phillips 66 Company" and "Phillips 66"; "Gunvor USA
-LLC" and, in FY27-1, "Gunvor USA"; with and without "LLC"). We merge these in `data/reference/company_map.csv` and keep
+LLC" and, in round 4 and FY27-1, "Gunvor USA"; with and without "LLC"). We merge these in `data/reference/company_map.csv` and keep
 DOE's spelling in `company_as_listed`. The sheets do not say whether different
 spellings are different legal entities.
 
@@ -785,6 +785,15 @@ What the post says without a number, and where it rests: "the law does not say w
 - **Style:** dark palette for static PNGs (background `#181A1B`, text `#BBBDC0`); legend as colored words; firm-type hues are the ledger page's, stepped for the dark surface (`#3987e5`, `#d95926`, `#199e70`, `#c98500`) and passed the dataviz palette validator on that surface. Rendered by headless Chrome at 2x (2400 x 1540).
 - **Wording:** no "emergency." Neither RFP uses the word for the program, only in standard clauses on national emergencies and force majeure.
 
+## Post 3 chart 02 (`scripts/build_update_chart.py` -> `charts/02-round-4-profit.png`)
+
+- **What it is:** the borrower's margin per barrel for every round 4 lot and return window (16 bars), at the minimum premium plus the window's add-on, priced on the bid due date (October 6, 2026), with the arithmetic written out for the best one. Values drawn are in `charts/02-round-4-profit.csv`, taken from `trade_example_round_4.csv` (`scripts/trade_math.py`).
+- **Sale price:** the futures contract for the month after pickup (December 2026 contract for a November pickup, January 2027 for December), the basis post 1 used for its round 4 example, so the two posts agree ($9.87 for the best lot in both). The front-month basis in `lot_margins_2026.csv` gives higher figures ($11.21 best lot).
+- **Return price:** mean close of the window's contract months that day. Yahoo does not serve September and October 2029, so Aug-Oct 2029 uses August alone; the chart says so.
+- **Profit potential across the round (not on the chart):** if every one of the 23,800,000 barrels awarded had used its lot's best window at the minimum premium, the total would fall between $178.7 million (all at the lowest best-lot figure, $7.51) and $234.9 million (all at $9.87). Which lots and windows were awarded is not public, and premiums bid can be higher, so this is a ceiling range before costs.
+- **Prices:** the saved Yahoo closes (retrieved October 11, 2026; matched by the independent re-pull of October 12). Yahoo has revised these since (see futures Revisions); on its November 2 numbers the round 4 figures are about $1.10 lower.
+- **Not on the chart:** FY27-1. Its bid day (October 21) is after the saved closes end, and the independent tie-out of November 2 found no free source for that day's settlements.
+
 ## Figures for post 3 (round 4 and FY27-1), traced
 
 | Figure | Value | Source | Script | Own tie-out |
@@ -805,8 +814,12 @@ What the post says without a number, and where it rests: "the law does not say w
 
 - **Still loans.** Both RFPs are titled "Exchange of up to ... million barrels of crude oil from the Strategic Petroleum Reserve," and both say "All Return Oil to SPR sites will include the awarded volume in addition to the premium" (Section B.5(b)). Same structure as rounds 1 to 3.
 - **Repayment terms** (`rfp_terms.csv`, Section B tables). Premium owed = the lot's minimum plus the add-on for the return window chosen.
-  - Round 4 (minimums 7% to 9.5%): Bryan Mound returns Apr-Jun 2027 (+0), Jan-Mar 2029 (+7), Aug-Oct 2029 (+9) or Nov-Dec 2029 (+10); Big Hill returns Jul-Sep 2027 (+0), Oct-Dec 2028 (+5), Jan-Mar 2029 (+6) or Apr-Jun 2029 (+7). Lowest total premium 7%, highest 19.5%.
-  - FY27-1 (minimums 12.5% to 14%): Bryan Mound returns Aug-Sep 2029 (+2.5), Oct 2029 (+3.5) or Dec 2029 (+4.5 for the November lot, +5.0 for the December lot); Big Hill returns Oct-Dec 2028 (+0.5, December lot only), Jul-Aug 2029 (+4), Sep-Oct 2029 (+5) or Nov-Dec 2029 (+6). No window before October 2028. Lowest total premium 13%, highest 20%.
-- **Premium actually agreed: not published.** The award sheets give only a company and a barrel count. The RFPs say offers are ranked with "Additional Premium having priority," so winning premiums are at or above the minimum, by an unknown amount. Every margin below is at the minimum premium, which is the most a borrower could have kept for that window.
+  - Round 4 (minimums 7% to 9.5%): Bryan Mound returns Apr-Jun 2027 (+0), Jan-Mar 2029 (+7), Aug-Oct 2029 (+9) or Nov-Dec 2029 (+10); Big Hill returns Jul-Sep 2027 (+0), Oct-Dec 2028 (+5), Jan-Mar 2029 (+6) or Apr-Jun 2029 (+7). Lowest total premium 7% (Bryan Mound December lot, earliest window), highest 17.5% (Bryan Mound November lot, Nov-Dec 2029).
+  - FY27-1 (minimums 12.5% to 14%): Bryan Mound returns Aug-Sep 2029 (+2.5), Oct 2029 (+3.5) or Dec 2029 (+4.5 for the November lot, +5.0 for the December lot); Big Hill returns Oct-Dec 2028 (+0.5, December lot only), Jul-Aug 2029 (+4), Sep-Oct 2029 (+5) or Nov-Dec 2029 (+6). No window before October 2028. Lowest total premium 14% (Big Hill December lot, Oct-Dec 2028), highest 19.5% (Big Hill December lot, Nov-Dec 2029), reading "--" as a window not offered.
+- **Premium actually agreed: not published.** The award sheets give only a company and a barrel count, and Section M of both RFPs says DOE may post "the successful Offerors and their offer data, excluding exchange ratio," so the premium is left out on purpose. The RFPs say offers are ranked with "Additional Premium having priority," so winning premiums are at or above the minimum, by an unknown amount. Every margin below is at the minimum premium, which is the most a borrower could have kept for that window.
 - **Borrower's margin, round 4** (`lot_margins_2026.csv`, saved futures, bid day October 6, 2026, minimum premium plus the best window's add-on): $9.18 to $11.21 a barrel by lot, $10.20 averaged over barrels offered. Front-month sale price $89.44.
 - **Borrower's margin, FY27-1: not computed.** Bids were due October 21; the saved futures end October 9. Yahoo's November 2 re-pull (not saved, see futures Revisions) would give $15.79 to $17.61, but the same re-pull also moves every earlier round (round 4 to $8.09 to $10.09; round 1.b from $17.03 to $9.63; round 3 from $2.47 to -$0.54). Against EIA's daily Cushing spot price (`PET.RWTC.D`), the saved front-month closes sit closer than the re-pull for March to October 2026 (mean gap $2.16 against $3.54; January and February identical at $0.23). That favors the saved copy for the front month; it says nothing about the 2028-29 contracts, for which we have no second source.
+| Round 4 margin per barrel, best lot and window | $9.87: sell $88.43, owe 1.175 x $66.86 = $78.56 | RFP DE-RP96-26PO00006; saved WTI futures, October 6, 2026 | `trade_math.py`, `build_update_chart.py` | `tie_out.py` chart 02 checks (from raw futures files) |
+| Round 4 margins, all 16 lot-window pairs | -$1.11 to $9.87 | Same | Same | Same |
+| Round 4 profit potential, ceiling | $178.7 million to $234.9 million | 23,800,000 barrels x $7.51 and $9.87 | arithmetic | Not yet independently checked |
+

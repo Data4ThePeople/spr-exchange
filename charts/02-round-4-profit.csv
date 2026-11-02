@@ -1,0 +1,17 @@
+site,pickup,return_window,premium_pct,sale_price,return_price,cost_to_return_per_barrel_borrowed,left_per_barrel
+Bryan Mound,Nov 2026,Apr-Jun 2027,7.5,88.43,82.74,88.95,-0.52
+Bryan Mound,Nov 2026,Jan-Mar 2029,14.5,88.43,69.88,80.01,8.42
+Bryan Mound,Nov 2026,Aug-Oct 2029,16.5,88.43,67.9,79.1,9.33
+Bryan Mound,Nov 2026,Nov-Dec 2029,17.5,88.43,66.86,78.56,9.87
+Bryan Mound,Dec 2026,Apr-Jun 2027,7.0,87.42,82.74,88.53,-1.11
+Bryan Mound,Dec 2026,Jan-Mar 2029,14.0,87.42,69.88,79.66,7.76
+Bryan Mound,Dec 2026,Aug-Oct 2029,16.0,87.42,67.9,78.76,8.66
+Bryan Mound,Dec 2026,Nov-Dec 2029,17.0,87.42,66.86,78.23,9.19
+Big Hill,Nov 2026,Jul-Sep 2027,9.5,88.43,79.62,87.19,1.24
+Big Hill,Nov 2026,Oct-Dec 2028,14.5,88.43,70.93,81.21,7.22
+Big Hill,Nov 2026,Jan-Mar 2029,15.5,88.43,69.88,80.71,7.72
+Big Hill,Nov 2026,Apr-Jun 2029,16.5,88.43,68.89,80.26,8.17
+Big Hill,Dec 2026,Jul-Sep 2027,9.0,87.42,79.62,86.79,0.63
+Big Hill,Dec 2026,Oct-Dec 2028,14.0,87.42,70.93,80.86,6.56
+Big Hill,Dec 2026,Jan-Mar 2029,15.0,87.42,69.88,80.36,7.06
+Big Hill,Dec 2026,Apr-Jun 2029,16.0,87.42,68.89,79.91,7.51

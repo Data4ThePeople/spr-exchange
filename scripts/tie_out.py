@@ -292,5 +292,37 @@ pro = page_data("proceeds.html")
 check("money chart matches the proceeds file", {k: pro[k] for k in use}, use)
 check("money chart parts add to receipts", pro["rescinded_with_cancelled_sales"] + pro["rescinded_in_energy_appropriation"] + pro["left_after_rescissions"], pro["dollars_received"])
 
+# 13. Post 3 chart 02: round 4 margin for every lot and window, from the raw futures files and rfp_terms.csv.
+#     Sale = close of the contract for the month after pickup on the bid due date; return price = mean close of
+#     the window's contract months that day; margin = sale - (1 + minimum premium + add-on) x return price.
+MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+def months_in(label):   # "Apr-Jun 2027", "Oct 2029", "Nov-Dec 2029"
+    m = re.fullmatch(r"(\w{3})(?:-(\w{3}))? (\d{4})", label.strip())
+    a, b, yr = MON.index(m.group(1)), MON.index(m.group(2) or m.group(1)), int(m.group(3))
+    return [(yr, k + 1) for k in range(a, b + 1)]
+day4 = rinfo["4"]["bids_due"]
+c2 = {(r["site"], r["pickup"], r["return_window"]): r for r in csv.DictReader((ROOT / "charts/02-round-4-profit.csv").open())}
+n2 = 0
+for t in terms:
+    if t["round"] != "4":
+        continue
+    pm, py = MON.index(t["delivery_period"][:3]) + 1, int(t["delivery_period"][-4:])
+    sale = wti(py + (pm == 12), pm % 12 + 1)[day4]
+    for opt in t["return_options"].split(";"):
+        label, add = opt.strip().rsplit(" ", 1)
+        served = [(y, m) for y, m in months_in(label)
+                  if (ROOT / "data/raw/futures" / f"CL{'FGHJKMNQUVXZ'[m - 1]}{y % 100:02d}.NYM.json").exists()]
+        if len(served) < len(months_in(label)):
+            print(f"INFO chart 02: {label} priced on {len(served)} of {len(months_in(label))} months (Yahoo does not serve the rest)")
+        later = sum(wti(y, m)[day4] for y, m in served) / len(served)
+        prem = float(t["min_premium_pct"]) + float(add)
+        row = c2[(t["site"], t["delivery_period"], label)]
+        check(f"chart 02: {t['site']} {t['delivery_period']} {label} premium", float(row["premium_pct"]), prem)
+        check(f"chart 02: {t['site']} {t['delivery_period']} {label} sale price", float(row["sale_price"]), round(sale, 2), 0.005)
+        check(f"chart 02: {t['site']} {t['delivery_period']} {label} return price", float(row["return_price"]), round(later, 2), 0.006)
+        check(f"chart 02: {t['site']} {t['delivery_period']} {label} left per barrel", float(row["left_per_barrel"]), sale - (1 + prem / 100) * later, 0.011)
+        n2 += 1
+check("chart 02: every lot and window drawn", len(c2), n2)
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)
