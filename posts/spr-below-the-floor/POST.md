@@ -85,3 +85,21 @@ The weekly numbers will tell us how low the reserve goes this winter, and whethe
 - **When oil actually leaves or comes back.** The weekly level is net. It cannot separate pickups from returns.
 - **Where the true floor is.** The estimates above come from different people using different measures, and they do not agree.
 - **Whether every barrel awarded is picked up.** The department publishes barrels awarded, not barrels delivered.
+
+## Common questions
+
+### How much oil is in the Strategic Petroleum Reserve now?
+
+The reserve held 282.6 million barrels in the week ending October 23, 2026, according to the Energy Information Administration. If companies take all 40.55 million barrels just lent out, and none comes back first, it would hold about 242 million.
+
+### How low can the Strategic Petroleum Reserve go?
+
+Experts do not agree. The Energy Department has said at least 70 million barrels must stay in the reserve to safely manage its salt caverns. A Texas A&M petroleum engineering professor told CNBC the practical floor is 250 million to 300 million barrels. Analysts at Rapidan Energy describe a floor of about 170 million.
+
+### Who borrowed oil in the latest rounds?
+
+In the round awarded as of October 13, ExxonMobil took 16 million of the 23.8 million barrels awarded. In the round awarded as of October 28, trading companies (Trafigura, Gunvor, Vitol and Macquarie) took 91.9%. Across both rounds, trading companies took 49.8%.
+
+### When does the borrowed oil have to come back?
+
+Oil from the first round is due back between April 2027 and December 2029, and oil from the second between October 2028 and December 2029. When the government last lent oil, in late 2021 and early 2022, return dates moved back on 10 of 13 loans.

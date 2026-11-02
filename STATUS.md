@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2e
+Step: 2f
 Since: 2026-11-02
 
 ## Steps
@@ -18,7 +18,7 @@ Since: 2026-11-02
 | 2b | Eric's edit, Claude's look-over | 2026-11-02 | Eric's edits and closing; six look-over items accepted; floor sources linked |
 | 2c | Slice markup | 2026-11-02 | No changes needed; 41 blocks, 2 images with captions, divider once, no embeds |
 | 2d | Hero 1680x1080 + alt text | 2026-11-02 | Gemini cavern with several FLOOR? lines, center crop; alt 479 characters |
-| 2e | SEO | | |
+| 2e | SEO | 2026-11-02 | meta title 47, description 156, 7 keywords; 4 Common questions (FAQ schema) |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
 
@@ -54,3 +54,4 @@ None.
 - 2026-11-02 Step 2d: Eric generated the cavern image from the revised Prompt 1 (several FLOOR? lines). Source kept as images/spr-below-the-floor-hero-source.jpg (2752x1536); cropped from the center to images/spr-below-the-floor-hero-1680x1080.png; the barrel is partly cut off at the right, as Eric expected. Lettering: four FLOOR? signs spelled correctly, plus a mirror-image reflection of one on the oil surface; barrel text partly cropped. Alt 479 characters; hero check ok. Waiting for Eric to confirm.
 - 2026-11-02 Eric confirmed 2d. Next: 2e, SEO.
 - 2026-11-02 Step 2e opened. Eric gave no target searches, so Claude chose them (how low can the SPR go, minimum operating level, the November loans, return dates) and wrote meta_title, description and 7 keywords; a Common questions section is proposed to Eric, not applied.
+- 2026-11-02 Eric accepted all four Common questions and confirmed 2e. Next: 2f, push to Prismic as a draft.

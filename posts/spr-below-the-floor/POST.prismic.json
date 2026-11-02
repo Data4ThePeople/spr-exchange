@@ -3,6 +3,9 @@
   "page_subtitle": "The government just lent out another 40.55 million barrels. If companies take all of it, the Strategic Petroleum Reserve would fall to about 242 million barrels, below the range some experts call its practical bottom.",
   "published_date": "2026-11-03",
   "updated_date": "2026-11-03",
+  "meta_title": "How Low Can the Strategic Petroleum Reserve Go?",
+  "meta_description": "The U.S. just lent 40.55 million more barrels of emergency oil. If all of it leaves, the reserve would fall to about 242 million, below some experts' floor.",
+  "meta_keywords": "how low can the SPR go, SPR minimum operating level, Strategic Petroleum Reserve floor, SPR level 2026, SPR exchange November 2026, SPR oil loans trading companies, SPR oil return dates",
   "make_this_main_post": false,
   "slices": [
     {
@@ -654,7 +657,166 @@
           }
         ]
       }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Common questions",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How much oil is in the Strategic Petroleum Reserve now?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The reserve held 282.6 million barrels in the week ending October 23, 2026, according to the Energy Information Administration. If companies take all 40.55 million barrels just lent out, and none comes back first, it would hold about 242 million.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How low can the Strategic Petroleum Reserve go?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Experts do not agree. The Energy Department has said at least 70 million barrels must stay in the reserve to safely manage its salt caverns. A Texas A&M petroleum engineering professor told CNBC the practical floor is 250 million to 300 million barrels. Analysts at Rapidan Energy describe a floor of about 170 million.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Who borrowed oil in the latest rounds?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In the round awarded as of October 13, ExxonMobil took 16 million of the 23.8 million barrels awarded. In the round awarded as of October 28, trading companies (Trafigura, Gunvor, Vitol and Macquarie) took 91.9%. Across both rounds, trading companies took 49.8%.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "When does the borrowed oil have to come back?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Oil from the first round is due back between April 2027 and December 2029, and oil from the second between October 2028 and December 2029. When the government last lent oil, in late 2021 and early 2022, return dates moved back on 10 of 13 loans.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"The Latest Oil Loans Could Push Our Emergency Reserve Below the Floor Experts Warned About\",\n  \"description\": \"\",\n  \"datePublished\": \"2026-11-03T06:30:00-05:00\",\n  \"dateModified\": \"2026-11-03T06:30:00-05:00\",\n  \"articleSection\": \"Data 4 Thought\",\n  \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n  \"inLanguage\": \"en-US\",\n  \"isAccessibleForFree\": true,\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Eric Pachman\",\n    \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Data 4 The People\",\n    \"url\": \"https://data4thepeople.com\"\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://www.data4thepeople.com/p/spr-below-the-floor\"\n  }\n}"
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"The Latest Oil Loans Could Push Our Emergency Reserve Below the Floor Experts Warned About\",\n      \"description\": \"The U.S. just lent 40.55 million more barrels of emergency oil. If all of it leaves, the reserve would fall to about 242 million, below some experts' floor.\",\n      \"datePublished\": \"2026-11-03T06:30:00-05:00\",\n      \"dateModified\": \"2026-11-03T06:30:00-05:00\",\n      \"articleSection\": \"Data 4 Thought\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"inLanguage\": \"en-US\",\n      \"isAccessibleForFree\": true,\n      \"keywords\": [\n        \"how low can the SPR go\",\n        \"SPR minimum operating level\",\n        \"Strategic Petroleum Reserve floor\",\n        \"SPR level 2026\",\n        \"SPR exchange November 2026\",\n        \"SPR oil loans trading companies\",\n        \"SPR oil return dates\"\n      ],\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"https://www.data4thepeople.com/p/spr-below-the-floor\"\n      },\n      \"@id\": \"https://www.data4thepeople.com/p/spr-below-the-floor#article\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/spr-below-the-floor#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much oil is in the Strategic Petroleum Reserve now?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The reserve held 282.6 million barrels in the week ending October 23, 2026, according to the Energy Information Administration. If companies take all 40.55 million barrels just lent out, and none comes back first, it would hold about 242 million.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How low can the Strategic Petroleum Reserve go?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Experts do not agree. The Energy Department has said at least 70 million barrels must stay in the reserve to safely manage its salt caverns. A Texas A&M petroleum engineering professor told CNBC the practical floor is 250 million to 300 million barrels. Analysts at Rapidan Energy describe a floor of about 170 million.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who borrowed oil in the latest rounds?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"In the round awarded as of October 13, ExxonMobil took 16 million of the 23.8 million barrels awarded. In the round awarded as of October 28, trading companies (Trafigura, Gunvor, Vitol and Macquarie) took 91.9%. Across both rounds, trading companies took 49.8%.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When does the borrowed oil have to come back?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oil from the first round is due back between April 2027 and December 2029, and oil from the second between October 2028 and December 2029. When the government last lent oil, in late 2021 and early 2022, return dates moved back on 10 of 13 loans.\"\n          }\n        }\n      ]\n    }\n  ]\n}"
 }
