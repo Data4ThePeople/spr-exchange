@@ -86655,6 +86655,7 @@ wti_spot_usd,PET.RWTC.D,2026-06-29,71.87,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-06-30,70.56,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-07-01,69.74,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-07-02,69.73,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-07-03,69.83,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-07-06,69.6,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-07-07,71.53,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-07-08,74.56,$/BBL
@@ -86700,6 +86701,7 @@ wti_spot_usd,PET.RWTC.D,2026-09-01,91.48,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-02,92.15,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-03,92.55,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-04,92.69,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-09-07,92.69,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-08,94.21,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-09,97.26,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-09-10,103.57,$/BBL
@@ -86721,3 +86723,18 @@ wti_spot_usd,PET.RWTC.D,2026-10-01,99.77,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-10-02,97.89,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-10-05,96.13,$/BBL
 wti_spot_usd,PET.RWTC.D,2026-10-06,96.24,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-07,95.02,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-08,98.26,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-09,98.73,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-12,94.99,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-13,95.39,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-14,96.34,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-15,104.71,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-16,108.21,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-19,110.01,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-20,107.89,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-21,103.95,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-22,104.27,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-23,109.72,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-26,105.25,$/BBL
+wti_spot_usd,PET.RWTC.D,2026-10-27,103.37,$/BBL

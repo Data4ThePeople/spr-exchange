@@ -207,7 +207,9 @@ series in `data/raw/eia/`; tidy table in `data/processed/eia_series.csv`.
 Monthly data through July 2026. Daily spot prices through October 6, 2026.
 Weekly SPR stocks (`PET.WCSSTUS1.W`) alone were pulled again on November 2,
 2026, through the week ending October 23, 2026 (282.583 million barrels); no
-earlier week changed. The other series were left as saved.
+earlier week changed. Daily WTI Cushing spot (`PET.RWTC.D`) was pulled again
+the same day, through October 27, 2026; no earlier day changed. The other
+series were left as saved.
 
 **Coverage.** Weekly SPR stocks start August 20, 1982, so "lowest since" claims
 from the weekly series can reach back only that far; the monthly series starts
@@ -823,4 +825,5 @@ What the post says without a number, and where it rests: "the law does not say w
 | Round 4 margin per barrel, best lot and window | $9.87: sell $88.43, owe 1.175 x $66.86 = $78.56 | RFP DE-RP96-26PO00006; saved WTI futures, October 6, 2026 | `trade_math.py`, `build_update_chart.py` | `tie_out.py` chart 02 checks (from raw futures files) |
 | Round 4 estimated profit, trading houses | $47 million: 4,800,000 x $9.87 | Award sheet; card above | `build_update_chart.py` | `tie_out.py` chart 02 checks |
 | Round 4 profit potential, ceiling (not on the card) | $178.7 million to $234.9 million | 23,800,000 barrels x $7.51 and $9.87 | arithmetic | Independent tie-out of November 2 matched |
+| WTI spot on the round 4 and FY27-1 bid days | $96.24 (October 6) and $103.95 (October 21), 8.0% higher | EIA `PET.RWTC.D` | `fetch_eia.py` | Own read of the raw file |
 
