@@ -15,7 +15,7 @@ Since: 2026-11-02
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-11-02 | Round 4 and FY27-1 keyed; two static charts; own tie-out passes; two independent tie-outs, fixes applied |
 | 2a | Draft with brackets resolved | 2026-11-02 | Claude drafted at Eric's instruction; independent fact-check, fixes applied; closing still a bracket for Eric |
-| 2b | Eric's edit, Claude's look-over | | |
+| 2b | Eric's edit, Claude's look-over | 2026-11-02 | Eric's edits and closing; six look-over items accepted; floor sources linked |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
@@ -47,4 +47,4 @@ None.
 - 2026-11-02 Step 2b opened. Waiting for Eric's edits to POST.md.
 - 2026-11-02 Step 2b: Eric edited POST.md (grain-of-salt line, floor intro, low-point sentence, his closing with a link bracket). Six look-over items accepted: link bracket resolved; comes/withdrawals; "we have no idea" -> "the true bottom is not known" (the stricter option, since "nobody" is a universal claim); heading "What to watch"; hyphens; delivery caveat added to the limits.
 - 2026-11-02 Eric asked for links on the floor sources. Added: CNBC August 15 (DOE 70M, Misra, Hochstein, Rapidan), Dallas Fed Q3 survey page, 42 U.S.C. 6241 (Cornell LII), EIA weekly SPR stocks page. All four URLs return 200.
-
+- 2026-11-02 Eric confirmed 2b. Next: 2c, slice markup.
