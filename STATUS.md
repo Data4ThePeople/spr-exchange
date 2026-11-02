@@ -13,7 +13,7 @@ Since: 2026-11-02
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
-| 1  | Exploration and analysis | | |
+| 1  | Exploration and analysis | 2026-11-02 | Round 4 and FY27-1 keyed; two static charts; own tie-out passes; two independent tie-outs, fixes applied |
 | 2a | Draft with brackets resolved | | |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
@@ -39,4 +39,4 @@ None.
 - 2026-11-02 Second independent check (chart 02, 16 lot-window margins): no differences; every premium, price and margin matched to the cent from the saved raw futures; the ceiling $178.7M to $234.9M matched. Word flags: "locks in ... by buying futures" stated an assumption as fact; "the most a borrower could make" holds only on our assumptions.
 - 2026-11-02 Eric: chart 02 "too busy"; asked for post 1's round 4 card instead. Rebuilt as a static card (best lot, $88.43 - $78.56 = $9.87; 32.3%; 17.5%; estimated profit $47 million = 4.8M trading-house barrels x $9.87, post 1's method), worded as a condition ("if prices were locked in"). All its inputs were in the independent checks; the $47 million is their product. tie_out.py recomputes the card from raw files; passes.
 - 2026-11-02 Eric wants to say FY27-1's economics were very likely good (98.5% taken, mostly trading houses). EIA daily spot pulled again (no revisions): $96.24 on round 4's bid day, $103.95 on FY27-1's (8.0% higher). Return-side 2028-29 prices for October 21 are still not verifiable. Wording proposed to Eric in chat.
-
+- 2026-11-02 Eric confirmed Step 1. Next: 2a, which needs a slug and Eric's draft.
