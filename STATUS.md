@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2b
+Step: 2c
 Since: 2026-11-02
 
 ## Steps
@@ -48,3 +48,4 @@ None.
 - 2026-11-02 Step 2b: Eric edited POST.md (grain-of-salt line, floor intro, low-point sentence, his closing with a link bracket). Six look-over items accepted: link bracket resolved; comes/withdrawals; "we have no idea" -> "the true bottom is not known" (the stricter option, since "nobody" is a universal claim); heading "What to watch"; hyphens; delivery caveat added to the limits.
 - 2026-11-02 Eric asked for links on the floor sources. Added: CNBC August 15 (DOE 70M, Misra, Hochstein, Rapidan), Dallas Fed Q3 survey page, 42 U.S.C. 6241 (Cornell LII), EIA weekly SPR stocks page. All four URLs return 200.
 - 2026-11-02 Eric confirmed 2b. Next: 2c, slice markup.
+- 2026-11-02 Step 2c opened. Convert-only: 41 blocks (drop cap, 6 headings, 2 images with captions, 14 list items, 17 paragraphs), divider once before the limits; no embeds, so no iframe spacers. Hero warnings expected until 2d.
