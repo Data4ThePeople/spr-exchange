@@ -14,14 +14,26 @@ continuity. Keep lettering short, because image tools often misspell long text.
 Rules for every variant: no recognizable person, no party symbols, no company
 names or logos, no real federal seal.
 
-## Prompt 1 (cavern cutaway)
+## Prompt 1 (cavern cutaway, several floors) — Eric's pick, revised November 2, 2026
+
+Eric: "maybe you can have several lines that say floor? at all the different
+levels that pundits say." The lines stand for the estimates in the post: 300
+and 250 million barrels (Misra's range, Hochstein's 300), 170 million
+(Rapidan) and 70 million (the Energy Department). The oil sits just below the
+250 line, as the post's 242 million would. The numbers are left off the lines
+on purpose so the image does not claim exact heights; the tool would not draw
+them to scale anyway.
 
 Photorealistic cutaway illustration of a huge underground salt cavern, shaped
 like a tall teardrop, carved into pale gray salt rock, seen from the side as if
-the earth were sliced open. Dark crude oil fills only the bottom part of the
-cavern, with a glossy black surface. Well above the oil, a bright yellow
-painted line runs across the cavern wall, with a small stenciled sign beside it
-that reads FLOOR? in black capital letters. At the surface above the cavern, a
+the earth were sliced open. Dark crude oil fills the lower part of the cavern,
+with a glossy black surface about one third of the way up. Four bright yellow
+painted lines run straight across the cavern wall at different heights, each
+with a small stenciled sign at its left end that reads FLOOR? in black capital
+letters: one line near the top of the cavern, one a little lower that sits
+just above the oil surface, one partway down inside the oil, visible through
+the oil as a faint yellow line, and one near the very bottom. The four signs
+all say exactly FLOOR? and nothing else. At the surface above the cavern, a
 small steel pipe and wellhead come down from a flat Gulf Coast landscape under
 a gray sky. In the lower right corner, a single dented navy blue oil barrel
 with white stenciled letters STRATEGIC / PETROLEUM / RESERVE sits on the
