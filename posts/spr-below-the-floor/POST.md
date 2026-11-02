@@ -21,7 +21,7 @@ dividers: false
 
 The Energy Department has lent out another 40.55 million barrels from the Strategic Petroleum Reserve, or SPR. If the companies take all of it, and no borrowed oil comes back first, the reserve would hold about 242 million barrels. That is below the 250 million to 300 million barrels that some experts call the reserve's practical bottom, and it would be the lowest level since early 1982.
 
-So we are about to find out whether those experts are right.
+So we may soon find out whether those experts are right.
 
 This is a quick update. For how these oil loans work, see [our first post on the 2026 exchange](https://www.data4thepeople.com/p/spr-exchange/). For how they compare with the 2022 oil sales, see [our second](https://www.data4thepeople.com/p/spr-sale-vs-loan/).
 
