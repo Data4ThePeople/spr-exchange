@@ -331,5 +331,17 @@ traders4 = sum(b for n, b in sheets["4"]["lines"] if CMAP[n] == "Trading house")
 check("chart 02: trading house barrels", int(card["trading_house_barrels"]), traders4)
 check("chart 02: estimated profit = barrels x rounded margin", int(card["estimated_profit_trading_houses"]), round(traders4 * float(card["left_per_barrel"])))
 
+# 14. Post 3 text: level after both rounds leave, when the reserve was last that low, trading-house share, spot prices.
+wk = {r["period"]: float(r["value"]) for r in json.loads((ROOT / "data/raw/eia/PET.WCSSTUS1.W.json").read_text()) if r["value"] is not None}
+mo = {r["period"]: float(r["value"]) for r in json.loads((ROOT / "data/raw/eia/PET.MCSSTUS1.M.json").read_text()) if r["value"] is not None}
+after = wk["2026-10-23"] * 1000 - (sheets["4"]["total"] + sheets["FY27-1"]["total"])
+check("post 3: level after both rounds leave, barrels", after, 242033000)
+check("post 3: last month at or below that level (end of month)", max(p for p, v in mo.items() if v * 1000 <= after and p < "2026"), "1982-02")
+tr = sum(b for r in ("4", "FY27-1") for n, b in sheets[r]["lines"] if CMAP[n] == "Trading house")
+check("post 3: trading houses across both rounds, %", round(tr / 40550000 * 100, 1), 49.8)
+spot = {r["period"]: float(r["value"]) for r in json.loads((ROOT / "data/raw/eia/PET.RWTC.D.json").read_text()) if r["value"] is not None}
+check("post 3: WTI spot, round 4 and FY27-1 bid days", (spot[rinfo["4"]["bids_due"]], spot[rinfo["FY27-1"]["bids_due"]]), (96.24, 103.95))
+check("post 3: spot higher on FY27-1 bid day, %", round((spot[rinfo["FY27-1"]["bids_due"]] / spot[rinfo["4"]["bids_due"]] - 1) * 100, 0), 8)
+
 print(f"\n{len(fails)} failed" if fails else "\nall checks passed")
 sys.exit(1 if fails else 0)

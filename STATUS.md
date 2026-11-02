@@ -5,8 +5,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: none yet
-Step: 1
+Post: spr-below-the-floor
+Step: 2a
 Since: 2026-11-02
 
 ## Steps
@@ -40,3 +40,5 @@ None.
 - 2026-11-02 Eric: chart 02 "too busy"; asked for post 1's round 4 card instead. Rebuilt as a static card (best lot, $88.43 - $78.56 = $9.87; 32.3%; 17.5%; estimated profit $47 million = 4.8M trading-house barrels x $9.87, post 1's method), worded as a condition ("if prices were locked in"). All its inputs were in the independent checks; the $47 million is their product. tie_out.py recomputes the card from raw files; passes.
 - 2026-11-02 Eric wants to say FY27-1's economics were very likely good (98.5% taken, mostly trading houses). EIA daily spot pulled again (no revisions): $96.24 on round 4's bid day, $103.95 on FY27-1's (8.0% higher). Return-side 2028-29 prices for October 21 are still not verifiable. Wording proposed to Eric in chat.
 - 2026-11-02 Eric confirmed Step 1. Next: 2a, which needs a slug and Eric's draft.
+- 2026-11-02 Step 2a opened. Eric: "i want you to draft this. this is a quick update": barrels just lent, how much to traders, when paybacks are due, and what experts consider the reserve's minimum operating level; lead: if companies take it all, the reserve drops below the bottom of the range, "we will find out if the experts are right." Claude drafted the whole post at his instruction, as with post 2. Working slug spr-below-the-floor (Claude's, for Eric to change); date November 3, 2026, 6:30 a.m. EST (DST ended November 1). New sources for the floor section are in DATASETS.md: CNBC August 15 (DOE 70M, Misra, Hochstein, Rapidan), Dallas Fed Q3 survey, 42 U.S.C. 6241(h) (252.4M, limited drawdowns only). Left out: the "1981 GAO 250 million" claim (report not found) and the unsourced "DOE projects 243 million". Closing left as a bracket for Eric.
+
