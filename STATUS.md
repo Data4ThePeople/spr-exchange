@@ -17,7 +17,7 @@ Since: 2026-11-02
 | 2a | Draft with brackets resolved | 2026-11-02 | Claude drafted at Eric's instruction; independent fact-check, fixes applied; closing still a bracket for Eric |
 | 2b | Eric's edit, Claude's look-over | 2026-11-02 | Eric's edits and closing; six look-over items accepted; floor sources linked |
 | 2c | Slice markup | 2026-11-02 | No changes needed; 41 blocks, 2 images with captions, divider once, no embeds |
-| 2d | Hero 1680x1080 + alt text | | |
+| 2d | Hero 1680x1080 + alt text | 2026-11-02 | Gemini cavern with several FLOOR? lines, center crop; alt 479 characters |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
@@ -52,4 +52,4 @@ None.
 - 2026-11-02 Eric confirmed 2c. Next: 2d, hero 1680x1080 and alt text.
 - 2026-11-02 Step 2d opened. No hero idea from Eric, so Claude wrote two prompts in posts/spr-below-the-floor/hero-prompt.md: a salt cavern cutaway with low oil under a painted FLOOR? line (recommended), and the navy SPR barrel with a measuring stick. Waiting for Eric's image or his own idea.
 - 2026-11-02 Step 2d: Eric generated the cavern image from the revised Prompt 1 (several FLOOR? lines). Source kept as images/spr-below-the-floor-hero-source.jpg (2752x1536); cropped from the center to images/spr-below-the-floor-hero-1680x1080.png; the barrel is partly cut off at the right, as Eric expected. Lettering: four FLOOR? signs spelled correctly, plus a mirror-image reflection of one on the oil surface; barrel text partly cropped. Alt 479 characters; hero check ok. Waiting for Eric to confirm.
-
+- 2026-11-02 Eric confirmed 2d. Next: 2e, SEO.
