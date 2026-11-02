@@ -14,7 +14,7 @@ rounds.csv and company_map.csv are updated (see DATASETS.md).
 Output: one line starting "NEW AWARD SHEET" or "NEW ROUND" per finding, or
 "nothing new". Exit code 0 unless a fetch fails.
 """
-import csv, json, os, sys, urllib.parse, urllib.request
+import csv, json, os, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, os.path.expanduser("~/.claude/d4tp-process"))
@@ -40,9 +40,12 @@ def main():
     found, seen = [], set()
     for where in ("current", "archive"):
         for rel in json.loads(get(BASE + where + "/", ua)):
-            if rel["name"] not in known and rel["name"] not in seen:
+            # Since late October 2026 DOE's listing puts a sort prefix before the name
+            # ("2-FY26 SPR Oil Release No. 4"); match on the name without it, download with it.
+            name_clean = re.sub(r"^\d+-", "", rel["name"])
+            if name_clean not in known and name_clean not in seen:
                 found.append(f"NEW ROUND {rel['name']} (in {where}/, not in rounds.csv)")
-            seen.add(rel["name"])
+            seen.add(name_clean)
             for folder in rel["folders"]:
                 for f in folder["files"]:
                     name = f["name"]

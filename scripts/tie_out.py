@@ -38,22 +38,51 @@ def wti(year, month):
     return closes(f"CL{'FGHJKMNQUVXZ'[month - 1]}{year % 100:02d}.NYM")
 
 
-# 1. Ledger: every award sheet's stated total, straight from the PDF text.
-ledger = page_data("ledger.html")
-stated = 0
+# 1. Ledger: every award sheet's stated total and its contract lines, straight from the PDF text.
+#    The round id comes from rounds.csv by release name ("FY27 SPR Oil Release No. 1" is round FY27-1, not 1).
+#    dist/ledger.html is embedded in post 1 and frozen: it is checked against the sheets for the rounds it holds.
+#    dist/ledger-2026-11.html (post 3) must hold every sheet.
+RELEASE = {r["release_name"]: r["round"] for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
+CMAP = {r["company_as_listed"]: r["type"] for r in csv.DictReader((ROOT / "data/reference/company_map.csv").open())}
+sheets = {}
 for pdf in sorted((ROOT / "data/raw/doe_awards").glob("*.pdf")):
-    text = re.sub(r"\s+", " ", " ".join(p.extract_text() for p in PdfReader(pdf).pages))
-    total = int(re.search(r"exchange of ([\d,]+) barrels", text).group(1).replace(",", ""))
-    rnd = re.search(r"Release No\. ([\w.]+?) Award", pdf.name).group(1)
-    check(f"ledger round {rnd} total", sum(r["barrels"] for r in ledger["ledger"] if r["round"] == rnd), total)
-    stated += total
-check("ledger grand total", sum(r["barrels"] for r in ledger["ledger"]), stated)
-check("ledger contracts", len(ledger["ledger"]), len({(r["round"], r["company_as_listed"]) for r in ledger["ledger"]}))
+    text = re.sub(r"[ \t]+", " ", "\n".join(p.extract_text() for p in PdfReader(pdf).pages))
+    rnd = RELEASE[re.search(r"(FY\d\d SPR Oil Release No\. [\w.]+?) Award", pdf.name).group(1)]
+    lines = [(n.strip(), int(b.replace(",", ""))) for n, b in re.findall(r"^ ?(.+?) ?[–-] ?([\d,]+) barrels ?$", text, flags=re.M)]
+    sheets[rnd] = dict(total=int(re.search(r"exchange of\s+([\d,]+)\s+barrels", text).group(1).replace(",", "")), lines=lines)
+    check(f"sheet {rnd}: contract lines add to the stated total", sum(b for _, b in lines), sheets[rnd]["total"])
+frozen = page_data("ledger.html")
+for rnd in sorted({r["round"] for r in frozen["ledger"]}):
+    check(f"ledger.html (frozen) round {rnd} total", sum(r["barrels"] for r in frozen["ledger"] if r["round"] == rnd), sheets[rnd]["total"])
+stated = sum(r["barrels"] for r in frozen["ledger"])   # what the frozen post-1 pages hold
+check("ledger.html (frozen) grand total, as published in post 1", stated, 133560000)
+ledger = page_data("ledger-2026-11.html")
+for rnd, sh in sheets.items():
+    check(f"ledger-2026-11 round {rnd} total", sum(r["barrels"] for r in ledger["ledger"] if r["round"] == rnd), sh["total"])
+    check(f"ledger-2026-11 round {rnd} contracts", sorted((r["company_as_listed"], r["barrels"]) for r in ledger["ledger"] if r["round"] == rnd), sorted(sh["lines"]))
+stated_all = sum(sh["total"] for sh in sheets.values())
+check("ledger-2026-11 grand total", sum(r["barrels"] for r in ledger["ledger"]), stated_all)
+check("ledger-2026-11 contracts", len(ledger["ledger"]), len({(r["round"], r["company_as_listed"]) for r in ledger["ledger"]}))
 
-# 2. SPR weekly stocks on the ledger page against the raw EIA response.
+# 1b. Post 3 figures for round 4 and FY27-1, recomputed from the sheet lines and company_map.csv.
+rinfo = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())}
+for rnd in ("4", "FY27-1"):
+    sh, meta = sheets[rnd], rinfo[rnd]
+    page = [r for r in ledger["ledger"] if r["round"] == rnd]
+    check(f"post 3: round {rnd} award date on page", page[0]["award_date"], meta["award_date"])
+    check(f"post 3: round {rnd} share of offered barrels taken, %", round(sh["total"] / int(meta["offered_bbl"]) * 100, 1),
+          round(sum(r["barrels"] for r in page) / page[0]["offered_bbl"] * 100, 1))
+    for ty in sorted(set(CMAP.values())):
+        check(f"post 3: round {rnd} {ty} barrels", sum(b for n, b in sh["lines"] if CMAP[n] == ty), sum(r["barrels"] for r in page if r["type"] == ty))
+    below = sorted(n for n, b in sh["lines"] if b < int(meta["min_offer_bbl"]))
+    print(f"INFO post 3: round {rnd} awards below the {int(meta['min_offer_bbl']):,}-barrel minimum offer: {below}")
+check("post 3: round 4 plus FY27-1", sheets["4"]["total"] + sheets["FY27-1"]["total"], 40550000)
+
+# 2. SPR weekly stocks on both ledger pages against the raw EIA response.
 raw = {r["period"]: float(r["value"]) for r in json.loads((ROOT / "data/raw/eia/PET.WCSSTUS1.W.json").read_text()) if r["value"] is not None}
-check("SPR weeks match raw EIA", sum(1 for d, v in ledger["spr"] if raw.get(d) != v), 0)
-check("SPR latest week", ledger["spr"][-1][1], raw[max(raw)])
+check("SPR weeks on ledger.html (frozen) match raw EIA", sum(1 for d, v in frozen["spr"] if raw.get(d) != v), 0)
+check("SPR weeks on ledger-2026-11 match raw EIA", sum(1 for d, v in ledger["spr"] if raw.get(d) != v), 0)
+check("SPR latest week on ledger-2026-11", ledger["spr"][-1][1], raw[max(raw)])
 
 # 3. Trade page: recompute each card from the raw futures files.
 terms = list(csv.DictReader((ROOT / "data/reference/rfp_terms.csv").open()))
@@ -82,14 +111,18 @@ for r in trade["rounds"]:
     check(f"trade {r['round']} later price", e["later_price"], later_price)
     check(f"trade {r['round']} left over", e["left"], round(sale - (1 + prem / 100) * sum(later) / len(later), 2), 0.011)
     if r["taken"] is not None:
-        check(f"trade {r['round']} barrels taken", r["taken"], sum(x["barrels"] for x in ledger["ledger"] if x["round"] == r["round"]))
+        check(f"trade {r['round']} barrels taken", r["taken"], sum(x["barrels"] for x in frozen["ledger"] if x["round"] == r["round"]))
         check(f"trade {r['round']} trader barrels", r["trader_taken"],
-              sum(x["barrels"] for x in ledger["ledger"] if x["round"] == r["round"] and x["type"] == "Trading house"))
+              sum(x["barrels"] for x in frozen["ledger"] if x["round"] == r["round"] and x["type"] == "Trading house"))
 
-# 4. Returns page: both scenarios hold every awarded barrel, and no lot is overfilled.
+# 4. Returns page (frozen, post 1): both scenarios hold every barrel the frozen ledger holds.
+#    The return schedule file, rebuilt with every round, must hold every barrel on the award sheets.
 ret = page_data("returns.html")
 for s in ("earliest", "latest"):
-    check(f"returns {s} total", sum(n for _, n in ret[s]), stated)
+    check(f"returns.html (frozen) {s} total", sum(n for _, n in ret[s]), stated)
+sched = list(csv.DictReader((ROOT / "data/processed/return_schedule.csv").open()))
+for scen in sorted({r["scenario"] for r in sched}):
+    check(f"return_schedule.csv {scen} total", sum(int(r["barrels"]) for r in sched if r["scenario"] == scen), stated_all)
 check("returns latest last date", ret["latest"][-1][0], "2029-07-31")
 check("receipt rate total", ret["receipt_per_month"],
       sum(int(r["nominal_receipt_bbl_per_month"]) for r in csv.DictReader((ROOT / "data/reference/site_receipt_rates.csv").open())))
@@ -126,10 +159,10 @@ for f in p22["firms"]:
 for t in p22["types"]:
     check(f"2022 type {t['type']}", t["barrels"], sum(b for n, b, _ in awards if cmap[n]["type"] == t["type"]))
 check("2022 offered", p22["offered"], sum(int(r["offered_bbl"]) for r in csv.DictReader((ROOT / "data/reference/sales_2022.csv").open())))
-check("2026 total matches the ledger page", p26["total"], sum(r["barrels"] for r in ledger["ledger"]))
+check("2026 total matches the frozen ledger page (post 2 compare.html)", p26["total"], sum(r["barrels"] for r in frozen["ledger"]))
 for t in p26["types"]:
-    check(f"2026 type {t['type']}", t["barrels"], sum(r["barrels"] for r in ledger["ledger"] if r["type"] == t["type"]))
-check("2026 borrowers", len(p26["firms"]), len({r["company"] for r in ledger["ledger"]}))
+    check(f"2026 type {t['type']}", t["barrels"], sum(r["barrels"] for r in frozen["ledger"] if r["type"] == t["type"]))
+check("2026 borrowers", len(p26["firms"]), len({r["company"] for r in frozen["ledger"]}))
 
 # 6. Design evidence: recount the 2022 offers straight from the Offeror Abstract
 #    Reports (one page per offer), and check the January 2022 loan table against
@@ -199,9 +232,11 @@ for r in trade["rounds"]:
     if r["example"]["sale_basis"] == "front":
         check(f"lot margins, round {r['round']} best lot matches the trade page",
               max(float(l["left_per_barrel"]) for l in lots if l["round"] == r["round"]), r["example"]["left"])
+held_to = max(r["date"] for r in csv.DictReader((ROOT / "data/processed/futures_closes.csv").open()))
 for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open()):
-    if r["bids_due"] > datetime.date.today().isoformat():
-        continue   # priced on bid day, so a round still open has no lot margins yet
+    if r["bids_due"] > held_to:
+        print(f"INFO lot margins: round {r['round']} not priced (bids due {r['bids_due']}, saved futures end {held_to})")
+        continue
     check(f"lot margins, round {r['round']} barrels offered", sum(int(l["offered_bbl"]) for l in lots if l["round"] == r["round"]), int(r["offered_bbl"]))
 for r in csv.DictReader((ROOT / "data/processed/round_uptake_2026.csv").open()):
     if r["taken_bbl"]:

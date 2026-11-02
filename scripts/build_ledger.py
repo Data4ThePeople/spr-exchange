@@ -24,11 +24,15 @@ COLS = ["round", "rfp_no", "award_date", "offered_bbl", "company_as_listed", "co
         "type", "barrels", "source_pdf", "source_url"]
 
 
-def parse(pdf):
+def parse(pdf, rounds):
     text = "\n".join(p.extract_text() for p in PdfReader(pdf).pages)
     text = re.sub(r"[ \t]+", " ", text)
     release = re.search(r"(FY\d\d SPR Oil Release No\. [\w.]+?) Award Information", pdf.name).group(1)
-    rnd = release.split("No. ")[1]
+    # The round id comes from rounds.csv, not the file name: "FY27 SPR Oil Release No. 1"
+    # would otherwise read as round "1" and clash with FY26 round 1.
+    if release not in rounds:
+        sys.exit(f"{pdf.name}: release '{release}' is not in rounds.csv")
+    rnd = rounds[release]["round"]
     rfp = re.search(r"RFP NO\. (DE-RP96-\d\dPO\d{5})", text).group(1)
     offered = float(re.search(r"UP TO ([\d.]+) MILLION BARRELS", text).group(1)) * 1e6
     date = datetime.datetime.strptime(re.search(r"As of (\w+ \d+, \d{4})", text).group(1), "%B %d, %Y").date()
@@ -37,7 +41,9 @@ def parse(pdf):
     awards = [(name.strip(), int(n.replace(",", ""))) for name, n in lines]
     if sum(n for _, n in awards) != stated:
         sys.exit(f"{pdf.name}: lines add to {sum(n for _, n in awards):,}, sheet says {stated:,}")
-    url = ARCHIVE + urllib.parse.quote(f"{release}/1-Request for Proposal/{pdf.name}")
+    # Closed rounds sit in DOE's archive; a sheet served elsewhere (a round still listed
+    # under current/) carries its URL in rounds.csv award_sheet_url.
+    url = rounds[release]["award_sheet_url"] or ARCHIVE + urllib.parse.quote(f"{release}/1-Request for Proposal/{pdf.name}")
     return [dict(round=rnd, rfp_no=rfp, award_date=date.isoformat(), offered_bbl=int(offered),
                  company_as_listed=name, barrels=n, source_pdf=pdf.name, source_url=url)
             for name, n in awards], stated
@@ -45,9 +51,10 @@ def parse(pdf):
 
 def main():
     cmap = {r["company_as_listed"]: r for r in csv.DictReader((REF / "company_map.csv").open())}
+    rounds = {r["release_name"]: r for r in csv.DictReader((REF / "rounds.csv").open())}
     rows, seen = [], set()
     for pdf in sorted(PDFS.glob("*Award Information.pdf")):
-        awards, stated = parse(pdf)
+        awards, stated = parse(pdf, rounds)
         for a in awards:
             key = (a["round"], a["company_as_listed"])
             if key in seen:

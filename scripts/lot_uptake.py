@@ -48,13 +48,21 @@ def options(text):
 
 def main():
     terms = list(csv.DictReader((ROOT / "data/reference/rfp_terms.csv").open()))
-    rounds = {r["round"]: r for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open())
-              if r["bids_due"] <= datetime.date.today().isoformat()}   # no bid-day prices yet for a round still open
     awards = list(csv.DictReader((ROOT / "data/processed/spr_2026_exchange_awards.csv").open()))
     curve = {}
     for r in csv.DictReader((ROOT / "data/processed/futures_closes.csv").open()):
         if r["product"] == "WTI":
             curve[r["date"], r["delivery"]] = float(r["close"])
+    # A round is priced only if its bid day is within the saved futures closes. The saved
+    # closes are not refreshed in place (see DATASETS.md, Yahoo revisions), so a later
+    # round waits until bid-day prices are added; it is named here, not silently dropped.
+    held_to = max(d for d, _ in curve)
+    rounds = {}
+    for r in csv.DictReader((ROOT / "data/reference/rounds.csv").open()):
+        if r["bids_due"] <= held_to:
+            rounds[r["round"]] = r
+        else:
+            print(f"round {r['round']}: bids due {r['bids_due']}, after the last saved futures close ({held_to}); not priced")
     front = front_month()
 
     lots, seen = [], set()

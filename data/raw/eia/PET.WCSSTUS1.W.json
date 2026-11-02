@@ -1,5 +1,44 @@
 [
 {
+"period": "2026-10-23",
+"duoarea": "NUS",
+"area-name": "U.S.",
+"product": "EPC0",
+"product-name": "Crude Oil",
+"process": "SAS",
+"process-name": "Ending Stocks SPR",
+"series": "WCSSTUS1",
+"series-description": "U.S. Ending Stocks of Crude Oil in SPR (Thousand Barrels)",
+"value": 282583,
+"units": "MBBL"
+},
+{
+"period": "2026-10-16",
+"duoarea": "NUS",
+"area-name": "U.S.",
+"product": "EPC0",
+"product-name": "Crude Oil",
+"process": "SAS",
+"process-name": "Ending Stocks SPR",
+"series": "WCSSTUS1",
+"series-description": "U.S. Ending Stocks of Crude Oil in SPR (Thousand Barrels)",
+"value": 282683,
+"units": "MBBL"
+},
+{
+"period": "2026-10-09",
+"duoarea": "NUS",
+"area-name": "U.S.",
+"product": "EPC0",
+"product-name": "Crude Oil",
+"process": "SAS",
+"process-name": "Ending Stocks SPR",
+"series": "WCSSTUS1",
+"series-description": "U.S. Ending Stocks of Crude Oil in SPR (Thousand Barrels)",
+"value": 282983,
+"units": "MBBL"
+},
+{
 "period": "2026-10-02",
 "duoarea": "NUS",
 "area-name": "U.S.",

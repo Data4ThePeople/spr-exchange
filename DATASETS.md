@@ -12,34 +12,55 @@ lists the RFP number, an "as of" date, a stated total, and one line per
 contract: a company name and a barrel count. Nothing else.
 
 **Where it comes from.** `https://www.spr.doe.gov/posting/EXCHANGE/archive/<release>/1-Request for Proposal/<release> Award Information.pdf`.
-Five files in `data/raw/doe_awards/`, supplied by Eric and confirmed
-byte-identical to DOE's archive copies. DOE's folder listing is a JSON feed at
+Seven files in `data/raw/doe_awards/`. Rounds 1 to 3 were supplied by Eric and
+confirmed byte-identical to DOE's archive copies. Round 4 and FY27-1 were
+downloaded by the weekly check on November 2, 2026 from DOE's `current/` folder,
+where the release folders now carry a sort prefix
+(`2-FY26 SPR Oil Release No. 4/`, `1-FY27 SPR Oil Release No. 1/`). A sheet not
+at the archive path has its URL in `rounds.csv` (`award_sheet_url`), which
+`build_ledger.py` uses for `source_url`; that URL will change when DOE archives
+the round. DOE's folder listing is a JSON feed at
 `.../posting/EXCHANGE/archive/` (closed rounds) and `.../posting/EXCHANGE/current/`
 (open rounds); snapshots are in `data/raw/doe_rfps/`.
 
-**Version and vintage.** Rounds 1, 1.a, 1.b, 2 and 3, dated March 20, April 10,
-April 17, May 11 and June 22, 2026. DOE moves a round from `current/` to
-`archive/` after it closes, which changes the URL. Round 4 (RFP issued
-September 29, bids due October 6) had no award sheet posted as of October 19.
-DOE moved it to `archive/` on October 16 with only its RFP, exhibits and Q&A.
-The FY27 Release No. 1 RFP (October 16) says return windows "will cede
-priority to awards under DE-RP96-26PO00006," which is round 4's RFP number,
-so round 4 appears to have made awards, but DOE has not posted who or how much.
+**Version and vintage.** Rounds 1, 1.a, 1.b, 2, 3, 4 and FY27-1, with "as of"
+dates March 20, April 10, April 17, May 11, June 22, October 13 and October 28,
+2026. The round 4 and FY27-1 sheets were posted on October 29, 2026 (DOE's
+`timeLastModified`). DOE moves a round from `current/` to `archive/` after it
+closes, which changes the URL; round 4 was listed under `archive/` on
+October 16 and was back under `current/`, with the prefixed name, by
+November 2.
+
+**Round id.** `build_ledger.py` and `tie_out.py` take each sheet's round from
+`rounds.csv` by release name, not from the number in the file name, because
+"FY27 SPR Oil Release No. 1" would otherwise read as round 1.
 
 **Weekly check.** `scripts/check_awards.py` reads both DOE folder listings and
 downloads any award sheet not yet in `data/raw/doe_awards/`; it also reports a
-release that is not in `rounds.csv`. `scripts/check_awards_weekly.sh` runs it
+release that is not in `rounds.csv`, matching on the release name with DOE's
+leading sort prefix ("2-") removed. `scripts/check_awards_weekly.sh` runs it
 every Monday at 10:30 through a launchd job on Eric's Mac
 (`org.data4thepeople.spr-awards-weekly`), commits a new sheet, and shows an
 alert. It does not rebuild the ledger or the charts.
 
-**Coverage.** Every contract DOE announced: 31 contracts, 13 firms,
-133,560,000 barrels. All values are DOE's own figures; nothing is estimated.
+**Coverage.** Every contract DOE announced: 42 contracts, 13 firms,
+174,110,000 barrels in seven rounds. Round 4: six contracts, 23,800,000 of
+40,000,000 barrels offered. FY27-1: five contracts, 16,750,000 of 17,000,000.
+All values are DOE's own figures; nothing is estimated.
+
+**Published pages are frozen.** Post 1 embeds `dist/ledger.html`,
+`dist/trade.html` and `dist/returns.html`, and post 2 embeds
+`dist/compare.html`, from GitHub Pages. Their text quotes the 31 contracts and
+133,560,000 barrels of rounds 1 to 3, so those pages are not rebuilt. A later
+post gets its own file: post 3 uses `dist/ledger-2026-11.html`
+(`build_ledger_page.py --out`), same template, all seven rounds. `tie_out.py`
+checks the frozen pages against the sheets for the rounds they hold, and the
+new page against every sheet.
 
 **Changes over time.** Company names are not spelled the same way from sheet to
 sheet ("Marathon Petroleum Company LP" and "Marathon Petroleum Company";
-"Vitol Inc." and "Vitol"; "Phillips 66 Company" and "Phillips 66"; with and
-without "LLC"). We merge these in `data/reference/company_map.csv` and keep
+"Vitol Inc." and "Vitol"; "Phillips 66 Company" and "Phillips 66"; "Gunvor USA
+LLC" and, in FY27-1, "Gunvor USA"; with and without "LLC"). We merge these in `data/reference/company_map.csv` and keep
 DOE's spelling in `company_as_listed`. The sheets do not say whether different
 spellings are different legal entities.
 
@@ -55,9 +76,13 @@ be reissued; we have seen no reissue.
 **Units and rounding.** Barrels, to the nearest 5,000 in practice. These are
 awarded volumes, not delivered volumes. Delivered volumes can differ.
 
-**Known quirks.** Round 3 awarded 500,000 barrels although the RFP set a
-3,000,000-barrel minimum offer; the RFP is "negotiated," so DOE can agree other
-terms. The firm type is ours, not DOE's (see "Firm types" below).
+**Known quirks.** Several awards are smaller than the RFP's 3,000,000-barrel
+minimum offer: round 3, Vitol (500,000); round 4, Atlantic Trading & Marketing
+(2,450,000), Gunvor USA (1,350,000), Energy Transfer Crude Marketing (550,000)
+and Trafigura (300,000); FY27-1, Macquarie (1,775,000) and Phillips 66
+(1,350,000). The minimum applies to an offer, and the sheets show only the
+award, so a small award may be part of a larger offer; the RFP is
+"negotiated," so DOE can also agree other terms. The sheets do not say which. The firm type is ours, not DOE's (see "Firm types" below).
 
 **Uncertainty.** None stated. The gap between awarded and delivered is unknown
 per contract; the weekly SPR level is the only public check (see EIA below).
@@ -107,9 +132,11 @@ windows "--" where round 4 printed "0.0%". We read "--" as a window not offered
 for that lot (so Bryan Mound has no Jan-Mar 2029 option and the Big Hill
 January lot has no Oct-Dec 2028 option); the RFP does not define the mark, and
 no Q&A has been posted yet. Second, round 4 awards get priority over this
-round's returns (Section B.6(c)). Lot margins for this round are computed only
-after its bid day, when futures for that day are held; `lot_uptake.py` and
-`tie_out.py` skip a round whose bids are not yet due. The independent tie-out
+round's returns (Section B.6(c)). Lot margins are computed only for a round
+whose bid day is within the saved futures closes; `lot_uptake.py` names any
+round it skips and `tie_out.py` does the same. FY27-1 (bids due October 21) is
+not priced: the saved closes end October 9 and were not refreshed (see the
+futures section, Revisions). The independent tie-out
 of October 19, 2026 (fresh agent, its own download of the RFP, pages 7 and 12
 read from images) matched every field of both CSVs. It also read "--" as a
 window not offered, with moderate to high confidence: round 4 printed "0.0%"
@@ -140,8 +167,8 @@ million barrels a month for "Nov-Feb 2027" on pages B-1 and C-1 and "Jan-Feb
 **Changes over time.** The premium design changed. Round 1 set a minimum
 premium per site and one return window. From round 1.a on, DOE added a schedule
 of extra premium for choosing a later return period. Minimum premiums ran 17%
-to 24% in rounds 1 through 2, then 8% to 9% in round 3 and 7% to 9.5% in
-round 4. Minimum offer size rose from 1 million to 3 million barrels at round 2.
+to 24% in rounds 1 through 2, then 8% to 9% in round 3, 7% to 9.5% in
+round 4, and 12.5% to 14% in FY27-1. Minimum offer size rose from 1 million to 3 million barrels at round 2.
 
 **Suppressed, censored or masked values.** The premium each winner actually
 bid (minimum plus the bidder's "additional premium" plus the return-period
@@ -179,6 +206,9 @@ series in `data/raw/eia/`; tidy table in `data/processed/eia_series.csv`.
 
 **Version and vintage.** Weekly data through the week ending October 2, 2026.
 Monthly data through July 2026. Daily spot prices through October 6, 2026.
+Weekly SPR stocks (`PET.WCSSTUS1.W`) alone were pulled again on November 2,
+2026, through the week ending October 23, 2026 (282.583 million barrels); no
+earlier week changed. The other series were left as saved.
 
 **Coverage.** Weekly SPR stocks start August 20, 1982, so "lowest since" claims
 from the weekly series can reach back only that far; the monthly series starts
@@ -237,7 +267,16 @@ far-dated Brent months are also not served. Missing symbols are listed in
 
 **Missing data.** See coverage. A missing contract is left missing.
 
-**Revisions.** Not expected. Pinned in the repo.
+**Revisions.** Yahoo revised its history. A full re-pull on November 2, 2026
+dropped 1,899 saved closes (expired contracts no longer served) and returned
+different values for most WTI closes from March 2026 on: of 4,338 contract-days
+compared, differences ran from -$4.72 to +$4.61 a barrel, averaging $0.02, and
+14 of them are explained by a one-day date shift. January and February 2026
+closes are unchanged. The independent tie-out of October 12 had re-pulled 2,894
+saved closes with no difference, so the change is after that date. We cannot
+say which version matches the exchange settlement without CME's file. The saved
+closes were kept, not overwritten; the re-pull was discarded. Figures already
+published from the saved closes stand on the saved copy.
 
 **Units and rounding.** Dollars per barrel, two decimals.
 
@@ -338,7 +377,7 @@ original article located and read before it is used.
 
 ## Return schedule bounds (`scripts/return_schedule.py` -> `data/processed/return_schedule.csv`, `dist/returns.html`)
 
-- **What it is:** the earliest and latest dates the RFP return windows allow for the 133,560,000 barrels awarded in rounds 1 to 3. Premium barrels are not counted. Round 4 is not included until DOE posts awards.
+- **What it is:** the earliest and latest dates the RFP return windows allow for the barrels awarded. `return_schedule.csv` holds all seven rounds, 174,110,000 barrels. `dist/returns.html` is frozen at rounds 1 to 3 (133,560,000) because post 1 embeds it. Premium barrels are not counted.
 - **Why bounds:** award sheets give barrels per firm per round, not the lot (site and pickup month) or the return window chosen.
 - **Method:** within each round, awarded barrels are placed lot by lot up to each lot's offered volume (`rfp_terms.csv`). "Earliest" fills the lots whose first window opens soonest and returns the oil the day that window opens. "Latest" fills the lots whose last window closes latest and returns the oil the day that window closes. Round 1 windows use the exact days in the RFP; other rounds use the first and last day of the window months.
 - **Limits:** the earliest line ignores DOE's monthly receipt rate at each site, so it is faster than the sites could take oil back. It also starts September 1, 2026, and EIA weekly stocks show no net increase through October 2, 2026. Neither line reflects any later change to return dates.
@@ -629,14 +668,14 @@ Petroleum Reserve Project Management Office.
 
 ## Trade margin and uptake by 2026 round (`scripts/lot_uptake.py` -> `lot_margins_2026.csv`, `round_uptake_2026.csv`)
 
-- **What it is:** for each of the 25 lots DOE offered in the six 2026 rounds (`rfp_terms.csv`), the per-barrel result of the borrow, sell and buy-back trade on the day bids were due, and for each round the offered-weighted average beside the share of that round's oil that was awarded.
+- **What it is:** for each of the 25 lots DOE offered in rounds 1 to 4 (`rfp_terms.csv`; FY27-1's four lots are not priced, see the RFP section), the per-barrel result of the borrow, sell and buy-back trade on the day bids were due, and for each round the offered-weighted average beside the share of that round's oil that was awarded.
 - **Method:** the same as the worked trade example. One barrel is sold at the front-month WTI futures close (`CL=F`) on the bid date. The return barrels are priced at the mean WTI futures close, that day, of the contract months in the return window. Premium is DOE's minimum for the lot plus the window's add-on. "Left per barrel" is sale price minus (1 + premium) times the later price. "Gap" is sale price over later price, minus one. Each lot is given the return window that leaves the most.
 - **Round 1** offers one continuous return window per lot (for example November 1, 2026 to September 30, 2028), not a menu. It is priced at the last three months of the window.
 - **Round averages** weight each lot by barrels offered. "Taken" is the round's awarded barrels from the ledger over the barrels offered in `rounds.csv`.
 - **Why by round and not by lot:** DOE's award sheets give barrels per company per round. They do not say which site, crude type, pickup month or return window was awarded, so uptake cannot be measured for a single lot.
 - **Checked against the RFPs by the independent tie-out:** all 25 lots match. Three things to know: the round 3 RFP contradicts itself (one table lists 14 and 15 million barrels at Big Hill, three others and the title give 11 and 14 million, which we use); round 1 lists West Hackberry sour as one 34-million-barrel lot with two return routes, which we show as 24 and 10 million; round 2 uses Amendment 0001's volumes.
 - **Bids were due before the market closed.** In rounds 1.a to 4 offers were due at 11:00 a.m. Central, and this uses that day's closing price, which a bidder could not have seen. Round 1 was due at 5:00 p.m.
-- **Limits:** five rounds have results, so this is five observations, not a statistical test. The front-month price is used in every round to keep one basis; the published trade card for round 4 uses the contract for the month after pickup and so shows a lower figure ($9.87 for its best lot) than this file ($11.21). Bids could come in above the minimum premium. The grade's price gap to WTI, shipping and the bank guarantee are left out. Prices moved between bid day and award day, so a bidder could not be sure of the bid-day figure.
+- **Limits:** six rounds are priced and have results, so this is six observations, not a statistical test. Round 4 was taken at 59.5%. The front-month price is used in every round to keep one basis; the published trade card for round 4 uses the contract for the month after pickup and so shows a lower figure ($9.87 for its best lot) than this file ($11.21). Bids could come in above the minimum premium. The grade's price gap to WTI, shipping and the bank guarantee are left out. Prices moved between bid day and award day, so a bidder could not be sure of the bid-day figure.
 
 ## Crude oil purchases for the reserve, 2023 to 2025 (U.S. Department of Energy)
 
@@ -740,3 +779,35 @@ What the post says without a number, and where it rests: "the law does not say w
 **Final tie-out (October 12, 2026, Step 2b).** A fresh agent, given the raw PDFs and the method in words but none of our results, rebuilt the 2022 bid comparison from the 14 award and offer reports: 583 offers, 20 companies, no offer from Trafigura, five trading houses, and the price gaps above to four decimals. It also confirmed 10 of 13 loans moved, six companies, five of them 2026 borrowers. It could not read most of the loan modification PDFs (image scans, no text recognition available to it), so on the loan side it worked from our keyed tables; those tables were checked against page images in the earlier loan tie-out. Sensitivities it reported: counting each offer line equally, not by barrels, gives trading houses $4.19 below and refiners 14 cents below; capping barrels at each offer's stated maximum does not change either figure.
 
 **The sale money, checked again the same day.** Public Law 117-328 was downloaded again from govinfo.gov. The two rescissions appear once each, as quoted above: $10,395,000,000 in section 1301(a) of Division M and $2,052,000,000 under the heading "SPR Petroleum Account" in Division D. Both are "of the unobligated balances from amounts deposited" in the account "pursuant to section 167(b)(3) of the Energy Policy and Conservation Act", which is the provision for money from drawdown sales. The $16,993,463,785, the 140 million barrels and "in exchange for a recission of $10.4 billion ... with the money coming from revenue earned from emergency sales in 2022" were read again from pages 36 and 30 of DOE's 2022 annual report, and the Budget Appendix line "appropriations permanently reduced", -12,447 (millions), from the saved page. Two limits: DOE ties only the $10.4 billion to the 2022 sale money in so many words, so counting the $2.052 billion against the same receipts rests on the law's wording; and the law rescinds the money without naming any use for it. Section 1301 sits in Division M, the Additional Ukraine Supplemental Appropriations Act, 2023; the post draws no conclusion from where it sits.
+
+## Post 3 page (`scripts/build_ledger_page.py --out dist/ledger-2026-11.html`)
+
+- **What it is:** the ledger page from post 1, rebuilt from the same template with all seven rounds (42 contracts, 174,110,000 barrels) and EIA weekly SPR stocks through October 23, 2026. Embed height at 1,200px wide, framed: 1,536px of content; use 1,560.
+- **Template change:** at narrow widths the bar labels show the round alone ("FY27-1") instead of "Round FY27-1", so seven labels do not run together. The frozen `dist/ledger.html` was not rebuilt.
+- **Wording to settle:** the page's title block calls the contracts "the 2026 Strategic Petroleum Reserve emergency exchange." Neither the round 4 nor the FY27-1 RFP uses "emergency" for the program (only in standard clauses on national emergencies and force majeure). FY27-1 is tied to round 4 in its RFP (return priority to round 4's awards, Section B.6(c)), and its awards are dated October 28, 2026.
+
+## Figures for post 3 (round 4 and FY27-1), traced
+
+| Figure | Value | Source | Script | Own tie-out |
+|---|---|---|---|---|
+| Round 4 barrels awarded, of offered | 23,800,000 of 40,000,000; 59.5% | Round 4 award sheet; RFP DE-RP96-26PO00006 | `build_ledger.py`, `rounds.csv` | `tie_out.py` post 3 checks |
+| Round 4 by firm type | Refiner 16,000,000; trading house 4,800,000; major trading arm 2,450,000; midstream 550,000 | Same; `company_map.csv` | `build_ledger.py` | Same |
+| Round 4 awards as of | October 13, 2026 | Award sheet | `build_ledger.py` | Same |
+| FY27-1 barrels awarded, of offered | 16,750,000 of 17,000,000; 98.5% | FY27-1 award sheet; RFP DE-RP96-27PO00001 | `build_ledger.py`, `rounds.csv` | Same |
+| FY27-1 by firm type | Trading house 15,400,000; refiner 1,350,000 | Same; `company_map.csv` | `build_ledger.py` | Same |
+| FY27-1 awards as of | October 28, 2026 | Award sheet | `build_ledger.py` | Same |
+| Both rounds together | 40,550,000 | Both sheets | `tie_out.py` | Same |
+| Pickup months | Round 4 November and December 2026; FY27-1 November 2026 to January 2027 | RFPs, Section B tables | `rfp_terms.csv` | Keyed October 19; independent tie-out of FY27-1 matched |
+| All 2026 rounds | 174,110,000 barrels, 42 contracts, 13 firms | Seven award sheets | `build_ledger.py` | `tie_out.py` ledger checks |
+| Awards below the 3,000,000-barrel minimum offer | Round 4: four; FY27-1: two | Award sheets; RFPs | `tie_out.py` (INFO lines) | Listed, not a pass/fail check |
+| SPR stocks, week ending October 23, 2026 | 282.583 million barrels | EIA `PET.WCSSTUS1.W` | `fetch_eia.py` | `tie_out.py` SPR checks |
+
+## Post 3: loan terms, premiums and the borrower's margin (round 4 and FY27-1)
+
+- **Still loans.** Both RFPs are titled "Exchange of up to ... million barrels of crude oil from the Strategic Petroleum Reserve," and both say "All Return Oil to SPR sites will include the awarded volume in addition to the premium" (Section B.5(b)). Same structure as rounds 1 to 3.
+- **Repayment terms** (`rfp_terms.csv`, Section B tables). Premium owed = the lot's minimum plus the add-on for the return window chosen.
+  - Round 4 (minimums 7% to 9.5%): Bryan Mound returns Apr-Jun 2027 (+0), Jan-Mar 2029 (+7), Aug-Oct 2029 (+9) or Nov-Dec 2029 (+10); Big Hill returns Jul-Sep 2027 (+0), Oct-Dec 2028 (+5), Jan-Mar 2029 (+6) or Apr-Jun 2029 (+7). Lowest total premium 7%, highest 19.5%.
+  - FY27-1 (minimums 12.5% to 14%): Bryan Mound returns Aug-Sep 2029 (+2.5), Oct 2029 (+3.5) or Dec 2029 (+4.5 for the November lot, +5.0 for the December lot); Big Hill returns Oct-Dec 2028 (+0.5, December lot only), Jul-Aug 2029 (+4), Sep-Oct 2029 (+5) or Nov-Dec 2029 (+6). No window before October 2028. Lowest total premium 13%, highest 20%.
+- **Premium actually agreed: not published.** The award sheets give only a company and a barrel count. The RFPs say offers are ranked with "Additional Premium having priority," so winning premiums are at or above the minimum, by an unknown amount. Every margin below is at the minimum premium, which is the most a borrower could have kept for that window.
+- **Borrower's margin, round 4** (`lot_margins_2026.csv`, saved futures, bid day October 6, 2026, minimum premium plus the best window's add-on): $9.18 to $11.21 a barrel by lot, $10.20 averaged over barrels offered. Front-month sale price $89.44.
+- **Borrower's margin, FY27-1: not computed.** Bids were due October 21; the saved futures end October 9. Yahoo's November 2 re-pull (not saved, see futures Revisions) would give $15.79 to $17.61, but the same re-pull also moves every earlier round (round 4 to $8.09 to $10.09; round 1.b from $17.03 to $9.63; round 3 from $2.47 to -$0.54). Against EIA's daily Cushing spot price (`PET.RWTC.D`), the saved front-month closes sit closer than the re-pull for March to October 2026 (mean gap $2.16 against $3.54; January and February identical at $0.23). That favors the saved copy for the front month; it says nothing about the 2028-29 contracts, for which we have no second source.
