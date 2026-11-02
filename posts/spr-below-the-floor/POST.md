@@ -43,7 +43,9 @@ These are still loans. Companies pick up the oil from November 2026 through Janu
 
 Those are the minimums. Companies could offer more extra oil to win, and the department does not publish what each one offered. Its requests for proposals say it may post each winner's offer data "excluding exchange ratio," which is the extra oil.
 
-The last time the government lent oil, the return dates did not hold. In late 2021 and early 2022, it made 13 smaller oil loans. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. Some of that oil was rescheduled to come back this year. What remained of a 3 million barrel loan Trafigura took in January 2022 was moved to July through October 2026, and the records do not show whether it has come back. A 2.7 million barrel ExxonMobil loan from March 2022 was due back in June and July 2025 under the contract on file. It was moved twice, and is now due between October 1 and November 30 of this year. Several of the changes say directly that the delay cost the borrower nothing extra: "There is no adjustment to the premium as a result of this extension." The government agreed to every change, so the companies did not miss their deadlines. [We covered those loans in detail in our second post](https://www.data4thepeople.com/p/spr-sale-vs-loan/).
+The last time the government lent oil, the return dates did not hold. In late 2021 and early 2022, it made 13 smaller oil loans. Return dates moved back on 10 of them, and on seven, all or part of the oil was pushed back by two years or more. Some of that oil was rescheduled to come back this year. What remained of a 3-million-barrel loan Trafigura took in January 2022 was moved to July through October 2026, and the records do not show whether it has come back. A 2.7-million-barrel ExxonMobil loan from March 2022 was due back in June and July 2025 under the contract on file. It was moved twice, and is now due between October 1 and November 30 of this year. Several of the changes say directly that the delay cost the borrower nothing extra: "There is no adjustment to the premium as a result of this extension." The government agreed to every change, so the companies did not miss their deadlines. [We covered those loans in detail in our second post](https://www.data4thepeople.com/p/spr-sale-vs-loan/).
+
+In short, it's best to take these payback dates with a grain of salt.
 
 ## What the first round could pay
 
@@ -56,7 +58,7 @@ We cannot do the same math for the second round yet. We do not have futures pric
 
 ## How low can the reserve go?
 
-Experts do not agree on where the bottom is.
+It's becoming clear, based on the disagreement in expert opinions, that the true bottom is not known.
 
 - **The Energy Department** has said at least 70 million barrels must stay in the reserve to safely manage the underground salt caverns that hold the oil.
 - **Siddharth Misra,** a petroleum engineering professor at Texas A&M, told CNBC that 70 million barrels is the strict physical minimum, and that "the practical operational floor for the crude inventory is between 250 million and 300 million barrels." Below 300 million, he said, the reserve loses its ability to pump oil quickly in an emergency.
@@ -67,11 +69,11 @@ Experts do not agree on where the bottom is.
 
 The reserve held 282.6 million barrels in the week ending October 23, according to the Energy Information Administration. Take away 40.55 million and it would hold about 242 million. That is below Misra's range and below the line Congress set for short drawdowns. It is still well above the department's 70 million barrels and Rapidan's 170 million.
 
-The real low point depends on timing. Some oil from the first 2026 loans can come back starting this fall, and returns would offset part of the new pickups. The weekly data show no rise in the reserve through October 23. Barrels awarded are also not the same as barrels delivered.
+The real low point depends on timing. If oil from the first 2026 loans comes back starting this fall (I'm not holding my breath), we could stay above 250 million barrels after these withdrawals.
 
-## We will find out
+## What to watch
 
-[Eric: your closing. A suggestion to replace or keep: The weekly numbers will tell us how low the reserve goes this winter, and whether the experts who drew the line at 250 million to 300 million barrels were right. We will keep watching.]
+The weekly numbers will tell us how low the reserve goes this winter, and whether the experts who drew the line at 250 million to 300 million barrels were right. We will keep watching. You can watch alongside us each week using our [free interactive oil inventory data visualization](https://www.data4thepeople.com/p/methodology-the-petroleum-inventory-seasonality-ch).
 
 ::: divider
 
@@ -82,3 +84,4 @@ The real low point depends on timing. Some oil from the first 2026 loans can com
 - **The profit on the second round.** We do not have checked futures prices for its bid day.
 - **When oil actually leaves or comes back.** The weekly level is net. It cannot separate pickups from returns.
 - **Where the true floor is.** The estimates above come from different people using different measures, and they do not agree.
+- **Whether every barrel awarded is picked up.** The department publishes barrels awarded, not barrels delivered.
