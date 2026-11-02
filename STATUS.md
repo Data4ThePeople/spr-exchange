@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2c
+Step: 2d
 Since: 2026-11-02
 
 ## Steps
@@ -50,3 +50,4 @@ None.
 - 2026-11-02 Eric confirmed 2b. Next: 2c, slice markup.
 - 2026-11-02 Step 2c opened. Convert-only: 41 blocks (drop cap, 6 headings, 2 images with captions, 14 list items, 17 paragraphs), divider once before the limits; no embeds, so no iframe spacers. Hero warnings expected until 2d.
 - 2026-11-02 Eric confirmed 2c. Next: 2d, hero 1680x1080 and alt text.
+- 2026-11-02 Step 2d opened. No hero idea from Eric, so Claude wrote two prompts in posts/spr-below-the-floor/hero-prompt.md: a salt cavern cutaway with low oil under a painted FLOOR? line (recommended), and the navy SPR barrel with a measuring stick. Waiting for Eric's image or his own idea.
