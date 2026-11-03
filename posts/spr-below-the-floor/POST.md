@@ -54,7 +54,7 @@ The chart below repeats the math from our first post for the first of the two ro
 ![Card showing the math of borrowing one barrel in round 4. Sell one barrel now: $88.43. Buy back 1 barrel plus 17.5% extra: $78.56. Left over per barrel: $9.87. The price on bid day was 32.3% higher than the price for November to December 2029. Estimated profit before transportation costs, if prices were locked in the day bids were due: $47 million, from 4.8 million barrels borrowed by trading companies times $9.87.](images/02-round-4-profit.png)
 *Source: U.S. Department of Energy award sheet and request for proposals; NYMEX WTI futures closes as relayed by Yahoo Finance. Best lot and return window shown, at the lowest premium allowed. Before shipping and other costs.*
 
-We cannot do the same math for the second round yet. We do not have futures prices for its bid day, October 21, that we can check against a second source. But the signs point to a trade that borrowers expected to pay well. Companies took 98.5% of the oil even though the government asked for more extra oil than in the first round, and trading companies took 92% of it… and that's enough of a signal to tell me there was a lot of money to be made in this round.
+We cannot do the same math for the second round yet. We do not have futures prices for its bid day, October 21, that we can check against a second source. But the signs point to a trade that borrowers expected to pay well. Companies took 98.5% of the oil even though the government asked for more extra oil than in the first round, and trading companies took 92% of it. That's enough of a signal to tell me that borrowers expected a lot of money to be made in this round.
 
 ## How low can the reserve go?
 
