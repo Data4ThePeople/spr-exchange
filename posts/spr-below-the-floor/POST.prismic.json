@@ -96,7 +96,28 @@
           {
             "type": "paragraph",
             "text": "The department posted the results of two more rounds on October 29. In the first, awarded as of October 13, companies took 23.8 million of the 40 million barrels offered, or 59.5%. In the second, awarded as of October 28, they took 16.75 million of the 17 million offered, or 98.5%. The chart below shows who borrowed the oil in each round.",
-            "spans": [],
+            "spans": [
+              {
+                "start": 123,
+                "end": 169,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.spr.doe.gov/posting/EXCHANGE/2-FY26%20SPR%20Oil%20Release%20No.%204/1-Request%20for%20Proposal/FY26%20SPR%20Oil%20Release%20No.%204%20Award%20Information.pdf",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 232,
+                "end": 271,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.spr.doe.gov/posting/EXCHANGE/1-FY27%20SPR%20Oil%20Release%20No.%201/1-Request%20for%20Proposal/FY27%20SPR%20Oil%20Release%20No.%201%20Award%20Information.pdf",
+                  "target": "_blank"
+                }
+              }
+            ],
             "direction": "ltr"
           }
         ]
@@ -194,6 +215,16 @@
                 "start": 0,
                 "end": 12,
                 "type": "strong"
+              },
+              {
+                "start": 13,
+                "end": 57,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.spr.doe.gov/posting/EXCHANGE/2-FY26%20SPR%20Oil%20Release%20No.%204/1-Request%20for%20Proposal/FY26%20SPR%20Oil%20Release%20No.%204%20Request%20for%20Proposal.pdf",
+                  "target": "_blank"
+                }
               }
             ],
             "direction": "ltr"
@@ -206,6 +237,16 @@
                 "start": 0,
                 "end": 13,
                 "type": "strong"
+              },
+              {
+                "start": 14,
+                "end": 52,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.spr.doe.gov/posting/EXCHANGE/1-FY27%20SPR%20Oil%20Release%20No.%201/1-Request%20for%20Proposal/FY27%20SPR%20Oil%20Release%20No.%201%20Request%20for%20Proposal.pdf",
+                  "target": "_blank"
+                }
               }
             ],
             "direction": "ltr"

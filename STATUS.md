@@ -55,3 +55,4 @@ None.
 - 2026-11-02 Eric confirmed 2d. Next: 2e, SEO.
 - 2026-11-02 Step 2e opened. Eric gave no target searches, so Claude chose them (how low can the SPR go, minimum operating level, the November loans, return dates) and wrote meta_title, description and 7 keywords; a Common questions section is proposed to Eric, not applied.
 - 2026-11-02 Eric accepted all four Common questions and confirmed 2e. Next: 2f, push to Prismic as a draft.
+- 2026-11-03 Eric accepted four links to DOE source PDFs (round 4 and FY27-1 award sheets and requests for proposals), all checked live and matching the saved copies by SHA-256. Folder-number prefixes on DOE's site may shift when new rounds post, so these links can break.

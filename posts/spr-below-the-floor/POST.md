@@ -27,7 +27,7 @@ This is a quick update. For how these oil loans work, see [our first post on the
 
 ## What was just lent, and to whom
 
-The department posted the results of two more rounds on October 29. In the first, awarded as of October 13, companies took 23.8 million of the 40 million barrels offered, or 59.5%. In the second, awarded as of October 28, they took 16.75 million of the 17 million offered, or 98.5%. The chart below shows who borrowed the oil in each round.
+The department posted the results of two more rounds on October 29. In the first, awarded as of October 13, companies took [23.8 million of the 40 million barrels offered](https://www.spr.doe.gov/posting/EXCHANGE/2-FY26%20SPR%20Oil%20Release%20No.%204/1-Request%20for%20Proposal/FY26%20SPR%20Oil%20Release%20No.%204%20Award%20Information.pdf), or 59.5%. In the second, awarded as of October 28, they took [16.75 million of the 17 million offered](https://www.spr.doe.gov/posting/EXCHANGE/1-FY27%20SPR%20Oil%20Release%20No.%201/1-Request%20for%20Proposal/FY27%20SPR%20Oil%20Release%20No.%201%20Award%20Information.pdf), or 98.5%. The chart below shows who borrowed the oil in each round.
 
 ![Bar chart of barrels awarded to each company in two rounds of the Strategic Petroleum Reserve exchange, colored by type of company. In FY26 Release No. 4, 23.8 of 40 million barrels offered were awarded: ExxonMobil 16, Macquarie 3.15, Atlantic Trading and Marketing (TotalEnergies) 2.45, Gunvor USA 1.35, Energy Transfer Crude Marketing 0.55, Trafigura 0.3. In FY27 Release No. 1, 16.75 of 17 million were awarded: Trafigura 4.875, Gunvor USA 4.6, Vitol 4.15, Macquarie 1.775, Phillips 66 1.35.](images/01-newest-rounds.png)
 *Source: U.S. Department of Energy award sheets and requests for proposals. Type of company is our classification.*
@@ -38,8 +38,8 @@ The two rounds went to different kinds of borrowers. In the first, a refiner, Ex
 
 These are still loans. Companies pick up the oil from November 2026 through January 2027 and must return it later, plus extra barrels. How much extra depends on how late they return it.
 
-- **First round:** returns run from April 2027 to December 2029. The extra oil owed ranges from 7% to 17.5%.
-- **Second round:** no oil is due back before October 2028, and the last window ends in December 2029. The extra oil owed ranges from 14% to 19.5%.
+- **First round:** [returns run from April 2027 to December 2029](https://www.spr.doe.gov/posting/EXCHANGE/2-FY26%20SPR%20Oil%20Release%20No.%204/1-Request%20for%20Proposal/FY26%20SPR%20Oil%20Release%20No.%204%20Request%20for%20Proposal.pdf). The extra oil owed ranges from 7% to 17.5%.
+- **Second round:** [no oil is due back before October 2028](https://www.spr.doe.gov/posting/EXCHANGE/1-FY27%20SPR%20Oil%20Release%20No.%201/1-Request%20for%20Proposal/FY27%20SPR%20Oil%20Release%20No.%201%20Request%20for%20Proposal.pdf), and the last window ends in December 2029. The extra oil owed ranges from 14% to 19.5%.
 
 Those are the minimums. Companies could offer more extra oil to win, and the department does not publish what each one offered. Its requests for proposals say it may post each winner's offer data "excluding exchange ratio," which is the extra oil.
 
