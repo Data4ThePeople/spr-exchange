@@ -6,8 +6,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2f
-Since: 2026-11-02
+Step: 2b
+Since: 2026-11-03
 
 ## Steps
 
@@ -24,7 +24,7 @@ Since: 2026-11-02
 
 ## Stale
 
-None.
+- 2b, 2c, 2d, 2e, 2f: reopened 2026-11-03. Eric rewrote the second-round paragraph in "What the first round could pay" after the Prismic push. 2d and 2e need only a quick re-confirm; the hero and SEO fields did not change.
 
 ## Log
 
@@ -57,3 +57,4 @@ None.
 - 2026-11-02 Eric accepted all four Common questions and confirmed 2e. Next: 2f, push to Prismic as a draft.
 - 2026-11-03 Eric accepted four links to DOE source PDFs (round 4 and FY27-1 award sheets and requests for proposals), all checked live and matching the saved copies by SHA-256. Folder-number prefixes on DOE's site may shift when new rounds post, so these links can break.
 - 2026-11-03 Step 2f: dry run clean (50 blocks, 30 slices, 3 images); published as draft aunDJBIAAC4AasV2 in the Migration Release, tags and author empty. --verify not run: no PRISMIC_READ_TOKEN in the env file. Waiting for Eric to check the draft and confirm.
+- 2026-11-03 /step back 2b. Eric replaced the second-round paragraph; it drops the spot-price comparison ($96.24, $103.95, 8%) and the June 14.4% comparison. Removed the matching DATASETS.md trace row and tie_out.py spot checks. Tie-out passes. Claude's look-over sent to Eric.

@@ -825,7 +825,6 @@ What the post says without a number, and where it rests: "the law does not say w
 | Round 4 margin per barrel, best lot and window | $9.87: sell $88.43, owe 1.175 x $66.86 = $78.56 | RFP DE-RP96-26PO00006; saved WTI futures, October 6, 2026 | `trade_math.py`, `build_update_chart.py` | `tie_out.py` chart 02 checks (from raw futures files) |
 | Round 4 estimated profit, trading houses | $47 million: 4,800,000 x $9.87 | Award sheet; card above | `build_update_chart.py` | `tie_out.py` chart 02 checks |
 | Round 4 profit potential, ceiling (not on the card) | $178.7 million to $234.9 million | 23,800,000 barrels x $7.51 and $9.87 | arithmetic | Independent tie-out of November 2 matched |
-| WTI spot on the round 4 and FY27-1 bid days | $96.24 (October 6) and $103.95 (October 21), 8.0% higher | EIA `PET.RWTC.D` | `fetch_eia.py` | Own read of the raw file |
 | Reserve level after all 40,550,000 barrels leave, if nothing returns first | 242,033,000 (about 242 million) | EIA `PET.WCSSTUS1.W`, week ending October 23, 2026, less both award totals | arithmetic | `tie_out.py` post 3 checks |
 | Lowest since early 1982 | February 1982 end of month 241,241,000; March 1982 248,537,000 | EIA `PET.MCSSTUS1.M` (weekly series starts August 1982) | arithmetic | `tie_out.py` post 3 checks |
 | Trading houses across both rounds | 20,200,000 of 40,550,000 (49.8%) | Both award sheets; `company_map.csv` | arithmetic | `tie_out.py` post 3 checks |
