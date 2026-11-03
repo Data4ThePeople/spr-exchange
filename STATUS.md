@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2g
+Step: complete
 Since: 2026-11-03
 
 ## Steps
@@ -20,7 +20,7 @@ Since: 2026-11-03
 | 2d | Hero 1680x1080 + alt text | 2026-11-03 | re-confirmed; Gemini cavern with several FLOOR? lines, center crop; alt 479 characters |
 | 2e | SEO | 2026-11-03 | re-confirmed; meta title 47, description 156, 7 keywords; 4 Common questions (FAQ schema) |
 | 2f | Pushed to Prismic (draft) | 2026-11-03 | draft aunDJBIAAC4AasV2 updated after the paragraph rewrite; Eric moved on to 2g |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-11-03 | approved; headline shortened and in a copy block; hero email JPG 294KB |
 
 ## Stale
 
@@ -61,3 +61,4 @@ None.
 - 2026-11-03 Eric accepted look-over edit 1 (period for the ellipsis; "borrowers expected") and confirmed 2b. Step 2c re-run.
 - 2026-11-03 Eric re-confirmed 2c, 2d and 2e. Step 2f: dry run clean (would PUT, 30 slices), then updated draft aunDJBIAAC4AasV2 in the Migration Release. No images re-uploaded. Waiting for Eric to confirm 2f.
 - 2026-11-03 Eric ran /step 2g, taken as confirming 2f. Step 2g opened: EMAIL.md drafted from the post text; hero email JPG 1680x1080 at 294KB. Waiting for approve or reject.
+- 2026-11-03 Eric approved EMAIL.md and confirmed 2g. Post complete: draft aunDJBIAAC4AasV2 sits in the Migration Release for Eric to publish.
