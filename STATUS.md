@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: spr-below-the-floor
-Step: 2c
+Step: 2f
 Since: 2026-11-03
 
 ## Steps
@@ -16,15 +16,15 @@ Since: 2026-11-03
 | 1  | Exploration and analysis | 2026-11-02 | Round 4 and FY27-1 keyed; two static charts; own tie-out passes; two independent tie-outs, fixes applied |
 | 2a | Draft with brackets resolved | 2026-11-02 | Claude drafted at Eric's instruction; independent fact-check, fixes applied; closing still a bracket for Eric |
 | 2b | Eric's edit, Claude's look-over | 2026-11-03 | re-confirmed after the second-round paragraph rewrite; Eric's edits and closing; six look-over items accepted; floor sources linked |
-| 2c | Slice markup | 2026-11-02 | No changes needed; 41 blocks, 2 images with captions, divider once, no embeds |
-| 2d | Hero 1680x1080 + alt text | 2026-11-02 | Gemini cavern with several FLOOR? lines, center crop; alt 479 characters |
-| 2e | SEO | 2026-11-02 | meta title 47, description 156, 7 keywords; 4 Common questions (FAQ schema) |
+| 2c | Slice markup | 2026-11-03 | re-confirmed; No changes needed; 41 blocks, 2 images with captions, divider once, no embeds |
+| 2d | Hero 1680x1080 + alt text | 2026-11-03 | re-confirmed; Gemini cavern with several FLOOR? lines, center crop; alt 479 characters |
+| 2e | SEO | 2026-11-03 | re-confirmed; meta title 47, description 156, 7 keywords; 4 Common questions (FAQ schema) |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
 
 ## Stale
 
-- 2c, 2d, 2e, 2f: reopened 2026-11-03. Eric rewrote the second-round paragraph in "What the first round could pay" after the Prismic push. 2d and 2e need only a quick re-confirm; the hero and SEO fields did not change.
+- 2f: reopened 2026-11-03. Eric rewrote the second-round paragraph in "What the first round could pay" after the Prismic push. 2d and 2e need only a quick re-confirm; the hero and SEO fields did not change.
 
 ## Log
 
@@ -59,3 +59,4 @@ Since: 2026-11-03
 - 2026-11-03 Step 2f: dry run clean (50 blocks, 30 slices, 3 images); published as draft aunDJBIAAC4AasV2 in the Migration Release, tags and author empty. --verify not run: no PRISMIC_READ_TOKEN in the env file. Waiting for Eric to check the draft and confirm.
 - 2026-11-03 /step back 2b. Eric replaced the second-round paragraph; it drops the spot-price comparison ($96.24, $103.95, 8%) and the June 14.4% comparison. Removed the matching DATASETS.md trace row and tie_out.py spot checks. Tie-out passes. Claude's look-over sent to Eric.
 - 2026-11-03 Eric accepted look-over edit 1 (period for the ellipsis; "borrowers expected") and confirmed 2b. Step 2c re-run.
+- 2026-11-03 Eric re-confirmed 2c, 2d and 2e. Step 2f: dry run clean (would PUT, 30 slices), then updated draft aunDJBIAAC4AasV2 in the Migration Release. No images re-uploaded. Waiting for Eric to confirm 2f.
