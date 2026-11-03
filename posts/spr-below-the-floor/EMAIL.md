@@ -19,7 +19,7 @@ An AI-generated cutaway illustration of an underground salt cavern beneath a fla
 
 ## 2. Headline
 
-The Latest Oil Loans Could Push Our Emergency Reserve Below the Floor Experts Warned About
+The Latest Oil Loans Could Push Our Reserve Below the Floor
 
 ## 3. Body, part one
 
